@@ -1,8 +1,9 @@
 # Basic-Courses-Agent
 2026“未央城”智能体大赛
 
-简要文件框架
+##简要文件框架
 
+```text
 Basic-Courses-Agent/
 ├── data/                  # 原始数据与处理后的数据
 │   ├── raw/               # 原始 PDF 教材、讲义
