@@ -1,7 +1,7 @@
 # Basic-Courses-Agent
 2026“未央城”智能体大赛
 
-##简要文件框架
+## 简要文件框架
 
 ```text
 Basic-Courses-Agent/
