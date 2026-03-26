@@ -10,10 +10,8 @@ Basic-Courses-Agent/
 ├── scripts/
 │   └── build_knowledge.py # 用于构建向量数据库、嵌入等预处理脚本
 ├── src/
-│   ├── agents/            # 智能体核心模块
-│   │   ├── react_agent.py # ReAct 智能体执行逻辑
-│   │   └── prompts.py     # 提示语（Prompt）模板定义
-│   └── main.py            # 程序入口
+|   ├── prompts.py         # 提示语（Prompt）模板定义
+│   └── main.py            # 程序入口（包含Agent逻辑）
 ├── tests/                 # 单元测试、集成测试、习题验证
 ├── README.md              # 项目说明文档
 └── requirements.txt       # Python 依赖列表（当前为空或待补充）
@@ -40,13 +38,8 @@ Basic-Courses-Agent/
 ## 数据处理流程
 1. 将原始教材/讲义文件放入 `data/raw/`
 2. 运行 `scripts/build_knowledge.py` 生成 `data/processed/` 中的知识文件
-3. 启动 `src/main.py`，智能体将使用已构建的知识库进行问答
+3. 启动 `src/main.py`，开始解决题目（包含reAct Agent逻辑）
 
 ## 贡献指南
-- 建议先阅读并补全 `requirements.txt` 中依赖
+- 阅读并补全 `requirements.txt` 中依赖
 - 增加测试用例到 `tests/`
-- 如果新增模型或向量检索，优先修改 `src/agents/react_agent.py` 和 `src/tools/retriever.py`
-
-## 备注
-- 若使用 OpenAI 需在环境变量中设置 `OPENAI_API_KEY`
-- 本项目为大赛工程，请根据团队需求扩展数据预处理、缓存、日志等功能
