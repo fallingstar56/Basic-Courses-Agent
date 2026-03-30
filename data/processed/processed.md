@@ -1,9 +1,9 @@
 # 处理后数据说明
 
-该目录保存经过 FAISS+PDF 方案处理后的数据文件。
+该目录保存从电子教材中抽取并格式化后的 JSON 文件。
 
-- 数据已从 `raw/` 中的 PDF 或原始文本中提取并分段。
-- 文本段已进行向量化，生成用于 FAISS 索引的嵌入向量。
-- 目录中可包含向量文件、索引文件、分段文本缓存等中间结果。
+- 数据已由 `scripts/extract.py` 从 `data/raw/` 的 PDF 电子教材中提取。
+- `processed/` 中存储的是结构化、格式化的 JSON 文件，适合作为后续向量化和 FAISS 构建的输入。
+- 此阶段不直接保存 FAISS 索引结果，向量库生成由 `scripts/build.py` 负责。
 
-处理流程一般为：从 `raw/` 读取 PDF 或原始文件 -> 提取文本 -> 分段 -> 向量化 -> 构建 FAISS 索引 -> 输出到 `processed/`。
+处理流程一般为：从 `data/raw/` 读取 PDF -> 运行 `scripts/extract.py` 提取结构化 JSON -> 输出到 `data/processed/`。

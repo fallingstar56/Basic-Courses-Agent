@@ -5,13 +5,15 @@
 ```text
 Basic-Courses-Agent/
 ├── data/
-│   ├── raw/               # 原始教材、资料 PDF 等原始数据
-│   └── processed/         # 由脚本解析后的 Markdown/JSON 等知识文件
+│   ├── raw/               # 最初未处理的 PDF 电子教材
+│   ├── processed/         # 运行 scripts/extract.py 从 raw 中电子教材提取出的格式化 JSON 文件
+│   └── knowledge/         # 运行 scripts/build.py 后，用 FAISS 处理生成的 cong.json 数据
 ├── scripts/
-│   └── build_knowledge.py # 用于构建向量数据库、嵌入等预处理脚本
+│   ├── extract.py         # 从 data/raw/ 的 PDF 提取结构化/格式化 JSON
+│   └── build.py           # 使用 data/processed/ 中的 JSON，构建 FAISS 向量知识库，生成 data/knowledge/cong.json
 ├── src/
-|   ├── prompts.py         # 提示语（Prompt）模板定义
-│   └── main.py            # 程序入口（包含Agent逻辑）
+│   ├── prompts.py         # 提示语（Prompt）模板定义
+│   └── main.py            # 程序入口（包含 Agent 逻辑）
 ├── tests/                 # 单元测试、集成测试、习题验证
 ├── README.md              # 项目说明文档
 └── requirements.txt       # Python 依赖列表（当前为空或待补充）
@@ -36,10 +38,7 @@ Basic-Courses-Agent/
    ```
 
 ## 数据处理流程
-1. 将原始教材/讲义文件放入 `data/raw/`
-2. 运行 `scripts/build_knowledge.py` 生成 `data/processed/` 中的知识文件
-3. 启动 `src/main.py`，开始解决题目（包含reAct Agent逻辑）
-
-## 贡献指南
-- 阅读并补全 `requirements.txt` 中依赖
-- 增加测试用例到 `tests/`
+1. 将原始教材/电子教材 PDF 文件放入 `data/raw/`
+2. 运行 `python scripts/extract.py`，从 `data/raw/` 中提取格式化 JSON 到 `data/processed/`
+3. 运行 `python scripts/build.py`，使用 FAISS 处理 `data/processed/`，生成 `data/knowledge/cong.json`
+4. 启动 `python src/main.py`，开始解决题目（包含 Agent 逻辑）

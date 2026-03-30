@@ -2,12 +2,15 @@
 
 此目录用于存放项目所需的数据文件。
 
-- `raw/`：存放未处理的原始数据，通常直接从数据源获取，如 PDF 文件、文本等。
-- `processed/`：存放经过处理后用于 FAISS 向量检索的数据，包括从 PDF 中提取的文本、分段后的嵌入、索引文件等。
+- `raw/`：存放最初未处理的 `.pdf` 电子教材，作为 `scripts/extract.py` 的输入。
+- `processed/`：存放 `scripts/extract.py` 从 `raw/` 提取出的结构化、格式化 JSON 文件，作为后续构建 FAISS 的输入。
+- `knowledge/`：存放 `scripts/build.py` 使用 FAISS 处理 `processed/` 后生成的结果文件，例如 `cong.json`。
 
-当前项目计划采用 FAISS + PDF 方案，将 PDF 文档解析成文本，再构建向量索引以支持高效语义搜索。
-
-请根据项目需要，将原始文件放入 `raw`，将处理生成的向量、索引及中间结果放入 `processed`。
+当前项目采用的流程是：
+  1. 将原始 PDF 放入 `data/raw/`
+  2. 运行 `scripts/extract.py` 提取 JSON 到 `data/processed/`
+  3. 运行 `scripts/build.py` 构建 FAISS 知识库，输出到 `data/knowledge/`
+  4. 运行 `src/main.py` 进行问答或检索
 
 ## 数据处理分工
 
