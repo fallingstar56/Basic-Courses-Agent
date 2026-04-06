@@ -1,0 +1,408 @@
+[
+    {
+        "question_id": "EX_001",
+        "type": "数值计算与推导",
+        "difficulty": "中等",
+        "question": "在球坐标系中，求以原点为球心、半径为 $ r $ 的球面上位于 $ (r, \\theta, \\phi) $ 处的面积元 $ \\mathrm{d}\\vec{S} $。",
+        "answer": "如右图所示，可知 $ \\vec{dS} $ 与 $ \\vec{r} $ 相同，其大小为：\n\n $$ \\mathrm{d}S=\\left|\\mathrm{d}\\vec{r}_{1}\\times\\mathrm{d}\\vec{r}_{2}\\right|=(r\\mathrm{d}\\theta)(r\\sin\\theta\\mathrm{d}\\phi)=r^{2}\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi $$ \n\n因此，球坐标系中的球面的面元为：\n\n $$ \\mathrm{d}\\vec{S}=\\hat{\\boldsymbol{r}}r^{2}\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_745_226_1046_502.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n此外，也可以直接通过球面的参数方程求解：首先，我们已知球面的参数方程为：\n\n $$ \\vec{r}(\\theta,\\phi)=(r\\sin\\theta\\cos\\phi,r\\sin\\theta\\sin\\phi,r\\cos\\theta) $$ \n\n将 $ \\vec{r} $ 对 $ \\theta $ 和 $ \\phi $ 求偏导，可得：\n\n $$ \\frac{\\partial\\vec{r}}{\\partial\\theta}=\\left(r\\cos\\theta\\cos\\phi,r\\cos\\theta\\sin\\phi,-r\\sin\\theta\\right) $$ \n\n $$ \\frac{\\partial\\vec{\\mathbf{r}}}{\\partial\\phi}=(-r\\sin\\theta\\sin\\phi,r\\sin\\theta\\cos\\phi,0) $$ \n\n因而：\n\n $$ \\begin{aligned}\\vec{\\mathbf{S}}&=\\frac{\\partial\\vec{\\mathbf{r}}}{\\partial\\theta}\\times\\frac{\\partial\\vec{\\mathbf{r}}}{\\partial\\phi}\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\&=(r\\cos\\theta\\cos\\phi,r\\cos\\theta\\sin\\phi,-r\\sin\\theta)\\times(-r\\sin\\theta\\sin\\phi,r\\sin\\theta\\cos\\phi,0)\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\&=(r^{2}\\sin^{2}\\theta\\cos\\phi,r^{2}\\sin^{2}\\theta\\sin\\phi,r^{2}\\sin\\theta\\cos\\theta\\cos^{2}\\phi+r^{2}\\sin\\theta\\cos\\theta\\sin^{2}\\phi)\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\&=r^{2}\\sin\\theta(\\sin\\theta\\cos\\phi,\\sin\\theta\\sin\\phi,\\cos\\theta)\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\&=\\hat{\\mathbf{r}}r^{2}\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\ \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_002",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "比较氢原子中的质子和电子之间的库仑力  $ F_{e} $ 和引力  $ F_{g} $ 的大小。",
+        "answer": "根据库仑定律和万有引力定律，我们有：\n\n $$ \\begin{aligned}F_{e}=&\\frac{kq_{1}q_{2}}{r^{2}}=\\frac{8.99\\times10^{9}\\times(1.6\\times10^{-19})^{2}}{r^{2}}\\\\F_{g}=&\\frac{Gm_{1}m_{2}}{r^{2}}=\\frac{6.7\\times10^{-11}\\times(9.1\\times10^{-31})\\times(1.7\\times10^{-27})}{r^{2}}\\\\F_{e}/F_{g}=&\\frac{kq_{1}q_{2}}{Gm_{1}m_{2}}\\\\=&\\frac{8.99\\times10^{9}\\times(1.6\\times10^{-19})^{2}}{6.7\\times10^{-11}\\times(9.1\\times10^{-31})\\times(1.7\\times10^{-27})}\\\\\\approx&10^{39}\\end{aligned} $$ \n\n即库仑力是万有引力的约  $ 10^{39} $ 倍！从上面的例子我们可以看出，基本带电粒子间的库仑力远大于万有引力。事实上，电磁相互作用力是原子核与核外电子结合成原子以及原子与原子结合组成我们现实世界中的各种物质的最主要的相互作用力，因此，我们现实生活中所接触到的物质世界的许多现象背后都是由电磁相互作用在起主导作用。而在更大的尺度，比如宇宙中的天体与天体之间，由于宇宙中大部分天体的单位质量所带的净电荷非常小，因此天体之间的库仑力将远小于万有引力。以地球和火星为例，这两个天体所带的净电荷都约为 40 万库仑，根据这个我们可以推算出，地球和火星之间的万有引力是库仑力的约  $ 10^{17} $ 倍。"
+    },
+    {
+        "question_id": "EX_003",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "由牛顿第二定律 $ (\\vec{f} = d\\vec{P}/dt) $，在 dt 时间内，核外电子获得的动量为： $ d\\vec{P} = \\vec{f}dt $。因此，整个过程电子获得的总动量为：\n$$ \\vec{P}=\\int_{-\\infty}^{+\\infty}\\vec{f}\\mathrm{d}t $$\n\n我们先来求上述 $ \\vec{P} $ 在 x 轴方向的分量 $ P_{x} $:\n$$ P_{x}=\\int_{-\\infty}^{+\\infty}f_{x}\\mathrm{d}t=\\int_{-\\infty}^{+\\infty}f_{x}\\frac{\\mathrm{d}t}{\\mathrm{d}x}\\mathrm{d}x=\\frac{1}{v}\\int_{-\\infty}^{+\\infty}f_{x}\\mathrm{d}x $$\n\n如下图所示，由对称性可知， $ f_{x}(x)=-f_{x}(-x) $，因此上述积分 $ P_{x}=\\frac{1}{v}\\int_{-\\infty}^{+\\infty}f_{x}\\mathrm{d}x=0 $\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_333_151_862_308.jpg\" alt=\"Image\" width=\"44%\" /></div>\n\n因此，所求 $ P = P_{y} $\n$$ \\begin{aligned}P=&P_{y}=\\int_{-\\infty}^{+\\infty}f_{y}\\mathrm{d}t=\\int_{-\\infty}^{+\\infty}k\\frac{ze^{2}}{r^{2}}\\sin(\\varphi)\\mathrm{d}t\\\\=&\\int_{-\\infty}^{+\\infty}k\\frac{ze^{2}}{r^{2}}\\frac{b}{r}\\frac{\\mathrm{d}x}{v}=\\frac{kze^{2}b}{v}\\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(\\sqrt{x^{2}+b^{2}})^{3}}\\end{aligned} $$",
+        "answer": "在上述积分中，将 x 用 $ b\\tan\\theta $ 代替，可得：\n$$ \\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{(\\sqrt{x^{2}+b^{2}})^{3}}=\\int_{-\\pi/2}^{+\\pi/2}\\frac{b/\\cos^{2}\\theta\\mathrm{d}\\theta}{(\\sqrt{b^{2}\\tan^{2}\\theta+b^{2}})^{3}}=\\frac{1}{b^{2}}\\int_{-\\pi/2}^{+\\pi/2}\\cos\\theta\\mathrm{d}\\theta=\\frac{2}{b^{2}} $$\n\n代入上式，可得，核外电子获得的动量为：\n$$ P=\\frac{2k z e^{2}}{b v} $$\n\n考虑到可以忽略核外电子的初始速度，因此这也是核外电子的最终的动量，其对应的动能为：\n$ E_{0}=\\frac{P^{2}}{2m_{0}} $\n\n由能量守恒，可知整个过程中入射重带电粒子损失的能量为：\n$$ \\Delta E=E_{0}=\\frac{P^{2}}{2m_{0}}=\\frac{2k^{2}z^{2}e^{4}}{m_{0}b^{2}v^{2}} $$\n\n仔细观察该式我们可以发现，对于这样一种由重带电粒子入射导致的原子的电离的情况，入射粒子损失的能量与入射粒子的电荷 z 和速度 v 有很大的关系：\n\n1. 入射粒子电荷 z 越大，损失的能量也就越大。这是因为，电荷越大，库仑力也就越大，因此在此过程中入射粒子对核外电子做的功也就越多。事实上，上文中提到截止目前仍有一些国际大型实验在寻找带非整数倍电荷的新粒子（ $ z \\ll 1 $），对于这种粒子的寻找，就依赖于我们这道例题里推导出的能量损失与 z 的关系，因为这类 z 很小的粒子相比我们一直的带整数倍电荷的粒子在穿过探测器的物质时，其由于电离导致的能量损失很小，因而可以在探测器中飞行很长一段距离，利用这一特征我们便可以将这类新粒子与已知的粒子进行甄别。\n\n2. 入射粒子的速度 v 越大，损失的能量就越小。这是因为，速度越大，入射粒子经过核外电子所需要的时间越短，因而传递给核外电子的动量也就越少，所损失的能量也就越小。这一特征，同样被广泛应用于现代粒子物理实验的带电粒子的探测和甄别中：对于高能带电粒子，我们现有的探测手段往往只能测量带电粒子的动量和电荷，无法直接测量带电粒子的质量，因而对于一些电荷相同的重带电粒子，比如质子和介子（ $ \\pi/K $ 等介子），要想将它们区分开来需要额外的实验手段，其中一种方法就是利用本道例题得出的结论，对于不同质量的重带电粒子，当它们动量相等时，其速度会有所区别，因而它们在探测器的物质中的能量损失也会有所不同，通过对比它们在运动过程中损失的能量，我们便可以将电荷相同但质量不同的重带电粒子进行区分。"
+    },
+    {
+        "question_id": "EX_004",
+        "type": "数值计算与矢量分析",
+        "difficulty": "中等",
+        "question": "我们把一对靠得很近的等量异号点电荷对（+q 和 -q）称为电偶极子（electric dipole），如右图所示，设两个点电荷之间的距离为  $ \\vec{l} $ （方向从负到正），且我们定义电偶极矩矢量（electric dipole moment）  $ \\vec{p} = q\\vec{l} $ 。求电偶极子的中垂线上的点电荷 Q 受到的库仑力  $ \\vec{F} $ 。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_847_1034_1029_1370.jpg\" alt=\"Image\" width=\"15%\" /></div>",
+        "answer": "解:\n\n由叠加原理，Q 受到的总库仑力等于 +q 和 -q 对 Q 的库仑力的矢量和：\n\n $$ \\vec{F}=\\vec{F}_{+}+\\vec{F}_{-} $$ \n\n由对称性可知，竖直方向合力为 0，水平方向的合力大小为：\n\n $$ \\begin{aligned}F_{//}&=F_{+//+}+F_{-//-}=-2F_{+}\\cos\\theta\\\\&=-2\\frac{kqQ}{r_{+}^{2}}\\frac{l/2}{r_{+}}=-\\frac{kqQl}{(r^{2}+l^{2}/4)^{3/2}}\\end{aligned} $$ \n\n负号表示与  $ \\vec{l} $ 方向相反，因此：\n\n $$ \\vec{F}=-\\frac{kqQ\\vec{l}}{(r^{2}+l^{2}/4)^{3/2}}=-\\frac{kQ\\vec{p}}{(r^{2}+l^{2}/4)^{3/2}} $$ \n\n当  $ r \\gg l $ 时，上式可简化为：\n\n $$ \\vec{F}=-\\frac{k Q\\vec{p}}{r^{3}} $$ \n\n即：电偶极子在远处对其他电荷的库仑力与距离的三次方成反比，这比点电荷的距离的平方反比衰减得要快，相对来说是偏短程的相互作用。在本书的后续章节，我们还将继续讨论电偶极子的一些特征以及诸多应用。"
+    },
+    {
+        "question_id": "EX_005",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求如图所示的电四极子在远点  $ P(\\vec{r}) $ 处  $ (r \\gg l) $ 产生的电场  $ \\vec{E}(\\vec{r}) $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_836_1213_1032_1545.jpg\" alt=\"Image\" width=\"16%\" /></div>",
+        "answer": "该电四极子产生的电场可以看成是两个电偶极子产生的电场的矢量和，使用上一个例题的结论，可得：\n\n $$ \\begin{aligned}\\vec{E}(\\vec{r})&=\\vec{E}_{1}(\\vec{r})+\\vec{E}_{2}(\\vec{r})\\\\&=\\frac{1}{4\\pi\\varepsilon_{0}}\\bigg[\\frac{-q\\vec{l}}{(r+\\frac{l}{2})^{3}}+\\frac{q\\vec{l}}{(r-\\frac{l}{2})^{3}}\\bigg]\\end{aligned} $$ \n\n通过泰勒展开只保留 l/r 的一次项，可得：\n\n $$ \\begin{aligned}\\vec{E}(\\vec{r})&=\\frac{q\\vec{l}}{4\\pi\\varepsilon_{0}r^{3}}\\left[\\frac{-1}{(1+\\frac{l}{2r})^{3}}+\\frac{1}{(1-\\frac{l}{2r})^{3}}\\right]\\\\&=\\frac{q\\vec{l}}{4\\pi\\varepsilon_{0}r^{3}}\\left[-\\left(1-\\frac{3l}{2r}\\right)+\\left(1+\\frac{3l}{2r}\\right)\\right]\\\\&=\\frac{q\\vec{l}}{4\\pi\\varepsilon_{0}r^{3}}\\frac{3l}{r}\\\\&=\\frac{3q l^{2}\\hat{l}}{4\\pi\\varepsilon_{0}r^{4}}\\end{aligned} $$ \n\n可见，电四极子产生的电场随空间成  $ r^{-4} $ 的速度衰减，比电偶极子的衰减更快。"
+    },
+    {
+        "question_id": "EX_006",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求如图所示的均匀带电细圆环（半径 R，总电荷 q）在其轴线上任意一点  $ P(z) $ 处的电场强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_751_560_1031_717.jpg\" alt=\"Image\" width=\"23%\" /></div>",
+        "answer": "如图所示，把带电圆环分成无限多点电荷 dq，设 dq 在 P 点产生的电场强度为 dE。由对称性，所有的 dE⊥ 相互抵消，P 点的电场只剩下各 dE∥ 之和：\n\n $$ E=\\int\\mathrm{d}E_{||} $$ \n\n其中，\n\n $$ \\begin{aligned}\\mathrm{d}E_{\\parallel}&=\\mathrm{d}E\\cos\\theta\\\\&=\\frac{1}{4\\pi\\varepsilon_{0}}\\frac{\\mathrm{d}q}{r^{2}}\\frac{z}{r}\\end{aligned} $$ \n\n定义线电荷密度  $ \\lambda_{e}=\\frac{q}{2\\pi R} $，上式中  $ r=\\sqrt{R^{2}+z^{2}} $，代入上式可得：\n\n $$ \\mathrm{d}E_{\\parallel}=\\frac{1}{4\\pi\\varepsilon_{0}}\\frac{\\lambda_{e}\\mathrm{d}l}{R^{2}+z^{2}}\\frac{z}{\\sqrt{R^{2}+z^{2}}} $$ \n\n因此，\n\n $$ \\begin{aligned}E&=\\int\\mathrm{d}E_{\\parallel}=\\int_{0}^{2\\pi R}\\frac{1}{4\\pi\\varepsilon_{0}}\\frac{\\lambda_{e}}{R^{2}+z^{2}}\\frac{z}{\\sqrt{R^{2}+z^{2}}}\\mathrm{d}l\\\\&=\\frac{2\\pi R\\lambda_{e}z}{4\\pi\\varepsilon_{0}(R^{2}+z^{2})^{3/2}}\\\\&=\\frac{qz}{4\\pi\\varepsilon_{0}(R^{2}+z^{2})^{3/2}}\\\\ \\end{aligned} $$ \n\n根据上述结果可知，当  $ z \\gg R $ 时，电场可以近似为：\n\n $$ E\\approx\\frac{q}{4\\pi\\varepsilon_{0}z^{2}} $$ \n\n即这种情况下变成了点电荷的电场。"
+    },
+    {
+        "question_id": "EX_007",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求如图所示的均匀带电圆盘（半径 $ R $，面电荷密度 $ \\sigma_{e} $）在其轴线上任意一点 $ P(z) $ 处的电场强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_749_349_1031_518.jpg\" alt=\"Image\" width=\"23%\" /></div>",
+        "answer": "解:\n\n如图所示，可以将带电圆盘切成很多带电圆环，利用上一例题的结果，可知半径为 $ r $ 宽度为 $ \\mathrm{d}r $ 的圆环上的电荷在 $ P $ 点产生的电场强度为：\n\n$$\n\\begin{aligned}\n\\mathrm{d}E &= \\frac{z\\mathrm{d}q}{4\\pi\\varepsilon_{0}(r^{2}+z^{2})^{3/2}} \\\\\n&= \\frac{z\\sigma_{e}2\\pi r\\mathrm{d}r}{4\\pi\\varepsilon_{0}(r^{2}+z^{2})^{3/2}} \\\\\n&= \\frac{z\\sigma_{e}r\\mathrm{d}r}{2\\varepsilon_{0}(r^{2}+z^{2})^{3/2}}\n\\end{aligned}\n$$\n\n因此，$ P $ 点的电场强度为：\n\n$$\n\\begin{aligned}\nE &= \\frac{z\\sigma_{e}}{2\\varepsilon_{0}}\\int_{0}^{R}\\frac{r\\mathrm{d}r}{(r^{2}+z^{2})^{3/2}} \\\\\n&= \\frac{z\\sigma_{e}}{2\\varepsilon_{0}}\\left( \\frac{-1}{\\sqrt{r^{2}+z^{2}}} \\right)\\bigg|_{0}^{R} \\\\\n&= \\frac{\\sigma_{e}}{2\\varepsilon_{0}}\\left(1 - \\frac{z}{\\sqrt{z^{2}+R^{2}}}\\right)\n\\end{aligned}\n$$\n\n由上述结果可知：\n\n1. 当 $ z \\ll R $ 时:\n\n$$\nE \\approx \\frac{\\sigma_{e}}{2\\varepsilon_{0}}\n$$\n\n这种情况相当于无穷大带电平板产生的电场，其电场强度与 $ z $ 无关（即：$ E \\propto z^{0} $）。\n\n2. 当 $ z \\gg R $ 时:\n\n$$\nE \\approx \\frac{\\sigma_{e}}{2\\varepsilon_{0}}\\left[1 - \\left(1 - \\frac{1}{2}\\left(\\frac{R}{z}\\right)^{2}\\right)\\right] = \\frac{\\pi R^{2}\\sigma_{e}}{4\\pi\\varepsilon_{0}z^{2}} = \\frac{q}{4\\pi\\varepsilon_{0}z^{2}}\n$$\n\n即这种情况下变成了点电荷的电场。"
+    },
+    {
+        "question_id": "EX_008",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求如图所示的均匀带电细线（长度 $ l $，线电荷密度 $ \\lambda_{e} $）在其中垂线上 $ P(r) $ 点产生的电场强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_752_171_1028_514.jpg\" alt=\"Image\" width=\"23%\" /></div>",
+        "answer": "解:\n\n如图，将电荷分成无限多点电荷 $ \\lambda_{e} \\mathrm{d}x $。由对称性可知，$ P $ 点水平方向电场强度为 0，竖直方向的电场强度为：\n\n$$\n\\mathrm{d}E = 2\\mathrm{d}E_{1}\\cos\\theta = 2\\frac{\\lambda_{e}\\mathrm{d}x}{4\\pi\\varepsilon_{0}r^{\\prime2}}\\frac{r}{r^{\\prime}}\n$$\n\n其中，$ r' = \\sqrt{r^{2} + x^{2}} $，因此：\n\n$$\nE = \\int \\mathrm{d}E = \\frac{2\\lambda_{e}r}{4\\pi\\varepsilon_{0}} \\int_{0}^{l/2} \\frac{\\mathrm{d}x}{(x^{2} + r^{2})^{3/2}}\n$$\n\n令 $ x = r \\tan \\theta $，则 $ \\mathrm{d}x = \\frac{r \\mathrm{d}\\theta}{\\cos^{2}\\theta} $，上述积分可化为：\n\n$$\n\\begin{aligned}\nE &= \\frac{2\\lambda_{e}r}{4\\pi\\varepsilon_{0}} \\int_{0}^{\\arctan(l/(2r))} \\frac{r}{\\cos^{2}\\theta} \\cdot \\frac{\\cos^{3}\\theta}{r^{3}} \\mathrm{d}\\theta \\\\\n&= \\frac{2\\lambda_{e}r}{4\\pi\\varepsilon_{0}} \\int_{0}^{\\arctan(l/(2r))} \\frac{\\cos\\theta}{r^{2}} \\mathrm{d}\\theta \\\\\n&= \\frac{2\\lambda_{e}}{4\\pi\\varepsilon_{0}r} \\sin\\theta \\bigg|_{0}^{\\arctan(l/(2r))}\n\\end{aligned}\n$$\n\n由于 $ \\sin(\\arctan(l/(2r))) = \\frac{l/2}{\\sqrt{r^{2} + (l/2)^{2}}} $，最终得：\n\n$$\nE = \\frac{\\lambda_{e}}{2\\pi\\varepsilon_{0}r} \\cdot \\frac{l/2}{\\sqrt{r^{2} + (l/2)^{2}}} = \\frac{\\lambda_{e} l}{4\\pi\\varepsilon_{0}r \\sqrt{r^{2} + (l/2)^{2}}}\n$$"
+    },
+    {
+        "question_id": "EX_009",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求均匀带电球（半径 R，总电荷 q）产生的电场  $ \\vec{E}(\\vec{r}) $。",
+        "answer": "如图，令  $ \\vec{S} $ 为以 O 为球心、半径为 r 的球面。由对称性， $ \\vec{S} $ 上所有的点的电场的大小相同，且方向与  $ \\vec{S} $ 的法向平行。由高斯定理：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_794_320_1029_506.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n $$ \\begin{aligned}&\\iint_{\\vec{S}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\frac{Q_{\\mathrm{in}}}{\\varepsilon_{0}}\\\\ &\\Rightarrow4\\pi r^{2}E=\\frac{Q_{\\mathrm{in}}}{\\varepsilon_{0}}\\\\ &\\Rightarrow E=\\frac{Q_{\\mathrm{in}}}{4\\pi\\varepsilon_{0}r^{2}}\\\\ \\end{aligned} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_823_543_982_670.jpg\" alt=\"Image\" width=\"13%\" /></div>\n\n1. 当  $ r \\geq R $ 时， $ Q_{\\mathrm{in}} = q $，\n\n $$ E=\\frac{q}{4\\pi\\varepsilon_{0}r^{2}} $$ \n\n2. 当 r < R 时，\n\n $$ \\begin{aligned}&Q_{in}=q\\frac{r^{3}}{R^{3}}\\\\ &E=\\frac{q\\frac{r^{3}}{R^{3}}}{4\\pi\\varepsilon_{0}r^{2}}=\\frac{qr}{4\\pi\\varepsilon_{0}R^{3}}\\\\ \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_010",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求均匀带电球面产生的电场  $ \\vec{E}(\\vec{r}) $ （球面半径为 R，总电荷量为 q）",
+        "answer": "取以带电球面的球心为球心、半径为 r 的球面 S。由对称性， $ \\vec{S} $ 上各点的电场大小相等，方向与  $ \\vec{S} $ 的法向平行。由高斯定理：\n\n $$ \\begin{aligned}&\\iint_{\\vec{S}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\frac{Q_{in}}{\\varepsilon_{0}}\\\\ &\\Rightarrow4\\pi r^{2}E=\\frac{Q_{in}}{\\varepsilon_{0}}\\\\ &\\Rightarrow E=\\frac{Q_{in}}{4\\pi\\varepsilon_{0}r^{2}}\\\\ \\end{aligned} $$ \n\n1. 当 r < R 时， $ Q_{\\mathrm{in}} = 0, E = 0 $\n\n2. 当 r > R 时， $ Q_{\\mathrm{in}} = q $，\n\n $$ E=\\frac{q}{4\\pi\\varepsilon_{0}r^{2}} $$ \n\n3. 当  $ r \\rightarrow R + $ 时（即在无限贴近球面外表面的地方），\n\n $$ E\\rightarrow\\frac{q}{4\\pi\\varepsilon_{0}R^{2}}=\\frac{\\sigma_{e}}{\\varepsilon_{0}} $$ \n\n我们注意到两个有趣的现象：\n\n1. 球的外表面附近的电场值为无穷大带电平板附近的电场强度的两倍（无限大带电平板电场为  $ E = \\frac{\\sigma_{e}}{2\\varepsilon_{0}} $，见上一节例2.7）。为了直观的理解这个结论，可以像右图那样想象在一个维度上将一条直线逐渐弯成一个圆圈，在逐渐弯成圆圈的过程中，直线两端的电荷在 P 点产生的电场相互抵消的部分越来越少，即在水平方向分量越来越大，因此圆圈相比直线在 P 点产生的电场要大，同样的道理，球面（或者下一例题要讲的柱面）要比平面在 P 点产生的电场要大。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_788_536_1035_790.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n2. 在球面内外两侧电场强度发生了跳跃，是不连续的，这是理想面电荷产生"
+    },
+    {
+        "question_id": "EX_011",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求无限长均匀带电圆柱面（半径 $ R $，电荷面密度 $ \\sigma_{e} $）产生的电场 $ \\vec{E}(\\vec{r}) $。",
+        "answer": "解:\n\n如图，过 P 点取与带电圆柱面共轴、半径为 $ r $ 、高度为 $ h $ 的圆柱，设该圆柱的所有外表面为 $ \\vec{S} $ :\n\n$$ \\vec{S}=\\vec{S}_{\\mathrm{up}}+\\vec{S}_{\\mathrm{down}}+\\vec{S}_{\\mathrm{side}} $$\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_797_1223_1034_1506.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n由对称性，上下表面（$ \\vec{S}_{\\mathrm{up}}, \\vec{S}_{\\mathrm{down}} $）上的电场方向与表面的法向垂直，侧面（$ \\vec{S}_{\\mathrm{side}} $）上各点的电场大小相等且方向与 $ \\vec{S}_{\\mathrm{side}} $ 法向平行。因此，由高斯定理：\n\n$$\n\\begin{aligned}\n&\\iint_{\\vec{S}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\iint_{\\vec{S}_{\\mathrm{up}}+\\vec{S}_{\\mathrm{down}}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}+\\iint_{\\vec{S}_{\\mathrm{side}}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\frac{Q_{\\mathrm{in}}}{\\varepsilon_{0}}\\\\\n&\\Rightarrow 0 + 2\\pi r h E = \\frac{Q_{\\mathrm{in}}}{\\varepsilon_{0}}\\\\\n&\\Rightarrow E = \\frac{Q_{\\mathrm{in}}}{2\\pi\\varepsilon_{0} r h}\n\\end{aligned}\n$$\n\n1. 当 $ r < R $ 时，$ Q_{\\mathrm{in}} = 0 $，故 $ E = 0 $\n\n2. 当 $ r > R $ 时，$ Q_{\\mathrm{in}} = 2\\pi R h \\sigma_{e} $\n\n$$\nE = \\frac{2\\pi R h \\sigma_{e}}{2\\pi \\varepsilon_{0} r h} = \\frac{\\sigma_{e} R}{\\varepsilon_{0} r}\n$$\n\n3. 当 $ r \\rightarrow R^+ $ 时（即在无限贴近圆柱面外表面的地方），\n\n$$\nE \\rightarrow \\frac{\\sigma_{e}}{\\varepsilon_{0}}\n$$\n\n该结果与带电球面的外表面附近的电场强度一致。电场在圆柱面内外两侧发生了从 0 到 $ \\frac{\\sigma_{e}}{\\varepsilon_{0}} $ 的突变。"
+    },
+    {
+        "question_id": "EX_012",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求无限大带电平板（电荷面密度 $ \\sigma_{e} $）产生的电场 $ \\vec{E}(z) $",
+        "answer": "解:\n\n由对称性，平板外任意一点的电场的方向应当与平板垂直，且在与平板平行的平面上各点的电场强度应当相等。如图，以 P 点为原型作平行于平板的一个圆 S，并以 S 为底作一个高度为 2z 的圆柱，圆柱的另一个底面在平板的另一侧。对圆柱体表面应用高斯定理：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_751_903_1026_1122.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n $$ \\begin{aligned}&\\iint\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\iint_{\\vec{S}_{left}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}+\\iint_{\\vec{S}_{right}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}+\\iint_{\\vec{S}_{side}}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=\\frac{Q_{in}}{\\varepsilon_{0}}\\\\ &\\Rightarrow ES+ES+0=\\frac{\\sigma_{e}S}{\\varepsilon_{0}}\\\\ &\\Rightarrow E=\\frac{\\sigma_{e}}{2\\varepsilon_{0}}\\\\ \\end{aligned} $$ \n\n即：\n\n $$ \\vec{E}(z)=\\begin{cases}\\frac{\\sigma_{e}}{2\\varepsilon_{0}}\\hat{z},&z>0,\\\\-\\frac{\\sigma_{e}}{2\\varepsilon_{0}}\\hat{z},&z<0.\\end{cases} $$ \n\n该电场在 z = 0 处不连续。"
+    },
+    {
+        "question_id": "EX_013",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "均匀带电球体（半径 R，体电荷密度 $ \\rho_{e} $）内挖掉一个半径为 r 的空腔，求空腔内的电场。",
+        "answer": "解:\n\n如图所示，由叠加原理，该带电体系可以看成一个完整的半径为 R、体电荷密度 $ \\rho_{e} $ 的大带电球和一个半径为 r、体电荷密度 $ -\\rho_{e} $ 的小带电球的叠加。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_755_179_1022_434.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n由例2.10可知，均匀带电球在其内部的电场为：\n\n $$ \\vec{E}=\\frac{q\\vec{r}}{4\\pi\\varepsilon_{0}R^{3}}=\\frac{\\rho_{e}\\vec{r}}{3\\varepsilon_{0}} $$ \n\n因此，大带电球和小带电球在 P 点产生的电场分别为：\n\n $$ \\vec{E}_{+}=\\frac{\\rho_{e}\\vec{r}_{1}}{3\\varepsilon_{0}} $$ \n\n $$ \\vec{E}_{-}=\\frac{-\\rho_{e}\\vec{r}_{2}}{3\\varepsilon_{0}} $$ \n\n两者矢量叠加便得到了 P 点总的电场强度：\n\n $$ \\vec{E}=\\vec{E}_{+}+\\vec{E}_{-}=\\frac{\\rho_{e}\\vec{r}_{1}}{3\\varepsilon_{0}}+\\frac{-\\rho_{e}\\vec{r}_{2}}{3\\varepsilon_{0}}=\\frac{\\rho_{e}(\\vec{r}_{1}-\\vec{r}_{2})}{3\\varepsilon_{0}}=\\frac{\\rho_{e}\\vec{a}}{3\\varepsilon_{0}} $$ \n\n即：空腔内的电场是均匀电场，方向与两圆心组成的矢量同向（ $ \\vec{a}=O\\vec{O}' $），大小是 $ \\frac{\\rho_{e}a}{3\\varepsilon_{0}} $。\n\n上述结论也可以应用到两个半径相同、带等量异号的电荷的球有部分重叠的情况，如下图左图所示，两球的重叠部分净电荷密度为 0，该部分的空间内的电场为：\n\n $$ \\vec{E}=\\frac{\\rho_{e}\\vec{a}}{3\\varepsilon_{0}} $$ \n\n当两个球之间的距离逐渐缩小时，重叠部分（电荷空腔）的体积逐渐增大，此时空腔内的电场依然是均匀场。当两个球无限靠近后近似变成一个球时，这个时候只有球的表面有电荷分布，球内部没有电荷且电场为均匀场。如下面右图所示，球表面带电部分的“壁厚”与该处的θ角的关系是 $ d = a \\cos \\theta $"
+    },
+    {
+        "question_id": "EX_014",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "同例2.6，求如图所示的均匀带电细圆环（半径 R，总电荷 q）在其轴线上任意一点  $ P(z) $ 处的电场强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_749_539_1024_716.jpg\" alt=\"Image\" width=\"23%\" /></div>",
+        "answer": "如图所示，将带电圆环分成无限个点电荷 dq，该点电荷的电场在 P 点的电势为：\n\n $$ \\mathrm{d}U(z)=\\frac{\\mathrm{d}q}{4\\pi\\varepsilon_{0}r} $$ \n\n因此，整个带电圆环产生的电场在 P 点的电势为：\n\n $$ U(z)=\\int\\mathrm{d}U=\\int_{0}^{q}\\frac{\\mathrm{d}q}{4\\pi\\varepsilon_{0}r}=\\frac{q}{4\\pi\\varepsilon_{0}r}=\\frac{q}{4\\pi\\varepsilon_{0}\\sqrt{R^{2}+z^{2}}} $$ \n\n由对称性，P 点的电场方向指向 z 方向，且：\n\n $$ E_{z}=-\\frac{\\partial U}{\\partial z}=\\frac{qz}{4\\pi\\varepsilon_{0}(R^{2}+z^{2})^{3/2}} $$ \n\n该结果与例2.6中直接通过叠加原理求电场得到的结果相同。"
+    },
+    {
+        "question_id": "EX_015",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "求电偶极子在远点的电势。",
+        "answer": "如图所示，由叠加原理，电偶极子在 P 点的电势等于正负电荷在 P 点的电势之和：\n\n $$ \\begin{aligned}U(\\vec{\\mathbf{r}})&=U_{+}(\\vec{\\mathbf{r}})+U_{-}(\\vec{\\mathbf{r}})\\\\&=\\frac{q}{4\\pi\\varepsilon_{0}}\\bigg(\\frac{1}{r_{+}}-\\frac{1}{r_{-}}\\bigg)\\end{aligned} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_752_1216_1031_1471.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n将  $ r_{+} $,  $ r_{-} $用三角函数表示，并取  $ l/r \\ll 1 $ 时的泰勒展开后的一次项，可得：\n\n $$ \\begin{aligned}U(\\vec{r})&=\\frac{q}{4\\pi\\varepsilon_{0}}\\Big[(r^{2}+(\\frac{l}{2})^{2}-rl\\cos\\theta)^{-\\frac{1}{2}}-(r^{2}+(\\frac{l}{2})^{2}+rl\\cos\\theta)^{-\\frac{1}{2}}\\Big]\\\\&=\\frac{q}{4\\pi\\varepsilon_{0}r}\\Big[(1+(\\frac{l}{2r})^{2}-\\frac{l}{r}\\cos\\theta)^{-\\frac{1}{2}}-(1+(\\frac{l}{2r})^{2}+\\frac{l}{r}\\cos\\theta)^{-\\frac{1}{2}}\\Big]\\\\&\\approx\\frac{q}{4\\pi\\varepsilon_{0}r}\\Big[(1+\\frac{l}{2r}\\cos\\theta)-(1-\\frac{l}{2r}\\cos\\theta)\\Big] = \\frac{q l \\cos\\theta}{4\\pi\\varepsilon_{0} r^2}\\end{aligned} $$ \n\n引入电偶极矩 $\\vec{p} = q \\vec{l}$，其中方向从负电荷指向正电荷，则上式可写为：\n\n$$ U(\\vec{r}) = \\frac{1}{4\\pi\\varepsilon_0} \\frac{\\vec{p} \\cdot \\hat{r}}{r^2} $$"
+    },
+    {
+        "question_id": "EX_016",
+        "type": "数值计算与概念分析",
+        "difficulty": "中等",
+        "question": "一个面电荷密度为 $ \\sigma_{0} $ 的无限大绝缘板旁边，放置了一个与之平行的无限大的原本不带电的导体平板。\n\n1. 求静电平衡后导体板两个表面上的面电荷密度。\n\n2. 若导体平板接地，静电平衡后其两个表面上的电荷又该如何分布？\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_874_686_1037_849.jpg\" alt=\"Image\" width=\"13%\" /></div>",
+        "answer": "1. 如右图所示，由对称性，静电平衡后导体平板两侧的电荷一定是均匀分布，设两侧面电荷密度分别为 $ \\sigma_{1} $ 和 $ \\sigma_{2} $。由于导体板原本不带电，由电荷守恒，有：\n\n$$\n\\sigma_{1} + \\sigma_{2} = 0\n$$\n\n此外，由静电平衡，我们知道导体内部电场为 0，而导体内部的电场是面电荷 $ \\sigma_{0}, \\sigma_{1}, \\sigma_{2} $ 在导体内部产生的电场的和，即：\n\n$$\n0 = E_{0} + E_{1} + E_{2} = \\frac{\\sigma_{0}}{2\\varepsilon_{0}} + \\frac{\\sigma_{1}}{2\\varepsilon_{0}} - \\frac{\\sigma_{2}}{2\\varepsilon_{0}}\n$$\n\n联合求解上述两式，可得：\n\n$$\n\\sigma_{1} = -\\frac{\\sigma_{0}}{2}, \\quad \\sigma_{2} = \\frac{\\sigma_{0}}{2}\n$$\n\n2. 若导体平板接地，则其电势被固定为零，且可以与大地交换电荷。此时，导体靠近绝缘板的一侧仍会感应出负电荷，但由于接地，远离绝缘板的一侧的正电荷会被大地中和（流入大地），因此该侧电荷密度变为 0。最终，只有靠近绝缘板的一侧保留感应电荷，其面电荷密度为 $ \\sigma_{1} = -\\sigma_{0} $，而另一侧 $ \\sigma_{2} = 0 $。"
+    },
+    {
+        "question_id": "EX_017",
+        "type": "数值计算与推导题",
+        "difficulty": "中等",
+        "question": "如下图所示，将一个不带电的导体球放入一个均匀外场 $ \\vec{E} $ 中，求静电平衡后导体球表面电荷分布。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_319_285_873_611.jpg\" alt=\"Image\" width=\"46%\" /></div>",
+        "answer": "解:\n\n由静电平衡，我们知道导体球内部电场为零，而其内部电场等于外场 $ \\vec{E} $ 和其自身的表面电荷产生的电场的矢量和，这意味着表面电荷在球内产生的电场为 $ -\\vec{E} $，是个均匀电场。那什么样的球面电荷分布会在球内部产生均匀电场呢？在第二章中的例2.14的讨论中我们提到，对于形如 $ \\cos\\theta $ 的球面电荷分布，其在球内部产生的电场是一个均匀电场。不妨假设球面电荷的面电荷密度分布为：\n\n$$\n\\sigma_{e}(\\vec{\\boldsymbol{r}})=\\sigma_{0}\\cos\\theta\n$$\n\n我们来计算一下这样一个面电荷在球心产生的电场强度。由电荷分布的对称性，球心的电场强度必然与 z 轴（即 $ \\vec{E} $ 所在的轴）平行，球面上一个面元在球心产生的电场在 z 轴的分量为：\n\n$$\n\\mathrm{d}E_{z}=-\\frac{\\mathrm{d}q}{4\\pi\\varepsilon_{0}r^{2}}\\cos\\theta=-\\frac{\\sigma\\mathrm{d}S}{4\\pi\\varepsilon_{0}r^{2}}\\cos\\theta\n$$\n\n其中：\n\n$$\n\\sigma=\\sigma_{0}\\cos\\theta,\\quad\\mathrm{d}S=r^{2}\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi\n$$\n\n因此，\n\n$$\n\\mathrm{d}E_{z}=-\\frac{\\sigma\\mathrm{d}S}{4\\pi\\varepsilon_{0}r^{2}}\\cos\\theta=-\\frac{\\sigma_{0}}{4\\pi\\varepsilon_{0}}\\cos^{2}\\theta\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi\n$$\n\n积分可得：\n\n$$\n\\begin{aligned}E_{z}&=\\int_{0}^{2\\pi}\\int_{0}^{\\pi}-\\frac{\\sigma_{0}}{4\\pi\\varepsilon_{0}}\\cos^{2}\\theta\\sin\\theta\\mathrm{d}\\theta\\mathrm{d}\\phi\\\\&=2\\pi\\int_{0}^{\\pi}-\\frac{\\sigma_{0}}{4\\pi\\varepsilon_{0}}\\cos^{2}\\theta\\sin\\theta\\mathrm{d}\\theta\\\\&=-\\frac{\\sigma_{0}}{2\\varepsilon_{0}}\\int_{0}^{\\pi}\\cos^{2}\\theta\\sin\\theta\\mathrm{d}\\theta\\end{aligned}\n$$\n\n令 $ u = \\cos\\theta $，则 $ \\mathrm{d}u = -\\sin\\theta\\mathrm{d}\\theta $，积分变为：\n\n$$\n\\int_{1}^{-1} u^{2} (-\\mathrm{d}u) = \\int_{-1}^{1} u^{2}\\mathrm{d}u = \\frac{2}{3}\n$$\n\n因此，\n\n$$\nE_z = -\\frac{\\sigma_0}{2\\varepsilon_0} \\cdot \\frac{2}{3} = -\\frac{\\sigma_0}{3\\varepsilon_0}\n$$\n\n由于该电场应等于 $ -E $（以抵消外场），即：\n\n$$\n-\\frac{\\sigma_0}{3\\varepsilon_0} = -E \\quad \\Rightarrow \\quad \\sigma_0 = 3\\varepsilon_0 E\n$$\n\n故导体球表面电荷密度分布为：\n\n$$\n\\sigma(\\theta) = 3\\varepsilon_0 E \\cos\\theta\n$$"
+    },
+    {
+        "question_id": "EX_018",
+        "type": "概念辨析与推导题",
+        "difficulty": "中等",
+        "question": "一导体内部有一空腔，求静电平衡后导体内表面的总电荷 $ Q_{in} $ 及面电荷密度 $ \\sigma_{in} $，以及空腔内部的电场强度 $ \\vec{E} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_748_684_1029_892.jpg\" alt=\"Image\" width=\"23%\" /></div>",
+        "answer": "如右图所示，在导体内部取一高斯面 S 使其包围导体内表面，静电平衡时导体内部电场强度处处为零，因此，由高斯定理：\n\n$$ Q_{\\mathrm{in}}=\\varepsilon_{0}\\iint_{S}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=0 $$\n\n即导体内表面总电荷为零。\n\n下面我们再来分析空腔内部的电场，我们判定，空腔内部电场强度必定处处为零，这是因为，空腔内没有任何电荷，而电场线只能从正电荷或无穷远处出发，到负电荷或无穷远处，因此，如果空腔内有场强不为零的电场，其电场线必定穿过整个空腔从导体内表面的一点 A 到导体内表面的另一个点 B，如果这样一条电场线存在，那么点 A 的电势必定大于点 B 的电势： $ U_A - U_B = \\int \\vec{E} \\cdot d\\vec{l} > 0 $，这与静电平衡时导体是个等势体矛盾，因此空腔内部电场强度处处为零。\n\n由于空腔内和导体内电场强度都处处为零，因而导体的内表面的面电荷密度也必然处处为零。这是因为，在导体内表面上取任意一个面元 $ dS_{0} $，取一个穿过 $ dS_{0} $ 的上下底面分别等于 $ dS_{0} $ 的面积的圆柱体，设该圆柱体的表面为 S，则由高斯定理：\n\n$$ \\sigma_{in}\\mathrm{d}S_{0}=\\mathrm{d}q_{0}=\\varepsilon_{0}\\iint_{S}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=0 $$\n\n由于 $ dS_{0} $ 可以任意取，因此 $ \\sigma_{in} $ 必定为零。\n\n值得注意的是，上面的分析过程，完全与导体所处的外部电场环境无关，也就是说，不管外部电场环境如何，导体内部以及空腔内部电场为零、导体内表面无电荷这些结论依然成立，也就是导体的外表面的电荷在导体外表面以内的空间产生的电场完美地与外界电场相互抵消了。这一现象，也被称为静电屏蔽现象。利用这一现象，我们经常在一些需要被保护免受外界电场干扰的物体上，扰的仪器外面加上金属罩子，也称为法拉第笼（Faraday cage）。"
+    },
+    {
+        "question_id": "EX_019",
+        "type": "数值计算与高斯定理应用",
+        "difficulty": "基础",
+        "question": "如图所示，一导体内部有一空腔，空腔内有一电荷 Q，求静电平衡后导体内表面的总电荷 $ Q_{in} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_755_223_1028_428.jpg\" alt=\"Image\" width=\"22%\" /></div>",
+        "answer": "如图取一个在导体内的闭合曲面 S 使其包围导体内表面，静电平衡时导体内部电场强度处处为零，因此，由高斯定理：\n\n$$ Q_{\\mathrm{in}}+Q=\\varepsilon_{0}\\iint_{S}\\vec{E}\\cdot\\mathrm{d}\\vec{S}=0 $$\n\n即：导体内表面的总电荷为 $ Q_{in} = -Q $。"
+    },
+    {
+        "question_id": "EX_020",
+        "type": "概念辨析与电荷分布分析",
+        "difficulty": "中等",
+        "question": "同上述例3.5，但是导体板不接地，且净电荷为零，请分析导体板两侧电荷分布情况。",
+        "answer": "若导体板不接地，为了使导体板所在的平面处于等势面，依然需要如上述例题中求得的感应负电荷：\n\n$$ \\sigma_{e}(\\vec{\\mathbf{r}})=\\frac{-q a}{2\\pi(r^{2}+a^{2})^{3/2}} $$\n\n其总量为 -q，且这些感应负电荷分布在导体板靠近 q 的一侧，这些感应负电荷与 q 形成的带电体系产生的电场在导体板上电势为零。\n\n但是，由于导体板不接地且净电荷为零，所以必然有另外总量为 q 的正电荷分布在导体板两侧。这些正电荷在导体板接地时会被 “排斥” 到大地中去；在导体板不接地时，正电荷的分布应该使得正电荷产生的电场在导体内部是个等势体，很显然这要求正电荷在导体板两侧对称分布，且由于导体外面的电荷 q 的排斥作用，导体板上的正电荷面密度应该是中间小外围大，此时，若导体板面积无限大，正电荷的面电荷密度趋近于零。\n\n因而，若导体板不接地且净电荷为零，其两侧面电荷分布将如下图所示，其等价于上一例题求解得出的右侧的负电荷分布，加上左右对称的正电荷分布。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_387_481_794_625.jpg\" alt=\"Image\" width=\"34%\" /></div>"
+    },
+    {
+        "question_id": "EX_021",
+        "type": "数值计算与镜像法应用",
+        "difficulty": "困难",
+        "question": "如图，在一个半径为 R 的接地导体球外距离球心为 a 的地方有一个点电荷 Q。\n\n1. 求导体球外的电场；\n\n2. 求导体球面的面电荷密度和总电荷；\n\n3. 若导体球不接地且总电荷为零，球外电场、球面电荷又如何分布？\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_747_950_1034_1154.jpg\" alt=\"Image\" width=\"24%\" /></div>",
+        "answer": "1. 上文提到，两个符号相反、电荷量绝对值不相等的电荷系统的电势为零的等势面是一个球面，为此，我们取一镜像电荷 q，如右图所示，设它位于球心与 Q 的连线上且与球心的距离为 b，则由 Q 和 q 产生的电场在 P 点的电势为：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_750_170_1032_371.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n$$ U=\\frac{1}{4\\pi\\varepsilon_{0}}\\bigg(\\frac{Q}{r_{a}}+\\frac{q}{r_{b}}\\bigg) $$\n\n其中，$ r_{a}, r_{b} $ 分别为 P 到 Q, q 的距离。令 U = 0，得：\n\n$$ \\frac{Q}{r_{a}}+\\frac{q}{r_{b}}=0 $$\n\n将任意两个特殊点代入上式（如 P 位于 x 轴上的两个点），可得：\n\n$$ \\frac{Q}{a-R}+\\frac{q}{R-b}=0 $$\n\n$$ \\frac{Q}{a+R}+\\frac{q}{R+b}=0 $$\n\n解得：\n\n$$ b=\\frac{R^{2}}{a},\\quad q=-\\frac{R}{a}Q $$\n\n事实上，将上述 b, q 的值代入 U = 0 的等势面的表达式（3.40式），可得：\n\n$$ \\begin{aligned}&\\frac{Q}{\\sqrt{(x-a)^{2}+y^{2}+z^{2}}}-\\frac{R}{a}\\frac{Q}{\\sqrt{(x-b)^{2}+y^{2}+z^{2}}}=0\\\\&\\Rightarrow a\\sqrt{(x-b)^{2}+y^{2}+z^{2}}=R\\sqrt{(x-a)^{2}+y^{2}+z^{2}}\\\\&\\Rightarrow a^{2}\\Big[(x-b)^{2}+y^{2}+z^{2}\\Big]=R^{2}\\Big[(x-a)^{2}+y^{2}+z^{2}\\Big]\\\\&\\Rightarrow(a^{2}-R^{2})(x^{2}+y^{2}+z^{2})\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_022",
+        "type": "数值计算与概念应用",
+        "difficulty": "中等",
+        "question": "如图所示，有一在 z 方向均匀极化的介质球，其内部极化强度矢量为  $ \\vec{P} $，求球表面的极化面电荷密度  $ \\sigma_{e}^{\\prime} $ 和球内各点的退极化场。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_787_169_1035_347.jpg\" alt=\"Image\" width=\"20%\" /></div>",
+        "answer": "球表面任意一点的极化面电荷密度为：\n\n $$ \\sigma_{e}^{\\prime}=\\vec{P}\\cdot\\vec{n}=P\\cos\\theta $$ \n\n其中，θ 是该点在球坐标系中的 θ 坐标值。可知该面电荷分布为余弦分布，在例3.2我们曾经计算过，遵循余弦分布的球面面电荷其在球内产生的电场是个均匀场，因而我们可以直接套用例3.2的计算结果，该例题中  $ \\sigma = 3\\varepsilon_0E\\cos\\theta $ 的面电荷产生的均匀场的大小为 -E（负号表示沿 -z 方向）；因而本题中  $ \\sigma_e' = P\\cos\\theta $ 的极化面电荷在球内产生的退极化场应为：\n\n $$ \\vec{E}^{\\prime}=-\\frac{\\vec{P}}{3\\varepsilon_{0}} $$ \n\n负号表示退极化场与极化强度矢量方向相反。"
+    },
+    {
+        "question_id": "EX_023",
+        "type": "数值计算与场论应用",
+        "difficulty": "困难",
+        "question": "如图所示，有一个半径为  $ R $ 的非均匀极化介质球，已知其内部的极化强度矢量大小处处相同，但是方向处处沿着  $ \\hat{r} $ 方向，即： $ \\vec{P} = P \\hat{r} $，求球面极化面电荷密度  $ \\sigma_e' $ 和球内极化体电荷密度  $ \\rho_e' $，以及极化电荷在球内和球外产生的电场  $ \\vec{E}' $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_789_772_1031_1006.jpg\" alt=\"Image\" width=\"20%\" /></div>",
+        "answer": "球表面任意一点的极化面电荷密度为：\n\n $$ \\sigma_{e}^{\\prime}=\\vec{P}\\cdot\\vec{n}=P $$ \n\n球内部任意一点的极化体电荷密度为：\n\n $$ \\rho_{e}^{\\prime}=-\\nabla\\cdot\\vec{\\boldsymbol{P}}=-P\\nabla\\cdot\\hat{\\boldsymbol{r}}=-P\\left[\\frac{1}{r^{2}}\\frac{\\partial(r^{2}\\cdot1)}{\\partial r}\\right]=-\n\\frac{2P}{r} $$ \n\n下面我们计算极化电荷产生的电场。由对称性，极化电荷产生的电场在同一半径 r 处大小应该处处相等，且方向均与  $ \\vec{r} $ 方向平行。因此，选取半径为 r 的球面作为高斯面，由高斯定理可得：\n\n $$ E(r)=\\frac{Q^{\\prime}}{4\\pi\\varepsilon_{0}r^{2}} $$ \n\n其中  $ Q' $ 为半径为 r 的球内所有极化电荷的总量：\n\n1. 当 r < R 时，\n\n $$ Q^{\\prime}=\\iiint\\rho_{e}^{\\prime}\\mathrm{d}V=\\int_{0}^{r}-\\frac{2P}{r}4\\pi r^{2}\\mathrm{d}r=-4\\pi r^{2}P\\quad\\Rightarrow\\quad\\vec{E}(\\vec{r})=-\\frac{\\vec{P}}{\\varepsilon_{0}} $$ \n\n2. 当 r > R 时，\n\n $$ Q^{\\prime}=Q^{\\prime}_{ 体 }+Q^{\\prime}_{ 面 }=-4\\pi R^{2}P+4\\pi R^{2}P=0\\qquad\\Rightarrow\\qquad\\vec{E}(\\vec{r})=0 $$"
+    },
+    {
+        "question_id": "EX_024",
+        "type": "数值计算与概念推导综合题",
+        "difficulty": "中等",
+        "question": "如图所示，两带电平板上的电荷在其内部产生的均匀电场为  $ \\vec{E}_{0} $，现在在其内部插入各向同性线性均匀电介质，已知电介质的电极化率为  $ \\chi_{e} $，求插入平板后：电介质表面的面电荷密度  $ \\sigma' $，极化强度矢量  $ \\vec{P} $，退极化场  $ \\vec{E}' $ 以及平板之间总电场  $ \\vec{E} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_876_455_1029_733.jpg\" alt=\"Image\" width=\"12%\" /></div>",
+        "answer": "解:\n\n如图所示，由极化面电荷与  $ \\vec{P} $ 的关系，可知介质右表面极化面电荷密度为正，左表面极化面电荷密度为负，且：\n\n $$ \\sigma_{+}^{\\prime}=-\\sigma_{-}^{\\prime}=P=\\sigma^{\\prime} $$ \n\n由高斯定理易得出，该极化面电荷在介质内部产生的电场为：\n\n $$ \\vec{E}^{\\prime}=-\\frac{\\sigma^{\\prime}}{\\varepsilon_{0}}\\hat{z}=-\\frac{\\vec{P}}{\\varepsilon_{0}} $$ \n\n负号表示 E 与 P 方向相反。由于外加电场  $ E_0 $ 是均匀场，且介质为各向同性线性均匀介质，因此  $ \\vec{P} $ 也是各处相等，因而介质内部极化体电荷密度  $ \\rho' = -\\nabla \\cdot \\vec{P} = 0 $。因此，上述  $ \\vec{E}' $ 便是所有极化电荷产生的电场之和。根据极化强度矢量  $ \\vec{P} $ 与总电场之间的关系，可知介质内  $ \\vec{P} $ 为：\n\n $$ \\vec{P}=\\chi_{e}\\varepsilon_{0}\\vec{E}=\\chi_{e}\\varepsilon_{0}(\\vec{E}_{0}+\\vec{E}^{\\prime})=\\chi_{e}\\varepsilon_{0}\\left(\\vec{E}_{0}-\\frac{\\vec{P}}{\\varepsilon_{0}}\\right) $$ \n\n求解上式可得：\n\n $$ \\vec{P}=\\frac{\\chi_{e}}{1+\\chi_{e}}\\varepsilon_{0}\\vec{E}_{0} $$ \n\n因而有：\n\n $$ \\sigma^{\\prime}=P=\\frac{\\chi_{e}}{1+\\chi_{e}}\\varepsilon_{0}E_{0} $$ \n\n $$ \\vec{E}^{\\prime}=-\\frac{\\vec{P}}{\\varepsilon_{0}}=-\\frac{\\chi_{e}}{1+\\chi_{e}}\\vec{E}_{0} $$ \n\n $$ \\vec{E}=\\vec{E}_{0}+\\vec{E}^{\\prime}=\\frac{1}{1+\\chi_{e}}\\vec{E}_{0} $$ \n\n由于通常情况下  $ \\chi_{e} > 0 $，因而由上式结果可知，由于电介质的存在，平行板之间的总电场被减弱了，即  $ E < E_{0} $。\n\n我们把  $ 1 + \\chi_{e} $ 称为介质的相对介电常数，记作  $ \\varepsilon_{r} $\n\n $$ \\varepsilon_{r}=1+\\chi_{e} $$ \n\n则对于上述内部有介质的平行板电容器，其内部的电场为：\n\n $$ \\vec{E}=\\frac{\\vec{E}_{0}}{\\varepsilon_{r}} $$ \n\n而介质的相对介电常数与真空介电常数的乘积，也称为介质的介电常数，记作  $ \\varepsilon $\n\n $$ \\varepsilon=\\varepsilon_{r}\\varepsilon_{0} $$"
+    },
+    {
+        "question_id": "EX_025",
+        "type": "数值计算与概念应用",
+        "difficulty": "中等",
+        "question": "如图所示，一个半径为 $ R $、带电量为 $ q $ 的金属球浸在（无穷大体积的）介质油中，已知介质油为各向同性线性均匀介质，介电常数为 $ \\varepsilon $，求：金属球外的总电场 $ \\vec{E} $ 分布，以及贴近金属球表面的油面上的极化面电荷密度 $ \\sigma' $，以及油内的极化体电荷密度 $ \\rho' $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_832_1167_1035_1365.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+        "answer": "如图所示，在金属球外取一半径为 $ r $ 、与金属球同心的球面 $ S $ ，由对称性，球面 $ S $ 上各点的电场 $ \\vec{E} $ （及电位移矢量 $ \\vec{D} $ ）大小处处相等，且方向均与 $ \\vec{r} $ 方向平行，由 $ \\vec{D} $ 的高斯定理：\n\n$$ q=\\iint_{S}\\vec{D}\\cdot\\mathrm{d}\\vec{S}=4\\pi r^{2}D $$\n\n得：\n\n$$ \\vec{D}(\\vec{r})=\\frac{q}{4\\pi r^{2}}\\hat{\\boldsymbol{r}} $$\n\n由于是各向同性线性介质，可知总电场强度为：\n\n$$ \\vec{E}(\\vec{r})=\\frac{\\vec{D}}{\\varepsilon}=\\frac{q}{4\\pi\\varepsilon r^{2}}\\hat{\\boldsymbol{r}} $$\n\n极化强度矢量 $ \\vec{P} $ 为：\n\n$$ \\vec{P}(\\vec{r})=\\chi_{e}\\varepsilon_{0}\\vec{E}=(\\varepsilon_{r}-1)\\varepsilon_{0}\\vec{E}=(\\varepsilon-\\varepsilon_{0})\\vec{E}=\\frac{q\\left(\\varepsilon-\\varepsilon_{0}\\right)}{4\\pi\\varepsilon r^{2}}\\hat{\\boldsymbol{r}} $$\n\n贴近金属表面的油面上的极化面电荷密度为：\n\n$$ \\sigma^{\\prime}=\\vec{P}(\\vec{R})\\cdot\\vec{n}=\\vec{P}(\\vec{R})\\cdot(-\\hat{\\boldsymbol{r}})=-\\frac{q(\\varepsilon-\\varepsilon_{0})}{4\\pi\\varepsilon R^{2}} $$\n\n油内的极化体电荷密度为（参见2.63式）：\n\n$$ \\rho^{\\prime}=-\\nabla\\cdot\\vec{\\boldsymbol{P}}=-\\frac{q(\\varepsilon-\\varepsilon_{0})}{4\\pi\\varepsilon}\\nabla\\cdot\\frac{\\hat{\\boldsymbol{r}}}{r^{2}}=-\\frac{q(\\varepsilon-\\varepsilon_{0})}{4\\pi\\varepsilon}4\\pi\\delta(\\vec{\\boldsymbol{r}})=-\\frac{q(\\varepsilon-\\varepsilon_{0})}{\\varepsilon}\\delta(\\vec{\\boldsymbol{r}}) $$\n\n由于油内 $ r > 0 $，因而 $ \\rho' = 0 $。"
+    },
+    {
+        "question_id": "EX_026",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "### 例 5.1\n\n一半径为 $ R $，带电量为 $ Q $ 的均匀带电球体，求其静电能。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_832_565_1035_764.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+        "answer": "解:\n\n如图所示，将带电球体分成多个同心薄球壳，设半径为 $ r $ 处的电势为 $ U(r) $，内外半径为 $ r $ 和 $ r + dr $ 的球壳所带电荷为 $ dq $，则该带电球体的静电能为：\n\n$$ W=\\frac{1}{2}\\iiint_{V}U(\\vec{r})\\rho(\\vec{r})\\mathrm{d}V $$ \n\n下面我们来计算 $ U(r) $：由例2.10，我们知道，该均匀带电球产生的电场为：\n\n$$ \\vec{E}(\\vec{r})=\\begin{cases}\\frac{Qr}{4\\pi\\varepsilon_{0}R^{3}}\\hat{\\boldsymbol{r}},&r<R,\\\\\\frac{Q}{4\\pi\\varepsilon_{0}r^{2}}\\hat{\\boldsymbol{r}},&r\\geq R.\\end{cases} $$ \n\n因此，球内部半径为 $ r $ 处的电势为：\n\n$$ \\begin{aligned}U(r)&=\\int_{r}^{R}\\vec{E}\\cdot\\mathrm{d}\\vec{r}+\\int_{R}^{\\infty}\\vec{E}\\cdot\\mathrm{d}\\vec{r}\\\\&=\\int_{r}^{R}\\frac{Qr}{4\\pi\\varepsilon_{0}R^{3}}\\mathrm{d}r+\\int_{R}^{\\infty}\\frac{Q}{4\\pi\\varepsilon_{0}r^{2}}\\mathrm{d}r\\\\&=\\frac{Q(R^{2}-r^{2})}{8\\pi\\varepsilon_{0}R^{3}}+\\frac{Q}{4\\pi\\varepsilon_{0}R}\\\\&=\\frac{Q}{8\\pi\\varepsilon_{0}R^{3}}(3R^{2}-r^{2})\\\\ \\end{aligned} $$ \n\n代入5.10式可得：\n\n$$ \\begin{aligned}W&=\\frac{1}{2}\\int_{0}^{R}\\frac{Q}{8\\pi\\varepsilon_{0}R^{3}}(3R^{2}-r^{2})\\frac{Q}{\\frac{4}{3}\\pi R^{3}}4\\pi r^{2}\\mathrm{d}r\\\\&=\\frac{3Q^{2}}{20\\pi\\varepsilon_{0}R}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_027",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "一半径为 $ R $，带电量为 $ Q $ 的均匀带电球体，利用电场能量密度求其静电能。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_833_167_1035_365.jpg\" alt=\"Image\" width=\"16%\" /></div>",
+        "answer": "解:\n\n如图所示，任意一点电场的能量密度为：\n\n$$ w_{e}=\\frac{1}{2}\\varepsilon_{0}E^{2}=\\begin{cases}\\frac{1}{2}\\varepsilon_{0}\\left(\\frac{Qr}{4\\pi\\varepsilon_{0}R^{3}}\\right)^{2},&r<R,\\\\\\frac{1}{2}\\varepsilon_{0}\\left(\\frac{Q}{4\\pi\\varepsilon_{0}r^{2}}\\right)^{2},&r\\geq R.\\end{cases} $$ \n\n因此，总静电能为：\n\n$$ \\begin{aligned}W&=\\iiint_{V}w_{e}\\mathrm{d}V\\\\&=\\int_{0}^{R}\\frac{1}{2}\\varepsilon_{0}\\left(\\frac{Qr}{4\\pi\\varepsilon_{0}R^{3}}\\right)^{2}4\\pi r^{2}\\mathrm{d}r+\\int_{R}^{\\infty}\\frac{1}{2}\\varepsilon_{0}\\left(\\frac{Q}{4\\pi\\varepsilon_{0}r^{2}}\\right)^{2}4\\pi r^{2}\\mathrm{d}r\\\\&=\\frac{Q^{2}}{8\\pi\\varepsilon_{0}}\\Big(\\int_{0}^{R}\\frac{r^{4}}{R^{6}}\\mathrm{d}r+\\int_{R}^{\\infty}\\frac{1}{r^{2}}\\mathrm{d}r\\Big)\\\\&=\\frac{Q^{2}}{8\\pi\\varepsilon_{0}}\\Big(\\frac{1}{5R}+\\frac{1}{R}\\Big)\\\\&=\\frac{3Q^{2}}{20\\pi\\varepsilon_{0}R}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_028",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求单位长度的同轴电缆的电容。已知电缆内芯导线的半径为 $ R_{1} $，外层导电圆筒的内径为 $ R_{2} $，中间填充了各向同性均匀电介质，介电常数为 $ \\varepsilon $。",
+        "answer": "假设单位长度的内芯导线所带电荷为 $ \\lambda $，则由高斯定理可知，两层导体之间的电场强度为：\n\n $$ E=\\frac{\\lambda}{2\\pi\\varepsilon r} $$ \n\n因此，内芯导线和外层导电圆筒之间的电势差为：\n\n $$ \\Delta U=\\int_{R_{1}}^{R_{2}}E\\mathrm{d}r=\\frac{\\lambda}{2\\pi\\varepsilon}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n所以，单位长度的同轴电缆的电容为：\n\n $$ C=\\frac{\\lambda}{\\Delta U}=\\frac{2\\pi\\varepsilon}{\\ln\\frac{R_{2}}{R_{1}}} $$"
+    },
+    {
+        "question_id": "EX_029",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "已知平行板电容器的电容为 C，求两板间电势差为 U 时电容器储存的能量。",
+        "answer": "则给电容器充电的过程是将正电荷逐渐从负极搬运到正极的过程，在此过程中，两板之间的电势差逐渐增加，电源做的总功为：\n\n $$ W=\\int_{0}^{Q}u\\mathrm{d}q=\\int_{0}^{Q}\\frac{q}{C}\\mathrm{d}q=\\frac{Q^{2}}{2C}=\\frac{1}{2}QU=\\frac{1}{2}CU^{2} $$ \n\n上述电源做的功，便是该电容器储存的能量。该值也与直接使用5.8式计算的结果是一致的。"
+    },
+    {
+        "question_id": "EX_030",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "已知平行板电容器的电容为 $ C $，求两板间电势差为 $ U $ 时电容器储存的能量。",
+        "answer": "则给电容器充电的过程是将正电荷逐渐从负极搬运到正极的过程，在此过程中，两板之间的电势差逐渐增加，电源做的总功为：\n\n$$ W=\\int_{0}^{Q}u\\mathrm{d}q=\\int_{0}^{Q}\\frac{q}{C}\\mathrm{d}q=\\frac{Q^{2}}{2C}=\\frac{1}{2}QU=\\frac{1}{2}CU^{2} $$ \n\n上述电源做的功，便是该电容器储存的能量。该值也与直接使用5.8式计算的结果是一致的。"
+    },
+    {
+        "question_id": "EX_031",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如右图所示，求有限长载流直线导体在 P 点产生的磁场。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_878_870_1035_1183.jpg\" alt=\"Image\" width=\"13%\" /></div>",
+        "answer": "如图，由毕奥-萨伐尔定律，电流元  $ I d \\vec{l} $ 在 P 点产生的磁感应强度为：\n\n $$ \\mathrm{d}\\vec{B}=\\frac{\\mu_{0}I\\mathrm{d}\\vec{l}\\times\\hat{\\boldsymbol{r}}}{4\\pi r^{2}} $$ \n\n$\\mathrm{d} \\vec{B}$ 的方向为垂直纸面向里，大小为：\n\n $$ \\mathrm{d}B=\\frac{\\mu_{0}I\\mathrm{d}l\\sin\\theta}{4\\pi r^{2}}=\\frac{\\mu_{0}I\\mathrm{d}(-r_{0}/\\tan\\theta)\\sin\\theta}{4\\pi(r_{0}/\\sin\\theta)^{2}}\\mathrm{d}\\theta=\\frac{\\mu_{0}I\\sin\\theta}{4\\pi r_{0}}\\mathrm{d}\\theta $$ \n\n因此，\n\n $$ B=\\int\\mathrm{d}B=\\int_{\\theta_{1}}^{\\theta_{2}}\\frac{\\mu_{0}I\\sin\\theta}{4\\pi r_{0}}\\mathrm{d}\\theta=\\frac{\\mu_{0}I}{4\\pi r_{0}}(\\cos\\theta_{1}-\\cos\\theta_{2}) $$ \n\n对于无限长直线电流， $ \\theta_{1}=0,\\quad\\theta_{2}=\\pi $，因而：\n\n $$ B=\\frac{\\mu_{0}I}{2\\pi r_{0}} $$ \n\n可见，无限长线电流产生的磁场与距离成反比，这与无限长线电荷产生的电场随距离的衰减速度一样。而对于半无限长直线电流， $ \\theta_{1}=0,\\quad\\theta_{2}=\\pi/2 $，因而：\n\n $$ B=\\frac{\\mu_{0}I}{4\\pi r_{0}} $$"
+    },
+    {
+        "question_id": "EX_032",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如右图所示，求半径为 R 的圆形载流导线在其轴线上 P 点产生的磁场。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_832_292_1035_442.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+        "answer": "如图，电流元  $ I d\\vec{l} $ 在 P 点产生的磁场为：\n\n $$ \\mathrm{d}\\vec{B}=\\frac{\\mu_{0}I\\mathrm{d}\\vec{l}\\times\\vec{r}}{4\\pi r^{3}}=\\mathrm{d}\\vec{B}_{\\perp}+\\mathrm{d}\\vec{B}_{\\parallel}=\\frac{\\mu_{0}I\\mathrm{d}\\vec{l}\\times\\overrightarrow{O P}}{4\\pi r^{3}}+\\frac{\\mu_{0}I\\mathrm{d}\\vec{l}\\times\\overrightarrow{Q O}}{4\\pi r^{3}} $$ \n\n因而，\n\n $$ \\vec{B}=\\vec{B}_{\\perp}+\\vec{B}_{\\parallel}=\\int\\mathrm{d}\\vec{B}_{\\perp}+\\int\\mathrm{d}\\vec{B}_{\\parallel} $$ \n\n由对称性，垂直方向分量  $ \\mathrm{d}\\vec{B}_{\\perp} $ 在圆周上相对的两处互相取消，即  $ \\vec{B}_{\\perp} = \\int \\mathrm{d}\\vec{B}_{\\perp} = 0 $，因此：\n\n $$ B=B_{\\parallel}=\\int\\frac{\\mu_{0}I\\mathrm{d}\\vec{l}\\times\\overrightarrow{QO}}{4\\pi r^{3}}=\\int\\frac{\\mu_{0}IR\\mathrm{d}l}{4\\pi r^{3}}=\\frac{\\mu_{0}IR^{2}}{2r^{3}} $$"
+    },
+    {
+        "question_id": "EX_033",
+        "type": "数值计算与分析题",
+        "difficulty": "中等",
+        "question": "如右图所示为亥姆霍兹（Helmholtz）线圈示意图，它由一对间距等于半径的同轴载流圆线圈组成。求其轴线上的磁场，并分析该线圈产生的磁场在轴线中心附近的变化。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_832_169_1035_353.jpg\" alt=\"Image\" width=\"17%\" /></div>",
+        "answer": "该线圈在轴线上产生的磁场为两个圆形电流产生的磁场的叠加，由上一例题结果，可知：\n\n$$ B=B_{1}+B_{2}=\\frac{\\mu_{0}IR^{2}}{2[R^{2}+(x+\\frac{a}{2})^{2}]^{3/2}}+\\frac{\\mu_{0}IR^{2}}{2[R^{2}+(x-\\frac{a}{2})^{2}]^{3/2}} $$ \n\n为分析其在轴线中心附近的变化情况，将 B 对 x 求导数：\n\n$$ \\frac{\\mathrm{d}B}{\\mathrm{d}x}=-\\frac{3\\mu_{0}IR^{2}}{2}\\left[\\frac{x+\\frac{a}{2}}{[R^{2}+(x+\\frac{a}{2})^{2}]^{5/2}}+\\frac{x-\\frac{a}{2}}{[R^{2}+(x-\\frac{a}{2})^{2}]^{5/2}}\\right] $$ \n\n将 x = 0 代入，可得：\n\n$$ \\left(\\frac{\\mathrm{d}B}{\\mathrm{d}x}\\right)_{x=0}=0 $$ \n\n二阶导数为：\n\n$$ \\frac{\\mathrm{d}^{2}B}{\\mathrm{d}x^{2}}=-\\frac{3\\mu_{0}IR^{2}}{2}\\bigg[\\frac{R^{2}-4(x+\\frac{a}{2})^{2}}{[R^{2}+(x+\\frac{a}{2})^{2}]^{7/2}}+\\frac{R^{2}-4(x-\\frac{a}{2})^{2}}{[R^{2}+(x-\\frac{a}{2})^{2}]^{7/2}}\\bigg] $$ \n\n将 x = 0 代入，可得：\n\n$$ \\left(\\frac{\\mathrm{d}^{2}B}{\\mathrm{d}x^{2}}\\right)_{x=0}=-3\\mu_{0}IR^{2}\\frac{R^{2}-a^{2}}{(R^{2}+a^{2}/4)^{7/2}} $$ \n\n注意到对亥姆霍兹线圈，a = R，因此：\n\n$$ \\left(\\frac{\\mathrm{d}^{2}B}{\\mathrm{d}x^{2}}\\right)_{x=0}=0 $$ \n\n三阶导数为：\n\n$$ \\frac{\\mathrm{d}^{3}B}{\\mathrm{d}x^{3}}=\\frac{3\\mu_{0}IR^{2}}{2}\\bigg[\\frac{(x+\\frac{a}{2})[15R^{2}-20(x+\\frac{a}{2})^{2}]}{[R^{2}+(x+\\frac{a}{2})^{2}]^{9/2}}+\\frac{(x-\\frac{a}{2})[15R^{2}-20(x-\\frac{a}{2})^{2}]}{[R^{2}+(x-\\frac{a}{2})^{2}]^{9/2}}\\bigg] $$"
+    },
+    {
+        "question_id": "EX_034",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "### 例 6.4\n\n如图所示为一个半径为 R 的密绕长直螺线管，其单位长度有 n 匝线圈，求其轴线上任意一点 O 的磁感应强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_782_258_1035_527.jpg\" alt=\"Image\" width=\"21%\" /></div>",
+        "answer": "解:\n\n螺线管在 O 点产生的磁场可以看成多个圆线圈产生的磁场的叠加。如图所示，以 O 点为轴线 z 轴的原点，则由例6.2，位于 z 处长为 dz 的圆线圈在 O 点产生的磁场为：\n\n $$ \\mathrm{dB}=\\frac{\\mu_{0}IR^{2}n\\mathrm{d}z}{2(R^{2}+z^{2})^{3/2}} $$ \n\n因此，O 点的总磁场为：\n\n $$ B=\\int\\mathrm{d}B=\\frac{\\mu_{0}IR^{2}n}{2}\\int_{-l_{1}}^{l_{2}}\\frac{\\mathrm{d}z}{(R^{2}+z^{2})^{3/2}} $$ \n\n令  $ z = R / \\tan \\theta $，则上式积分可化为：\n\n $$ B=\\frac{\\mu_{0}IR^{2}n}{2}\\int_{\\theta_{1}}^{\\theta_{2}}\\frac{-R\\mathrm{d}\\theta/\\sin^{2}\\theta}{R^{3}/\\sin^{3}\\theta}=\\frac{n\\mu_{0}I}{2}(\\cos\\theta_{2}-\\cos\\theta_{1}) $$ \n\n1. 对无限长螺线管， $ \\theta_{1}=\\pi,\\quad\\theta_{2}=0 $ ，因此：\n\n $$ B=\\mu_{0}n I $$ \n\n2. 对半无限长螺线管， $ \\theta_{1}=\\pi/2,\\quad\\theta_{2}=0 $，因此：\n\n $$ B=\\mu_{0}n I/2 $$ \n\n这是无限长螺线管产生的磁场的一半。\n\n对于总长度远大于半径的螺线管，其轴线上中心的磁场可以近似成无限长螺线管的磁场，而其管口上的磁场则可以看成半无限长螺线管的磁场，管口处的磁感应强度是中心处的一半。"
+    },
+    {
+        "question_id": "EX_035",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求无限大平面电流产生的磁场分布（面电流密度为 $ \\vec{K} $）。",
+        "answer": "如图所示，对空间中任意一点 P，过 P 做垂直于电流平面的直线，作为 x 轴，在电流平面上以垂直电流方向为 y 轴。在 y 轴上取关于 O 点对称的两个点 $ O_{1} $ 和 $ O_{2} $，则由无限长线电流产生的磁场的特征易知过 $ O_{1} $ 和 $ O_{2} $ 的两个线电流在 P 点产生的磁场 $ \\vec{B}_{1} $ 和 $ \\vec{B}_{2} $ 的矢量和沿 y 轴方向，即：\n\n$$ B_{x}=B_{z}=0. $$\n\n由对称性，$ B_{y} $ 在电流平面两侧对称的位置应该大小相等，方向相反。如图取一个垂直于电流的矩形回路，该矩形回路关于电流平面对称，长为 l，高为 h，则由安培环路定理：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_748_1078_1033_1324.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_755_1336_1023_1544.jpg\" alt=\"Image\" width=\"22%\" /></div>\n\n\n$$ \\oint\\vec{B}\\cdot\\mathrm{d}\\vec{l}=2B_{y}l=\\mu_{0}I=\\mu_{0}K l\\quad\\Rightarrow\\quad B_{y}=\\frac{\\mu_{0}K}{2} $$ \n\n即：无限大平面电流在其两侧产生的磁场为均匀磁场，且在电流平面两侧大小相等，方向相反（±$ \\hat{y} $方向），其值为：\n\n$$ B=\\frac{\\mu_{0}K}{2} $$"
+    },
+    {
+        "question_id": "EX_036",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求半径为 R 的无限长圆柱形导线产生的磁场（导线内为均匀电流，电流密度为 $ \\vec{J} $）。",
+        "answer": "如图所示，在垂直于电流方向的截面上，取一以圆柱轴线所在位置为圆心的半径为 r 的圆，由对称性，导线内的电流产生的磁场在该圆上各点处处大小相等，且方向沿各点处的圆的切线方向。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_369_701_609_921.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_659_730_815_886.jpg\" alt=\"Image\" width=\"13%\" /></div>"
+    },
+    {
+        "question_id": "EX_037",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求半径为 $ R $ 的无限长圆柱形导线产生的磁场（导线内为均匀电流，电流密度为 $ \\vec{J} $）。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_369_701_609_921.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_659_730_815_886.jpg\" alt=\"Image\" width=\"13%\" /></div>",
+        "answer": "如图所示，在垂直于电流方向的截面上，取一以圆柱轴线所在位置为圆心的半径为 $ r $ 的圆，由对称性，导线内的电流产生的磁场在该圆上各点处处大小相等，且方向沿各点处的圆的切线方向。\n\n由安培环路定理：\n\n$$ \\oint\\vec{B}\\cdot\\mathrm{d}\\vec{l}=2\\pi r B=\\mu_{0}I_{ 内 }\\quad\\Rightarrow\\quad B=\\frac{\\mu_{0}I_{ 内 }}{2\\pi r} $$\n\n当 $ r < R $ 时:\n\n$$ B=\\frac{\\mu_{0}I_{ 内 }}{2\\pi r}=\\frac{\\mu_{0}J\\pi r^{2}}{2\\pi r}=\\frac{\\mu_{0}Jr}{2} $$\n\n当 $ r > R $ 时:\n\n$$ B=\\frac{\\mu_{0}I_{ 内 }}{2\\pi r}=\\frac{\\mu_{0}J\\pi R^{2}}{2\\pi r}=\\frac{\\mu_{0}I}{2\\pi r} $$\n\n这与例6.1中通过直接使用毕奥-萨伐尔定律积分得出的6.23式是一致的。"
+    },
+    {
+        "question_id": "EX_038",
+        "type": "推导题",
+        "difficulty": "困难",
+        "question": "半径为 $ R $ 的无限长圆柱形导线其内部挖掉了一个半径为 $ r $ 的小圆柱空腔，如图所示为其截面示意图，导线内电流密度为 $ \\vec{J} $。求空腔内的磁场分布。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_835_1312_1028_1500.jpg\" alt=\"Image\" width=\"16%\" /></div>",
+        "answer": "该电流产生的磁场可以看成是半径为 $ R $、电流密度为 $ \\vec{J} $ 的圆柱电流产生的磁场与半径为 $ r $、电流密度为 $ -\\vec{J} $ 的圆柱电流产生的磁场的矢量和。\n\n由上一例题，圆柱形电流在其内部产生的磁场由6.69式给出，该式也可以写成：\n\n$$ \\vec{B}=\\frac{\\mu_{0}}{2}\\vec{J}\\times\\vec{r} $$\n\n因此，空腔内任意一点的磁场为：\n\n$$ \\vec{B}=\\vec{B}_{\\vec{j}}+\\vec{B}_{-\\vec{j}}=\\frac{\\mu_{0}}{2}\\vec{J}\\times\\vec{r}_{1}-\\frac{\\mu_{0}}{2}\\vec{J}\\times\\vec{r}_{2}=\\frac{\\mu_{0}}{2}\\vec{J}\\times(\\vec{r}_{1}-\\vec{r}_{2})=\\frac{\\mu_{0}}{2}\\vec{J}\\times\\vec{a} $$\n\n注意到上式给出的 $ \\vec{B} $ 在空腔内部处处大小相等、方向相同，即在空腔中的磁场为均匀磁场。"
+    },
+    {
+        "question_id": "EX_039",
+        "type": "数值计算与概念应用",
+        "difficulty": "中等",
+        "question": "如图所示，有一个半径为 r 的密绕环形螺线管（toroidal solenoid），总匝数为 N，电流为 I，求其内部和外部的磁感应强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_796_432_1031_636.jpg\" alt=\"Image\" width=\"19%\" /></div>",
+        "answer": "管内和管外的磁场均存在轴对称分布，在以垂直于纸面过 O 的轴线上任意一点为圆心的圆周上各点  $ \\vec{B} $ 大小相等，且方向沿圆周的切线方向。\n\n由安培环路定理：\n\n $$ B=\\frac{\\mu_{0}\\sum I}{2\\pi r} $$ \n\n可知，管内磁感应强度为：\n\n $$ B=\\frac{\\mu_{0}NI}{2\\pi r} $$ \n\n若令  $ n=\\frac{N}{2\\pi r} $，则上式与上一例题求得的无穷长螺线管内部的磁感应强度一致。管外磁感应强度为：\n\n $$ B=0 $$"
+    },
+    {
+        "question_id": "EX_040",
+        "type": "数值计算与概念分析结合题",
+        "difficulty": "中等",
+        "question": "如图所示，有一个半径为 $ r $ 的密绕环形螺线管（toroidal solenoid），总匝数为 $ N $，电流为 $ I $，线圈内部有相对磁导率为 $ \\mu_{r} $ 的各向同性线性均匀磁介质，求其内部和外部的磁感应强度。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_794_229_1031_432.jpg\" alt=\"Image\" width=\"19%\" /></div>",
+        "answer": "解:\n\n管内和管外的磁场均存在轴对称分布，在以垂直于纸面过 O 的轴线上任意一点为圆心的圆周上各点 $ \\vec{H} $ 大小相等，且方向沿圆周的切线方向。由安培环路定理：\n\n$$ H=\\frac{\\sum I_{0}}{2\\pi r} $$ \n\n可知，管外的磁场强度 $ \\vec{H} $ 和磁感应强度 $ \\vec{B} $ 均为零。管内磁场强度为：\n\n$$ H=\\frac{NI}{2\\pi r} $$ \n\n对应的管内磁感应强度为：\n\n$$ B=\\mu_{0}\\mu_{r}H=\\frac{\\mu_{0}\\mu_{r}NI}{2\\pi r} $$ \n\n可知，管内的磁感应强度被增加。"
+    },
+    {
+        "question_id": "EX_041",
+        "type": "数值计算与概念辨析",
+        "difficulty": "中等",
+        "question": "有一根无限长永磁棒，其内部磁化强度矢量 $ \\vec{M} $ 为常数且方向与轴向相同（已知），求永磁棒内外的 $ \\vec{H} $ 和 $ \\vec{B} $。",
+        "answer": "由7.36式，可知空间各处 $ \\vec{H} $ 满足如下方程：\n\n $$ \\nabla\\times\\vec{H}=0 $$ \n\n $$ \\nabla\\cdot\\vec{H}=-\\nabla\\cdot\\vec{M}=0 $$ \n\n即 $ \\vec{H} $ 的散度和旋度都为零，$ \\vec{H} $ 相当于没有“源”，因此 $ \\vec{H} $ 处处为零。永磁棒内部的磁感应强度为：\n\n $$ \\vec{B}=\\mu_{0}(\\vec{H}+\\vec{M})=\\mu_{0}\\vec{M} $$ \n\n永磁棒外部的 $ \\vec{B}=0 $。\n\n由此可知，当永磁棒的 $ \\vec{M} $ 与无穷长螺线管的 $ nI $ 相等时，永磁棒产生的 $ \\vec{B} $ 与无穷长螺线管产生的 $ \\vec{B} $ 在各处都等价，两者主要区别在于管内的 $ \\vec{M} $ 和 $ \\vec{H} $ 不同：永磁棒内有 $ \\vec{M} $ 无 $ \\vec{H} $，而无穷长螺线管内有 $ \\vec{H} $ 无 $ \\vec{M} $。\n\n若永磁棒长度有限，则类似于有限长螺线管 $ B < n\\mu_0I $，有限长永磁棒内部的磁感应强度 $ B $ 也小于 $ \\mu_0M $。由7.41式，可知在永磁棒内部的周线上 $ \\vec{H} $ 必然与 $ \\vec{M} $ 和 $ \\vec{B} $ 方向相反。而在有限长永磁棒外部，$ \\vec{B} \\neq 0 $，$ \\vec{M} = 0 $，$ \\vec{H} = \\vec{B}/\\mu_0 $，即永磁棒外部 $ \\vec{H} $ 与 $ \\vec{B} $ 同向。注意到，对于有限长的永磁棒，其内部 $ \\nabla \\cdot \\vec{M} $ 依然为零，因此 $ \\vec{H} $ 的散度和旋度在永磁棒内部和外部依然为零，只不过，在永磁棒的端面，$ \\nabla \\cdot \\vec{M} $ 不为零，因而端面的 $ \\nabla \\cdot \\vec{M} $ 可以看作是 $ \\vec{H} $ 不为零的源头。"
+    },
+    {
+        "question_id": "EX_042",
+        "type": "数值计算与场分布分析",
+        "difficulty": "中等",
+        "question": "如图，半径为  $ R_{1} $ 和  $ R_{3} $ 的无限长共轴圆柱面上分别有沿轴向的大小为 I、方向相反的传导电流，在  $ R_{1} $ 圆柱面内部充满了磁导率为  $ \\mu_{1} $ 的各向同性线性均匀介质， $ R_{1} $ 和  $ R_{3} $ 之间充满了两层磁导率分别为  $ \\mu_{2} $ 和  $ \\mu_{3} $ 的各向同性线性均匀磁介质（两介质之间的分界面的半径为  $ R_{2} $），求空间各处的磁感应强度  $ \\vec{B} $ 和磁场强度  $ \\vec{H} $，以及各介质分界面处的磁化面电流密度  $ K' $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_369_150_821_407.jpg\" alt=\"Image\" width=\"37%\" /></div>",
+        "answer": "设任意一点 P 到轴线的距离为 r，则当介质不存在时（即全部换成真空），P 点的  $ \\vec{B} $ 和  $ \\vec{H} $ 均与该点所在的圆周的切线平行；由于所加的介质的分界面与真空情况下的磁感应强度平行，因此加入介质后 P 点的  $ \\vec{B} $ 和  $ \\vec{H} $ 仍然与该点所在的圆周的切线平行（事实上，本题由简单的电流分布的对称性就可以得出  $ \\vec{B} $ 和  $ \\vec{H} $ 处处与该点所在圆周切线平行且同一圆周上大小处处相等这一结论）。\n\n由  $ \\vec{H} $ 的环路定理，有：\n\n $$ H(\\vec{r})=\\frac{\\sum I_{0}}{2\\pi r}=\\begin{cases}0,&r<R_{1} \\text{ 或 } r>R_{3},\\\\\\frac{I}{2\\pi r},&R_{1}<r<R_{2},\\\\\\frac{I}{2\\pi r},&R_{2}<r<R_{3}.\\end{cases} $$ \n\n $ \\vec{H} $ 的方向与  $ R_{1} $ 处的 I 的方向满足右手定则。由  $ \\vec{B} $ 和  $ \\vec{H} $ 之间的线性关系，有：\n\n $$ B(\\vec{r})=\\mu H=\\begin{cases}0,&r<R_{1} \\text{ 或 } r>R_{3},\\\\\\frac{\\mu_{2}I}{2\\pi r},&R_{1}<r<R_{2},\\\\\\frac{\\mu_{3}I}{2\\pi r},&R_{2}<r<R_{3}.\\end{cases} $$ \n\n接下来计算磁化面电流密度 $ K' $。磁化面电流密度由 $ \\vec{K}' = \\vec{M}_2 \\times \\hat{n} - \\vec{M}_1 \\times \\hat{n} = (\\vec{M}_2 - \\vec{M}_1) \\times \\hat{n} $ 给出，其中 $ \\vec{M} = \\chi_m \\vec{H} = \\left( \\frac{\\mu}{\\mu_0} - 1 \\right) \\vec{H} $。\n\n在 $ r = R_1 $ 处（介质1与介质2交界）：\n- 内侧（$ r < R_1 $）：$ H = 0 \\Rightarrow M_1 = 0 $\n- 外侧（$ R_1 < r < R_2 $）：$ H = \\frac{I}{2\\pi R_1} \\hat{\\phi} \\Rightarrow M_2 = \\left( \\frac{\\mu_2}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_1} \\hat{\\phi} $\n- 法向 $ \\hat{n} $ 指向外（径向向外），即 $ \\hat{n} = \\hat{r} $\n- 因此：\n  $$\n  \\vec{K}'_{R_1} = (\\vec{M}_2 - \\vec{M}_1) \\times \\hat{r} = M_2 \\hat{\\phi} \\times \\hat{r} = -M_2 \\hat{z}\n  = -\\left( \\frac{\\mu_2}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_1} \\hat{z}\n  $$\n\n在 $ r = R_2 $ 处（介质2与介质3交界）：\n- 内侧：$ H = \\frac{I}{2\\pi R_2} \\hat{\\phi} \\Rightarrow M_2 = \\left( \\frac{\\mu_2}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_2} \\hat{\\phi} $\n- 外侧：$ H = \\frac{I}{2\\pi R_2} \\hat{\\phi} \\Rightarrow M_3 = \\left( \\frac{\\mu_3}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_2} \\hat{\\phi} $\n- 法向 $ \\hat{n} = \\hat{r} $\n- 因此：\n  $$\n  \\vec{K}'_{R_2} = (\\vec{M}_3 - \\vec{M}_2) \\times \\hat{r} = (M_3 - M_2) \\hat{\\phi} \\times \\hat{r} = -(M_3 - M_2) \\hat{z}\n  = -\\left( \\frac{\\mu_3 - \\mu_2}{\\mu_0} \\right) \\frac{I}{2\\pi R_2} \\hat{z}\n  $$\n\n在 $ r = R_3 $ 处：外侧 $ H = 0 $，内侧 $ H = \\frac{I}{2\\pi R_3} \\hat{\\phi} $，但注意此处存在传导电流 $ -I $，而磁化面电流仍可类似计算，但由于题目未要求 $ r > R_3 $ 区域的介质（通常为真空），若假设外部为真空（$ \\mu = \\mu_0 $），则：\n- $ M_{\\text{out}} = 0 $\n- $ M_{\\text{in}} = \\left( \\frac{\\mu_3}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_3} \\hat{\\phi} $\n- $ \\vec{K}'_{R_3} = (0 - M_{\\text{in}}) \\times \\hat{r} = -M_{\\text{in}} \\hat{\\phi} \\times \\hat{r} = M_{\\text{in}} \\hat{z} = \\left( \\frac{\\mu_3}{\\mu_0} - 1 \\right) \\frac{I}{2\\pi R_3} \\hat{z} $\n\n综上，各区域的 $ \\vec{B} $、$ \\vec{H} $ 如上分段函数所示，磁化面电流密度在 $ R_1 $、$ R_2 $、$ R_3 $ 处分别为上述表达式。"
+    },
+    {
+        "question_id": "EX_043",
+        "type": "数值计算与场分析综合题",
+        "difficulty": "困难",
+        "question": "如图，半径为 $ R_{1} $ 和 $ R_{2} $ 的无限长共轴圆柱面上分别有沿轴向的大小为 I、方向相反的传导电流，柱面间的空间被均分成四份，其间填充了四种各向同性线性均匀介质，介质分界面与轴线平行，求空间各处的磁感应强度 $ \\vec{B} $ 和磁场强度 $ \\vec{H} $，以及各分界面处的磁化面电流密度 $ K' $ 和传导面电流密度 $ \\vec{K}_{0} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_372_948_818_1201.jpg\" alt=\"Image\" width=\"37%\" /></div>",
+        "answer": "设任意一点 P 与轴线的距离为 r，则当介质不存在时（即全部换成真空），P 点的 $ \\vec{B} $ 和 $ \\vec{H} $ 均与该点所在的圆周的切线平行；由于所加的介质的分界面与真空情况下的磁感应强度垂直，因此加入介质后 P 点的 $ \\vec{B} $ 和 $ \\vec{H} $ 仍然与该点所在的圆周的切线垂直。\n\n由于 $ \\vec{B} $ 的法向分量在介质分界面连续，因此在同一 r 处的圆柱面各点上四种介质内的 $ \\vec{B} $ 处处大小相等（设值为 $ B(\\vec{r}) $），由 $ \\vec{H} $ 的环路定理，有：\n\n$$\n\\sum I=\\oint_{L}\\vec{H}\\cdot\\mathrm{d}\\vec{l}=\\sum_{i}\\frac{B(\\vec{r})}{\\mu_{i}}\\frac{1}{2}\\pi r\n$$\n\n得：\n\n$$\nB(\\vec{\\mathbf{r}})=\\frac{2\\sum I}{\\pi r\\sum\\frac{1}{\\mu_{i}}}=\\begin{cases}0,&r<R_{1} \\text{ 或 } r>R_{2},\\\\\\frac{2I}{\\pi r\\sum_{i}\\frac{1}{\\mu_{i}}},&R_{1}<r<R_{2}.\\end{cases}\n$$\n\n对应的各区域的磁场强度为：\n\n$$\nH_{i}(\\vec{r})=B(\\vec{r})/\\mu_{i}=\\begin{cases}0,&r<R_{1} \\text{ 或 } r>R_{2},\\\\\\frac{2I}{\\pi r\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}},&R_{1}<r<R_{2}.\\end{cases}\n$$\n\n$ \\vec{B} $ 和 $ \\vec{H} $ 的方向与 $ R_{1} $ 处的 I 的方向满足右手定则。为了求各分界面的磁化面电流密度，先求各处的磁化强度矢量：\n\n$$\nM_{i}(\\vec{\\mathbf{r}})=\\left(\\frac{\\mu_{i}}{\\mu_{0}}-1\\right)H_{i}(\\vec{\\mathbf{r}})=\\begin{cases}0,&r<R_{1} \\text{ 或 } r>R_{2},\\\\\\left(\\frac{\\mu_{i}}{\\mu_{0}}-1\\right)\\frac{2I}{\\pi r\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}},&R_{1}<r<R_{2}.\\end{cases}\n$$\n\n$ \\vec{M}_i(\\vec{r}) $ 的方向与该处圆周的切线方向平行，因此，在四个介质之间的分界面上， $ \\vec{K}' = \\vec{M} \\times \\vec{n} = 0 $，只有在介质与真空的分界面上有磁化面电流。\n\n在 $ r = R_{1} $ 处:\n\n$$\n\\vec{\\boldsymbol{K}}_{i}^{\\prime}(R_{1})=M_{i}(R_{1})\\hat{\\boldsymbol{z}}=\\left(\\frac{\\mu_{i}}{\\mu_{0}}-1\\right)\\frac{2\\boldsymbol{I}}{\\pi R_{1}\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}}\\hat{\\boldsymbol{z}}\n$$\n\n在 $ r = R_{2} $ 处:\n\n$$\n\\vec{K}_{i}^{\\prime}(R_{2})=-M_{i}(R_{2})\\hat{z}=-\\left(\\frac{\\mu_{i}}{\\mu_{0}}-1\\right)\\frac{2I}{\\pi R_{2}\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}}\\hat{z}\n$$\n\n由 $ \\vec{H} $ 的边值关系，可知在 $ r = R_{1} $ 和 $ r = R_{2} $ 处的传导面电流密度为：\n\n$$\n\\vec{K}_{0,i}(R_{1})=H_{i}(R_{1})\\hat{z}=\\frac{2I}{\\pi R_{1}\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}}\\hat{z}\n$$\n\n$$\n\\vec{\\mathbf{K}}_{0,i}(R_{2})=-H_{i}(R_{2})\\hat{\\mathbf{z}}=\\frac{2I}{\\pi R_{2}\\mu_{i}\\sum_{j}\\frac{1}{\\mu_{j}}}\\hat{\\mathbf{z}}\n$$"
+    },
+    {
+        "question_id": "EX_044",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如图所示，有一半径为 $ R $ 的导体圆盘，绕其圆心在垂直磁场 $ \\vec{B} $ 的平面做角速度为 $ \\omega $ 的匀速转动。若将圆盘的圆心和圆盘的最外围作为电源的两极，求该电源的电动势。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_794_1295_1034_1489.jpg\" alt=\"Image\" width=\"20%\" /></div>",
+        "answer": "图中，圆盘的圆心为电源负极，外围为电源正极，其电动势为：\n\n$$\n\\mathcal{E}=\\int_{-}^{+}(\\vec{v}\\times\\vec{B})\\cdot\\mathrm{d}\\vec{l}=\\int_{0}^{R}v(r)B\\mathrm{d}r=\\int_{0}^{R}\\omega r B\\mathrm{d}r=\\frac{1}{2}\\omega B R^{2}\n$$"
+    },
+    {
+        "question_id": "EX_045",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如图所示，有一无限长直线电流，其电流随时间变化的关系为  $ I = I_{0} \\sin \\omega t $，其中  $ I_{0} $ 和  $ \\omega $ 为常数，I > 0 的方向如图中箭头所示竖直向上。在与该直线相距 d 处有一个 N 匝矩形回路，矩形回路与直线电流共面，长和高分别为 a 和 h。求该回路 L 中的感应电动势（顺时针方向为 L 的正方向）。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_794_177_1024_423.jpg\" alt=\"Image\" width=\"19%\" /></div>",
+        "answer": "如图所示进行面积分，可得 t 时刻穿过回路 L 的磁链为：\n\n $$ \\Psi(t)=N\\iint_{S}\\vec{B}\\cdot\\mathrm{d}\\vec{S}=N\\int_{d}^{d+a}\\frac{\\mu_{0}I}{2\\pi x}h\\mathrm{d}x=\\frac{N\\mu_{0}I_{0}h\\sin\\omega t}{2\\pi}\\ln\\frac{d+a}{d} $$ \n\n因此，回路 L 中的感应电动势为：\n\n $$ \\mathcal{E}=-\\frac{\\mathrm{d}\\Psi(t)}{\\mathrm{d}t}=-\\frac{N\\mu_{0}I_{0}h\\omega\\cos\\omega t}{2\\pi}\\ln\\frac{d+a}{d} $$"
+    },
+    {
+        "question_id": "EX_046",
+        "type": "数值计算与方向判断",
+        "difficulty": "中等",
+        "question": "如图所示，在半径为 R 的区域内有一垂直纸面向内的均匀磁场  $ \\vec{B} $，其大小随时间以恒定速率变化，求纸面上任意一点 P 的感生电场  $ \\vec{E}_{感} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_790_772_1029_1001.jpg\" alt=\"Image\" width=\"20%\" /></div>",
+        "answer": "设 P 点与圆心 O 的距离为 r，以 O 为圆心取一半径为 r 的圆周 L，则由法拉第电磁感应定律：\n\n $$ \\oint_{L}\\vec{E}_{ 感 }\\cdot\\mathrm{d}\\vec{l}=2\\pi rE_{ 感 }=-\\frac{\\mathrm{d}\\Phi}{\\mathrm{d}t} $$ \n\n得：\n\n $$ E_{ 感 }=-\\frac{1}{2\\pi r}\\frac{\\mathrm{d}\\Phi}{\\mathrm{d}t}=\\begin{cases}-\\frac{1}{2\\pi r}\\pi r^{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}=-\\frac{r}{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t},&r<R,\\\\-\\frac{1}{2\\pi r}\\pi R^{2}\\frac{\\mathrm{d}B}{\\mathrm{d}t}=-\\frac{R^{2}}{2r}\\frac{\\mathrm{d}B}{\\mathrm{d}t},&r>R.\\end{cases} $$ \n\n $ \\vec{E}_{感} $ 的方向：当  $ \\frac{dB}{dt} > 0 $ 时， $ \\vec{E}_{感} $ 沿逆时针方向，反之为顺时针方向。"
+    },
+    {
+        "question_id": "EX_047",
+        "type": "物理条件推导",
+        "difficulty": "困难",
+        "question": "如图所示为电子感应加速器（Betatron）的原理示意图，磁场 $ \\vec{B} $ 垂直纸面向内且 B 随时间逐渐增大，电子在纸面内顺时针做圆周运动，由于 B 随时间增大，在电子所在位置产生与电子速度方向相反的感生电场 $ \\vec{E}_{感} $，电子在运动的过程中被 $ \\vec{E}_{感} $ 加速。问：若要使电子在被加速的过程中其圆周运动的半径保持不变，磁场B 的空间分布应该满足什么条件？\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_789_174_1029_358.jpg\" alt=\"Image\" width=\"20%\" /></div>",
+        "answer": "由洛伦兹力公式，电子做圆周运动应该满足：\n\n $$ mv=qB(R)R $$ \n\n其中， $ B(R) $ 表示半径为 R 处的磁感应强度大小。电子被  $ \\vec{E}_{感} $ 加速满足牛顿第二定律：\n\n $$ \\frac{\\mathrm{d}(mv)}{\\mathrm{d}t}=q\\vec{E}_{ 感 }=q\\frac{1}{2\\pi R}\\frac{\\mathrm{d}\\Phi}{\\mathrm{d}t}=q\\frac{1}{2\\pi R}\\frac{\\mathrm{d}}{\\mathrm{d}t}\\int_{0}^{R}2\\pi rB(r)\\mathrm{d}r $$ \n\n定义半径 R 的圆形区域内的平均磁感应强度:\n\n $$ \\bar{B}(R)=\\frac{\\int_{0}^{R}2\\pi rB(r)\\mathrm{d}r}{\\pi R^{2}} $$ \n\n当电子运动半径保持不变时（即  $ \\frac{dR}{dt}=0 $），将8.31式和8.33式代入8.32式，可得：\n\n $$ qR\\frac{\\mathrm{d}B(R)}{\\mathrm{d}t}=\\frac{qR}{2}\\frac{\\mathrm{d}\\bar{B}(R)}{\\mathrm{d}t} $$ \n\n即：\n\n $$ \\frac{\\mathrm{d}B(R)}{\\mathrm{d}t}=\\frac{1}{2}\\frac{\\mathrm{d}\\bar{B}(R)}{\\mathrm{d}t} $$ \n\n当产生磁场的线圈的几何形状不随时间变化时，这意味着任意时刻：\n\n $$ B(R)=\\frac{\\bar{B}(R)}{2} $$ \n\n即：要想在电子被加速过程中其圆周运动的半径保持不变，我们要求半径为 R 处的磁感应强度是以 R 为半径的圆内的平均磁感应强度的一半。"
+    },
+    {
+        "question_id": "EX_048",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如图所示，一个长直螺线管内部放有一个半径为 r 的圆环，圆环与螺线管的横截面在同一平面，且圆环的圆心位于螺线管的轴线上。求螺线管与圆环之间的互感系数。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_419_484_776_641.jpg\" alt=\"Image\" width=\"29%\" /></div>",
+        "answer": "解:\n\n螺线管产生的磁场在圆环中的磁通量为：\n\n$$ \\Phi = B\\pi r^{2} = \\mu_{0}n I\\pi r^{2} $$\n\n因此，两者之间的互感系数为：\n\n$$ M = \\frac{\\Phi}{I} = \\mu_{0}n\\pi r^{2} $$"
+    },
+    {
+        "question_id": "EX_049",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "### 例 8.6\n\n如图所示为一个理想变压器的示意图，初级线圈和次级线圈的匝数分别为  $ N_{p} $ 和  $ N_{s} $。假定铁芯不漏磁（即铁芯任意两个横截面上的磁通量都相等），请证明：初级线圈两端电压  $ U_{p} $ 和次级线圈两端电压  $ U_{s} $ 的关系为：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_787_1065_1032_1225.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n $$ \\frac{U_{p}}{U_{s}}=\\frac{N_{p}}{N_{s}} $$ ",
+        "answer": "证明：\n\n假设任意时刻，铁芯中的磁通量为  $ \\Phi(t) $，则初级和次级线圈中的总磁通量分别为：\n\n $$ \\Psi_{p}(t)=N_{p}\\Phi(t),\\qquad\\Psi_{s}(t)=N_{s}\\Phi(t) $$ \n\n理想情况下，假设线圈内如 r = 0，则线圈两端的电压的大小等于线圈产生的电动势的大小（见8.6式），即：\n\n $$ U_{p}=|\\mathcal{E}_{p}|=\\left|\\frac{\\mathrm{d}\\Psi_{p}(t)}{\\mathrm{d}t}\\right|=N_{p}\\left|\\frac{\\mathrm{d}\\Phi(t)}{\\mathrm{d}t}\\right| $$ \n\n $$ U_{s}=|\\mathcal{E}_{s}|=\\left|\\frac{\\mathrm{d}\\Psi_{s}(t)}{\\mathrm{d}t}\\right|=N_{s}\\left|\\frac{\\mathrm{d}\\Phi(t)}{\\mathrm{d}t}\\right| $$ \n\n上面两式相除，可得：\n\n $$ \\frac{U_{p}}{U_{s}}=\\frac{N_{p}}{N_{s}} $$ "
+    },
+    {
+        "question_id": "EX_050",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "例 8.7\n\n求半径为 r 的长直螺线管的单位长度的自感系数。",
+        "answer": "解:\n\n螺线管内部的磁感应强度为：\n\n $$ B=\\mu_{0}n I $$ \n\n因此，长度为 l 的螺线管的总磁通量为：\n\n $$ \\Psi=n l\\Phi=n l B S=n l\\mu_{0}n I\\pi r^{2} $$ \n\n得单位长度的螺线管的自感系数为：\n\n $$ L_{0}=\\frac{1}{l}\\frac{\\Psi}{I}=n^{2}\\mu_{0}\\pi r^{2} $$ "
+    },
+    {
+        "question_id": "EX_051",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "例 8.8\n\n有一同轴电缆，内芯和外壳通有大小相等、方向相反的电流，内芯和外壳的半径分别为  $ R_{1} $\n\n和  $ R_{2} $ 。假设内芯只有导体表面有电流（高频近似），且外壳厚度忽略不计，求单位长度电缆的自感系数。\n\n解:\n\n如下图所示，截取长度为 l 的一段电缆进行计算：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_333_369_864_604.jpg\" alt=\"Image\" width=\"44%\" /></div>\n\n该无限长电缆可以想象成内芯和外壳在无穷远处相连接组成闭合回路，由题目的假定条件可知内芯内部和外壳外部都没有磁场，因此，闭合回路所限定的面积中有磁通量的部分，只是是电缆的轴线所在的任意一个平面与  $ R_{1} $ 和  $ R_{2} $ 之间围成的矩形这部分。在所截取的长度为 l 这一段，则对应一个长为 l、宽为  $ R_{2}-R_{1} $ 的矩形。下面求穿过这个矩形的磁通量。",
+        "answer": "首先，由安培环路定理，可以求出两柱面间任意一点的磁感应强度：\n\n $$ B(r)=\\frac{\\mu_{0}I}{2\\pi r} $$ \n\n其方向与  $ \\hat{z} $ 成右手螺旋关系。在上述所截取的长度为 l 这段距离对应的矩形内， $ \\vec{B} $ 处处垂直于矩形所在的平面，因而，其磁通量为：\n\n $$ \\Phi=\\iint_{S}\\vec{B}\\cdot\\mathrm{d}\\vec{S}=\\int_{R_{1}}^{R_{2}}B(r)l\\mathrm{d}r=\\int_{R_{1}}^{R_{2}}\\frac{\\mu_{0}I}{2\\pi r}l\\mathrm{d}r=\\frac{\\mu_{0}I l}{2\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n根据自感系数的定义，有：\n\n $$ L = \\frac{\\Phi}{I} = \\frac{\\mu_{0} l}{2\\pi} \\ln\\frac{R_{2}}{R_{1}} $$\n\n因此，单位长度的自感系数为：\n\n $$ L_0 = \\frac{L}{l} = \\frac{\\mu_{0}}{2\\pi} \\ln\\frac{R_{2}}{R_{1}} $$"
+    },
+    {
+        "question_id": "EX_052",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "在同轴电缆中，内导体半径为 $ R_1 $，外导体内半径为 $ R_2 $，长度为 $ l $ 的一段。求该段电缆的自感系数 $ L $ 及单位长度的自感系数 $ L_0 $。",
+        "answer": "首先，由安培环路定理，可以求出两柱面间任意一点的磁感应强度：\n\n $$ B(r)=\\frac{\\mu_{0}I}{2\\pi r} $$ \n\n其方向与 $ \\hat{z} $ 成右手螺旋关系。在所截取的长度为 $ l $ 这段距离对应的矩形内，$ \\vec{B} $ 处处垂直于矩形所在的平面，因而，其磁通量为：\n\n $$ \\Phi=\\iint_{S}\\vec{B}\\cdot\\mathrm{d}\\vec{S}=\\int_{R_{1}}^{R_{2}}B(r)l\\mathrm{d}r=\\int_{R_{1}}^{R_{2}}\\frac{\\mu_{0}I}{2\\pi r}l\\mathrm{d}r=\\frac{\\mu_{0}I l}{2\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n根据自感系数的定义，有：\n\n $$ L=\\frac{\\Phi}{I}=\\frac{\\mu_{0}l}{2\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n因此，单位长度的自感系数为：\n\n $$ L_{0}=\\frac{L}{l}=\\frac{\\mu_{0}}{2\\pi}\\ln\\frac{R_{2}}{R_{1}} $$"
+    },
+    {
+        "question_id": "EX_053",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "考虑一个电感 $ L $ 与电阻 $ R $ 串联的放电回路。当开关从充电位置拨向放电位置后，电流随时间如何变化？并由此推导电感中储存的磁场能量表达式。",
+        "answer": "由于电感的自感电动势 $ \\varepsilon = -L \\frac{dI}{dt} $ 不能无穷大，因而电流 $ I $ 不能突变到 0，只能逐渐减小。在 $ I $ 减小的过程中，电感 $ L $ 两端产生的电动势与电阻 $ R $ 两端的电势差相等：\n\n $$ IR=\\mathcal{E}=-L\\frac{\\mathrm{d}I}{\\mathrm{d}t} $$ \n\n求解上述微分方程，可得：\n\n $$ I(t)=I_{0}e^{-\\frac{R}{L}t} $$ \n\n其中 $ I_0 $ 为开关切换瞬间电感中的初始电流。\n\n电阻 $ R $ 中产生的焦耳热为：\n\n $$ W_{\\text{热}}=\\int_{0}^{\\infty}I^{2}(t)R\\mathrm{d}t=\\int_{0}^{\\infty}I_{0}^{2}Re^{-\\frac{2R}{L}t}\\mathrm{d}t=\\frac{1}{2}LI_{0}^{2} $$ \n\n由能量守恒可知，磁场中储存的能量为：\n\n $$ W_{m}=\\frac{1}{2}LI^{2} $$\n\n此外，也可从非静电力做功角度计算：在 $ dt $ 时间内，非静电力做功为：\n\n $$ \\mathrm{d}A_{m}=\\mathcal{E}_{L}I\\mathrm{d}t=-L\\frac{\\mathrm{d}I}{\\mathrm{d}t}I\\mathrm{d}t=-L I\\mathrm{d}I $$ \n\n因此，线圈中的磁场能量为：\n\n $$ W_{m}=\\int\\mathrm{d}A_{m}=-\\int_{I}^{0}L I\\mathrm{d}I=\\frac{1}{2}L I^{2} $$"
+    },
+    {
+        "question_id": "EX_054",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "有一同轴电缆，内芯和外壳通有大小相等、方向相反的电流，内芯和外壳的半径分别为  $ R_{1} $ 和  $ R_{2} $。假设外壳厚度忽略不计，但是不做高频近似（即内芯处处有均匀体电流密度分布），求单位长度电缆的自感系数。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_333_1094_864_1335.jpg\" alt=\"Image\" width=\"44%\" /></div>",
+        "answer": "我们用先计算磁场能量的方法来进行计算自感，即：\n\n $$ W_{m}=\\frac{1}{2}LI^{2}\\quad\\Rightarrow\\quad L=\\frac{2W_{m}}{I^{2}} $$ \n\n显然，在  $ r > R_{2} $ 处，磁感应强度为零，对应的磁场能量也为零。由安培环路定理，容易计算出在  $ r < R_{1} $ 和  $ R_{1} < r < R_{2} $ 区域（记作区域 1 和 2）的磁感应强度分别为：\n\n $$ B_{1}=\\frac{\\mu_{0}Ir}{2\\pi R_{1}^{2}} $$ \n\n $$ B_{2}=\\frac{\\mu_{0}I}{2\\pi r} $$ \n\n因此，这两个区域的总磁场能量分别为：\n\n $$ W_{m1}=\\frac{1}{2\\mu_{0}}\\iiint_{V}B_{1}^{2}\\mathrm{d}V=\\frac{1}{2\\mu_{0}}\\int_{0}^{R_{1}}2\\pi r l\\left(\\frac{\\mu_{0}I r}{2\\pi R_{1}^{2}}\\right)^{2}\\mathrm{d}r=\\frac{\\mu_{0}I^{2}l}{16\\pi} $$ \n\n $$ W_{m2}=\\frac{1}{2\\mu_{0}}\\iiint_{V}B_{2}^{2}\\mathrm{d}V=\\frac{1}{2\\mu_{0}}\\int_{R_{1}}^{R_{2}}2\\pi r l\\left(\\frac{\\mu_{0}I}{2\\pi r}\\right)^{2}\\mathrm{d}r=\\frac{\\mu_{0}I^{2}l}{4\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n因此，单位长度的电缆的总磁能为：\n\n $$ W_{m}=\\frac{W_{m1}+W_{m2}}{l}=\\frac{\\mu_{0}I^{2}}{16\\pi}+\\frac{\\mu_{0}I^{2}}{4\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n因此，电缆的自感为：\n\n $$ L=\\frac{2W_{m}}{I^{2}}=\\frac{\\mu_{0}}{8\\pi}+\\frac{\\mu_{0}}{2\\pi}\\ln\\frac{R_{2}}{R_{1}} $$ \n\n注意到，上述结果中的第二项与例8.8通过磁通量计算自感（且忽略1区的磁场）的结果是一致的。"
+    },
+    {
+        "question_id": "EX_055",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "铜导线中通有频率为 50 Hz 的交流电  $ I = I_{0} \\cos \\omega t $，求位移电流和传导电流的比值。",
+        "answer": "由欧姆定律，可知导线中的电场强度的大小为：\n\n $$ E=J\\rho=\\frac{I\\rho}{S} $$ \n\n因此，导线中的位移电流为：\n\n $$ I_{d}=\\iint_{S}\\vec{J}_{d}\\cdot\\mathrm{d}\\vec{S}=S\\varepsilon_{0}\\frac{\\partial E}{\\partial t}=S\\varepsilon_{0}\\frac{\\rho}{S}\\frac{\\mathrm{d}I}{\\mathrm{d}t}=\\varepsilon_{0}\\rho\\omega I_{0}\\cos(\\omega t+\\frac{\\pi}{2}) $$ \n\n可知，位移电流与传导电流相位相差 90 度。位移电流和传导电流的振幅之比为：\n\n $$ \\frac{I_{d0}}{I_{0}}=\\varepsilon_{0}\\rho\\omega $$ \n\n将  $ \\omega = 2\\pi \\times 50\\,\\text{Hz} $，铜的电阻率  $ \\rho = 1.68 \\times 10^{-8}\\,\\Omega \\cdot m $ 代入，可得：\n\n $$ \\frac{I_{d0}}{I_{0}}=\\varepsilon_{0}\\rho\\omega=8.85\\times10^{-12}\\times1.68\\times10^{-8}\\times2\\pi\\times50=4.7\\times10^{-17} $$"
+    },
+    {
+        "question_id": "EX_056",
+        "type": "数值计算与理论推导结合题",
+        "difficulty": "中等",
+        "question": "2. 求电容极板间与两极板距离相等的平面上任意一点 P 的磁感应强度  $ \\vec{B} $\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_379_1110_821_1429.jpg\" alt=\"Image\" width=\"37%\" /></div>",
+        "answer": "2. 如图所示，忽略边缘效应，电容极板间的位移电流为均匀分布的电流，位移电流密度为：\n\n $$ J_{d}=\\frac{I_{d1}}{S}=\\frac{I}{S}=\\frac{I}{\\pi R^{2}} $$ \n\n设与两极板距离相等的平面与极板的轴线的交点为 O，设 P 与 O 点之间的距离为 r，则以 O 为圆心，以 r 为半径，在该平面上做圆  $ C_{1} $，则由对称性，该圆上的任意一点的磁感应强度大小相等，方向平行于圆周的切线方向。因此，P 点的磁感应强度可由安培定理给出：\n\n $$ \\oint_{C_{1}}\\vec{B}\\cdot\\mathrm{d}\\vec{l}=2\\pi r B=\\mu_{0}\\iint\\vec{J}_{d}\\cdot\\mathrm{d}\\vec{S}=\\begin{cases}\\frac{r^{2}}{R^{2}}\\mu_{0}I,&r<R,\\\\ \\mu_{0}I,&r>R.\\end{cases} $$ \n\n因此：\n\n $$ B=\\begin{cases}\\frac{\\mu_{0}I r}{2\\pi R^{2}},&r<R,\\\\\\frac{\\mu_{0}I}{2\\pi r},&r>R.\\end{cases} $$"
+    },
+    {
+        "question_id": "EX_057",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "一个半径为 $ r $ 的尘埃（密度 $ \\rho $ 取 $ 3\\,\\text{g/cm}^3 $）在太阳系中，其受到的来自太阳的万有引力和太阳光的光压力之比是多大？当 $ r $ 为多大时，这两个力大小相等？",
+        "answer": "假设尘埃与太阳之间的距离为 $ R $，太阳质量为 $ M $，则尘埃受到的万有引力为：\n\n$$\nF_{g}=\\frac{GMm}{R^{2}}=\\frac{4GM\\rho\\pi r^{3}}{3R^{2}}\n$$\n\n太阳的辐射总功率为 $ P_{0}=3.8\\times10^{26}\\,\\text{W} $，则尘埃受到的光的压力为（假设光全部吸收）：\n\n$$\nF_{r}=p_{r}\\pi r^{2}=\\frac{S\\pi r^{2}}{c}=\\frac{P_{0}\\pi r^{2}}{4\\pi R^{2}c}\n$$\n\n万有引力和光压力之比为：\n\n$$\n\\frac{F_{g}}{F_{r}}=\\frac{16GM\\rho\\pi cr}{3P_{0}}\n$$\n\n可知该比值与尘埃所在的位置无关。尘埃半径越大，光压力相比万有引力越小。两者相等时，尘埃半径应等于：\n\n$$\n\\frac{F_{g}}{F_{r}}=1\\quad\\Rightarrow\\quad r=\\frac{3P_{0}}{16GM\\rho\\pi c}\n$$\n\n代入可得：\n\n$$\nr=\\frac{3\\times3.8\\times10^{26}}{16\\times6.674\\times10^{-11}\\times2\\times10^{30}\\times3\\times10^{3}\\times\\pi\\times3\\times10^{8}}\\,\\text{m}=0.19\\,\\mu\\text{m}\n$$\n\n也就是说，当尘埃的半径小于 $ 0.19\\,\\mu\\text{m} $ 时，其受到的来自太阳光的光压将大于来自太阳的万有引力。比如，当彗星靠近太阳时，由于温度升高，彗星中的挥发性物质会升华而放出许多半径在纳米至微米量级的尘埃，这些尘埃由于半径足够小，其受到的太阳光的光压比引力大，会被推向远离太阳的方向形成很长的彗星尾巴。"
+    },
+    {
+        "question_id": "EX_058",
+        "type": "概念分析与方向判断",
+        "difficulty": "中等",
+        "question": "同轴电缆中通有高频信号，请分析电缆中电场和磁场的方向，以及电磁波的传播方向。",
+        "answer": "<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_328_1191_862_1365.jpg\" alt=\"Image\" width=\"44%\" /></div>\n\n在介质内部，由于内芯导体和外围导体之间存在随时间变化的电压差（与被传输信号的电压差对应），因此，从横截面这个平面上看，介质内存在随时间变化的径向电场（从圆心指向外或从外指向圆心）；同时，由于内芯导线流有随时间变化的电流（方向为图中的  $ \\hat{z} $ 方向），因此介质内存在随时间变化的环形磁场，磁场方向由右手法则确定。上图的左图画出了某一时刻介质内的电场和磁场方向示意图。\n\n可见，介质内存在随时间变化的电场和磁场，且电场和磁场互相垂直，也就是有电磁波在电缆的介质内传播。根据  $ \\vec{S} = \\vec{E} \\times \\vec{H} $，可知电磁波的传播方向为导线的轴线所在的方向（即图中  $ \\hat{z} $ 方向），即从同轴电缆的一端传播到另一端。\n\n此外，由于趋肤效应，我们还可以分析出，同轴电缆内部的电磁场不会穿过外围导体传播到电缆外部空间，也就是信号只限于在电缆内部传输，可以避免信号在传输过程中由于向外部空间辐射导致的衰减；同样的，外部空间任何的其他电磁波，也无法穿过外围导体进入同轴电缆内部的介质中，这样能很好地保护电缆内部信号在传输过程中不被外界电磁波干扰。由于这个原因，同轴电缆被广泛应用于高频信号的高质量传输中。"
+    }
+]
