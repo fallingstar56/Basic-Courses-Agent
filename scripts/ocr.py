@@ -11,8 +11,8 @@ API_URL = "https://b9zabar2f6bbw35c.aistudio-app.com/layout-parsing"
 TOKEN = "b5ef3c1b24eff2120808f9aaa40a0da13617e0a0"
 
 # 输入PDF路径和输出目录
-PDF_PATH = r"D:\weiyang city\Basic-Courses-Agent\data\raw\高等微积分教程2.pdf"
-OUTPUT_DIR = r"D:\weiyang city\Basic-Courses-Agent\data\processed\calculus2"
+PDF_PATH = r"D:\weiyang city\Basic-Courses-Agent\data\raw\电路原理下.pdf"
+OUTPUT_DIR = r"D:\weiyang city\Basic-Courses-Agent\data\processed\electric2"
 TEMP_DIR = os.path.join(OUTPUT_DIR, "temp_parts")  # 临时存放拆分后的PDF
 MERGE_IMAGES_DIR = "merged_images"                # 合并后图片存放的子目录
 
