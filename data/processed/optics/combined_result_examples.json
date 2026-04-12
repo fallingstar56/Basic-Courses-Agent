@@ -1,0 +1,814 @@
+[
+    {
+        "question_id": "EX_001",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "[例 1.1.1] 均匀光纤纤芯的折射率为  $ n_{r} $，包层的折射率为  $ n_{e} $，入射端外介质的折射率为  $ n_{0} $，与芯轴相交的光线叫作子午光线，试求当入射到纤芯中的子午光线，能在芯-包层界面上全内反射时，入射角 i 的上限  $ u_{0} $ 为多少？",
+        "answer": "[解] 请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_002",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "### 4. 光程 费马原理\n\n由于不同介质对光的传播速度有影响,因此在研究光在介质中的传播路径时,需要引入一个加权分析的方法。在此我们引入光程的概念。在均匀介质中,光程[l]表示光的几何路程l与介质折射率n相乘的积,即\n\n $$ \\left\\lceil l\\right\\rceil=n l $$ \n\n如果光线从 A 点出发，中间经过 N 种均匀介质而达到 B 点，则总光程  $ [l] $ 为各段光程的累加， $ l_{i} $ 表示光线在第 i 种介质中的折射率和路程。\n\n $$ \\left\\lceil l\\right\\rceil=\\sum_{i=1}^{N}n_{i}l_{i} $$ \n\n若介质折射率连续改变，则光程为\n\n $$ \\left[\\begin{array}{l}l\\end{array}\\right]=\\int_{A}^{B}n_{l}\\mathrm{d}l $$ \n\n其中，沿光线方向（光能流传播的方向）的元路程 dl>0，逆光线方向的元路程 dl<0。",
+        "answer": "仅从光程的定义式,看不出光程与时间的关系,但是非常有趣的是,光由 A 点到 B 点的传播路径是光程取极值的路径，这被称为费马原理。"
+    },
+    {
+        "question_id": "EX_003",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "光线路径 ADB 不在入射面 Oxy 内，总可从 D 点作 Oz 轴的平行线交入射面于 C，路径 ACB 位于入射面内，由于  $ \\left|AD\\right| > \\left|AC\\right| $， $ \\left|DB\\right| > \\left|CB\\right| $，故光程极小路径必须在入射面内。其光程表达式可以写成\n\n $$ \\begin{aligned}\\left\\lceil A C B\\right\\rceil&=n_{1}\\left\\vert A C\\right\\vert+n_{2}\\left\\vert C B\\right\\vert\\\\&=n_{1}\\sqrt{x^{2}+y_{A}^{2}}+n_{2}\\sqrt{\\left(x_{B}-x\\right)^{2}+y_{B}^{2}}\\end{aligned} $$ \n\n根据费马原理, 如果 C 点在 Ox 轴上移动, 则光传播路径必定对应于光程 [ACB] 为极值。此处, 由于只有一个空间变量 x, 也就是当 x 变化很小时, [ACB] 的变化为零, 也就是 [ACB] 光程对 x 的导数为零。具体地,\n\n $$ \\begin{aligned}\\frac{\\mathrm{d}}{\\mathrm{d}x}\\big[ACB\\big]&=\\frac{n_{1}x}{\\sqrt{x^{2}+y_{A}^{2}}}-\\frac{n_{2}\\left(x_{B}-x\\right)}{\\sqrt{\\left(x_{B}-x\\right)^{2}+y_{B}^{2}}}\\\\&=n_{1}\\sin i_{1}-n_{2}\\sin i_{2}\\end{aligned} $$ \n\n由光程取极值条件\n\n $$ \\frac{\\mathrm{d}}{\\mathrm{d}x}\\left[ACB\\right]=0 $$ \n\n $$ n_{1}\\sin i_{1}=n_{2}\\sin i_{2} $$ \n\n得\n\n上式即斯涅耳(Willebrord Snellius)公式，但是并不是斯涅耳本人发表，而是在1621年由荷兰天文学家和数学家惠更斯在他的著作《光论》中得以公开。",
+        "answer": "通过分析光线路径和光程表达式，根据费马原理，光程取极值的条件是光程对变量x的导数为零。通过计算导数并设其为零，我们得到了斯涅耳公式：$ n_{1}\\sin i_{1}=n_{2}\\sin i_{2} $。这个公式表明，当光从一种介质进入另一种介质时，入射角的正弦与折射角的正弦之比等于两种介质的折射率之比。"
+    },
+    {
+        "question_id": "EX_004",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "图 1-1-9 中 M 是平面镜，A 和  $ A' $ 是一对物像共轭点。可以证明：理想光学系统中物像共轭点 A、A' 间所有光线都是等光程的。设点 A 所在一侧介质折射率为 n，则\n\n $$ \\left[\\begin{array}{l}ABA^{\\prime}\\end{array}\\right]=n\\int_{A}^{B}\\mathrm{d}l+n\\int_{B}^{A^{\\prime}}\\mathrm{d}l $$ \n\n $ BA' $段光程，是反射线BD延长线的光程，其折射率应按反射线BD所在介质的折射率n计算， $ dl $沿 $ BA' $中走向与反射光BD方向相反，故应取负值，即\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_1211_1261_1524_1605.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n $$ \\left\\lceil A B A^{\\prime}\\right\\rceil=n\\left\\vert A B\\left\\vert+n\\left(\\left.\\right\\vert-B A^{\\prime}\\right\\vert\\right)=0 $$ \n\n<div style=\"text-align: center;\">图 1-1-9 平面镜物像共轭点之间光线的等程性</div>\n\n同理可证  $ \\left[\\boldsymbol{A}\\boldsymbol{D}\\boldsymbol{A}^{\\prime}\\right]=0 $",
+        "answer": "在理想光学系统中，物像共轭点A和A'之间的所有光线都是等光程的。对于平面镜系统，通过计算ABA'路径的光程，可以得到其值为0。这是因为反射线BA'的光程与AB的光程大小相等但方向相反，因此总光程为零。这一性质同样适用于其他从A到A'的路径，如ADA'，也满足等光程条件。"
+    },
+    {
+        "question_id": "EX_005",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "图 1-1-10 为一内切于回转椭球面的曲面镜 MN, P 为切点, 从椭球焦点  $ F_{1} $ 发出, 经曲面镜反射后再过椭球另一焦点  $ F_{2} $ 的光线, 必过 P 点, 而  $ \\left|F_{1}P\\right|+\\left|PF_{2}\\right|=2a $ (a 为椭圆半长轴), 曲面镜 MN 上任意其他点  $ P' $ 位于椭球内, 因而  $ \\left|F_{1}P'\\right|+\\left|PF_{2}\\right|<2a $, 所以光程  $ \\left[F_{1}PF_{2}\\right] $ 较邻近的其他光程  $ \\left[F_{1}P'F_{2}\\right] $ 更大。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_1115_1952_1574_2216.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n<div style=\"text-align: center;\">图 1-1-10 内切回转椭球曲面镜</div>",
+        "answer": "在这个例子中，光程取极大值。从椭球的一个焦点F1发出的光线，经过曲面镜MN上的点P反射后，会通过另一个焦点F2。由于P是切点，F1P + PF2 = 2a（椭圆的半长轴）。对于曲面镜MN上的任意其他点P'，由于P'位于椭球内部，F1P' + P'F2 < 2a。因此，路径F1PF2的光程大于邻近的其他路径F1P'F2的光程，说明光程在此处取极大值。"
+    },
+    {
+        "question_id": "EX_006",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "半径  $ r = a (a > 0) $ 的单球面折射系统，物方折射率 n = 1.0，像方折射率  $ n' = 1.5 $。\n\n(1) 求系统的物方焦距和像方焦距；\n\n(2) 物距 s=4a 的物体  $ A_{1}B_{1} $ 竖立在光轴上，用高斯公式求像的位置、虚实和垂轴放大率；\n\n（3）物距 x = -a 的物体  $ A_{2}B_{2} $ 竖立在光轴上，用牛顿公式求像的位置和垂轴放大率。",
+        "answer": "请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_007",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "〔例 1.2.2〕物 $ A_{1}B_{1} $ 竖立在半径 1 cm 的凸折射球面左侧 4 cm 处，球面左侧为空气，右侧介质折射率为 1.5，在球面右侧 4 cm 处放置平面镜，求像的位置和垂轴放大率。",
+        "answer": "请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_008",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "[例 1.2.3] 如图 1-2-10 所示，厚度为 l、折射率为 n 的透明厚板放在空气中，该板左侧面 A 点有粒砂子，人在右侧正视，砂子在透明板内的视深度 $ l' $ 是多少？",
+        "answer": "请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_009",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "例 1.2.3 题解\n\n研究球面反射成像的出发点是反射定律 $ i = -i' $。\n\n显然,形式地令 $ n'=-n $, 折射定律即可转换为反射定律。这就启发我们, 只要将球面折射傍轴成像公式中的像方折射率 $ n' $ 形式地换成 -n, 即可得球面反射傍轴成像公式, 参阅表 1-2-1。",
+        "answer": "球面镜的符号规则和球面折射系统相同。\n\n值得指出的是,球面折射系统物方焦点 F 和像方焦点 $ F' $ 必定在异侧;但是,球面反射系统物方焦点 F 和像方焦点 $ F' $ 必重合,故可用一个 F 点代表。球面折射系统 $ s'>0 $ 表示实像, $ s'<0 $ 表示虚像;但是,球面反射系统 $ s'<0 $ 表示实像, $ s'>0 $ 表示虚像。对于单球面折(反)射系统而言:物方"
+    },
+    {
+        "question_id": "EX_010",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "上物点 A，经薄透镜的两次球面折射成像于  $ A' $，物像位置关系可用逐次成像法定出。\n\nA 对于第一球面系统成像于 $ A' $，物像位置关系为\n\n $$ \\frac{n_{\\mathrm{L}}}{s_{1}^{\\prime}}+\\frac{n}{s_{1}}=\\Phi_{1} $$ \n\n $ A' $ 亦为第二球面系统的物,经其成像于 $ A' $,物像位置关系为\n\n $$ \\frac{n^{^{\\prime}}}{s_{2}^{^{\\prime}}}+\\frac{n_{\\mathrm{L}}}{s_{2}}=\\Phi_{2} $$ \n\n对于薄透镜,可近似认为  $ O_{1} $ 和  $ O_{2} $ 重合于 O,这等于说第一折射球面系统的主平面和第二折射球面系统主平面重合,这个重合面亦即薄透镜的物方主平面",
+        "answer": "若取薄透镜主点 O 为物距 s、像距  $ s' $ 计算原点，可用  $ s = s_{1}, s' = s_{2}^{\\prime}, s_{1}^{\\prime} = -s_{2} $ 代入上二式，相加后得\n\n $$ \\frac{n^{\\prime}}{s^{\\prime}}+\\frac{n}{s}=\\bar{\\Phi} $$ \n\n $$ \\boldsymbol{\\varPhi}=\\boldsymbol{\\varPhi}_{1}+\\boldsymbol{\\varPhi}_{2} $$ \n\n $ \\Phi $ 称为薄透镜的光焦度。上式表明，薄透镜光焦度是两折射球面系统光焦度的代数和。利用(1-2-3)式，薄透镜的光焦度可写为\n\n $$ \\Phi=\\frac{n_{1}-n}{r_{1}}+\\frac{n^{\\prime}-n_{1}}{r_{2}} $$ \n\n单折射球面成像公式(1-2-2)和薄透镜成像公式(1-3-1)有完全相同的形式,只是光焦度  $ \\Phi $ 的具体表达式不同,单折射球面的下述公式:\n\n $$ \\begin{aligned}f=&\\frac{n}{\\varPhi},\\quad f^{\\prime}=\\frac{n^{\\prime}}{\\varPhi},\\quad\\frac{f^{\\prime}}{f}=\\frac{n^{\\prime}}{n}\\\\\\frac{f^{\\prime}}{s^{\\prime}}+\\frac{f}{s}&=1,\\quad xx^{\\prime}=ff^{\\prime}\\\\s-x&=f,\\quad s^{\\prime}-x^{\\prime}=f^{\\prime}\\\\\\beta=&\\frac{y^{\\prime}}{y}=-\\frac{ns^{\\prime}}{n^{\\prime}s}=-\\frac{fs^{\\prime}}{f^{\\prime}s}=-\\frac{x^{\\prime}}{f^{\\prime}}=-\\frac{f}{x}\\\\\\gamma=&\\frac{u^{\\prime}}{u}=-\\frac{s}{s^{\\prime}},\\quad\\beta\\gamma=\\frac{n}{n^{\\prime}}=\\frac{f}{f^{\\prime}}\\end{aligned} $$ \n\n对于薄透镜来说依然有效。只是薄透镜的焦距为\n\n $$ \\begin{aligned}&f=\\frac{n}{\\left(n_{\\mathrm{L}}-n\\right)\\frac{1}{r_{1}}+\\left(n^{\\prime}-n_{\\mathrm{L}}\\right)\\frac{1}{r_{2}}}\\\\ &f^{\\prime}=\\frac{n^{\\prime}}{\\left(n_{\\mathrm{L}}-n\\right)\\frac{1}{r_{1}}+\\left(n^{\\prime}-n_{\\mathrm{L}}\\right)\\frac{1}{r_{2}}}\\\\\\end{aligned} $$ \n\n若薄透镜放在同一种介质中使用，则  $ n=n' $，上式变为\n\n $$ f^{\\prime}=f=\\left[\\left(\\frac{n_{\\mathrm{L}}}{n}-1\\right)\\left(\\frac{1}{r_{1}}-\\frac{1}{r_{2}}\\right)\\right]^{-1} $$ \n\n若薄透镜的  $ \\Phi>0(f' $ 必大于零 $，则为会聚透镜（正透镜）； $ \\Phi<0(f' $ 必小于零），则为发散透镜（负透镜）。\n\n### 2. 几对特殊共轭点\n\n(1) $ \\beta=0 $，则有 $ x=\\infty,x^{\\prime}=0 $。即物方无限远与像方焦点 $ F^{\\prime} $共轭。\n\n(2) $ \\beta=\\infty $，则有x=0， $ x^{\\prime}=\\infty $。即物方焦点F与像方无限远共轭。\n\n(3) $ \\beta=+1 $，则有 $ x_{H}=-f,x_{H^{\\prime}}=-f^{\\prime} $。即薄透镜的物方主点H和像主方点 $ H^{\\prime} $重合于点 $ O_{\\circ} $。过 $ O $点的垂轴平面是薄透镜的主平面。\n\n(4)  $ \\gamma = +1 $，则有  $ x_{N} = -f', x_{N'} = -f $。即薄透镜的一对节点 N、N' 是重合的，当 n = n' 时，则有  $ \\left|f\\right| = \\left|f^{\\prime}\\right| $，N、N'、H、H' 四者重合于主点 O。\n\n### 3. 作图法\n\n选取上述几对共轭点、共轭面为基点、基面，有如下作图法则："
+    },
+    {
+        "question_id": "EX_011",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "图 1-3-4 薄透镜对轴上物点的成像作图法\n\n(a) $ f=2a, f'=3a, s=4a $\n\n(b) $ f=2a $ $ f'=3a $ $ s=-4a $",
+        "answer": "从图1-3-5成像规律曲线可以列出 $ \\Phi > 0 $ 的成像情况，见表1-3-1；$ \\Phi < 0 $ 薄透镜成像情况，见表1-3-2。\n\n$$ \\frac{x^{^{\\prime}}}{f^{^{\\prime}}}\\cdot\\frac{x}{f}=1,\\quad\\left(\\frac{s^{^{\\prime}}}{f^{^{\\prime}}}\\right)^{-1}+\\left(\\frac{s}{f}\\right)^{-1}=1 $$ \n\n$$ \\beta=-\\frac{x^{\\prime}}{f^{\\prime}},\\quad-\\beta\\frac{x}{f}=1 $$ \n\n容易看出： $ \\frac{x'}{f'} \\sim \\frac{x}{f}, -\\beta \\sim \\frac{x}{f} $ 的相应曲线是同一组位于第一、第三象限的等轴双曲线，见图 1-3-5。图中曲线上括号内的数字是  $ \\beta $ 值。再利用高斯公式、牛顿公式两组坐标变换关系式\n\n$$ \\frac{s}{f}=\\frac{x}{f}+1,\\quad\\frac{s^{\\prime}}{f^{\\prime}}=\\frac{x^{\\prime}}{f^{\\prime}}}+1 $$ \n\n从而同一张图上又可表示 $ \\frac{s'}{f'} \\sim \\frac{s}{f} $曲线。选用这样一组变数描绘成像规律曲线，好处是曲线具有最大的普适性。即对于任何 $ f, f' $值的薄透镜，该曲线均适用。"
+    },
+    {
+        "question_id": "EX_012",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "焦距为 $ 10 \\, cm $ 的薄凸透镜 $ L_{1} $ 和焦距为 $ 15 \\, cm $ 的薄凹透镜 $ L_{2} $，共轴地放置在空气中，两者相距 $ 10 \\, cm $，今把物放在 $ L_{1} $ 左侧 $ 20 \\, cm $ 处，求最后的像。",
+        "answer": "请扫描侧边栏二维码获取解答过程。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_597_388_1326_702.jpg\" alt=\"Image\" width=\"43%\" /></div>\n\n<div style=\"text-align: center;\">图 1-3-6 例 1.3.1 的作图法验证</div>"
+    },
+    {
+        "question_id": "EX_013",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求组合系统的像方焦距f'、物方焦距f以及组合系统主点的位置。",
+        "answer": "从△M₁'F₁'H₁'∼△M₂F₁'H₂和△H₂'F'M₂'∼△H'F'M'得\n$$ \\begin{aligned}\\frac{h}{-h^{\\prime}}&=\\frac{f_{1}^{\\prime}}{\\Delta+f_{2}}\\\\\\frac{h}{-h^{\\prime}}&=\\frac{-f^{\\prime}}{f_{2}^{\\prime}+F_{2}^{\\prime}F^{\\prime}}\\end{aligned} $$\n两式联立可得\n$$ f^{\\prime}=-f_{1}^{\\prime}\\cdot\\frac{f_{2}^{\\prime}+F_{2}^{\\prime}F^{\\prime}}{\\Delta+f_{2}} $$\n由于 F₁' 和 F' 对于系统Ⅱ是一对共轭点，利用牛顿公式得\n$$ F_{2}^{\\prime}F^{\\prime}=\\frac{f_{2}f_{2}^{\\prime}}{\\Delta} $$\n从上两式中消去 |F₂'F'| 得\n$$ f^{\\prime}=-\\frac{f_{1}^{\\prime}f_{2}^{\\prime}}{\\Delta} $$\n同理,可求得组合系统物方焦距f为\n$$ f=-\\frac{f_{1}f_{2}}{\\Delta} $$\n组合系统像方主点 H' 与系统Ⅱ像方主点 H₂' 的距离为\n$$ \\begin{aligned}H_{2}^{\\prime}H^{\\prime}&=f_{2}^{\\prime}+F_{2}^{\\prime}F^{\\prime}+(-f^{\\prime})\\\\&=f_{2}^{\\prime}+\\frac{f_{2}f_{2}^{\\prime}}{\\Delta}+\\frac{f_{1}^{\\prime}f_{2}^{\\prime}}{\\Delta}\\\\&=f_{2}^{\\prime}\\frac{\\Delta+f_{2}+f_{1}^{\\prime}}{\\Delta}\\end{aligned} $$\n即\n$$ H_{2}^{\\prime}H^{\\prime}=f_{2}^{\\prime}\\frac{d}{\\Delta} $$\n同理可得\n$$ H_{1}H=f_{1}\\frac{d}{\\Delta} $$"
+    },
+    {
+        "question_id": "EX_014",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求组合系统的光焦度Φ。",
+        "answer": "从 (1-4-3a)和 (1-4-3b)两式，可得\n$$ \\frac{f^{\\prime}}{f}=\\frac{f_{1}^{\\prime}}{f_{1}}\\cdot\\frac{f_{2}^{\\prime}}{f_{2}}=\\left(\\frac{n}{n_{1}}\\right)\\left(\\frac{n_{2}^{\\prime}}{n}\\right)=\\frac{n_{2}^{\\prime}}{n_{1}} $$\n由于光焦度的定义\n$$ \\Phi=\\frac{n_{1}}{f}=\\frac{n_{2}^{\\prime}}{f^{\\prime}} $$\nΦ为组合系统的光焦度，将 (1-4-3a)式代入上式得\n$$ \\begin{aligned}\\Phi&=\\frac{n_{2}^{\\prime}\\Delta}{-f_{1}^{\\prime}f_{2}^{\\prime}}=\\frac{n_{2}^{\\prime}(d-f_{1}^{\\prime}-f_{2})}{-f_{1}^{\\prime}f_{2}^{\\prime}}\\\\&=\\frac{n_{2}^{\\prime}f_{2}}{f_{1}^{\\prime}f_{2}^{\\prime}}+\\frac{n_{2}^{\\prime}f_{1}^{\\prime}}{f_{1}^{\\prime}f_{2}^{\\prime}}-n_{2}^{\\prime}\\frac{d}{f_{1}^{\\prime}f_{2}^{\\prime}}\\\\&=\\frac{n}{f_{1}^{\\prime}}+\\frac{n_{2}^{\\prime}}{f_{2}^{\\prime}}-\\frac{d}{n}\\cdot\\frac{n}{f_{1}^{\\prime}}\\cdot\\frac{n_{2}^{\\prime}}{f_{2}^{\\prime}}\\\\&\\Phi=\\Phi_{1}+\\Phi_{2}-\\frac{d}{n}\\Phi_{1}\\Phi_{2}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_015",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "[例 1.5.1] 求单一球面折射系统、厚透镜、薄透镜的系统矩阵 S。",
+        "answer": "[解] 请扫描侧边栏二维码获取解答过程。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_251_694_527_950.jpg\" alt=\"Image\" width=\"16%\" /></div>\n\n<div style=\"text-align: center;\">图 1-5-5 单一球面折射系统</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_775_659_1235_948.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n<div style=\"text-align: center;\">图 1-5-6 厚透镜</div>\n\n<div style=\"text-align: center;\">例 1.5.1 题解</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_1421_532_1591_700.jpg\" alt=\"Image\" width=\"10%\" /></div>"
+    },
+    {
+        "question_id": "EX_016",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "〔例 1.5.2〕由折射率 $ n_{L}=3/2 $ 材料制成的半径 R=4 cm 的球透镜，放在空气中，如图 1-5-8 所示，物放在球心左侧 10 cm 处，求像的位置、虚实和放大率。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_801_1798_1109_2045.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n<div style=\"text-align: center;\">图 1-5-8 球透镜</div>",
+        "answer": "[解] 请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_017",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "摄远物镜是一种焦距长，暗箱却较短的照相机镜头。例如可由 $\\Phi_{1}=5\\ D,\\Phi_{2}=-\\frac{50}{3}\\ D$ 的两薄透镜，间距 $d_{1}=0.16\\ m$，共轴组合而成。整个系统置于空气中，试计算该物镜的主平面位置和焦距。",
+        "answer": "请扫描侧边栏二维码获取解答过程。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_940_941_1257_1203.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_1415_972_1585_1140.jpg\" alt=\"Image\" width=\"10%\" /></div>"
+    },
+    {
+        "question_id": "EX_018",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "[例 1.5.3] 摄远物镜是一种焦距长，暗箱却较短的照相机镜头。例如可由 $ \\Phi_{1}=5\\ D,\\Phi_{2}=-\\frac{50}{3}\\ D $ 的两薄透镜，间距 $ d_{1}=0.16\\ m $，共轴组合而成。整个系统置于空气中，试计算该物镜的主平面位置和焦距。",
+        "answer": "请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_019",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "〔例 1.5.4〕有三个薄透镜，焦距分别为 $ f_{1}^{\\prime}=0.20\\ m, f_{2}^{\\prime}=0.10\\ m, f_{3}^{\\prime}=-0.20\\ m $，共轴地放在空气中使用， $ d_{1}=d_{2}=0.10\\ m $。求组合系统主点位置和焦距。",
+        "answer": "请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_020",
+        "type": "概念分析题",
+        "difficulty": "中等",
+        "question": "〔例 1.6.1〕孔径光阑前后两部分光学系统完全对称的物镜叫作对称物镜。试分析对称物镜入瞳和出瞳的位置特点。",
+        "answer": "[解] 请扫描侧边栏二维码获取解答过程。"
+    },
+    {
+        "question_id": "EX_021",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "由消视角放大率色差条件，推导两个薄透镜的间距 d 与其焦距的关系式。",
+        "answer": "由消视角放大率色差条件，得\n\n$$ \\frac{\\mathrm{d}}{\\mathrm{d}\\lambda}\\Big(\\frac{1}{f}\\Big)=0 $$\n\n对公式\n\n$$ \\frac{1}{f}=\\left(n-1\\right)K_{1}+\\left(n-1\\right)K_{2}-d\\left(n-1\\right)^{2}K_{1}K_{2} $$\n\n求导后得到：\n\n$$ \\left(K_{1}+K_{2}\\right)\\frac{\\mathrm{d}n}{\\mathrm{d}\\lambda}-2d\\left(n-1\\right)K_{1}K_{2}\\frac{\\mathrm{d}n}{\\mathrm{d}\\lambda}=0 $$\n\n简化后得到：\n\n$$ d=\\frac{1}{2}\\left[\\frac{1}{\\left(n-1\\right)K_{1}}+\\frac{1}{\\left(n-1\\right)K_{2}}\\right] $$\n\n即\n\n$$ d=\\frac{1}{2}(f_{1}+f_{2}) $$"
+    },
+    {
+        "question_id": "EX_022",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "求余弦辐射体光出射度与亮度的关系。",
+        "answer": "余弦辐射体光出射度 M，为\n $$ M_{ 冫 }=\\frac{\\mathrm{d}\\varPhi_{ 冫 }}{\\mathrm{d}S}=\\pi L $$"
+    },
+    {
+        "question_id": "EX_023",
+        "type": "光学系统分析",
+        "difficulty": "中等",
+        "question": "用 $ n = \\frac{3}{2} $ 材料加工薄透镜 $ (r_{1} = -r_{2} = 10 \\, \\text{cm}) $ 当放大镜，透镜的直径为 $ 5 \\, \\text{cm} $，若人眼瞳孔距透镜 $ 20 \\, \\text{cm} $。\n\n(1) 放大镜的视角放大率多大?\n\n(2) 指出视场光阑、入窗、出窗、孔径光阑、入瞳、出瞳及视场角 $ \\omega $ 多大？\n\n（3）当物放在放大镜 F 点，像成在无穷远；当物从 F 点向放大镜移近 $ x_{0} $（cm）时，像成在瞳孔前 25 cm，求 $ x_{0} $ 值。\n\n（4）用该放大镜看报，报纸放在放大镜物方焦平面处，线视场半径 $ R_{F} $ 为多大？",
+        "answer": "(1) 放大镜的视角放大率计算：\n\n放大镜的焦距 $f' = \\frac{r_1}{2(n-1)} = \\frac{10}{2(\\frac{3}{2}-1)} = 10 \\, \\text{cm}$\n\n视角放大率 $M = \\frac{25}{f'} = \\frac{25}{10} = 2.5$ 倍\n\n(2) 光阑和视场角分析：\n\n- 孔径光阑：人眼瞳孔\n- 入瞳：人眼瞳孔经透镜成的像\n- 出瞳：人眼瞳孔本身\n- 视场光阑：透镜边缘\n- 入窗：透镜边缘\n- 出窗：透镜边缘\n- 视场角 $\\omega = \\arctan(\\frac{D/2}{f'}) = \\arctan(\\frac{2.5}{10}) = 14.04°$\n\n(3) 物距 $x_0$ 计算：\n\n当物在焦距点时，像在无穷远\n\n当物移近 $x_0$ 时，像距 $v = -25 \\, \\text{cm}$（负号表示虚像）\n\n使用透镜公式：$\\frac{1}{f'} = \\frac{1}{u} + \\frac{1}{v}$\n\n$\\frac{1}{10} = \\frac{1}{10-x_0} + \\frac{1}{-25}$\n\n解得：$x_0 = 3.33 \\, \\text{cm}$\n\n(4) 线视场半径 $R_F$ 计算：\n\n当报纸放在物方焦平面时，线视场半径 $R_F = f' \\cdot \\tan\\omega = 10 \\cdot \\tan(14.04°) = 2.5 \\, \\text{cm}$"
+    },
+    {
+        "question_id": "EX_024",
+        "type": "光学证明",
+        "difficulty": "基础",
+        "question": "试证:光线通过顶角 $ \\alpha $ 很小放在空气中的三棱镜时, 如果在棱面上的入射角很小, 则偏向角 $ \\delta_{0} = \\alpha(n - 1) $ 。",
+        "answer": "证明：\n\n考虑光线通过顶角为 $\\alpha$ 的三棱镜，入射角很小。\n\n在第一个折射面上，根据折射定律：$n = \\frac{\\sin i_1}{\\sin r_1} \\approx \\frac{i_1}{r_1}$（因为角度很小，$\\sin\\theta \\approx \\theta$）\n\n在第二个折射面上：$\\frac{1}{n} = \\frac{\\sin i_2}{\\sin r_2} \\approx \\frac{i_2}{r_2}$\n\n根据几何关系：$\\alpha = r_1 + r_2$\n\n偏向角 $\\delta = (i_1 - r_1) + (i_2 - r_2) = i_1 + i_2 - \\alpha$\n\n由于入射角很小，光线几乎对称通过棱镜，有 $i_1 = i_2$\n\n因此：$\\delta \\approx 2i - \\alpha$\n\n由 $n = \\frac{i}{r}$ 和 $\\alpha = 2r$（对称情况），得 $r = \\frac{\\alpha}{2}$\n\n所以 $i = n \\cdot r = n \\cdot \\frac{\\alpha}{2}$\n\n代入偏向角公式：$\\delta \\approx 2 \\cdot n \\cdot \\frac{\\alpha}{2} - \\alpha = n\\alpha - \\alpha = \\alpha(n-1)$\n\n因此，当入射角很小时，偏向角 $\\delta_0 = \\alpha(n-1)$"
+    },
+    {
+        "question_id": "EX_025",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "放映镜头的透射系数 = 0.8，放映镜头的 D/f 比为 1:2，片门尺寸为  $ 10 \\times 7 \\, mm^2 $，若在银幕上成 2.5 m 宽的像，求：\n\n（1）光源发出的光通量  $ \\Phi_{v} $，光源的平均光出射度  $ \\overline{M}_{v} $，平均亮度  $ \\overline{L}_{0} $，经球面镜加强后的平均亮度  $ \\overline{L}_{1} $；\n\n(2) 片门处的亮度  $ L_{2} $\n\n(3) 银幕上的照度  $ E_{v} $ [计算时可取  $ \\sin^{2}U=(1/4)(D/f)^{2} $ 近似]。",
+        "answer": "该题目的解答过程未提供完整内容，无法提取完整解答。"
+    },
+    {
+        "question_id": "EX_026",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "某相机, 光圈选用 f2, 用 1/100 s 快门拍摄某一景物, 当底片用 21°DIN(100ASA) 时, 摄得像底在光度方面很满意。为了提高景深和减小底片成像的颗粒度, 光圈拟改为 f2.8, 底片改为感光速度慢一倍的 18°DIN(50ASA)(感光速度慢一倍的意思是指在一切条件相同时, 要得到同等曝光量, 必须把曝光时间增加一倍) 时, 问快门该用多少?",
+        "answer": "该题目的解答过程未提供完整内容，无法提取完整解答。"
+    },
+    {
+        "question_id": "EX_027",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "有两个点光源 $ S_{1} $ 和 $ S_{2} $，波函数分别为\n $$ \\begin{aligned}\\boldsymbol{E}_{1}&=\\boldsymbol{E}_{10}\\cos\\left(\\omega_{1}t-k_{1}r_{1}-\\varphi_{10}\\right)=\\boldsymbol{E}_{10}\\cos\\left(\\omega_{1}t-\\varphi_{1}\\\\\\\\\\boldsymbol{E}_{2}&=\\boldsymbol{E}_{20}\\cos\\left(\\omega_{2}t-k_{2}r_{2}-\\varphi_{20}\\right)=\\boldsymbol{E}_{20}\\cos\\left(\\omega_{2}t-\\varphi_{2}\\right)\\end{aligned} $$ \n设 P 为两光波叠加区中某一点，见图 2-1-2。式中 $ E_{10} $、 $ E_{20} $ 和 $ \\varphi_{1} $、 $ \\varphi_{2} $ 分别为两叠加光波在 P 点的振幅矢量和负初相位， $ \\omega_{1} $、 $ \\omega_{2} $ 和 $ \\varphi_{10} $、 $ \\varphi_{20} $ 为光源 $ S_{1} $、 $ S_{2} $ 的角频率和负初相位。\n\n按波的叠加原理，P 点（合）光矢 E 应为\n $$ \\boldsymbol{E}=\\boldsymbol{E}_{1}+\\boldsymbol{E}_{2} $$ \n平方后得 $ E^{2}=E_{1}^{2}+E_{2}^{2}+2E_{1}\\cdot E_{2} $",
+        "answer": "当 $ E_{1} \\perp E_{2} $ 时， $ E^{2} = E_{1}^{2} + E_{2}^{2} $，即 $ I = I_{1} + I_{2} $。此式表明，两正交振动光波叠加，不会产生干涉。\n\n当 $ E_{1}\\parallel E_{2} $时， $ (2-1-12) $式可写为\n $$ \\begin{aligned}E^{2}&=E_{1}^{2}+E_{2}^{2}+2E_{1}E_{2}\\\\ &=E_{1}^{2}+E_{2}^{2}+2E_{10}E_{20}\\cos\\left(\\omega_{1}t-\\varphi_{1}\\right)\\cos\\left(\\omega_{2}t-\\varphi_{2}\\right)\\\\ &=E_{1}^{2}+E_{2}^{2}+E_{10}E_{20}\\left\\{\\cos\\left[\\left(\\omega_{1}+\\omega_{2}\\right)t-\\left(\\varphi_{1}+\\varphi_{2}\\right)\\right]+\\cos\\left[\\left(\\omega_{1}-\\omega_{2}\\right)t-\\delta\\right]\\right\\}\\\\ &\\quad\\delta=\\varphi_{1}-\\varphi_{2}=\\left(k_{1}r_{1}-k_{2}r_{2}\\right)"
+    },
+    {
+        "question_id": "EX_028",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "相干光的两个必要条件是什么？为什么相位差稳定是最主要的条件？",
+        "answer": "相干光的两个必要条件如下：\n①叠加光波有互相平行的光振动分量；\n②光波在叠加区相位差稳定，至少在相对光强接收器的时间常量 $\\tau_{0}$ 范围内是稳定的。\n\n相位差稳定是最主要的条件，因为：普通光源(指激光以外的光源)自发发射占支配地位，光源中原子每一次发光持续时间 $\\tau$，即使对持续时间最长的低压气体放电管来说，也不超过 $10^{-9} \\sim 10^{-8}$ s。在这段时间内原子发射波列长度为 $\\tau c$ 的波列，不管是由同一原子或不同原子发出的波列，停顿若干时间之后(停顿时间与发光持续时间有相同数量级)再发另一波列，不管是由同一原子或不同原子发出的波列，它们的相位是各自独立的，没有固定相位差。或者说，最多在发光持续时间 $(10^{-9} \\sim 10^{-8}$ s)内各波列的相位差才可认为是稳定。激光光源不同于普通光源，它是受激发射占支配地位的光源，激光器中不仅原子发光的持续时间特别长(一般可达到 $10^{-4}$ s)。也就是说，在 $10^{-4}$ s 时间内初相位可认为是稳定的，而且各发光中心是紧密联系的。也就是说，激光的时间相干性和空间相干性都很好。"
+    },
+    {
+        "question_id": "EX_029",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "同方向同频率简谐振动的合振幅和初相与原来分振动的关系是什么？",
+        "answer": "同方向同频率简谐振动的合振动仍然是简谐振动，其合振动的振幅E₀和负初相φ与原来分振动的振幅E₁₀、E₂₀和负初相φ₁、φ₂的关系由(2-2-1)式决定。引入分振动E₁的复振幅\tilde{E}_{10}，分振动E₂的复振幅\tilde{E}_{20}，合振动E的复振幅\tilde{E}_{0}，则(2-2-1)式可理解为：同方向同频率两简谐分振动的复振幅之和等于合振动之复振幅。即合振幅与分振幅之间，合振动初相与分振动初相之间，不满足代数运算，满足复数运算。\n\n复振幅的模表示振幅，幅角表示负初相。由于一个复数对应一个复平面上矢量，所以(2-2-1)式也可理解为同方向同频率两简谐振动的复振幅矢量(矢量之模表振幅大小，矢量与实数轴的夹角表振动负初相位)之和等于合振动的复振幅矢量。\n\n参考图2-2-2得：\nE₀² = E₁² + E₂² + 2E₁₀E₂₀cosδ\nφ = tan⁻¹[(E₁₀sinφ₁ + E₂₀sinφ₂)/(E₁₀cosφ₁ + E₂₀cosφ₂)]\n\n(2-2-2a)式中相位差δ在φ₁₀-φ₂₀=0的情况下为：\nδ = φ₁ - φ₂ = 2π[n(r₁ - r₂)]/λ = 2πΔ/λ\n其中光程差Δ = n(r₁ - r₂)。\n\n将cε₀n/2乘(2-2-2a)式，得屏上P点光强I为：\nI = I₁ + I₂ + 2√(I₁I₂)cosδ\n或\nI = I₁ + I₂ + 2√(I₁I₂)cos(2πΔ/λ)\n\n相干光源的强度相等时，I₁ = I₂，由(2-2-4)式得：\nI = 2I₁(1 + cosδ) = 4I₁cos²(δ/2)\n或\nI = 4I₁cos²(πΔ/λ)"
+    },
+    {
+        "question_id": "EX_030",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "当相干光源的强度相等时，光强I与相位差δ的关系是什么？",
+        "answer": "当相干光源的强度相等时，I₁ = I₂，由(2-2-4)式得：\nI = 2I₁(1 + cosδ) = 4I₁cos²(δ/2)\n或\nI = 4I₁cos²(πΔ/λ)\n\n其中Δ是光程差，δ是相位差，λ是波长。"
+    },
+    {
+        "question_id": "EX_031",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "用钠灯做双缝实验， $ \\lambda = 5.9 \\times 10^{-4} $ mm，观察屏位于 L = 2 m 处，若希望 e = 2 mm，按（2-2-9）式双缝间距 d 应为多少？如果 d 取 5.9 mm，则条纹间距会是多少？",
+        "answer": "根据双缝干涉条纹间距公式 $ e = \\frac{L\\lambda}{d} $，当 $ \\lambda = 5.9 \\times 10^{-4} $ mm，L = 2 m = 2000 mm，e = 2 mm 时，双缝间距 $ d = \\frac{L\\lambda}{e} = \\frac{2000 \\times 5.9 \\times 10^{-4}}{2} = 0.59 $ mm。若 d 取 5.9 mm，则条纹间距 $ e = \\frac{2000 \\times 5.9 \\times 10^{-4}}{5.9} = 0.2 $ mm，此时条纹会密集到只有 0.2 mm，需要借助 CCD 等辅助设备观察。"
+    },
+    {
+        "question_id": "EX_032",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "什么是干涉条纹的可见度？它如何定义？影响可见度的因素有哪些？",
+        "answer": "干涉条纹的可见度 V 表示干涉条纹的反衬程度，定义为 $ V=\\frac{I_{max}-I_{min}}{I_{max}+I_{min}} $，其中 $ I_{max} $ 和 $ I_{min} $ 分别是干涉条纹某点附近极大和极小光强。影响可见度的因素有三个：叠加光波的相对强度、光源的线度和光源的单色性。后两个因素属于光源的空间相干性和时间相干性。在理想单色点光源条件下，双光束干涉条纹的可见度 $ V=\\frac{2\\sqrt{I_{1}}\\sqrt{I_{2}}}{I_{1}+I_{2}} $。当 $ I_{1}=I_{2} $ 时 V=1，干涉条纹亮暗反衬最明显；当 $ I_{1} $ 与 $ I_{2} $ 相差愈大，V 愈小，条纹的亮暗反衬愈差。"
+    },
+    {
+        "question_id": "EX_033",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "菲涅耳双棱镜实验中，设棱镜的折射率为 n，放在空气中使用，由于小棱角棱镜偏向角为 $ (n-1)\\alpha $。若 S 到双棱镜距离为 r，双棱镜到屏 BC 距离为 l，求屏上亮（或暗）条纹间距 e 的表达式。",
+        "answer": "在菲涅耳双棱镜实验中，S₁、S₂之间的距离 d 为 $ 2r(n-1)\\alpha $。根据双缝干涉条纹间距公式 $ e = \\frac{(r+l)\\lambda}{d} $，将 d 代入得屏上亮（或暗）条纹间距 $ e = \\frac{(r+l)}{2r(n-1)\\alpha}\\lambda $。"
+    },
+    {
+        "question_id": "EX_034",
+        "type": "概念解释",
+        "difficulty": "基础",
+        "question": "亮纹间隔(暗纹间隔也一样)与波长成正比,与两波矢夹角(2θ)之半的正弦成反比。例如 $\\lambda=632.8\\ nm,\\theta=15^{\\circ}$ 时, $e=1.23\\ \\mu m$, 即每毫米约有 810 个亮条纹或暗条纹, 利用上述装置上这些条纹恰当地记录下来, 就可以造复振幅透过率为正弦函数的正弦光栅。",
+        "answer": "亮纹间隔(暗纹间隔也一样)与波长成正比,与两波矢夹角(2θ)之半的正弦成反比。例如 $\\lambda=632.8\\ nm,\\theta=15^{\\circ}$ 时, $e=1.23\\ \\mu m$, 即每毫米约有 810 个亮条纹或暗条纹, 利用上述装置上这些条纹恰当地记录下来, 就可以造复振幅透过率为正弦函数的正弦光栅。"
+    },
+    {
+        "question_id": "EX_035",
+        "type": "实验原理分析",
+        "difficulty": "中等",
+        "question": "劳埃德镜干涉实验有一个特点。当观察屏与镜端相接触时，即图2-2-9中 $OO'$位置，在平面镜与屏接触点是暗条纹中心，而不是亮条纹中心。请解释这一现象。",
+        "answer": "劳埃德镜干涉实验中，当观察屏与镜端相接触时，在接触点出现暗条纹中心而不是亮条纹中心，这表明入射光掠入射(入射角接近90°时的入射)时，反射光波相对入射光波有相位跃变$\\pi$，也就是说光程差跃变了半波长，常说发生了半波损失。"
+    },
+    {
+        "question_id": "EX_036",
+        "type": "定量计算",
+        "difficulty": "困难",
+        "question": "下面定量计算宽度为$b$的带光源，照亮双狭缝时，在屏上的干涉光强分布。设单位宽度的带光源单独照射双狭缝之一时在屏上产生的光强为$I'$。则$S(x)$处，$dx$宽度线光源在屏上$P$点产生的干涉光强$dI_p$按$(2-2-5a)$式为$$\\mathrm{d}I_{p}=2I^{\\prime}\\left(1+\\cos\\delta_{x}\\right)\\mathrm{d}x$$式中$$\\delta_{x}=\\frac{2\\pi}{\\lambda}\\Delta_{x}=\\frac{2\\pi}{\\lambda}n\\left[\\left(SS_{1}+r_{1}\\right)-\\left(SS_{2}+r_{2}\\right)\\right]=\\frac{2\\pi}{\\lambda}n\\left[\\left(r_{1}-r_{2}\\right)+\\left(SS_{1}-SS_{2}\\right)\\right]$$在$y、d\\ll L$条件下，由$(2-2-7)$式有$$r_{1}-r_{2}=d\\frac{y}{L}$$同理，在$x、d$均远小于$R$条件下，应有$$SS_{1}-SS_{2}=d\\frac{x}{R}=\\beta x$$$\\beta=d/R$称为干涉孔径角。利用上两式，$S(x)$点发出的，经双缝到达$P$点的两相干光束的相位差$\\delta_{x}$为$$\\delta_{x}=\\frac{2\\pi}{\\lambda^{\\prime}}\\left[\\left(r_{1}-r_{2}\\right)+\\beta x\\right]=\\delta_{0}+\\frac{2\\pi}{\\lambda^{\\prime}}\\beta x$$式中$\\lambda'$表介质中波长，$\\delta_{0}=2\\pi(r_{1}-r_{2})/\\lambda'$表示$x=0$时的相位差。",
+        "answer": "将相位差表达式代回$dI_p$表示式，对整个缝宽积分，得屏上$P$点干涉光强$I_p$为$$I_{p}=2I^{\\prime}\\int_{-b/2}^{b/2}\\left[1+\\cos\\left(\\delta_{0}+\\frac{2\\pi}{\\lambda^{\\prime}}\\beta x\\right)\\right]\\mathrm{d}x$$"
+    },
+    {
+        "question_id": "EX_037",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设杨氏双缝干涉实验中，$\\lambda=0.59\\ \\mu\\mathrm{m}$（Na 的 D 线），$d=0.59\\ \\mathrm{mm}$，$R=200\\ \\mathrm{mm}$，计算临界宽度 $b_{c}$。",
+        "answer": "根据临界宽度公式 $b_{\\mathrm{c}}=\\frac{\\lambda^{\\prime}}{\\beta}$，其中 $\\beta=\\frac{d}{R}=\\frac{0.59\\ \\mathrm{mm}}{200\\ \\mathrm{mm}}=0.00295$。代入数值计算得 $b_{\\mathrm{c}}=\\frac{0.59\\ \\mu\\mathrm{m}}{0.00295}=0.2\\ \\mathrm{mm}$。"
+    },
+    {
+        "question_id": "EX_038",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "厚度为 h，折射率为 n 的平行平板，放在折射率为 $ n_{0} $ 的介质中。先设想光源是单色点光源 Q，不管观察点 P 位于板上方何处，从 Q 点发出光线中总可以找到...用面光源，但选择干涉孔径角 $ \\beta=0 $ 的地方(即定域中心区)来观察,则可以得到比用点光源亮而可见度又不会降低的干涉条纹。",
+        "answer": "从平板上下界面反射回来的两条光线在 P 点相交, 见图 2-3-1(a)。从对称性考虑, 与平板面平行的平面内, 干涉条纹是以板面法线 QN 为轴的同心圆, 得到的是亮度不高的非定域干涉。若改用普通面光源, 面光源上另一点光源 Q' 产生的干涉条纹是以板面法线 Q'N' 为轴的同心圆, 由于面光源上各非相干点光源各自产生的干涉条纹, 亮暗位置彼此错开, 非相干叠加的结果, 虽然提高了条纹的亮度却降低了条纹的可见度。用面光源,但选择干涉孔径角 $ \\beta=0 $ 的地方(即定域中心区)来观察,则可以得到比用点光源亮而可见度又不会降低的干涉条纹。其中道理可用图 2-3-1(b) 说明: $ \\beta=0 $ 时,定域中心在无穷远处,若用屏来接收干涉条纹,屏要放在透镜 L 像方焦平面上。从面光源上不同点 Q、Q' 发出的光线中,方向相同的那些光线经平板上下表面反射后仍维持彼此平行,最后将被透镜会聚到焦面上的同一点 P。另一方面由于这些光线对平板的入射角相同,上下表面反射光之间的光程差也彼此相同,因而在幕上的强度也相同。换句话说,面光源上各个点在透镜像方焦平面上形成的各套干涉条纹完全重合。它们非相干叠加的结果将使亮条纹更加明亮,暗条纹仍是暗的,因而干涉条纹的可见度没有减少。在定域中心观察平行平板干涉时，面光源是有利的。干涉的定域性是由面光源引起的，而光源降低了平板非定域中心区的可见度，但对定域中心区的干涉，可见度不会降低。"
+    },
+    {
+        "question_id": "EX_039",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "单色光垂直照射折射率 n 的楔形薄膜时, 干涉图案是一组平行于楔棱 AB 的亮暗交替的条纹。设 $ h_{K} $、 $ h_{K+1} $ 分别表示楔形薄膜上第 K 级和第 $ K+1 $ 级暗条纹处膜的厚度，求相邻暗条纹处的厚度差 $ \\Delta h $。",
+        "answer": "根据干涉条件，有：\n\n$$ 2nh_{k}+\\frac{\\lambda}{2}=(2K+1)\\frac{\\lambda}{2} $$\n\n$$ 2nh_{K+1}+\\frac{\\lambda}{2}=2\\left[\\left(K+1\\right)+1\\right]\\frac{\\lambda}{2} $$\n\n两式相减可得相邻暗条纹处的厚度差 $ \\Delta h $ 为：\n\n$$ \\Delta h=h_{_{K+1}}-h_{_{K}}=\\frac{\\lambda}{2n} $$\n\n上式也代表相邻亮条纹处的厚度差。"
+    },
+    {
+        "question_id": "EX_040",
+        "type": "理论推导题",
+        "difficulty": "中等",
+        "question": "当光程差 Δ = Kλ (K 为整数) 和 Δ = (2K + 1)λ/2 时，推导干涉条纹的可见度表达式，并分析相干长度与谱线宽度的关系。",
+        "answer": "当 Δ = Kλ 时，光强为：\n $$ I_{\\Delta=K\\lambda}=2\\left(2L_{0}-K\\lambda\\right)\\sum_{j=1}^{N}\\frac{i_{j}}{c}=I_{1} $$ \n\n当 Δ = (2K + 1)λ/2 时，光强为：\n $$ I_{\\Delta=(2K+1)\\frac{\\lambda}{2}}=(2K+1)\\lambda\\sum_{j=1}^{N}\\frac{i_{j}}{c}=I_{2} $$ \n\n当 Δ > L₀ 时，光强为：\n $$ I_{\\Delta>L_{0}}=2L_{0}\\sum_{j=1}^{N}\\left(\\frac{\\dot{i}_{j}}{c}\\right) $$ \n\n当 Kλ ≤ L₀ 时，可见度表示式为：\n $$ V=\\frac{I_{1}-I_{2}}{I_{1}+I_{2}}=\\frac{4L_{0}-4K\\lambda-\\lambda}{4L_{0}+\\lambda} $$ \n\n由于 λ ≪ L₀，可简化为：\n $$ V\\approx1-\\frac{K\\lambda}{L_{0}}\\qquad(K\\lambda\\leqslant L_{0} 时 ) $$ \n\n当 Kλ > L₀ 时，V = 0。\n\n相干长度 L₀ 可表示为：\n $$ L_{0}=K_{\\mathrm{e}}\\lambda=\\Delta_{\\mathrm{e}}=c\\tau $$ \n\n其中 Kₑ 和 Δₑ 分别表示干涉条纹可见度不为零时最大可允许干涉级和光程差上限。"
+    },
+    {
+        "question_id": "EX_041",
+        "type": "理论推导",
+        "difficulty": "中等",
+        "question": "推导透射光强 $ I_{T} $ 与入射光强 $ I_{0} $ 的比值，并引入光强反射率 $ R=r^{2} $ 后的表达式。",
+        "answer": "从上式得透射光强  $ I_{T} $ 与入射光强  $ I_{0} $ 的比值为\n\n $$ \\frac{I_{_{T}}}{I_{_{0}}}=\\frac{E_{_{T}}E_{_{T}}^{*}}{E_{_{0}}^{2}}=\\frac{\\left(1-r^{2}\\right)^{2}}{\\left(1-r^{2}\\right)^{2}+4r^{2}\\sin^{2}\\frac{\\delta}{2}} $$ \n\n引入光强反射率  $ R=r^{2} $，则  $ (2-4-3) $ 式和  $ (2-4-4) $ 式可分别写为\n\n $$ \\frac{I_{_{R}}}{I_{_{0}}}=\\frac{4R\\sin^{2}\\frac{\\delta}{2}}{\\left(1-R\\right)^{2}+4R\\sin^{2}\\frac{\\delta}{2}} $$ \n\n $$ \\frac{I_{_{T}}}{I_{_{0}}}=\\frac{\\left(1-R\\right)^{2}}{\\left(1-R\\right)^{2}+4R\\sin^{2}\\frac{\\delta}{2}} $$ \n\n上两式称为艾里(Airy $ ^{①} $)公式，不出所料，反射光强 $ I_{R} $和透射光强 $ I_{T} $是互补的。"
+    },
+    {
+        "question_id": "EX_042",
+        "type": "理论推导",
+        "difficulty": "中等",
+        "question": "同级谱线角距离 $ \\Delta\\theta $ 为\n\n $$ \\Delta\\theta=\\frac{\\mathrm{d}\\theta}{\\mathrm{d}\\lambda}\\Delta\\lambda=D_{\\theta}\\Delta\\lambda $$ \n\n按泰勒判据, $ \\Delta\\theta=\\Delta\\theta_{半} $时，则 $ -\\Delta\\lambda=\\delta\\lambda,\\delta\\lambda $称最小可分辨波长差，即\n\n $$ \\delta\\lambda=\\frac{\\Delta\\theta_{ 半 }}{-D_{\\theta}} $$ \n\n将 $  (2-4-10)  $式和 $  (2-4-14)  $式代入上式，化简得\n\n $$ \\delta\\lambda=\\frac{\\left(1-R\\right)\\lambda}{\\pi K\\sqrt{R}}=\\frac{\\lambda}{K F} $$ \n\n最小可分辨波长差  $ \\delta\\lambda $ 愈小，标准具的分辨能力愈大、通常定义  $ \\lambda $ 与  $ \\delta\\lambda $ 的比值为分光仪器的色分辨本领 A。标准具色分辨本领为\n\n $$ A=\\frac{\\lambda}{\\delta\\lambda}=K F $$ \n\n光强反射率  $ R = 90\\% $ 时， $ F \\approx 30 $ 。对中央条纹而言， $ K = 2hn/\\lambda $ 是一个很大的数。若  $ h = 100 \\, mm, n = 1, \\lambda = 5000 \\, \\text{\\AA} $，则  $ K = 4 \\times 10^{4} $，分辨本领可达  $ 1.2 \\times 10^{6} $，最小可分辨波长  $ \\delta\\lambda = 0.0042 \\, \\text{\\AA} $ 。比最好光栅的分辨本领还要大。\n\n以上讨论假定了标准具两个内表面是理想的平面,也就是说对谱线角宽度只考虑了反射率 R 的影响。实际上,表面不平缺陷带来的影响常常超过了反射率的影响。因此,单纯提高 R 不一定能收到良好的效果。",
+        "answer": "根据题目给出的公式和条件，我们推导标准具的色分辨本领：\n\n1. 同级谱线角距离：$ \\Delta\\theta = \\frac{\\mathrm{d}\\theta}{\\mathrm{d}\\lambda}\\Delta\\lambda = D_{\\theta}\\Delta\\lambda $\n\n2. 按泰勒判据，当 $ \\Delta\\theta = \\Delta\\theta_{半} $时，$ -\\Delta\\lambda = \\delta\\lambda $，其中 $ \\delta\\lambda $ 称最小可分辨波长差：\n   $ \\delta\\lambda = \\frac{\\Delta\\theta_{半}}{-D_{\\theta}} $\n\n3. 将 $(2-4-10)$式和$(2-4-14)$式代入上式，化简得：\n   $ \\delta\\lambda = \\frac{(1-R)\\lambda}{\\pi K\\sqrt{R}} = \\frac{\\lambda}{K F} $\n\n4. 色分辨本领定义为 $ A = \\frac{\\lambda}{\\delta\\lambda} $，因此标准具色分辨本领为：\n   $ A = K F $\n\n5. 当光强反射率 $ R = 90\\% $ 时，$ F \\approx 30 $\n\n6. 对中央条纹，$ K = \\frac{2hn}{\\lambda} $，代入数值：\n   $ h = 100 \\, mm, n = 1, \\lambda = 5000 \\, \\text{\\AA} $\n   $ K = \\frac{2 \\times 100 \\times 1}{5000 \\times 10^{-8}} = 4 \\times 10^4 $\n\n7. 分辨本领：\n   $ A = K F = 4 \\times 10^4 \\times 30 = 1.2 \\times 10^6 $\n\n8. 最小可分辨波长：\n   $ \\delta\\lambda = \\frac{\\lambda}{A} = \\frac{5000}{1.2 \\times 10^6} = 0.0042 \\, \\text{\\AA} $\n\n结论：标准具的分辨本领可达 $ 1.2 \\times 10^6 $，最小可分辨波长为 $ 0.0042 \\, \\text{\\AA} $，比最好光栅的分辨本领还要大。但需注意，单纯提高反射率 R 不一定能提高分辨本领，因为表面不平缺陷的影响可能超过反射率的影响。"
+    },
+    {
+        "question_id": "EX_043",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如果需一块只让中心波长 $\\lambda_{0}$ 为 632.8 nm 的透射带通过的滤光片，其他中心波长的透射带属抑制之列，应怎样选择间隔层的光学厚度？",
+        "answer": "如果选取间隔层光学厚度 $nh = \\lambda_{0} / 2 = 632.8 \\, nm / 2$。按 $ (2 - 5 - 14) $ 式有一系列中心波长 $\\lambda_{0K}$ 的透射带通过。\n\n $$ \\lambda_{_{01}}=2nh=\\lambda_{_{0}}=632.8nm( 一级 ) $$ \n\n $$ \\lambda_{02}=nh=\\frac{1}{2}\\lambda_{0}=316.4nm( 二级 ) $$ \n\n $$ \\lambda_{03}=\\frac{2}{3}nh=\\frac{1}{3}\\lambda_{0}=210.9nm( 三级 ) $$ \n\n在整个可见光区内只有中心波长 $\\lambda_{01}=632.8\\ nm=\\lambda_{0}$ 的一级透射带，其余的各级透射带都在紫外区。而基片强烈强收紫外光，结果只剩下可见光区中心波长 $\\lambda_{01}=632.8\\ nm$ 的透射带通过。正适合要求。"
+    },
+    {
+        "question_id": "EX_044",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "如果选取间隔层的光学厚度 $nh = \\lambda_{0} = 632.8 \\, nm$，会有哪些中心波长的透射带通过？如何只让中心波长 $\\lambda_{0}$ 相应的透射带通过？",
+        "answer": "如果选取间隔层的光学厚度 $nh = \\lambda_{0} = 632.8 \\, nm$，按 $ (2-5-14) $ 式有一系列中心波长 $\\lambda_{0K}$ 的透射带通过。\n\n $$ \\lambda_{_{01}}=2nh=2\\lambda_{_{0}}=1\\ 265.6\\ nm( 一级 ) $$ \n\n $$ \\lambda_{02}=nh=\\lambda_{0}=632.8nm( 二级 ) $$ \n\n $$ \\lambda_{03}=\\frac{2}{3}nh=\\frac{2}{3}\\lambda_{0}=421.9nm( 三级 ) $$ \n\n $$ \\lambda_{04}=\\frac{2}{4}nh=\\frac{1}{2}\\lambda_{0}=316.4nm( 四级 ) $$ \n\n由此看出，当光学厚度增加时，属于可见光区透射带的数目也随之增加，如果只要中心波长 $\\lambda_{0}$ 相应的透射带通过，则要用附加滤光片将 $\\lambda_{03}(421.9\\ nm)$ 的透射带滤掉。"
+    },
+    {
+        "question_id": "EX_045",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "什么是干涉滤光片的峰值透射率？它通常受哪些因素影响？",
+        "answer": "滤光片对中心波长 $\\lambda_{0}$ 的透射光强度 $I_{T}$ 与入射光强度 $I_{0}$ 之比称为峰值透射率 $\\tau$，即\n\n $$ \\tau=\\frac{I_{T\\max}}{I_{0}} $$ \n\n若不考虑滤光片的吸收和散射损失时，见图 2-4-4，$I_{T_{\\max}}$ 等于 $I_{0}$，即峰值透射率 $\\tau=1$，由于玻璃及介质膜的吸收和散射，峰值透射率不可能等1。特别是金属反射膜滤光片，吸收更为严重，峰值透射率常在30%以下。"
+    },
+    {
+        "question_id": "EX_046",
+        "type": "光学分析",
+        "difficulty": "中等",
+        "question": "牛顿环实验若按下图装置: 玻璃板是由两部分拼成(冕牌玻璃 $ n_{1}=1.50 $ 和火石玻璃 $ n_{2}=1.75 $), 透镜用冕牌玻璃 $ (n_{3}=1.50) $ 制成, 透镜与玻璃板之间充满二硫化碳 $ (n_{4}=1.62) $。试按单色光正入射情况下的复振幅反射比 $ (2-5-3) $ 式讨论相干光附加相位跃变, 并画出牛顿环亮暗环分布示意图。",
+        "answer": "需要根据复振幅反射比公式 $ (2-5-3) $ 分析各界面处的相位跃变情况，并据此推导牛顿环的亮暗环分布规律。由于题目未提供具体的解答过程，此处无法给出完整答案。"
+    },
+    {
+        "question_id": "EX_047",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "(1) 试证明：正入射时复振幅反射比、透射比表示式\n $$ r=\\frac{n_{1}-n_{2}}{n_{1}+n_{2}},\\quad t=\\frac{2n_{1}}{n_{1}+n_{2}} $$ \n满足斯托克公式 $ （2-3-2） $。\n\n（2）若折射率为  $ n_{1} $、 $ n_{2} $ 的介质无吸收，试证明在正入射情况下，要满足能流守恒（入射辐通量恒等于反射辐通量与折射辐通量之和），必满足  $ 1=r^{2}+tt' $，即  $ (2-3-2b) $ 式。",
+        "answer": "需要根据电磁波在界面上的边界条件和能量守恒原理进行数学推导，证明所给公式满足斯托克关系和能流守恒定律。由于题目未提供具体的解答过程，此处无法给出完整答案。"
+    },
+    {
+        "question_id": "EX_048",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "考虑光正入射情况,有人认为:若在玻璃基板上镀光学厚度为  $ \\lambda/2 $ 的低折射率膜,上下界面反射都有相位跃变  $ \\pi $ 所以两表面反射光叠加同相位,因而反射光得到加强;若镀光学厚度为  $ \\lambda/2 $ 的高折射率膜,由于上表面反射有相位  $ \\pi $ 跃变,下表面反射无相位跃变,所以两表面反射光叠加有相位差  $ \\pi $,因而反射光得到减弱。\n\n简言之，有人认为：镀低折射率  $ \\lambda/2 $ 膜有增反效果；镀高折射率  $ \\lambda/2 $ 膜有增透效果。你认为正确吗？为什么？",
+        "answer": "这种观点不完全正确。对于光学厚度为 $ \\lambda/2 $ 的薄膜，增反或增透效果取决于薄膜折射率与基板折射率的相对大小。当薄膜折射率介于入射介质和基板折射率之间时，$ \\lambda/2 $ 膜有增反效果；当薄膜折射率小于或大于两侧介质折射率时，$ \\lambda/2 $ 膜有增透效果。需要根据具体的折射率关系和相位变化进行分析。"
+    },
+    {
+        "question_id": "EX_049",
+        "type": "分析题",
+        "difficulty": "中等",
+        "question": "（2-5-12a）式和（2-5-12b）式分别表镀  $ \\lambda/4 $ 和  $ \\lambda/2 $ 单层膜时， $ I_{R}/I_{0} $ 取极值的表示式。试指出什么条件下表示极大值，什么条件下表示极小值；什么条件下表示增反，什么条件下表示增透。",
+        "answer": "需要根据给定的公式分析 $ I_{R}/I_{0} $ 的极值条件，并结合薄膜折射率与周围介质折射率的关系，判断在什么情况下出现极大值（增反）或极小值（增透）。由于题目未提供具体的公式和解答过程，此处无法给出完整答案。"
+    },
+    {
+        "question_id": "EX_050",
+        "type": "概念题",
+        "difficulty": "基础",
+        "question": "干涉滤光片有哪些主要的性能参量和优点？",
+        "answer": "干涉滤光片的主要性能参量包括：中心波长、带宽、峰值透过率、截止深度、截止带宽等。其优点包括：高选择性、高透过率、窄带宽、可实现特定波长的过滤等。干涉滤光片广泛应用于光学系统、光谱分析、激光技术等领域。"
+    },
+    {
+        "question_id": "EX_051",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "图 3-1-5 菲涅耳衍射积分\n\nd $ \\widetilde{E}(P)\\propto\\left\\{\\begin{aligned}&\\widetilde{E}(Q)——次波源复振幅；\\\\&\\mathrm{d}\\sigma——次波源的元面积；\\\\&\\mathrm{e}^{\\mathrm{i}kr}/r——次波源发射球面波；\\\\&F(\\theta)——倾斜因子，菲涅耳假定\\theta\\leqslant\\pi/2 时，\\\\&F(\\theta)=\\cos\\theta;\\theta\\geqslant\\pi/2 时，F(\\theta)=0。\\end{aligned}\\right. $",
+        "answer": "场点 P 的复振幅  $ \\tilde{E}(P) $ 为\n\n $$ \\tilde{E}\\left(P\\right)=K\\int_{\\Sigma},\\tilde{E}\\left(Q\\right)\\frac{1}{r}\\mathrm{e}^{\\mathrm{i}k r}F\\left(\\theta\\right)\\mathrm{d}\\sigma $$ \n\n上式称为菲涅耳衍射积分公式,1882年基尔霍夫(Gustav Robert Kirchhoff)用严格的数学理论,在kr>1近似下,求解标量波的波动方程,可得场点P的复振幅 $ \\tilde{E}(P) $为\n\n $$ \\frac{1}{\\mathrm{i}\\lambda}\\int_{\\Sigma}\\tilde{E}(Q)\\frac{\\mathrm{e}^{\\mathrm{i}k r}}{r}\\frac{\\cos\\theta_{0}+\\cos\\theta}{2}\\mathrm{d}\\sigma $$ \n\n上式称为菲涅耳-基尔霍夫衍射公式,要注意(3-1-2)式中的∑面不一定要波面(等相位面),它可以是任何包围光源S的任意闭合曲面,见图3-1-6。θ₀为SQ和面元dσ法线间夹角,θ为dσ法线和QP间夹角。对比(3-1-1)式和(3-1-2)式,可以看出,比例因子\n\n $$ K=\\frac{1}{\\mathrm{i}\\lambda}=\\frac{1}{\\lambda}\\mathrm{e}^{-\\mathrm{i}\\pi/2} $$ \n\n这表明次波源相位比入射波超前  $ \\pi/2 $，而倾斜因子\n\n $$ F\\left(\\theta_{0},\\theta\\right)=\\frac{\\cos\\theta_{0}+\\cos\\theta}{2} $$ \n\n当积分曲面  $ \\Sigma $ 取波面  $ \\Sigma' $ 时,  $ \\theta_{0}=0, F(\\theta)=(1+\\cos\\theta)/2 $, 和菲涅耳当时假设并不一致。"
+    },
+    {
+        "question_id": "EX_052",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "图 3-2-1 圆孔波面上的半波带\n\n图 3-2-1 中, S 是单色点光源, D 是圆孔衍射屏, 场点  $ P_{0} $ 位于过 S 且垂直衍射屏 D 的轴线上。这里主要介绍半波带法半定量地解释圆孔的菲涅耳衍射现象。",
+        "answer": "## (1) 半波带法\n\n利用菲涅耳-基尔霍夫衍射公式求图中 $ P_{0} $点的复振幅，数学上需要进行复杂的积分计算。为了简化运算，将波面 $ \\Sigma' $ 上面元 $ \\mathrm{d}\\sigma $ 用 $ \\Delta\\sigma_{j} $ 来代替，使得相邻 $ \\Delta\\sigma_{j} $ 到 $ P_{0} $ 点的平均光程为 $ \\lambda/2 $，这样的小面积 $ \\Delta\\sigma_{j} $ 称为半波带。与圆孔密接的波面 $ \\Sigma' $（球面），其半径为 $ R $， $ P_{0} $ 点距该球面顶点O的距离为 $ r_{0} $，以 $ P_{0} $ 为球心，以\n\n $$ r_{j}=r_{0}+j\\frac{\\lambda}{2},\\quad j=1,2,3,\\cdots,n $$ \n\n为半径作球面，这些球面与波面  $ \\Sigma' $ 相截，并将其分成许多环状半波带，如图 3-2-1 所示， $ \\Delta\\sigma_{j} $ 表示第 j 个半波带面积。\n\n取闭合曲面  $ \\Sigma = \\Sigma' + \\Sigma_1 + \\Sigma_2 $， $ \\Sigma_1 $ 表示衍射屏上遮光部分，由于  $ \\Sigma_1 $ 上  $ E(Q) = 0 $，对积分无贡献。 $ \\Sigma_2 $ 可理解为以  $ P_0 $ 中心，和"
+    },
+    {
+        "question_id": "EX_053",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "ma_{j} $、 $ \\overline{r}_{j} $ 和  $ (1+\\cos\\overline{\\theta}_{j}) $ 随 j 的变化规律。",
+        "answer": "由图 3-2-2 容易看出，第 j 个半波带面积  $ \\Delta\\sigma_{j} $ 中的无穷小环带面积  $ \\mathrm{d}\\sigma $ 为\n\n $$ \\mathrm{d}\\sigma=2\\pi\\left(R\\sin\\varphi\\right)R\\mathrm{d}\\varphi $$ \n\n按余弦定理有\n\n $$ r^{2}=R^{2}+\\left(R+r_{0}\\right)^{2}-2R\\left(R+r_{0}\\right)\\cos\\varphi $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_1130_1285_1568_1480.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n对上式微分得\n\n $$ 2r\\mathrm{d}r=2R\\left(R+r_{0}\\right)\\sin\\varphi\\mathrm{d}\\varphi $$ \n\n<div style=\"text-align: center;\">图 3–2–2 计算第 j 个半波带面积</div>\n\n将上式代入  $ d\\sigma $ 式，消去  $ \\sin\\varphi d\\varphi $，得\n\n $$ \\begin{aligned}\\mathrm{d}\\sigma&=2\\pi\\frac{R}{\\left(R+r_{0}\\right)}r\\mathrm{d}r\\\\\\Delta\\sigma_{j}&=\\frac{2\\pi R}{\\left(R+r_{0}\\right)}\\int_{r_{j-1}}^{r_{j}}r\\mathrm{d}r=\\frac{\\pi R\\lambda}{\\left(R+r_{0}\\right)}\\left(r_{0}+j\\frac{\\lambda}{2}-\\frac{\\lambda}{4}\\right)\\end{aligned} $$ \n\n上式表明半波带面积  $ \\Delta\\sigma_{j} $ 随 j 增大稍微有所增加。\n\n从图 3-2-1 容易求出第 j 个半波带到  $ P_{0} $ 点的平均距离  $ \\overline{r}_{j} $ 为\n\n $$ \\overline{r_{j}}=\\frac{1}{2}\\left[\\left(r_{j}+r_{j-1}\\right)=\\frac{1}{2}\\left[\\left(r_{0}+j\\frac{\\lambda}{2}\\right)+r_{0}+\\left(j-1\\right)\\frac{\\lambda}{2}\\right]=r_{0}+j\\frac{\\lambda}{2}-\\frac{\\lambda}{4}\\right. $$ \n\n将 $  (3-2-5)  $式和 $  (3-2-6)  $式代入 $  (3-2-3)  $式，得\n\n $$ a_{j}\\propto(1+\\cos\\overline{\\theta_{j}})\\frac{\\pi R\\lambda}{R+r_{0}} $$ \n\n上式表明，各半波带在  $ P_{0} $ 的振幅贡献只与倾角有关，半波带序号 j 愈大，倾角  $ \\theta_{j} $ 亦愈大，因各半波带在  $ P_{0} $ 的振幅贡献将随 j 的增大而单调减小，即  $ a_{1}>a_{2}>a_{3}>\\cdots>a_{n} $。对单调下降序列，近似有\n\n $$ a_{2}=\\frac{a_{1}}{2}+\\frac{a_{3}}{2},\\quad a_{4}=\\frac{a_{3}}{2}+\\frac{a_{5}}{2},\\quad\\cdots $$ \n\n当 n 为奇数时， $  (3-2-4)  $ 式可写成\n\n $$ A_{_{n}}=\\frac{a_{_{1}}}{2}+\\left(\\frac{a_{_{1}}}{2}-a_{_{2}}+\\frac{a_{_{3}}}{2}\\right)+\\cdots+\\left(\\frac{a_{_{n-2}}}{2}-a_{_{n-1}}+\\frac{a_{_{n}}}{2}\\right)+\\frac{a_{_{n}}}{2} $$ \n\n当 n 为偶数时， $  (3-2-4)  $ 式可写成\n\n $$ \\boldsymbol{A}_{n}=\\frac{\\boldsymbol{a}_{1}}{2}+\\left(\\frac{\\boldsymbol{a}_{1}}{2}-\\boldsymbol{a}_{2}+\\frac{\\boldsymbol{a}_{3}}{2}\\right)+\\cdots+\\left(\\frac{\\boldsymbol{a}_{n-3}}{2}-\\boldsymbol{a}_{n-2}+\\frac{\\boldsymbol{a}_{n-1}}{2}\\right)+\\frac{\\boldsymbol{a}_{n-1}}{2}-\\boldsymbol{a}_{n} $$ \n\n利用 $  (3-2-7)  $式，上两式可简化为\n\n $$ \\begin{aligned}A_{n}=\\begin{cases}\\frac{a_{1}}{2}+\\frac{a_{n}}{2}&(n 为奇数时 )\\\\\\frac{a_{1}}{2}+\\frac{a_{n-1}}{2}-a_{n}=\\frac{a_{1}}{2}-\\frac{a_{n}}{2}&(n 为偶数时 )\\end{cases}\\end{aligned} $$ \n\n上式表明，对所考察的  $ P_{0} $ 点而言，圆孔露出的波面上，包含奇数个半波带时，"
+    },
+    {
+        "question_id": "EX_054",
+        "type": "理论分析题",
+        "difficulty": "中等",
+        "question": "设想制作与图 3-2-1 中露出波面 $ \\sum' $ 重合的球帽状波带片，将序号为偶数的半波带涂黑，只让光从序号为奇数的半波带中通过，它们在 $ P_{0} $ 点相位只差 $ 2\\pi $ 整倍数，因而振幅的贡献都是相长的，若有 m 个奇数序号的半波带，$ P_{0} $ 点的振幅约为 $ m a_{1} $，是波面完全未受阻时的振幅 $ a_{1}/2 $ 的 2m 倍。光强是波面完全未受阻时的 $ 4m^{2} $ 倍。通常将相邻序号半波带的振幅(或相位)改变的衍射屏称为波带片。激光准直仪中的波带片就是在玻璃板上涂制一定的黑白图案制成的。不同的是不用球帽形玻璃，而是用平板玻璃。\n\n平板玻璃上涂有环形黑带构成的波带片称为环形波带片，图 3-2-8 为计算环形波带片各环带半径公式的参考图，S 表单色点光源，$ P_{0} $ 表观察点，环形波带片 $ AA' $ 与 $ SP_{0} $ 连线正交，交点 C 为波带片中心。\n\n设 $ SC = R_{c} $，$ CP_{0} = r_{c} $，$ SP_{0} = R_{c} + r_{c} = l_{0} $，$ D_{1} $，$ D_{2} $，$ \\cdots $，$ D_{j} $ 表示各环带边缘点。按半波带要求应有\n\n $$ SD_{1}+D_{1}P_{0}=l_{0}+\\frac{\\lambda}{2} $$ \n\n $$ SD_{2}+D_{2}P_{0}=l_{0}+2\\frac{\\lambda}{2} $$ \n\n $$ SD_{j}+D_{j}P_{0}=l_{0}+j\\frac{\\lambda}{2} $$ \n\n令 $ \\rho_{j}=CD_{j} $，则 $ (3-2-12) $ 式可写为\n\n $$ \\sqrt{R_{\\mathrm{e}}^{2}+\\rho_{j}^{2}}+\\sqrt{r_{\\mathrm{e}}^{2}+\\rho_{j}^{2}}=\\left(R_{\\mathrm{e}}+r_{\\mathrm{e}}\\right)+j\\frac{\\lambda}{2} $$ \n\n实际装置中常满足 $ r_{c} \\gg \\rho_{j} $，所以有\n\n $$ \\sqrt{r_{\\mathrm{e}}^{2}+\\rho_{j}^{2}}=r_{\\mathrm{e}}\\left(1+\\frac{\\rho_{j}^{2}}{2r_{\\mathrm{e}}^{2}}+\\cdots\\right)\\approx r_{\\mathrm{e}}+\\frac{\\rho_{j}^{2}}{2r_{\\mathrm{e}}} $$ \n\n将上式代入 $  (3-2-13)  $式，平方后整理得：",
+        "answer": " $$ \\rho_{j}=\\sqrt{\\frac{jR_{\\mathrm{e}}r_{\\mathrm{e}}\\lambda}{R_{\\mathrm{e}}+r_{\\mathrm{e}}}} $$ \n\n值得指出，上式和(3-2-10)式在形式上虽然相似，但要注意 $ R_{c} $和 $ R,r_{c} $和 $ r_{0} $的区别，波带片环带尺寸"
+    },
+    {
+        "question_id": "EX_055",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "推导单缝夫琅禾费衍射的强度分布公式，并分析其极值条件。",
+        "answer": "单缝夫琅禾费衍射的强度分布公式为：\n$$ I_{\\theta}=I_{0}\\mathrm{sinc}^{2}\\alpha=I_{0}\\mathrm{sinc}^{2}\\frac{\\delta}{2} $$\n其中 $\\alpha=\\frac{\\delta}{2}=\\frac{\\pi a\\sin\\theta}{\\lambda}$。\n\n极值条件分析：\n①当 $\\delta=0$，即 $\\sin\\theta=0$时，$I=I_{0}$（主极强）。\n②当 $\\delta = \\pm 2K\\pi$，即 $\\sin\\theta = \\pm K\\frac{\\lambda}{a}, K = 1, 2, 3, \\cdots$ 时，$I=0$（暗条纹）。\n③相邻暗条纹之间有一次极强，次极强的位置由 $\\tan\\frac{\\delta}{2}=\\frac{\\delta}{2}$ 确定，可通过作图法求解。"
+    },
+    {
+        "question_id": "EX_056",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "圆孔的夫琅禾费衍射花样中央是亮斑，周围亮环的强度下降比单缝时要快，实际上只能看到一两个亮环。从表3-4-1中数据可得中央亮斑(艾里斑)角半径为\n $$ \\Theta=\\frac{0.61}{r}\\lambda=\\frac{1.22}{d}\\lambda $$ \n式中 d 是圆孔直径, r 是半径。\n\n### 2. 成像仪器的分辨本领\n\n在几何光学里,物点经理想透镜能得到一个像点。由于存在衍射,几何光学中的所谓像点实际上是艾里斑。物点成的像是艾里斑,这就限制了成像系统分辨两相近物点的能力。通常用分辨本领或最小可分辨物点间距来表征这种能力。\n\n## (1) 瑞利判据\n\n如果两物点是强度相等的同频点光源，当它们离得很开，经成像系统后两个艾里斑角距离  $ \\Delta\\theta $ 大于艾里斑角半径  $ \\Theta $ 时，毫无困难分辨，如图 3-4-3(a) 所示；如果两物点很靠近，艾里斑重叠到  $ \\Delta\\theta < \\Theta $ 时完全不能分辨，如图 3-4-3(b) 所示，图中虚线是两个艾里斑非相干叠加时合光强分布，和单一物点的艾里斑没有区别。\n\n如果两物点靠近到两艾里斑角距离  $ \\Delta\\theta $ 则刚好等于艾里斑角半径  $ \\Theta $ 时，如图 3-4-3c 所示，这时合光强分布曲线中凹陷处强度为两侧峰值的 74%，正常眼均能分辨出是两个部分重叠的艾里斑。瑞利提出： $ \\Delta\\theta=\\Theta $ 可作为成像系统对两物点恰可被分辨的准则，这个准则通常被称作瑞利判据。\n\n按瑞利判据，恰可被分辨两物点的角距离  $ \\delta\\theta $，或称最小可分辨角为",
+        "answer": "按瑞利判据，恰可被分辨两物点的角距离  $ \\delta\\theta $，或称最小可分辨角为\n $$ \\delta\\theta=\\frac{0.61}{r}\\lambda=\\frac{1.22}{d}\\lambda $$ \n式中 r、d 分别为仪器通光孔的半径和直径。从上式出发下面讨论向种成像系统的分辨本领。\n\n## (2) 眼睛\n\n用眼睛观察远处物体时，网膜上的像，实际上就是自物体发出的光通过眼睛瞳孔而产生的夫琅禾费圆孔衍射。用图3-4-4简化眼模型，满足瑞利判据要求的两物点A、B对简化眼节点C的张角由(3-4-1)式给出，此即人眼的最小可分辨角。若物体放在明视距离处，则最小可分辨物点间距 $ \\delta y_{e}=l_{明}\\delta\\theta_{e} $"
+    },
+    {
+        "question_id": "EX_057",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "机分辨本领既取决于照相物镜的最小可分辨角，也取决于底片上感光乳剂的结构和性质。为充分利用照相物镜的分辨本领：要求感光乳剂对于相差不多的光强有足够灵敏的变黑反应，即有较高的反衬灵敏度；乳剂结构还应该足够的细密，以致乳剂面上感光元的大小和相邻两感光元间的距离都要小于物镜所产生的艾里斑直径。当乳剂满足上述两方面的要求时，照相机的分辨本领才可以说取决于物镜的分辨本领。\n\n相对孔径为  $ D/f' $ 的照相物镜，其最小可分辨像点间距为\n\n $$ \\delta y_{o}^{\\prime}=f^{\\prime}\\delta\\theta_{o}=1.22\\lambda\\frac{f^{\\prime}}{D} $$ \n\n为充分利用物镜的分辨本领,感光乳剂单位长度内能分辨的线条数为\n\n $$ \\frac{1}{\\delta y_{。}^{\\prime}}=\\frac{1}{1.22\\lambda}\\frac{D}{f^{\\prime}} $$ \n\n上式表示,相对孔径愈大的照相物镜,其分辨本领愈大。为充分利用它的分辨本领,要求底片单位长度内能分辨的线条数也愈多。例如,最大相对孔径为1:3.5的照相物镜,若取  $ \\lambda=0.55\\ \\mu\\mathrm{m} $,要求用每毫米能分辨420条线的底片。一般的照相机物镜剩余像差很大,它显著地降低了物镜的分辨本领,因而对感光底片的要求可较420条/mm小许多,一般要求200条/mm就足够了。",
+        "answer": "为充分利用照相物镜的分辨本领，感光乳剂需要满足两个条件：\n\n1. 感光乳剂对于相差不多的光强有足够灵敏的变黑反应，即有较高的反衬灵敏度。\n\n2. 乳剂结构应该足够的细密，以致乳剂面上感光元的大小和相邻两感光元间的距离都要小于物镜所产生的艾里斑直径。\n\n当乳剂满足上述两方面的要求时，照相机的分辨本领才可以说取决于物镜的分辨本领。\n\n相对孔径为 $ D/f' $ 的照相物镜，其最小可分辨像点间距为\n\n $$ \\delta y_{o}^{\\prime}=f^{\\prime}\\delta\\theta_{o}=1.22\\lambda\\frac{f^{\\prime}}{D} $$ \n\n为充分利用物镜的分辨本领,感光乳剂单位长度内能分辨的线条数为\n\n $$ \\frac{1}{\\delta y_{。}^{\\prime}}=\\frac{1}{1.22\\lambda}\\frac{D}{f^{\\prime}} $$ \n\n上式表示,相对孔径愈大的照相物镜,其分辨本领愈大。为充分利用它的分辨本领,要求底片单位长度内能分辨的线条数也愈多。例如,最大相对孔径为1:3.5的照相物镜,若取 $ \\lambda=0.55\\ \\mu\\mathrm{m} $,要求用每毫米能分辨420条线的底片。一般的照相机物镜剩余像差很大,它显著地降低了物镜的分辨本领,因而对感光底片的要求可较420条/mm小许多,一般要求200条/mm就足够了。"
+    },
+    {
+        "question_id": "EX_058",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "什么是缺级？当第K级主极强位置刚好和单缝衍射零点位置重叠时，会出现什么现象？",
+        "answer": "当第K级主极强位置 $\\sin\\theta=K\\lambda/d$刚好和单缝衍射零点位置$\\sin\\theta=K'\\lambda/a$重叠时，光强为零，称为缺级。主极强缺级的级次K为$K=K'\\frac{d}{a}$，其中$K'=0,\\pm1,\\pm2,\\cdots$。例如，当d/a=4时，$K=\\pm4,\\pm8,\\pm12,\\cdots$为缺级。"
+    },
+    {
+        "question_id": "EX_059",
+        "type": "理论推导",
+        "difficulty": "困难",
+        "question": "推导亮纹的半角宽度公式，并解释其物理意义。",
+        "answer": "第K级主极强角位置$\\theta_K$由$\\sin\\theta_K=K\\frac{\\lambda}{d}$决定。第K级主极强旁第1个零点位置$\\theta_K+\\Theta$由$\\sin(\\theta_K+\\Theta)=(K+\\frac{1}{N})\\frac{\\lambda}{d}$决定，其中$\\Theta$称为K级亮纹半角宽度。将上两式相减得：$\\sin(\\theta_K+\\Theta)-\\sin\\theta_K=\\frac{\\lambda}{Nd}$。当$N\\gg1$时，$\\Theta$很小，可写为$\\Theta(\\frac{d\\sin\\theta}{d\\theta})_{\\theta=\\theta_K}=\\frac{\\lambda}{Nd}$，即$\\Theta\\cos\\theta_K=\\frac{\\lambda}{Nd}$。因此，$\\Theta=\\frac{\\lambda}{Nd\\cos\\theta_K}$。上式表明亮纹的半角宽度同N缝宽度(Nd)成反比，即Nd越大，亮纹越细。"
+    },
+    {
+        "question_id": "EX_060",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "多缝夫琅禾费衍射光强分布有哪些特征？",
+        "answer": "多缝夫琅禾费衍射光强分布有下列特征：①多缝夫琅禾费衍射光强取决于单缝衍射和缝间干涉两个因子的相乘积，缝间干涉因子决定亮纹主极强位置(位置因子)，单缝衍射因子决定了强度曲线的外部'轮廓'(强度因子)；②与单缝夫琅禾费衍射相比出现了一系列新的主极强和次极强；③主极强的位置与缝数N无关，但亮纹半角宽度随N缝宽度增大而减少；④相邻主极强间有N-1个极小，N-2个次极大；⑤主极强干涉级K为d/a的正负整数倍时，出现缺级。"
+    },
+    {
+        "question_id": "EX_061",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "什么是光栅？光栅方程是什么？",
+        "answer": "任何一种装置或结构，只要它能对入射光的振幅或相位产生周期性的空间调制，都可以称为光栅。光栅方程为$d\\sin\\theta=K\\lambda$，其中$K=0,\\pm1,\\pm2,\\cdots$。d称为光栅常量，它决定了复色光源中每种波长各级衍射光主极强(或说各级谱线)角位置。按光栅方程可以判定：除零级外，各级谱线的位置因波长而异。"
+    },
+    {
+        "question_id": "EX_062",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "光栅作为分光元件有哪些性能参量？",
+        "answer": "光栅相当一个分光元件，主要有三个性能参量：角色散、色分辨本领和自由光谱范围（或称色散范围）。角色散$D_\\theta$是指同级光谱中，谱线主极强角距离对波长差的比率。"
+    },
+    {
+        "question_id": "EX_063",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "〔例 3.5.1〕试比较光栅和棱镜摄谱仪的色分辨本领。",
+        "answer": "〔解〕请扫描右侧二维码获取解答过程(见图3-5-6)。\n\n $$ A=\\frac{\\lambda}{\\delta\\lambda}=\\frac{t}{n_{0}}\\cdot\\frac{\\mathrm{d}n}{\\mathrm{d}\\lambda} $$"
+    },
+    {
+        "question_id": "EX_064",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "例 3.5.1 解题过程\n\n条件可求得\n\n $$ K(\\lambda+\\Delta\\lambda_{sr})=(K+1)\\lambda $$ \n\n光栅总是在低级次下使用,在可见光范围内为几百纳米,和棱镜类似可做大波段的光谱分析,干涉仪多在高级次下使用,只能在很窄的光谱区使用,表3-5-1列举了几种分光仪器的性能参量。\n\n<div style=\"text-align: center;\">表 3-5-1 几种分光仪器的性能参量 ( $ \\lambda \\approx 500.0 $ nm)</div>",
+        "answer": " $$ \\Delta\\lambda_{sr}=\\frac{\\lambda}{K} $$ \n\n<div style=\"text-align: center;\">表 3-5-1 几种分光仪器的性能参量 ( $ \\lambda \\approx 500.0 $ nm)</div>\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>仪器</td><td style='text-align: center; word-wrap: break-word;'>K</td><td style='text-align: center; word-wrap: break-word;'>N</td><td style='text-align: center; word-wrap: break-word;'>A</td><td style='text-align: center; word-wrap: break-word;'>$ \\delta\\lambda/nm $</td><td style='text-align: center; word-wrap: break-word;'>$ \\Delta\\lambda_{sr}/nm $</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>法布里-珀罗标准具  $ h=25\\ mm,r=0.95 $</td><td style='text-align: center; word-wrap: break-word;'>$ 10^{5} $</td><td style='text-align: center; word-wrap: break-word;'>30</td><td style='text-align: center; word-wrap: break-word;'>$ 3\\times10^{6} $</td><td style='text-align: center; word-wrap: break-word;'>0.00016</td><td style='text-align: center; word-wrap: break-word;'>0.005</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>迈克耳孙干涉仪  $ (h=25\\ mm\\text{时}) $</td><td style='text-align: center; word-wrap: break-word;'>$ 10^{5} $</td><td style='text-align: center; word-wrap: break-word;'>2</td><td style='text-align: center; word-wrap: break-word;'>$ 3\\times10^{5} $</td><td style='text-align: center; word-wrap: break-word;'>0.0025</td><td style='text-align: center; word-wrap: break-word;'>0.005</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>洛兰光栅</td><td style='text-align: center; word-wrap: break-word;'>3</td><td style='text-align: center; word-wrap: break-word;'>$ 10^{5} $</td><td style='text-align: center; word-wrap: break-word;'>$ 3\\times10^{5} $</td><td style='text-align: center; word-wrap: break-word;'>0.002</td><td style='text-align: center; word-wrap: break-word;'>200</td></tr></table>\n\n### 3. 闪耀光栅\n\n上述透射光栅，零级谱线无色散，在第一个缺级以前，谱线强度随级次增加而减少，但色散和色分辨本领却随级次增加而增加。换句话说，分光性能好的谱线强度低，分光性能差的谱线强度高，完全不能分光的零级谱线强度最高。显然，作为分光仪器来说，强度的这种分布是很不好的。\n\n决定谱线位置的是干涉因子,决定强度分布的是衍射因子,要想改变谱线强度的分布,使分光性能好的某级谱线占具有最多光能,得从改变衍射因子入手。闪耀光栅就是按这种指导思想设计的。平面反射闪耀光栅通过控制刻槽的形状使衍射因子中央主极强向期望强化的某级谱线定向,所以反射闪耀光栅又称为反射定向光栅。它是在铝膜上刻划断面为锯齿形的槽,光栅基板用光学玻璃或熔凝石英制成,在铝膜和基板之间常镀"
+    },
+    {
+        "question_id": "EX_065",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "为什么在晶体衍射中只考虑各晶面零级主极强之间的相长干涉，而不考虑各晶面非零级主极强之间的相长干涉？",
+        "answer": "这是因为零级主极强的方向与波长无关，而非零级主极强的方向与波长有关。要求同一波长同时满足二维点间干涉和面间干涉两个极强条件，一般说来是不可能的。也就是说，二维晶格产生的高级主极强在面间干涉时是相消干涉，不必考虑。"
+    },
+    {
+        "question_id": "EX_066",
+        "type": "原理分析",
+        "difficulty": "中等",
+        "question": "理解和使用布拉格条件时，需要注意哪三点？",
+        "answer": "a）晶体的布拉维晶格有许多晶面族，因此对同一入射光来说，各晶面族有各自的掠射角 θ₁,θ₂,⋯，对其中一个晶面族有一个布拉格条件：2d₁sinθ₁=K₁λ, 2d₂sinθ₂=K₂λ，即给定了入射光方向,对同一个空间光栅有一系列的布拉格条件。\nb）如果入射的是单色 X 射线，以某一掠射角 θ 入射到特定的晶面族上，一般不产生衍射的 X 射线束。因为在入射方向、晶体取向入射波长三者都给定了之后，一般情况下不满足布拉格条件，因而不出现主极强。总之，要得到满足布拉格条件的衍射主极强，λ 和 θ 两者中，只能有一个选定，另一个是连续分布的。\nc）由于 sinθ≤1，从布拉格条件可得 λ≤2d/K。令 K=1 得极限波长 λc=2d。即 λ<λc=2d 时，才有可能产生非零级衍射主极强；λ>2d 时，除了产生零级衍射主极强外，不能产生任何非零级衍射主极强。零级衍射主极强，对应于原入射线的透射方向。只是零级无色散，不能用于分光测量。"
+    },
+    {
+        "question_id": "EX_067",
+        "type": "方法介绍",
+        "difficulty": "基础",
+        "question": "拍摄 X 射线在晶体上的衍射照片通常有哪两类方法？",
+        "answer": "拍摄 X 射线在晶体上的衍射照片,通常有两类方法,一类是给定晶体方位,用连续谱 X 射线,以劳厄法为代表;另一类是用单色 X 射线,连续改变晶体方位,以旋转晶体法和德拜法为代表。"
+    },
+    {
+        "question_id": "EX_068",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "用再现光照射全息图时，若在全息图 $\\sum$出射面上出现 $(3-7-2)$式和 $(3-7-4)$ 式的复振幅分布，则表示出射面一侧出现了什么样的光波场？从复振幅分布如何判断光波场？",
+        "answer": "出射面一侧出现了中心在 $P(0,0,-d)$ 的发散球面波场和中心在 $P'(0,0,d)$ 的会聚球面波场。从复振幅分布判断光波场的关键在于识别复振幅分布中相因子分布特征。"
+    },
+    {
+        "question_id": "EX_069",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "拍摄单个物点的共轴全息图时，参考光R和物光O在全息底片$\\sum$面上近轴区$Q(x,y)$点的复振幅分布分别为多少？",
+        "answer": "参考光R的复振幅分布为：$E_{R}(Q)=A_{R}\\exp(\\mathrm{i}\\phi_{R})=A_{R}$；物光O的复振幅分布为：$E_{o}(Q)=A_{o}\\exp(\\mathrm{i}k\\rho^{2}/2d)$。其中$A_{R}$和$A_{o}$分别表示$\\sum$面上参考光、物光的实振幅。"
+    },
+    {
+        "question_id": "EX_070",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "在拍摄单个物点的共轴全息图时，干涉条纹的可见度和形状、疏密分别反映了物光的什么信息？",
+        "answer": "干涉条纹的可见度反映了物光的振幅信息，其形状和疏密反映了物光的相位信息。"
+    },
+    {
+        "question_id": "EX_071",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "在拍摄单个物点的共轴全息图时，亮环半径$\\rho_{K}$的表达式是什么？第一亮环半径$\\rho_{1}$是多少？",
+        "answer": "亮环半径$\\rho_{K}$的表达式为：$\\rho_{\\kappa}=\\sqrt{2K\\lambda d}=\\sqrt{K}\\rho_{1}$。第一亮环半径$\\rho_{1}=\\sqrt{2\\lambda d}$。"
+    },
+    {
+        "question_id": "EX_072",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "为了记录下全息底片上的强度分布$I(Q)$，全息底片的复振幅透过率$t(x,y)$与曝光强度$I(x,y)$应满足什么关系？",
+        "answer": "应控制记录介质——全息底片的曝光量和显影过程，使冲洗后全息底片复振幅透过率$t(x,y)$与曝光强度$I(x,y)$成线性关系，即$t(x,y)=t_{0}+\\beta I(x,y)$。其中$t_{0}$是底片的灰雾度（本底振幅透过率），$\\beta$是与x、y无关的常量，负片$\\beta<0$；正片$\\beta>0$。"
+    },
+    {
+        "question_id": "EX_073",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "解释全息照相的基本原理，包括全息记录和波场再现两个过程。",
+        "answer": "全息照相的基本原理包括全息记录和波场再现两个过程：\n\n### 全息记录\n为了记录物光在∑平面上的振幅分布和相位分布，需要另一与之相干的参考光和它一起投射到全息底片上进行叠加。设物由n个物点组成，每个物点在相干光照明下各自发出球面物光波，它们在全息底片∑上分别产生分复振幅 $E_{0j}(Q)$，而整个物光场在∑上产生的合复振幅为：\n$$E_o(Q)=\\sum_{j=1}^n E_{0j}(Q)=A_o\\mathrm{e}^{i\\phi_0}$$\n其中$A_{0}, \\phi_{0}$表示物光O在全息底片上的振幅分布和相位分布。\n\n参考光在全息底片上复振幅为：\n$$E_{R}(Q)=A_{R}\\mathbf{e}^{i\\phi_{R}}$$\n其中$A_{R}, \\phi_{R}$表示参考光R在全息底片上的振幅分布和相位分布。\n\n物光和参考光在$\\Sigma$上相干叠加后的复振幅分布为：\n$$E(Q)=E_{R}(Q)+E_{o}(Q)=A_{R}\\mathrm{e}^{\\mathrm{i}\\phi_{R}}+A_{o}\\mathrm{e}^{\\mathrm{i}\\phi_{o}}$$\n\n强度分布为：\n$$I(Q)=E(Q)^{*}E(Q)=(A_{R}\\mathrm{e}^{\\mathrm{i}\\phi_{R}}+A_{O}\\mathrm{e}^{\\mathrm{i}\\phi_{O}})(A_{R}\\mathrm{e}^{-\\mathrm{i}\\phi R}+A_{O}\\mathrm{e}^{-\\mathrm{i}\\phi_{O}})$$\n即\n$$I(Q)=A_{R}^{2}+A_{O}^{2}+A_{R}A_{O}[\\mathrm{e}^{\\mathrm{i}(\\phi_{R}-\\phi_{O})}+\\mathrm{e}^{-\\mathrm{i}(\\phi_{R}-\\phi_{O})}]$$\n或\n$$I(Q)=A_{R}^{2}+A_{O}^{2}+2A_{R}A_{O}\\cos(\\phi_{O}-\\phi_{R})$$\n\n从上式看出，∑面上干涉条纹的形状、间隔等几何特征，反映了物光相对参考光的相对相位分布$(\\phi_{0}-\\phi_{R})$，条纹的可见度反映了物光相对参考光的相对振幅分布。物光在∑面上的振幅和相位两部分信息都被干涉条纹记录下来了。将全息底片线性曝光冲洗，使全息图的复振幅透过率$t(x,y)$与曝光时强度$I(x,y)$成线性关系，即：\n$$t(x,y)=t_{0}+\\beta I(x,y)=(t_{b}+\\beta A_{R}^{2}+\\beta A_{O}^{2})+\\beta A_{R}A_{O}[\\mathrm{e}^{\\mathrm{i}(\\phi_{R}-\\phi_{O})}+\\mathrm{e}^{-\\mathrm{i}(\\phi_{R}-\\phi_{O})}]$$\n\n### 波场再现\n设再现光$R'$在全息图上复振幅$E_{R}' = A_{R}' \\exp(\\mathrm{i} \\phi_{R}')$，可以不同于参考光在$\\Sigma$上复振幅。全息图后表面复振幅$E_{H}(Q)$为：\n$$E_{H}(Q)=t(Q)E_{R}'^{\\prime}$$\n$$=(t_{0}+\\beta A_{R}^{2}+\\beta A_{O}^{2})E_{R}'^{\\prime}(Q)$$\n$$+\\beta A_{R}A_{R}'^{\\prime}\\exp[\\mathrm{i}(\\varphi_{R}'^{\\prime}-\\varphi_{R})]E_{O}(Q)$$\n$$+\\beta A_{R}A_{R}'^{\\prime}\\exp[\\mathrm{i}(\\varphi_{R}'^{\\prime}+\\varphi_{R})]$$\n\n通过这一过程，可以再现原物光波场，形成虚像和实像。"
+    },
+    {
+        "question_id": "EX_074",
+        "type": "理论推导",
+        "difficulty": "中等",
+        "question": "设物镜的通光孔径充分大,即假定不计物镜的衍射效应,按菲涅耳-基尔霍夫公式 $ (3-1-2) $,得\n\n $$ E_{F}(x,y)=\\frac{1}{\\mathrm{i}\\lambda}\\iint_{\\Sigma}E_{0}(\\xi,\\eta)\\frac{\\mathrm{e}^{\\mathrm{i}k r}}{r}\\frac{\\cos\\theta_{0}+\\cos\\theta}{2}\\mathrm{d}\\xi\\mathrm{d}\\eta $$ \n\n用单色相干光正入射垂轴小物平面，在近轴近似下  $ \\cos\\theta_{0}=\\cos\\theta=1,1/r= $ 常量， $ kr=k(r-r_{0})+kr_{0} $，其中  $ kr_{0}(x,y) $ 为物平面坐标原点 O 到频谱面  $ P(x,y) $ 点的光程。上式可简化为\n\n $$ E_{F}(x,y)=C\\mathrm{e}^{\\mathrm{i}k r_{0}}\\iint\\Sigma E_{0}(\\xi,\\eta)\\mathrm{e}^{\\mathrm{i}k(r-r_{0})}\\mathrm{d}\\xi\\mathrm{d}\\eta $$ \n\n式中 C 为与  $ (x, y) $ 无关的复常量。",
+        "answer": " $$ \\begin{aligned}k\\left(r-r_{0}\\right)&=-k\\left(r_{0}-r\\right)\\\\&=-\\overrightarrow{OQ}\\cdot\\overrightarrow{k}-2\\pi\\left(\\xi f_{s}+\\eta f_{y}\\right)\\\\&=-\\overrightarrow{OQ}\\cdot\\frac{2\\pi}{\\lambda}\\frac{\\overrightarrow{CP}}{CP}\\\\&=-2\\pi\\Big(\\xi\\frac{x}{\\lambda f^{\\prime}}+\\eta\\frac{y}{\\lambda f^{\\prime}}\\Big)\\\\ \\end{aligned} $$ \n\n上式中利用了近轴近似条件  $ CP = f' $（物镜焦距）。利用上式， $ E_{F}(x, y) $ 表示式又可写为\n\n $$ E_{F}(x,y)=C\\mathrm{e}^{\\mathrm{i}k r_{0}}\\int_{-\\infty}^{+\\infty}\\int_{-\\infty}^{+\\infty}E_{0}(\\xi,\\eta)\\mathrm{e}^{-\\mathrm{i}2\\pi(f_{x}\\xi+f_{y}\\eta)}\\mathrm{d}\\xi\\mathrm{d}\\eta $$ \n\n式中\n\n $$ f_{x}=\\left(\\frac{x}{\\lambda f^{\\prime}}\\right),\\quad f_{y}=\\left(\\frac{y}{\\lambda f^{\\prime}}\\right) $$ \n\n积分限本应是物面  $ \\Sigma $，但在  $ \\Sigma $ 之外，各点的  $ E_{0}(\\xi,\\eta) $ 为零，所以积分限可以取  $ (-\\infty,\\infty) $。复常量 C 对频谱面上，复振幅的相对分布无影响，但  $ kr_{0} $ 与频谱面上  $ P(x,y) $ 点坐标有关，因此  $ (3-8-2) $ 式说明：夫琅禾费衍射场中，复振幅分布  $ E_{F}(x,y) $，严格说来，还不完全是物函数的傅里叶频谱  $ E(f_{x},f_{y})[(3-8-1)\\text{式}] $。但是，当物平面和透镜 L 的物方焦平面重合时， $ kr_{0} $ 属等程情况。不论 P 点在  $ P(0,0) $、 $ P(x_{1},y_{1}) $ 和  $ P(x,y) $， $ kr_{0} $ 均相同，即  $ Ce^{kr_{0}}=C^{\\prime} $（复常量）。只有在此条件下， $ (3-8-1) $ 式才可写为\n\n $$ E_{F}(x,y)=C^{\\prime}\\int_{-\\infty}^{+\\infty}\\int_{-\\infty}^{+\\infty}E_{0}(\\xi,\\eta)\\mathrm{e}^{-i2\\pi(f_{x}\\xi+f_{y}\\eta)}\\mathrm{d}\\xi\\mathrm{d}\\eta $$ \n\n上式表示，当物平面放在透镜的物方焦平面（或称前焦面）时，经夫琅禾费衍射在后焦面上的复振幅分布  $ E_{F}(x,y) $ 才是物函数  $ E_{0}(\\xi,\\eta) $ 的傅里叶变换。换句话说，后焦面上  $ P(x,y) $ 点的光场复振幅  $ E_{F}(x,y) $ 与物函数  $ E_{0}(\\xi,\\eta) $ 中空间频率为  $ f_{x}f_{y} $ 的平面波成分的复振幅成正比。因此，夫琅禾费衍射装置可看成从物函数求频谱函数的光学计算机，或说傅里叶频谱分析器。"
+    },
+    {
+        "question_id": "EX_075",
+        "type": "理论推导题",
+        "difficulty": "中等",
+        "question": "透射率\n\n4. 布儒斯特角的应用\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_1428_1495_1594_1662.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n菲涅耳\n\n磁波中,E 和 H 的大小存在以下关系:\n\n $$ H=\\sqrt{\\frac{\\varepsilon_{\\mathrm{r}}\\varepsilon_{0}}{\\mu_{\\mathrm{r}}\\mu_{0}}}E=\\frac{\\varepsilon_{0}}{\\sqrt{\\varepsilon_{0}\\mu_{0}}}\\sqrt{\\varepsilon_{\\mathrm{r}}}E=c\\varepsilon_{0}nE $$ \n\n其中，折射率  $ n = c \\sqrt{\\varepsilon \\mu} = c \\sqrt{\\varepsilon_{r} \\mu_{r}} \\sqrt{\\varepsilon_{0} \\mu_{0}} = \\sqrt{\\varepsilon_{r}} $， $ n_{0} = c \\sqrt{\\varepsilon_{0} \\mu_{0}} = 1 $ 为真空的折射率。因此（4-2-3）式可写为\n\n $$ n_{1}E_{s}\\cos i_{1}-n_{1}E_{s}^{\\prime}\\cos i_{1}=n_{2}E_{s}^{\\prime\\prime}\\cos i_{2} $$ \n\n利用折射定律，上式又可写为\n\n $$ \\left(E_{\\mathrm{s}}-E_{\\mathrm{s}}^{\\prime}\\right)\\cos i_{1}\\sin i_{2}=E_{\\mathrm{s}}^{\\prime\\prime}\\sin i_{1}\\cos i_{2} $$ \n\n将入射光、反射光和折射光的波函数分别写成复数形式\n\n $$ \\begin{aligned}\\boldsymbol{E}_{\\mathrm{s}}&=\\boldsymbol{E}_{0\\mathrm{s}}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}\\cdot\\boldsymbol{r}\\right)\\right]\\\\\\boldsymbol{E}_{\\mathrm{s}}^{\\prime}&=\\boldsymbol{E}_{0\\mathrm{s}}^{\\prime}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}^{\\prime}\\cdot\\boldsymbol{r}\\right)\\right]\\\\\\boldsymbol{E}_{\\mathrm{s}}^{\\prime \\prime}&=\\boldsymbol{E}_{0\\mathrm{s}}^{\\prime \\prime}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}^{\\prime \\prime}\\cdot\\boldsymbol{r}\\right)\\right]\\end{aligned} $$ \n\n将上三式分别代入边界条件(4-2-2)式和(4-2-4)式,要该边界条件在界面上任何时刻,任何地点均成立,必有\n\n $$ k\\cdot r=k^{\\prime}\\cdot r=k^{\\prime \\prime}\\cdot r $$ \n\n因此得\n\n $$ \\begin{aligned}E_{0s}+E_{0s}^{\\prime}&=E_{0s}^{\\prime \\�}\\\\ \\left(E_{0s}-E_{0s}^{\\prime}\\right)&\\cos i_{1}\\sin i_{2}=E_{0s}^{\\prime \\prime}\\sin i_{1}\\cos i_{2}\\end{aligned} $$ \n\n上两式中的  $ E_{0s} $、 $ E'_{0s} $ 和  $ E''_{0s} $ 为包含有常量相位因子的复振幅。联立求得\n\n $$ \\begin{aligned}&r_{s}=\\frac{E_{0s}^{\\prime}}{E_{0s}}=\\frac{-\\sin\\left(i_{1}-i_{2}\\right)}{\\sin\\left(i_{1}+i_{2}\\right)}\\\\ &t_{s}=\\frac{E_{0s}^{\\prime \\prime}}{E_{0s}}=\\frac{2\\cos i_{1}\\sin i_{2}}{\\sin\\left(i_{1}+i_{2}\\right)}\\\\ \\end{aligned} $$ \n\n上两式给出了入射波光矢垂直于入射面的情况下，复振幅反射比  $ r_{s} $ 、复振幅透射比  $ t_{s} $ 随入射角和介质折射率（通过  $ i_{2} $ 反映）的函数关系。\n\n## (2) 光矢平行入射面\n\n设  $ E_{p} $ 表示振动方向平行入射面的入射波光矢，根据平面电磁波的性质，相应的磁场强度矢量垂直于入射面，用  $ E_{s} $ 表示。 $ E_{p} $、 $ H_{s} $、 $ E'_{p} $、 $ H'_{s} $、 $ E''_{p} $、 $ H''_{s} $ 的正方向规定如图 4-2-2 所示。\n\n按电磁场在各向同性电介质分界面上的边界条件 $  (4-2-1)  $式得\n\n $$ \\begin{aligned}E_{\\mathrm{p}}\\cos i_{1}-E_{\\mathrm{p}}^{\\prime}\\cos i_{1}&=E_{\\mathrm{p}}^{\\prime \\prime}\\cos i_{2}\\\\H_{\\mathrm{s}}+H_{\\mathrm{s}}^{\\prime}&",
+        "answer": "根据电磁场在各向同性电介质分界面上的边界条件，对于光矢平行入射面的情况，我们有以下边界条件方程：\n\n$$ \\begin{aligned}E_{\\mathrm{p}}\\cos i_{1}-E_{\\mathrm{p}}^{\\prime}\\cos i_{1}&=E_{\\mathrm{p}}^{\\prime \\prime}\\cos i_{2}\\\\H_{\\mathrm{s}}+H_{\\mathrm{s}}^{\\prime}&=H_{\\mathrm{s}}^{\\prime \\prime}\\end{aligned} $$\n\n其中，$E_{\\mathrm{p}}$、$E_{\\mathrm{p}}^{\\prime}$和$E_{\\mathrm{p}}^{\\prime \\prime}$分别表示入射波、反射波和折射波的平行分量，$H_{\\mathrm{s}}$、$H_{\\mathrm{s}}^{\\prime}$和$H_{\\mathrm{s}}^{\\prime \\prime}$表示相应的垂直分量。\n\n利用平面电磁波的性质，$H_{\\mathrm{s}}=\\sqrt{\\frac{\\varepsilon_{\\mathrm{r}}\\varepsilon_{0}}{\\mu_{\\mathrm{r}}\\mu_{0}}}E_{\\mathrm{p}}=nE_{\\mathrm{p}}$，同理可得$H_{\\mathrm{s}}^{\\prime}=n_{1}E_{\\mathrm{p}}^{\\prime}$和$H_{\\mathrm{s}}^{\\prime \\prime}=n_{2}E_{\\mathrm{p}}^{\\prime \\prime}$。\n\n将这些关系代入边界条件方程，可以得到关于平行分量的边界条件：\n\n$$ \\begin{aligned}E_{\\mathrm{p}}\\cos i_{1}-E_{\\mathrm{p}}^{\\prime}\\cos i_{1}&=E_{\\mathrm{p}}^{\\prime \\prime}\\cos i_{2}\\\\n_{1}(E_{\\mathrm{p}}+E_{\\mathrm{p}}^{\\prime})&=n_{2}E_{\\mathrm{p}}^{\\prime \\prime}\\end{aligned} $$\n\n利用折射定律$n_{1}\\sin i_{1}=n_{2}\\sin i_{2}$，可以进一步简化这些方程，最终得到复振幅反射比和透射比的表达式。"
+    },
+    {
+        "question_id": "EX_076",
+        "type": "理论推导",
+        "difficulty": "中等",
+        "question": "设 $ E_{p} $ 表示振动方向平行入射面的入射波光矢，根据平面电磁波的性质，相应的磁场强度矢量垂直于入射面，用 $ E_{s} $ 表示。 $ E_{p}$、 $ H_{s}$、 $ E'_{p}$、 $ H'_{s}$、 $ E''_{p}$、 $ H''_{s}$ 的正方向规定如图 4-2-2 所示。\n\n按电磁场在各向同性电介质分界面上的边界条件 $  (4-2-1)  $式得\n\n $$ \\begin{aligned}E_{\\mathrm{p}}\\cos i_{1}-E_{\\mathrm{p}}^{\\prime}\\cos i_{1}&=E_{\\mathrm{p}}^{\\prime \\prime}\\cos i_{2}\\\\H_{\\mathrm{s}}+H_{\\mathrm{s}}^{\\prime}&=H_{\\mathrm{s}}^{\\prime \\end{aligned} $$ \n\n利用 $ H = c\\varepsilon_{0}nE $ 关系，(4-2-8)式可写为",
+        "answer": "利用折射定律,上式又可写为\n\n $$ \\left(E_{\\mathrm{p}}+E_{\\mathrm{p}}^{\\prime}\\right)\\sin i_{2}=E_{\\mathrm{p}}^{\\prime\\prime}\\sin i_{1} $$ \n\n将波函数\n\n $$ \\begin{aligned}&E_{\\mathrm{p}}=E_{0\\mathrm{p}}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}\\cdot\\boldsymbol{r}\\right)\\right]\\\\&E_{\\mathrm{p}}^{\\prime}=E_{0\\mathrm{p}}^{\\prime}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}^{\\prime}\\cdot\\boldsymbol{r}\\right)\\right]\\\\&E_{\\mathrm{p}}^{\\prime\\prime}=E_{0\\mathrm{p}}^{\\prime\\prime}\\exp\\left[-\\mathrm{i}\\left(\\omega t-\\boldsymbol{k}^{\\prime\\prime}\\cdot\\boldsymbol{r}\\right)\\right]\\\\ \\end{aligned} $$ \n\n代入 $  (4-2-7)  $式和 $  (4-2-9)  $式，并考虑到 $  (4-2-5)  $式关系，得\n\n $$ \\begin{aligned}&\\left(\\boldsymbol{E}_{0\\mathrm{p}}-\\boldsymbol{E}_{0\\mathrm{p}}^{\\prime}\\right)\\cos i_{1}=\\boldsymbol{E}_{0\\mathrm{p}}^{\\prime\\prime}\\cos i_{2}\\\\&\\left(\\boldsymbol{E}_{0\\mathrm{p}}+\\boldsymbol{E}_{0\\mathrm{p}}^{\\prime}\\right)\\sin i_{2}=\\boldsymbol{E}_{0\\mathrm{p}}^{\\prime\\prime}\\sin i_{1}\\end{aligned} $$ \n\n上两式中 $ E_{0p}, E_{0p}^{\\prime} $ 和 $ E_{0p}^{\\prime\\prime} $ 也都是包含有常量相位因子的复振幅，联立求得\n\n $$ \\begin{aligned}&\\frac{E_{0_{\\mathrm{p}}}^{\\prime}}{E_{0_{\\mathrm{p}}}}=\\frac{\\sin i_{1}\\cos i_{1}-\\sin i_{2}\\cos i_{2}}{\\sin i_{1}\\cos i_{1}+\\sin i_{2}\\cos i_{2}}=\\frac{\\sin2i_{1}-\\sin2i_{2}}{\\sin2i_{1}+\\sin2i_{2}}\\\\ &\\frac{E_{0_{\\mathrm{p}}}^{\\prime \\prime}}{E_{0_{\\mathrm{p}}}}=\\frac{2\\cos i_{1}\\sin i_{2}}{\\sin i_{1}\\cos i_{1}+\\sin i_{2}\\cos i_{2}}=\\frac{4\\cos i_{1}\\sin i_{2}}{\\sin2i_{1}+\\sin2i_{2}}\\\\ \\end{aligned} $$ \n\n利用和差化积公式\n\n $$ \\sin\\alpha\\pm\\sin\\beta=2\\sin\\left[\\frac{1}{2}(\\alpha\\pm\\beta)\\right]\\cos\\left[\\frac{1}{2}(\\alpha\\mp\\beta)\\right] $$ \n\n上两式可进一步简化为\n\n $$ \\begin{aligned}&\\frac{E_{0_{\\mathrm{p}}}^{\\prime}}{E_{0_{\\mathrm{p}}}}=\\frac{\\tan(i_{1}-i_{2})}{\\tan(i_{1}+i_{2})}\\\\&\\frac{E_{0_{\\mathrm{p}}}^{\\prime\\prime}}{E_{0_{\\mathrm{p}}}}=\\frac{2\\sin i_{2}\\cos i_{1}}{\\sin(i_{1}+i_{2})\\cos(i_{1}-i_{2})}\\end{aligned} $$ \n\n这就是光矢平行入射面情况下，复振幅反射比 $ r_{p} $ 和复振幅透射比 $ t_{p} $ 的表达式。"
+    },
+    {
+        "question_id": "EX_077",
+        "type": "推导计算",
+        "difficulty": "中等",
+        "question": "推导全反射时s偏振和p偏振的反射系数和相位变化公式。",
+        "answer": "对于s偏振光：\n\n$$ r_{s}=\\frac{A_{s}^{\\prime}}{A_{s}}\\exp(-\\mathrm{i}\\delta_{s}^{\\prime})=\\frac{\\sin(i_{1}-i_{2})}{\\sin(i_{1}+i_{2})} $$\n\n$$ =\\frac{-\\left[\\sin i_{1}\\cos i_{2}-\\cos i_{1}\\sin i_{2}\\right]}{\\sin i_{1}\\cos i_{2}+\\cos i_{1}\\sin i_{2}} $$\n\n$$ =\\frac{-\\left[\\sin i_{1}\\frac{i}{n_{21}}\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}-\\cos i_{1}\\frac{\\sin i_{1}}{n_{21}}\\right]}{\\sin i_{1}\\frac{i}{n_{21}}\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}+\\cos i_{1}\\frac{\\sin i_{1}}{n_{21}}} $$\n\n$$ =\\frac{\\cos i_{1}-i\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{\\cos i_{1}+i\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}} $$\n\n$$ =1\\cdot\\exp\\left(-i2\\arctan\\frac{\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{\\cos i_{1}}\\right) $$\n\n即\n\n$$ \\frac{A_{s}^{\\prime}}{A_{s}}=1 $$\n\n$$ \\tan\\frac{\\delta_{s}^{\\prime}}{2}=\\frac{\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{\\cos i_{1}}\\quad(\\text{全反射时}) $$\n\n对于p偏振光：\n\n$$ r_{p}=\\frac{A_{p}^{\\prime}}{A_{p}}\\exp(-\\mathrm{i}\\delta_{p}^{\\prime})=\\frac{\\tan(i_{1}-i_{2})}{\\tan(i_{1}+i_{2})} $$\n\n$$ =\\frac{2\\sin(i_{1}-i_{2})\\cos(i_{1}+i_{2})}{2\\sin(i_{1}+i_{2})\\cos(i_{1}-i_{2})} $$\n\n$$ =\\frac{\\sin2i_{1}-\\sin2i_{2}}{\\sin2i_{1}+\\sin2i_{2}} $$\n\n$$ =\\frac{\\sin i_{1}\\cos i_{1}-\\sin i_{2}\\cos i_{2}}{\\sin i_{1}\\cos i_{1}+\\sin i_{2}\\cos i_{2}} $$\n\n$$ =\\frac{\\sin i_{1}\\cos i_{1}-\\frac{\\sin i_{1}}{n_{21}}\\left(\\frac{\\mathrm{i}}{n_{21}}\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}\\right)}{\\sin i_{1}\\cos i_{1}+\\frac{\\sin i_{1}}{n_{21}}\\left(\\frac{\\mathrm{i}}{n_{21}}\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}\\right)} $$\n\n$$ =1\\cdot\\exp\\left[-\\mathrm{i}2\\arctan\\frac{\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{n_{21}^{2}\\cos i_{1}}\\right] $$\n\n即\n\n$$ \\frac{A^{\\prime}_{\\mathrm{p}}}{A_{\\mathrm{p}}}=1 $$\n\n$$ \\tan\\frac{\\delta_{p}^{\\prime}}{2}=\\frac{\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{n_{21}^{2}\\cos i_{1}}\\quad(\\text{全反射时}) $$\n\n由以上两式可得\n\n$$ \\tan\\frac{\\delta_{p}^{\\prime}-\\delta_{s}^{\\prime}}{2}=\\frac{\\cos i_{1}\\sqrt{\\sin^{2}i_{1}-n_{21}^{2}}}{\\sin^{2}i_{1}} $$\n\n利用图 4-2-4(b) 和图 4-2-5(b) 可以证明, 在薄膜干涉中计算反射的两相邻光束 a、b 光程差时, 要附加半波损失。"
+    },
+    {
+        "question_id": "EX_078",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "### 3. 能流反射率和能流透射率\n\n为确定入射光、反射光和折射光的能流，必须注意光的能流等于光强与光能流的横截面积相乘积，设 $ \\sigma $ 为入射光束所照射的界面面积， $ \\Phi $、 $ \\Phi' $、 $ \\Phi'' $ 分别表示入射光能流、反射光能流和折射光能流， $ I $、 $ I' $、 $ I'' $ 分别表示入射光光强、反射光光强和折射光光强。则\n\n $$ \\Phi=I\\sigma\\cos i_{1}=\\frac{1}{2}c\\varepsilon_{0}n_{1}A^{2}\\sigma\\cos i_{1} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_920_1622_1317_1945.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n<div style=\"text-align: center;\">图 4-2-10 能流反射率和能流透射率</div>\n\n $$ \\Phi^{\\prime}=I^{\\prime}\\sigma\\cos i_{1}=\\frac{1}{2}c\\varepsilon_{0}n_{1}(A^{\\prime})^{2}\\sigma\\cos i_{1} $$ \n\n $$ \\Phi^{\\prime \\prime}=I^{\\prime \\prime}\\sigma\\cos i_{2}=\\frac{1}{2}c\\varepsilon_{0}n_{2}(A^{\\prime \\prime})^{2}\\sigma\\cos i_{2} $$ \n\n由于能量守恒,显然有\n\n $$ \\bar{\\Phi}=\\bar{\\Phi}^{\\prime}+\\bar{\\Phi}^{\\prime \\prime} $$ \n\n将能流反射率 R, 能流透射率 T 的定义分别为\n\n $$ R=\\frac{\\Phi^{\\prime}}{\\Phi},\\quad T=\\frac{\\Phi^{\\prime \\prime}}{\\Phi} $$ \n\n显然\n\n将 $ （4-2-20） $式代入 $ （4-2-22） $式可得\n\n $$ R=\\frac{\\Phi^{\\prime}}{\\Phi}=\\frac{I^{\\prime}}{I}=\\frac{\\left(A^{\\prime}\\right)^{2}}{A^{2}}=\\left|r\\right|^{2} $$ \n\n $$ T=\\frac{\\Phi^{\\prime \\prime}}{\\Phi}=\\frac{I^{\\prime \\prime}\\cos i_{2}}{I\\cos i_{1}}=\\frac{\\left(A^{\\prime \\prime}\\right)^{2}n_{2}\\cos i_{2}}{A^{2}n_{1}\\cos i_{1}}=t^{2}\\frac{n_{2}\\cos i_{2}}{n_{1}\\cos i_{1}} $$ \n\n从上式看出:能流反射率  $ \\Phi'/\\Phi $ 恒等于光强反射率  $ I'/I $;能流透射率  $ \\Phi''/\\Phi $ 一般不等于光强透射率  $ I''/I $, 即  $ T \\neq T_{1} $。\n\n若入射光为线偏振光，且振动面和入射面垂直，则\n\n $$ \\begin{aligned}R_{s}=\\left(\\frac{A_{s}^{\\prime}}{A_{s}}\\right)^{2}=\\left|r_{s}\\right|^{2}=\\left|\\frac{\\sin\\left(i_{1}-i_{2}\\right)}{\\sin\\left(i_{1}+i_{2}\\right)}\\right|^{2}\\\\T_{s}=1-R_{s}\\end{aligned} $$ \n\n若入射光为线偏振光，且振动面和入射面平行，则\n\n $$ \\begin{aligned}R_{\\m",
+        "answer": "若入射光为线偏振光，且振动面和入射面平行，则\n\n $$ \\begin{aligned}R_{p}=\\left(\\frac{A_{p}^{\\prime}}{A_{p}}\\right)^{2}=\\left|r_{p}\\right|^{2}=\\left|\\frac{\\tan\\left(i_{1}-i_{2}\\right)}{\\tan\\left(i_{1}+i_{2}\\right)}\\right|^{2}\\\\T_{p}=1-R_{p}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_079",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "若入射光为线偏振光，且振动面和入射面垂直，则反射率和透射率如何计算？若入射光为线偏振光，且振动面和入射面平行，则反射率和透射率如何计算？若入射光为自然光或圆偏振光，反射率和透射率又如何计算？",
+        "answer": "若入射光为线偏振光，且振动面和入射面垂直，则\n $$ \\begin{aligned}R_{s}=\\left(\\frac{A_{s}^{\\prime}}{A_{s}}\\right)^{2}=\\left|r_{s}\\right|^{2}=\\left|\\frac{\\sin\\left(i_{1}-i_{2}\\right)}{\\sin\\left(i_{1}+i_{2}\\right)}\\right|^{2}\\\\T_{s}=1-R_{s}\\end{aligned} $$ \n\n若入射光为线偏振光，且振动面和入射面平行，则\n $$ \\begin{aligned}R_{\\mathrm{p}}=\\left(\\frac{A_{\\mathrm{p}}^{\\prime}}{A_{\\mathrm{p}}}\\right)^{2}=\\left|\\begin{array}{c}r_{\\mathrm{p}}\\end{array}\\right|^{2}=\\left|\\frac{\\tan\\left(i_{1}-i_{2}\\right)}{\\tan\\left(i_{1}+i_{2}\\right)}\\right|^{2}\\\\T_{\\mathrm{p}}=1-R_{\\mathrm{p}}\\end{aligned} $$ \n\n若入射光为自然光或圆偏振光，电矢量垂直入射面和平行入射面的两部分能流相等，即\n $$ \\Phi=\\Phi_{\\mathrm{s}}+\\Phi_{\\mathrm{p}}=2\\Phi_{\\mathrm{s}}=2\\Phi_{\\mathrm{p}} $$ \n\n因此\n $$ R=\\frac{\\Phi^{\\prime}}{\\Phi}=\\frac{\\Phi_{\\mathrm{s}}^{\\prime}}{2\\Phi_{\\mathrm{s}}}+\\frac{\\Phi_{\\mathrm{p}}^{\\prime}}{2\\Phi_{\\mathrm{p}}}=\\frac{1}{2}\\left(R_{\\mathrm{s}}+R_{\\mathrm{p}}\\right) $$ \n\n即\n $$ \\begin{aligned}R=&\\frac{1}{2}\\Bigg(\\left|\\frac{\\sin\\left(i_{1}-i_{2}\\right)}{\\sin\\left(i_{1}+i_{2}\\right)}\\right|^{2}+\\left|\\frac{\\tan\\left(i_{1}-i_{2}\\right)}{\\tan\\left(i_{1}+i_{2}\\right)}\\right|^{2}\\Bigg)\\\\&T=1-R\\end{aligned} $$ \n\n在 $ i_{1}\\approx0 $时，由 $ (4-2-13a) $式和 $ (4-2-13b) $式得\n $$ R_{s}=R_{p}=\\left(\\frac{n_{2}-n_{1}}{n_{2}+n_{1}}\\right)^{2}\\quad(i_{1}\\approx0 时 ) $$ \n\n因而自然光或圆偏振光的能流反射率 R 和能流透射率 T 为\n $$ \\begin{aligned}R&=\\frac{1}{2}(R_{s}+R_{p})=\\left(\\frac{n_{2}-n_{1}}{n_{2}+n_{1}}\\right)^{2}\\\\T&=1-R=\\frac{4n_{2}n_{1}}{\\left(n_{2}+n_{1}\\right)^{2}}\\quad(i_{1}\\approx0 时)\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_080",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "用 $ K_{9} $ 玻璃（折射率 1.516）制成的薄透镜，在空气中使用。试估计光在透镜界面上因反射所损失的能流占入射能流的百分比。",
+        "answer": "因空气到透镜界面上的反射率和透镜到空气界面上的反射率在小角度近似下是一样的,即\n $$ R=\\left(\\frac{n_{2}-n_{1}}{n_{2}+n_{1}}\\right)^{2}=\\left(\\frac{n_{1}-n_{2}}{n_{2}+n_{1}}\\right)^{2}=\\left(\\frac{0.516}{2.516}\\right)^{2}=4.023\\times10^{-2} $$ \n于是通过第一个界面的能流  $ \\Phi_{1} $ 为\n $$ \\Phi_{1}=\\left(1-R\\right)\\Phi_{0} $$ \n $ \\Phi_{0} $ 为入射能流，通过第二界面的能流  $ \\Phi_{2} $ 为\n $$ \\begin{aligned}\\varPhi_{2}&=\\left(1-R\\right)\\varPhi_{1}\\\\&=\\left(1-R\\right)^{2}\\varPhi_{0}\\\\&=\\left(1-4.023\\times10^{-2}\\right)^{2}\\varPhi_{0}\\\\&=91.75\\%\\varPhi_{0}\\end{aligned} $$ \n即只有91.75%的能流通过,有8.25%的能流由于反射损失掉了。"
+    },
+    {
+        "question_id": "EX_081",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "某天塞型相机镜头, 见图 4-2-12 各透镜的折射率依次为 1.6384、1.6031、1.5954、1.6073, 由于两胶合面上的光的反射损失很少(为什么?) 可忽略不计, 所以只计算六个与空气相接触界面上的反射损失。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_1201_612_1556_919.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n<div style=\"text-align: center;\">图 4-2-12 天塞镜头</div>",
+        "answer": "通过第一个透镜两界面的能流  $ \\Phi_{2} $ 为\n $$ \\Phi_{2}=\\left[1-\\left(\\frac{1.638\\ 4-1}{1.638\\ 4+1}\\right)^{2}\\right]^{2}\\Phi_{0}=0.886\\ 4\\Phi_{0} $$ \n再通过第二个透镜两界面后的能流  $ \\Phi_{4} $ 为\n $$ \\Phi_{4}=\\left[1-\\left(\\frac{1.603\\ 1-1}{1.603\\ 1+1}\\right)^{2}\\right]^{2}\\Phi_{2}=0.895\\ 5\\Phi_{2}=0.793\\ 8\\Phi_{0} $$ \n通过最后那个双胶合透镜的能流  $ \\Phi_{6} $ 为\n $$ \\begin{aligned}\\varPhi_{6}&=\\left[1-\\left(\\frac{1.5954-1}{1.5954+1}\\right)^{2}\\right]\\left[1-\\left(\\frac{1.6073-1}{1.6073+1}\\right)^{2}\\right]\\varPhi_{4}\\\\&=0.8357\\varPhi_{4}=0.711\\varPhi_{0}\\end{aligned} $$ \n对这个镜头，若不镀增透膜，能流的反射损失将达29%。"
+    },
+    {
+        "question_id": "EX_082",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "大多数光学玻璃对波长大于  $ 3 \\mu m $ 的红外线不再透明。某些特种玻璃和晶体材料，例如硅和锗在红外区是透明的。所以在红外区常用硅片锗片作为光学器件和光学仪器的窗口，在红外区硅和锗的折射率较高（硅为 3.5，锗为 4.0），反射损失很大的。\n\n以锗片为例,设锗片两边的介质为空气,通过一次界面的能流反射率、能流透射率和通过两次界面后能流分别为",
+        "answer": "$$ R=\\left(\\frac{4-1}{4+1}\\right)^{2}=0.36=36\\% $$ $$ T=1-R=64\\% $$ $$ \\Phi_{_{2}}=T^{2}\\Phi_{_{1}}=\\left(0.64\\right)^{2}\\Phi_{_{1}}=41\\%\\Phi_{_{0}} $$ \n锗虽对红外是透明的，因其折射率较大，一个界面的反射损失达36%，两个界面的损失达59%，而透过镜片的能流还不到入射的一半，镀增透膜更显重要。"
+    },
+    {
+        "question_id": "EX_083",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "以锗片为例,设锗片两边的介质为空气,通过一次界面的能流反射率、能流透射率和通过两次界面后能流分别为多少？",
+        "answer": "通过一次界面的能流反射率：\n $$ R=\\left(\\frac{4-1}{4+1}\\right)^{2}=0.36=36\\% $$ \n\n能流透射率：\n $$ T=1-R=64\\% $$ \n\n通过两次界面后能流：\n $$ \\Phi_{_{2}}=T^{2}\\Phi_{_{1}}=\\left(0.64\\right)^{2}\\Phi_{_{1}}=41\\%\\Phi_{_{0}} $$ "
+    },
+    {
+        "question_id": "EX_084",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "自然光以布儒斯特角 $ i_{B}=\\arctan\\left(n_{2}/n_{1}\\right) $ 入射时，反射光和折射光的偏振特性是什么？",
+        "answer": "自然光以布儒斯特角 $ i_{B} $ 入射时，反射光是垂直入射面振动的线偏振光，而光矢与入射面平行的 p 光完全不能反射，却可完全折射。"
+    },
+    {
+        "question_id": "EX_085",
+        "type": "应用分析",
+        "difficulty": "中等",
+        "question": "布儒斯特窗在外腔式气体激光器中有什么作用？为什么能减少反射损失？",
+        "answer": "布儒斯特窗的作用是减少反射损失。采用轴线与窗表面夹角 $ \\theta $ 为 $ 90^{\\circ}-i_{B} $ 的布儒斯特窗(入射角为布儒斯特角 $ i_{B} $)，在这种情况下，s振动的损失约占15%，因此不能起振；但P振动在布儒斯特窗上没有反射损失，因而衰减很小，可以在管内形成稳定的振荡。外腔式气体激光器输出的激光是线偏振光，它的振动面平行于布儒斯特窗的入射面。"
+    },
+    {
+        "question_id": "EX_086",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "自然光以布儒斯特角 $ i_{B} $ 由 $ n_{1}=1.00 $ 介质入射到 $ n_{2}=1.50 $ 的玻璃表面时，反射光和折射光的偏振特性是什么？折射光的偏振度如何计算？",
+        "answer": "自然光以布儒斯特角 $ i_{B} $ 由 $ n_{1}=1.00 $ 介质入射到 $ n_{2}=1.50 $ 的玻璃表面时 $ (i_{B}=56^{\\circ}19') $，$ R_{p}=0 $ 而 $ R_{s}=15\\% $，反射光是线偏振的 s 光。折射光中，平行于入射面的能流全部折射 $ (T_{p}=100\\%) $，但 s 振动还有大部分折射 $ (T_{s}=85\\%) $，所以折射光是部分偏振光。折射光的偏振度P由下式求出：\n $$ P=\\frac{I_{\\mathrm{p}}}{I}=\\frac{I_{\\mathrm{p}}^{\\prime \\prime}-I_{\\mathrm{s}}^{\\prime \\prime}}{I_{\\mathrm{p}}^{\\prime \\prime}+I_{\\mathrm{s}}^{\\prime \\prime}} $$ \n利用 $ (4-2-15a) $式、 $ (4-2-15d) $式和自然光中 $ A_{p}=A_{s} $关系，可以计算出具体的偏振度。"
+    },
+    {
+        "question_id": "EX_087",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "双轴晶体中，介电主轴 x, y, z 的选择符合 $ \\varepsilon_{1} < \\varepsilon_{2} < \\varepsilon_{3} $ 次序，对应的三个主速度为 $ v_{1} > v_{2} > v_{3} $，它们的定义为 $ v_{1}=\\frac{c}{\\sqrt{\\varepsilon_{1}}}=\\frac{c}{n_{1}} $，$ v_{2}=\\frac{c}{\\sqrt{\\varepsilon_{2}}}=\\frac{c}{n_{2}} $，$ v_{3}=\\frac{c}{\\sqrt{\\varepsilon_{3}}}=\\frac{c}{n_{3}} $。式中 $ n_{1} $、$ n_{2} $、$ n_{3} $ 为双轴晶体主折射率。由任意两介电主轴所决定的平面叫作主轴面。双轴晶体中不在主轴面的光线，一般来说都是各向异性的非寻常光线，但在主轴面内的光线和单轴晶体有点相似，除了在光轴方向外，一般可分为振动面垂直于主轴面的，在该主轴面范围内各向同性的光；以及振动面平行于主轴面的各向异性的光。图 4-5-1 为双轴晶体光率体，从光率体中心在主轴面 Oyz 内作波矢 k，过中心 O 作垂直于 k 的平面与光率体相截，一般得一椭圆。椭圆两主轴 OA 和 OB，(其中 $ OA \\parallel D_{0} $，$ OB \\parallel D $) 不仅跟 k 正交，而且由简单的几何考虑可知，与该椭圆两主轴方向上对应的两组矢量 $ (D_{0}, E_{0}, k, S_{0}) $ 和 $ (D, E, k, S) $ 各自四矢共面。这两组矢量代表与同一波矢 k 方向对应的，振动面正交的两线偏振光，前者是光矢 $ \\perp $ 主轴面 Oyz 振动的，在 Oyz 二维面上各向同性的光；后者是光矢平行于主轴面 Oyz 振动的，各向异性的光。Oyz 主轴面内光光的 $ v_{n}=v_{s}=v_{1} $，e 光的 $ v_{n} \\neq v_{s} $ （主轴方向例外），随方向不同在 $ v_{3}-v_{2} $ 之间变化。在其他两个主截面内，情况类似。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_818_995_1241_1546.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n<div style=\"text-align: center;\">图 4–5–1 双轴晶体 Oyz 主轴面内光的偏振态</div>",
+        "answer": "双轴晶体中点光源的波面比单轴晶体的要复杂得多,若不追求导出三维情况下波面表示式,立足于讨论三个主轴面上波面表示式,由于可直接借用讨论单轴晶体主平面内波面的相似数学步骤,问题就变得简便得多。\n\nOyz 主轴面内 o 光有两维的各向同性，其折射率为 $ n_{1} $，光速为 $ v_{1}=c/n_{1} $，波面方程式为\n\n $$ y^{2}+z^{2}=v^{2} $$ \n\nOyz 主轴面内 e 光折射率 n 随 e 光电位移 D 方向不同而改变，仿 4.4 节中导出单轴晶体中主平面上 e 光波面表示式时，(4-4-4) 式至 (4-4-7a) 式完全相似步骤（只要注意 $ n_{0}, n_{e} $ 分别用 $ n_{2}, n_{3} $ 置换，$ v_{0}, v_{e} $ 分别用 $ v_{2}, v_{3} $ 置换），可得双轴晶体 Oyz 主轴面内 e 光波面方程式为\n\n $$ \\frac{y^{2}}{v_{3}^{2}}+\\frac{z^{2}}{v_{1}^{2}}=1 $$ \n\n从(4-5-1a)式、(4-5-1b)式可以看出点光源波面在Oyz面上的截面形状，外层为圆，内层为椭圆。如图4-5-2(a)所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_465_436_804_834.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_825_439_1168_838.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_1184_442_1526_821.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n<div style=\"text-align: center;\">图 4-5-2 双轴晶体波面在主轴面上截面图</div>\n\n同理, 可得 Oxz 主轴面上波面方程式为\n\n $$ \\begin{aligned}x^{2}+z^{2}&=v_{2}^{2}\\\\\\frac{x^{2}}{v_{3}^{2}}+\\frac{z^{2}}{v_{1}^{2}}&=1\\end{aligned} $$ "
+    },
+    {
+        "question_id": "EX_088",
+        "type": "概念解释与推导",
+        "difficulty": "中等",
+        "question": "波晶片后表面上光矢的矢端轨迹是什么？不同相位差δ下出射光的性质如何？",
+        "answer": "波晶片后表面上光矢的矢端轨迹一般表现为椭圆，该椭圆内切于高 $2A_e$，宽 $2A_o$ 的矩形内。\n\n(1) 当 $δ = ±K(2π)$ 时，即 $(n_0 - n_e)l = ±Kλ$ 时，K为非负整数。轨迹方程变为 $\frac{z}{A_e} - \frac{y}{A_o} = 0$，出射光为线偏振光，振动面与入射波晶片线偏振光振动面平行。这种波晶片称为全波片。\n\n(2) 当 $δ = ±(2K+1)π$ 时，即 $(n_0 - n_e)l = ±(2K+1)λ/2$ 时，K为非负整数。轨迹方程变为 $\frac{z}{A_e} + \frac{y}{A_o} = 0$，出射光为线偏振光，但振动面与入射波晶片线偏振光振动面转过 $2θ$。当 $θ=45°$ 时，出射光振动面与原入射光振动面垂直。这种波晶片称为半波片或1/2波片（或称$λ/2$片）。\n\n(3) 当 $δ = ±(4K+1)π/2$ 时，即 $(n_0 - n_e)l = ±(4K+1)λ/4$ 时，K为非负整数。轨迹方程变为 $\frac{z^2}{A_e^2} + \frac{y^2}{A_o^2} = 1$，出射光为椭圆偏振光。当$δ=π/2$时，对着光线看，光矢的矢端轨迹为顺时针转向，称为右旋椭圆偏振光；当$δ=-π/2$时，对着光线看，光矢的矢端轨迹为逆时针转向，称为左旋椭圆偏振光。若$θ=π/4$，则$A_e=A_0$，轨迹方程为$x^2 + y^2 = A_e^2(=A_o^2)$，出射光为圆偏振光。当$δ=π/2$时，为顺时针转向的右旋圆偏振光；当$δ=-π/2$时，为逆时针转向的左旋圆偏振光。这种波晶片称为1/4波片或$λ/4$片。\n\n图 4-6-2 表示 $θ=π/4$，$δ$取不同值时，轨迹方程的图形。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_513_453_1447_690.jpg\" alt=\"Image\" width=\"55%\" /></div>\n\n<div style=\"text-align: center;\">图 4-6-2 $θ=π/4$ 时由线偏振光产生椭"
+    },
+    {
+        "question_id": "EX_089",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "什么是1/4波片？它的作用是什么？",
+        "answer": "$ (n_{\\mathrm{e}}-n_{\\mathrm{e}})l=(4K+1)\\lambda/4 $ 的波晶片称 1/4 波片或  $ \\lambda/4 $ 片。1/4波片可以使通过它的线偏振光转变为椭圆偏振光或圆偏振光，具体取决于入射光的振动方向与波片光轴的夹角。"
+    },
+    {
+        "question_id": "EX_090",
+        "type": "原理分析",
+        "difficulty": "中等",
+        "question": "如何区分自然光、圆偏振光和部分圆偏振光？",
+        "answer": "让这些光束逐个依次通过1/4波片和偏振片,转动偏振片改变透振方向,观察透射光强变化情况:若强度无变化,则为自然光;若强度有变化且有消光现象,则为圆偏振光;若强度有变化但无消光现象,则为部分圆偏振光。"
+    },
+    {
+        "question_id": "EX_091",
+        "type": "原理分析",
+        "difficulty": "中等",
+        "question": "如何区分椭圆偏振光、部分线偏振光和部分椭圆偏振光？",
+        "answer": "让这些光束逐个依次通过1/4波片和偏振片,只是1/4波片的光轴方向必须与单用偏振片观察时的强度极大或极小时的透振方向一致,转动偏振片改变透振方向,观察透射光强度变化情况:若强度有变化并有消光现象,则为椭圆偏振光;若强度有变化,但无消光现象,且极大光强时偏振片透振方向和单用偏振片观察极大光强时透振方向相同,则为部分线偏振光;若强度有变化,但无消光现象,且极大光强时偏振片透振方向和只用偏振片观察极大光强时透振方向不同,则为部分椭圆偏振光。"
+    },
+    {
+        "question_id": "EX_092",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "什么是巴比涅-索列尔补偿器？它的原理是什么？",
+        "answer": "巴比涅-索列尔补偿器是一种可调厚度的波晶片,它由两个光轴平行、楔角很小、厚度也不大的楔形水晶棱镜和一个平面水晶薄片组成。薄片光轴与楔形水晶的光轴垂直。调节螺旋使两楔形棱镜交叠部分所构成的平行晶片厚度为  $ d_{1} $，而下面水晶薄片厚度为  $ d_{2} $。它相当于有效厚度为  $ d_{2}-d_{1} $ 的一块平行水晶薄片。其中 o 光相对 e 光的相位延迟  $ \\delta $ 为  $$ \\delta=\\frac{2\\lambda}{\\lambda}(n_{\\mathrm{o}}-n_{\\mathrm{e}})(d_{2}-d_{1}) $$ 调节螺旋改变  $ d_{1} $ 数值， $ \\delta $ 值也随之改变。"
+    },
+    {
+        "question_id": "EX_093",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "考虑单色光入射情况下的偏振光干涉问题：\n\n1. 当 $N_1 \\parallel N_2$（平行偏振片）时，$\\beta = -\\alpha$，推导光强表达式。\n2. 当 $N_1\\perp N_2$（正交偏振片）时，$\\beta=\\pi/2-\\alpha$，推导光强表达式。\n3. 证明两种情况下光强之和等于$(I_1)_\\lambda$。\n4. 讨论白光入射时的显色偏振现象，特别是$N_1\\perp N_2$时的情况。",
+        "answer": "解答过程如下：\n\n1. 当 $N_1 \\parallel N_2$（平行偏振片）时，$\\beta = -\\alpha$，代入(4-7-4)式：\n\n$$ \\left(I_{2}\\right)_{\\lambda}=\\left(I_{1}\\right)_{\\lambda}\\left\\{1-\\sin^{2}2\\alpha\\sin^{2}\\left[\\frac{\\pi\\left(n_{\\mathrm{o}}-n_{\\mathrm{e}}\\right)d}{\\lambda}\\right]\\right\\} $$\n\n2. 当 $N_1\\perp N_2$（正交偏振片）时，$\\beta=\\pi/2-\\alpha$，代入(4-7-4)式：\n\n$$ \\left(I_{2}\\right)_{\\lambda}=\\left(I_{1}\\right)_{\\lambda}\\sin^{2}2\\alpha\\sin^{2}\\left[\\frac{\\pi\\left(n_{\\mathrm{o}}-n_{\\mathrm{e}}\\right)d}{\\lambda}\\right] $$\n\n3. 将两种情况的光强相加：\n\n$$ \\left(I_{2}\\right)_{\\lambda}+_{\\mathrm{正}}\\left(I_{2}\\right)_{\\lambda}=\\left(I_{1}\\right)_{\\lambda} $$\n\n这表明偏振片透振方向正交和平行两种情况下，单色线偏振光的干涉在光强上是互补的。\n\n4. 当用白光入射时，透过偏振片2的光强 $I_{2}^{\\prime}$由(4-7-4)式对$\\lambda$累加可得：\n\n$$ \\begin{aligned}I_{2}^{\\prime}&=\\cos^{2}(\\alpha+\\beta)\\sum_{\\lambda}\\left(I_{1}\\right)_{\\lambda}+\\sin2\\alpha\\sin2\\beta\\sum_{\\lambda}\\left(I_{1}\\right)_{\\lambda}\\sin^{2}\\left[\\frac{\\pi\\left(n_{\\mathrm{o}}-n_{\\mathrm{e}}\\right)d}{\\lambda}\\right]\\\\\n&=\\cos^{2}(\\alpha+\\beta)\\left(I_{1}\\right)_{\\text{白}}+\\sin2\\alpha\\sin2\\beta\\sum_{\\lambda}\\left(I_{1}\\right)_{\\lambda}\\sin^{2}\\left[\\frac{\\pi\\left(n_{\\mathrm{o}}-n_{\\mathrm{e}}\\right)d}{\\lambda}\\right]\\end{aligned} $$\n\n当$N_1\\perp N_2$时，$\\beta=\\pi/2-\\alpha$，上式变为：\n\n$$ I_{2}=\\sin^{2}2\\alpha\\cdot\\sum_{\\lambda}\\left(I_{1}\\right)_{\\lambda}\\sin^{2}\\left[\\frac{\\pi\\left(n_{\\mathrm{o}}-n_{\\mathrm{e}}\\right)d}{\\lambda}\\right] $$\n\n不同色光在穿出偏振片2后强度减弱的成数不同，因此$I_{2}^{\\prime}$不再是白光而是呈现彩色。这种由白色线偏振光的干涉出现彩色的现象称为显色偏振。"
+    },
+    {
+        "question_id": "EX_094",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "4-17 下图所示实验中，在幕上能看到什么现象？\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_451_285_998_563.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">正单轴晶体</div>\n\n<div style=\"text-align: center;\">思考题 4-17 图</div>\n\n(2) 用一束细的线偏振光代替自然光, 重做(1)中实验。\n\n（1）让一束细的自然光正入射正单轴晶体平板上，让平板绕入射光线旋转？",
+        "answer": "题目不完整，没有提供解答内容。"
+    },
+    {
+        "question_id": "EX_095",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "4–18 试回答线偏振光垂直通过波晶片后的偏振状态。\n\n<table border=1 style='margin: auto; word-wrap: break-word;'><tr><td style='text-align: center; word-wrap: break-word;'>入射线偏振光振动方向与波晶片光轴的夹角  $ \\alpha $</td><td style='text-align: center; word-wrap: break-word;'>波晶片厚度或波晶片名称</td><td style='text-align: center; word-wrap: break-word;'>通过波晶片后的偏振状态</td></tr><tr><td style='text-align: center; word-wrap: break-word;'>0°</td><td style='text-align: center; word-wrap: break-word;'>任意</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>90°</td><td style='text-align: center; word-wrap: break-word;'>任意</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>45°</td><td style='text-align: center; word-wrap: break-word;'>$ \\lambda $ 片</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>45°</td><td style='text-align: center; word-wrap: break-word;'>$ \\lambda/2 $ 片</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>45°</td><td style='text-align: center; word-wrap: break-word;'>$ \\lambda/4 $ 片</td><td style='text-align: center; word-wrap: break-word;'></td></tr><tr><td style='text-align: center; word-wrap: break-word;'>45°</td><td style='text-align: center; word-wrap: break-word;'>",
+        "answer": "题目不完整，没有提供解答内容。"
+    },
+    {
+        "question_id": "EX_096",
+        "type": "物理光学",
+        "difficulty": "中等",
+        "question": "正交偏振片之间放一块 $ \\lambda/4 $ 片，以单色自然光入射。\n\n(1) 绕入射光线转动 $ \\lambda/4 $ 片时，出射光强随波晶片光轴方位变化的函数关系式如何？\n\n(2) $ \\lambda/4 $ 片的光轴处于什么方位,会出现强度极大和消光现象,相应的出射光偏振状态如何?",
+        "answer": "解答：\n\n(1) 设偏振片P1和P2的透振方向分别沿x轴和y轴，$ \\lambda/4 $ 片的光轴与x轴的夹角为$ \\theta $，则通过P1后的线偏振光可表示为：\n\n$ E_1 = E_0 \\cos(\\omega t) \\hat{x} $\n\n通过$ \\lambda/4 $ 片后，光场变为：\n\n$ E_2 = E_0 \\cos(\\omega t - \\pi/2) \\cos\\theta \\hat{x} + E_0 \\cos(\\omega t) \\sin\\theta \\hat{y} $\n\n再通过P2后，出射光场为：\n\n$ E_{out} = E_0 \\cos(\\omega t - \\pi/2) \\cos\\theta \\sin\\theta $\n\n出射光强为：\n\n$ I = I_0 \\sin^2(2\\theta) $\n\n其中$ I_0 $为入射光强。\n\n(2) 当$ \\theta = 0, \\pi/2, \\pi, 3\\pi/2 $时，$ \\sin^2(2\\theta) = 0 $，出现消光现象，此时出射光为线偏振光。\n\n当$ \\theta = \\pi/4, 3\\pi/4, 5\\pi/4, 7\\pi/4 $时，$ \\sin^2(2\\theta) = 1 $，出现光强极大，此时出射光为圆偏振光。"
+    },
+    {
+        "question_id": "EX_097",
+        "type": "物理光学",
+        "difficulty": "基础",
+        "question": "右旋圆偏振光从玻璃表面正反射后，是什么偏振光？",
+        "answer": "解答：\n\n右旋圆偏振光从玻璃表面正反射后变为左旋圆偏振光。这是因为正反射时光的传播方向反向，导致旋转方向也反向。"
+    },
+    {
+        "question_id": "EX_098",
+        "type": "物理光学",
+        "difficulty": "中等",
+        "question": "如何用已知透振方向的偏振片和已知快轴方向的 $ \\lambda/4 $ 片叠合在一起制成右旋圆偏振器和左旋圆偏振器。\n\n（1）用右旋圆偏振光和左旋圆偏振光分别反向通过右旋圆偏振器（光由 $ \\lambda/4 $ 片入射，从偏振片出射叫反向通过），能看到什么现象？\n\n(2) 用右旋圆偏振光和左旋圆偏振光分别反向通过左旋圆偏振器，能看到什么现象？\n\n（3）自然光正向通过右旋圆偏振器后，正入射平面镜，反射光能反向通过右旋圆偏振器吗？",
+        "answer": "解答：\n\n1. 制造右旋圆偏振器：将偏振片透振方向与$ \\lambda/4 $ 片快轴方向成$ \\pi/4 $角放置。\n\n   制造左旋圆偏振器：将偏振片透振方向与$ \\lambda/4 $ 片快轴方向成$ -\\pi/4 $角放置。\n\n(1) 右旋圆偏振光反向通过右旋圆偏振器：光强不变，仍为右旋圆偏振光。\n\n   左旋圆偏振光反向通过右旋圆偏振器：光强为零，被完全阻挡。\n\n(2) 右旋圆偏振光反向通过左旋圆偏振器：光强为零，被完全阻挡。\n\n   左旋圆偏振光反向通过左旋圆偏振器：光强不变，仍为左旋圆偏振光。\n\n(3) 自然光正向通过右旋圆偏振器后变为右旋圆偏振光，经平面镜反射后变为左旋圆偏振光，因此不能反向通过右旋圆偏振器。"
+    },
+    {
+        "question_id": "EX_099",
+        "type": "物理光学",
+        "difficulty": "中等",
+        "question": "两块用单轴晶体制成的 $ \\lambda/4 $ 片，其中一块的快轴方向已知，另一块快轴方向待定。若给两块偏振片和单色平行自然光光束给你，能定出待定快轴的方位吗？",
+        "answer": "解答：\n\n可以确定待定快轴的方位。具体方法如下：\n\n1. 将已知快轴方向的$ \\lambda/4 $ 片和待定快轴方向的$ \\lambda/4 $ 片叠合在一起。\n2. 将两块偏振片分别放在叠合片的前后，调整使它们正交。\n3. 旋转待定$ \\lambda/4 $ 片，观察出射光强变化。\n4. 当出射光强为零时，待定$ \\lambda/4 $ 片的快轴方向与已知$ \\lambda/4 $ �片的快轴方向平行或垂直。\n5. 通过进一步测试可以确定具体方向。\n\n这种方法利用了$ \\lambda/4 $ 片对偏振态的变换特性，通过光强变化可以确定快轴方位。"
+    },
+    {
+        "question_id": "EX_100",
+        "type": "物理现象分析",
+        "difficulty": "中等",
+        "question": "玻璃，放在电磁铁的两极之间，令椭圆偏振的钠黄光 ($ \\lambda = 589.3 \\, \\text{nm} $) 沿磁场方向入射，问透射光偏振态与入射光相比有何变化？若磁场 $ B = 10^4 \\, \\text{Gs} $，韦尔代常量 $ V $ 为 $ 0.016 \\, \\text{l} \\cdot (\\text{Gs} \\cdot \\text{cm})^{-1} $。<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_88_855_259_1023.jpg\" alt=\"Image\" width=\"10%\" /></div>",
+        "answer": "当椭圆偏振光沿磁场方向通过置于磁场中的玻璃时，由于法拉第效应（磁致旋光效应），光的偏振态会发生旋转。旋转角度 $ \\theta $ 由下式计算：$ \\theta = V \\cdot B \\cdot d $，其中 $ V $ 是韦尔代常量，$ B $ 是磁场强度，$ d $ 是样品厚度。题目中给出了韦尔代常量 $ V = 0.016 \\, \\text{l} \\cdot (\\text{Gs} \\cdot \\text{cm})^{-1} $ 和磁场强度 $ B = 10^4 \\, \\text{Gs} $，但缺少玻璃样品的厚度 $ d $，因此无法计算具体的旋转角度。透射光的偏振态将相对于入射光发生旋转，旋转角度与玻璃厚度成正比。"
+    },
+    {
+        "question_id": "EX_101",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "什么是浑浊介质？请举例说明浑浊介质的散射特点及其与散射颗粒线度的关系。",
+        "answer": "浑浊介质是指均匀介质中散布着与其折射率不同的大量微粒时形成的介质。例如烟（气体中的固体微粒）、雾（空气中的液体微滴）、悬浮液、乳状液（如牛奶）、蛋白石或毛玻璃等。浑浊介质都呈现出光的强烈散射。\n\n浑浊介质的散射规律与散射颗粒的线度关系密切：\n1. 当散射颗粒的线度 a < λ/20 时，符合瑞利散射定律，散射光强度与波长的四次方成反比，散射光一般是部分线偏振光。\n2. 当 a ≫ λ 时，散射光强度与波长的关系不明显，散射光的颜色比小颗粒散射要淡，散射光是部分偏振的，偏振度与质点的大小和形状有关，散射光强度沿角度的分布情况也比较复杂。\n\n习惯上称小颗粒散射为瑞利散射，大颗粒散射为丁铎尔散射或米氏散射。例如，从点燃的香烟冒出来的烟是蓝色的，属于瑞利散射；而从嘴里喷出来的烟是灰白色的，属于米氏散射。"
+    },
+    {
+        "question_id": "EX_102",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "什么是纯净介质的分子散射？请说明分子散射的特点及其与浑浊介质散射的区别。",
+        "answer": "纯净介质是指不含任何杂质的介质。纯净介质中的散射是由分子的 Nα' 出现涨落（统计起伏）产生的。纯净介质的散射比浑浊介质的散射要弱得多，在大多数情况下，单位体积内仅为散射光束能量的 1/10^6 ∼ 1/10^7。\n\n纯净介质的散射分为两种：\n1. 由分子数密度的涨落造成 (Nα') 不均匀相联系的散射叫分子散射。\n2. 由分子极化率涨落造成 Nα' 不均匀相联系的散射叫作拉曼散射，也被称为联合散射。\n\n分子散射的特点是散射强度和波长四次方成反比，也称为瑞利散射。例如，天空的蓝色是由于大气中分子数密度的起伏产生散射，波长较短的光波有更强烈散射的结果；落日看起来比正午的太阳要红，是因为透过厚大气层看太阳时，蓝光比红光更有效地被散射。\n\n与浑浊介质散射的区别：\n1. 纯净介质散射是由分子本身的涨落引起，而浑浊介质散射是由介质中的微粒引起。\n2. 纯净介质散射强度远弱于浑浊介质散射。\n3. 纯净介质散射主要是瑞利散射，而浑浊介质散射可能是瑞利散射也可能是米氏散射，取决于微粒大小。"
+    },
+    {
+        "question_id": "EX_103",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "讨论群速度与相速度的关系，并分析在真空中、无色散介质和有色散介质中的情况。",
+        "answer": "复色光群速度的一般表示式为：\n\n $$ u=\\frac{\\mathrm{d}\\omega}{\\mathrm{d}k} $$ \n\n(1) 相速度与圆波数无关的情况（真空中或无色散介质）：\n\n $$ u=\\frac{\\mathrm{d}\\omega}{\\mathrm{d}k}=v $$ \n\n这表示真空中或无色散介质中，群速度与相速度相同。\n\n(2) 相速度与圆波数有关的情况（有色散介质）：\n\n $$ u=\\frac{\\mathrm{d}\\omega}{\\mathrm{d}k}=\\frac{\\mathrm{d}\\left(kv\\right)}{\\mathrm{d}k}=v+k\\frac{\\mathrm{d}v}{\\mathrm{d}k} $$ \n\n进一步推导得到相速与群速的普遍关系式：\n\n $$ u=v-\\lambda^{\\prime}\\frac{\\mathrm{d}v}{\\mathrm{d}\\lambda^{\\prime}} $$ \n\n对光波而言，可表示为：\n\n $$ u=v\\left(1-\\frac{\\lambda\\mathrm{d}n}{n\\mathrm{d}\\lambda}\\right)^{-1} \\approx v\\left(1+\\frac{\\lambda\\mathrm{d}n}{n\\mathrm{d}\\lambda}\\right) $$ \n\n由上式可知：\n- 正常色散 $(\\mathrm{d}n/\\mathrm{d}\\lambda<0)$ 时，$u<v$\n- 反常色散 $(\\mathrm{d}n/\\mathrm{d}\\lambda>0)$ 时，$u>v$\n- 无色散 $(\\mathrm{d}n/\\mathrm{d}\\lambda=0)$ 时，$u=v$\n\n值得指出的是，用群速度表示光能量的传播速度是有条件的。只有当介质的色散很小时，波群散开得很慢，群速才近似代表能量的传播速度。在反常色散（吸收带内）情况下，群速已失去意义。实际上，信号速度才是能量传播速度，也是直接测量到的光速，最大信号速度永远小于真空中光速。"
+    },
+    {
+        "question_id": "EX_104",
+        "type": "概念解释",
+        "difficulty": "基础",
+        "question": "什么是零折射率材料？它有什么特殊性质？",
+        "answer": "零折射率材料是指具有负介电常数和负磁导率的特殊材料。根据折射率与介电常数和磁导率的关系，这种材料的折射率小于零。\n\n在常规材料中，磁导率和介电常数一般为正数，折射率大于零，光在界面发生折射时折射角大于零，入射光线和折射光线分别位于界面法线的两侧（正折射现象）。\n\n而在零折射率材料中，根据麦克斯韦方程组和电磁波在界面需要满足的边界条件，折射光线与入射光线位于界面法线的同侧，折射角为负数，对应于负折射现象。\n\nV.G.Veselago提出在这种特殊的材料中还存在其他一些现象，比如逆多普勒频移、反常切连科夫辐射。然而，自然界中并不存在满足这种条件的负折射材料，因此当时负折射材料仅仅停留在理论上。"
+    },
+    {
+        "question_id": "EX_105",
+        "type": "物理现象解释",
+        "difficulty": "中等",
+        "question": "5-8 日落时，当太阳的顶部正好消失在清晰而平坦的地平线时，人们常可看到太阳发出短暂的绿色闪光（持续约 10 s 左右），能解释这一现象吗？",
+        "answer": "绿色闪光现象是由于大气色散效应造成的。当太阳接近地平线时，阳光穿过的大气层厚度增加，导致不同波长的光发生不同程度的折射。蓝光和绿光比红光折射更多，但由于大气散射，蓝光通常被散射掉，而绿光在特定条件下能够短暂地被观察到。这种现象发生在太阳完全沉入地平线前的短暂时刻，持续时间约10秒左右。"
+    },
+    {
+        "question_id": "EX_106",
+        "type": "物理概念分析",
+        "difficulty": "中等",
+        "question": "5-9 波动在介质中传播时相速度为 v，波长为  $ \\lambda' $，而群速度却为零。如果有这种介质，该介质  $ v-\\lambda' $ 关系何特点？",
+        "answer": "当群速度为零时，意味着波包不传播能量，这发生在色散关系 $v(\\lambda')$ 的极值点处，即 $dv/d\\lambda' = 0$。因此，在 $v-\\lambda'$ 关系曲线上，这一点对应于曲线的极大值或极小值点。这种介质具有特殊的色散特性，使得波包虽然以相速度传播，但其群速度为零。"
+    },
+    {
+        "question_id": "EX_107",
+        "type": "物理计算",
+        "difficulty": "中等",
+        "question": "5-10 已知深水中的水波（重力波），波速 v 与波长  $ \\lambda' $ 的关系为  $ v = a\\sqrt{\\lambda'} $；试在  $ v - \\lambda' $ 曲线上，标明用图解法或者计算机模拟的方法求群速度。",
+        "answer": "群速度 $u$ 可以通过 $u = v - \\lambda' \\frac{dv}{d\\lambda'}$ 计算。对于 $v = a\\sqrt{\\lambda'}$，我们有 $\\frac{dv}{d\\lambda'} = \\frac{a}{2\\sqrt{\\lambda'}}$。因此，群速度 $u = a\\sqrt{\\lambda'} - \\lambda' \\cdot \\frac{a}{2\\sqrt{\\lambda'}} = \\frac{a}{2}\\sqrt{\\lambda'}$。在 $v-\\lambda'$ 曲线上，群速度可以通过切线法求得：在给定的 $\\lambda'$ 点处作切线，切线的斜率即为 $dv/d\\lambda'$，然后通过上述公式计算群速度。"
+    },
+    {
+        "question_id": "EX_108",
+        "type": "物理证明",
+        "difficulty": "困难",
+        "question": "5-11 试在色散曲线 $ (v-\\lambda $ 曲线 $上，标明用图解法求c/u的方法（即求群速度u的方法）；用作图法证明：即使在n<1的正常色散区域，虽然相速v>c，但其群速u仍然是小于c的。",
+        "answer": "在色散曲线上，群速度 $u$ 可以通过 $u = v - \\lambda \\frac{dv}{d\\lambda}$ 计算。对于 $n<1$ 的正常色散区域，相速 $v = c/n > c$。然而，群速度 $u = c/n - \\lambda \\frac{d}{d\\lambda}(c/n)$。由于在正常色散区域 $dn/d\\lambda > 0$，所以 $d/d\\lambda(1/n) = -1/n^2 \\cdot dn/d\\lambda < 0$，因此第二项为负，使得群速度 $u < c$。通过作图法，可以在色散曲线上找到切线，计算斜率，进而验证这一结论。"
+    },
+    {
+        "question_id": "EX_109",
+        "type": "理论推导",
+        "difficulty": "中等",
+        "question": "普朗克根据能量量子化假设，利用麦-玻统计，导出了热平衡状态下线谐振子的平均能量。请推导线谐振子的平均能量表达式，并解释其在长波和高温条件下的近似形式。",
+        "answer": "根据麦克斯韦-玻耳兹曼分布律，线谐振子的平均能量为：\n\n$$ \\begin{aligned}\\overline{\\varepsilon}&=\\frac{\\mathcal{E}_{1}N_{1}+\\mathcal{E}_{2}N_{2}+\\cdots+\\mathcal{E}_{i}N_{i}+\\cdots}{N}\\\\&=\\sum\\mathcal{E}_{i}\\mathrm{e}^{-\\varepsilon_{i}/kT}/\\sum\\mathrm{e}^{-\\varepsilon_{i}/kT}\\\\&=kT^{2}\\frac{\\mathrm{d}}{\\mathrm{d}T}\\Big[\\ln\\Big(\\sum_{i=0}^{\\infty}\\mathrm{e}^{-\\varepsilon_{i}/kT}\\Big)\\Big]\\\\&=kT^{2}\\frac{\\mathrm{d}}{\\mathrm{d}T}\\ln\\big(1-\\mathrm{e}^{-h\\nu/kT}\\big)^{-1}\\end{aligned} $$\n\n即\n\n$$ \\overline{\\varepsilon}=\\frac{h\\nu}{\\mathrm{e}^{h\\nu/kT}-1}=\\frac{hc}{\\lambda}\\frac{1}{\\exp\\left(hc/\\lambda kT\\right)-1} $$\n\n这就是温度为 T 的热平衡状态下，以频率 $ \\nu $ 振动的量子线谐振子的平均能量。\n\n特殊情况：\n\n① 当 $ \\lambda kT \\gg hc $ 时（长波或高温）：\n\n$$ \\begin{aligned}\\exp(hc/\\lambda kT)-1&=\\left\\{1+\\frac{h c}{\\lambda kT}+\\frac{1}{2}\\left(\\frac{h c}{\\lambda kT}\\right)^{2}+\\cdots\\right\\}-1\\\\&\\approx\\frac{h c}{\\lambda kT}\\end{aligned} $$\n\n普朗克公式变为\n\n$$ r_{0}(\\lambda,T)=\\frac{2\\pi h c^{2}}{\\lambda^{5}}\\frac{\\lambda kT}{hc}=\\frac{2\\pi c}{\\lambda^{4}}kT $$\n\n这便是瑞利-金斯公式。\n\n② 当 $ \\lambda kT \\ll hc $ 时（短波或低温）：\n\n$$ \\exp(hc/\\lambda kT)\\gg1 $$\n\n普朗克公式变为"
+    },
+    {
+        "question_id": "EX_110",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "[例 6.2.1] 试从普朗克公式推导斯特藩—玻耳兹曼定律，维恩位移定律和绝对黑体辐射谱的峰值定律。",
+        "answer": "[解] 请扫描侧边栏二维码获取解答过程。\n\n $$ R_{0}(T)=6.494\\frac{c_{1}k^{4}}{h^{4}c^{4}}T^{4}=\\sigma T^{4} $$ \n\n式中\n\n $$ \\sigma=5.670\\times10^{-8}W\\cdot m^{-2}\\cdot K^{-4} $$ \n\n上式便是斯特藩-玻耳兹曼定律。\n\n $$ \\lambda_{m^{-}}=\\frac{hc}{4.965kT} $$ \n\n即\n\n $$ \\lambda_{m}(μm)=\\frac{289\\ 8}{T} $$ \n\n $$ r_{0}(\\lambda_{\\mathrm{m}},T)=1.301\\times10^{-15}\\left(\\frac{\\mathrm{W}}{\\mathrm{cm}^{2}\\cdot\\mu\\mathrm{m}\\cdot\\mathrm{K}^{5}}\\right)\\cdot T^{5} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_chart_box_857_237_1292_937.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n上式便是维恩位移定律。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_1447_349_1614_514.jpg\" alt=\"Image\" width=\"9%\" /></div>\n\n上式即绝对黑体辐射谱的峰值定律。\n\n<div style=\"text-align: center;\">例 6.2.1 题解</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_chart_box_627_1517_1367_2011.jpg\" alt=\"Image\" width=\"43%\" /></div>\n\n<div style=\"text-align: center;\">图 6–2–1 几个绝对黑体辐射公式的比较</div>\n\n<div style=\"text-align: center;\">图 6–2–2 超越方程作图法求解</div>"
+    },
+    {
+        "question_id": "EX_111",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "为什么需要谐振腔才能得到高度平行的激光？",
+        "answer": "在激活介质中，自发发射产生的初始光子在实现了反转分布的介质中传播时，也会得到光放大。光放大增生的光子和初始光子有相同频率、位相、偏振和传播方向。但由于初始光子是随机分布的，所以增生光子的传播方向也是随机的，因此得不到高度平行的激光。谐振腔通过只允许与轴线平行的光子束在腔内来回反射，连续不断地进行光放大，从而形成稳定的沿腔轴方向的强激光束输出。发散角只受衍射效应限制，所以谐振腔对光子走向起了定向作用。"
+    },
+    {
+        "question_id": "EX_112",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "为什么需要谐振腔才能得到高强度的激光？",
+        "answer": "单靠一台光放大器，由于激活介质的长度 L 和增益系数 G 都是很有限的，从公式(7-2-8)和(7-2-9)看出，光放大率不可能很大，所以得不到足够强的激光。谐振腔通过使光束在腔内来回反射多次经过激活介质，实现多次放大，从而大大提高激光的强度。"
+    },
+    {
+        "question_id": "EX_113",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "为什么需要谐振腔才能得到单色性更好的激光？",
+        "answer": "受激发射光放大得到的光，其单色性至少要受到激活介质亚稳态能级寿命 $\\tau$的限制，谱线频率宽度 $\\Delta\\nu=1/\\tau$。要突破这种限制，得到更纯的准单色光，需要用谐振腔。谐振腔通过选择特定频率的光进行放大，从而提高激光的单色性。"
+    },
+    {
+        "question_id": "EX_114",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "推导激光振荡的阈值条件。已知强度 $I_{0}$ 的光通过长度为 L 的激活介质，增益后光强 I 为 $I=I_{0}\\mathrm{e}^{G L}$。谐振腔对光强也有'损耗'，设镜 $M_{1}, M_{2}$ 的透射率分别为 $T_{1}, T_{2}$，反射率分别为 $R_{1}, R_{2}$，因衍射、散射、吸收引起的总损耗分别为 $\\delta_{1}, \\delta_{2}$。",
+        "answer": "设在激活介质左端面处 $(x=0)$，光强为 $I_{0}$，光传播到激活介质右端 $(x=L)$，光强增加到 $I_{1}$，即 $I_{1}=I_{0}\\mathrm{e}^{G L}$。经 $M_{2}$ 反射以后，光强降为 $I_{2}$，即 $I_{2}=R_{2}I_{1}=R_{2}I_{0}\\mathrm{e}^{G L}$。在回来的路上又经过激活介质的增益和损耗，光强增为 $I_{3}$，即 $I_{3}=I_{2}\\mathrm{e}^{G L}=R_{2}I_{0}\\mathrm{e}^{2G L}$。再经 $M_{1}$ 反射，光强又降为 $I_{4}$，即 $I_{4}=R_{1}I_{3}=R_{1}R_{2}I_{0}\\mathrm{e}^{2G L}$。即 $\\frac{I_{4}}{I_{0}}=R_{1}R_{2}\\mathrm{e}^{2G L}$。至此光束完成了一个循环。激光振荡的阈值条件是当 $I_{4} \\geq I_{0}$ 时，即 $R_{1}R_{2}\\mathrm{e}^{2G L} \\geq 1$，或 $\\mathrm{e}^{2G L} \\geq \\frac{1}{R_{1}R_{2}}$，取对数后得到 $2G L \\geq -\\ln(R_{1}R_{2})$，即 $G L \\geq -\\frac{1}{2}\\ln(R_{1}R_{2})$。这就是激光振荡的阈值条件。"
+    },
+    {
+        "question_id": "EX_115",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "谐振腔的阈值条件是什么？阈值增益如何计算？",
+        "answer": "谐振腔的阈值条件是 $I_4 = I_0$，其中 $I_4$ 是光束完成一个循环后的光强，$I_0$是初始光强。阈值增益 $G_m$ 的计算公式为：\n\n$$ G_{m} = \\frac{1}{2L}\\ln\\frac{1}{R_{1}R_{2}} $$\n\n其中，$L$ 是谐振腔长度，$R_1$ 和 $R_2$ 是反射镜的反射率。阈值增益反映了产生光振荡对激励能源和激活介质的综合要求。"
+    },
+    {
+        "question_id": "EX_116",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "激光的单色性是如何形成的？激活介质和谐振腔对单色性各有什么影响？",
+        "answer": "激光的单色性主要受两个因素影响：\n\n1. 激活介质的影响：激活介质本征谱线有一定的半值宽度 $\\Delta\\nu_D$，这限制了激光的频谱。谱线增宽的原因包括自然增宽、碰撞增宽和多普勒增宽等。\n\n2. 谐振腔的影响：谐振腔对振荡频率具有选择性，根据多光束干涉的极强条件 $2nL=K\\lambda$（$K$为自然数），决定了激光的振荡频率为：\n\n$$ \\nu = K\\frac{c}{2nL} $$\n\n这些频率以纵模间隔 $\\Delta\\nu_m = \\frac{c}{2nL}$ 等距离分布。\n\n激活介质和谐振腔共同决定了激光的单色性，激活介质限制了频谱的宽度，而谐振腔决定了频谱的离散分布。"
+    }
+]
