@@ -1,0 +1,8 @@
+src/
+├── agent.py            # 核心智能体（已集成 RAG）
+├── rag.py              # 检索增强生成模块
+├── tool_executor.py    # Python 代码执行器（不变）
+├── config.py           # API 密钥、模型名称等配置
+├── submission.json     # 入口类和方法声明
+├── requirements.txt    # 依赖列表（新增 scikit-learn）
+└── README.md           # 功能说明与使用须知须知

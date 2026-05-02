@@ -75,7 +75,8 @@ class BaselineAgent:
 
         answer = "请根据题意作答"
 
-"""     expr = self._extract_math_expression(question)
+        # 基础能力: 仅做简单算式求值，作为可扩展起点。
+        expr = self._extract_math_expression(question)
         if expr:
             try:
                 value = self._safe_eval(expr)
@@ -140,6 +141,3 @@ class BaselineAgent:
             return float(self._allowed_unary_ops[op_type](value))
 
         raise ValueError("表达式语法不受支持")
-"""
-
-    #TODO: 调用reAct Agent解题逻辑

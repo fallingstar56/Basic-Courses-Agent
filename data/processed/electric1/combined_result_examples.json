@@ -1,0 +1,443 @@
+[
+    {
+        "question_id": "EX_001",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求图 2-2-5 所示电路的入端电阻。已知 $ R_{1}=1k\\Omega, R_{2}=1k\\Omega $，电流控制电流源的转移电流比 $ \\beta=98 $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_0_imgs_img_in_image_box_581_1599_1038_1997.jpg\" alt=\"Image\" width=\"26%\" /></div>\n\n<div style=\"text-align: center;\">图 2-2-5 例 2-2 附图</div>",
+        "answer": "解 假设有电流 i 流入此电路，受控电流电源中便有电流 $ \\beta i $，所以 $ R_{2} $ 中的电流为 $ (1+\\beta)i $，于是得此电路两端的电压为\n\n$$ u=R_{1}i+(1+\\beta)i R_{2}=\\left[R_{1}+(1+\\beta)R_{2}\\right]i $$\n\n又得此二端电路的入端电阻为\n\n$$ R_{in}=\\frac{u}{i}=R_{1}+(1+\\beta)R_{2} $$\n\n代入数字, 得\n\n$$ R_{in}=1+(1+98)=100\\mathrm{~k}\\Omega $$"
+    },
+    {
+        "question_id": "EX_002",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求图 2-4-5(a) 所示的电路中电阻 $ R_{3} $ 中的电流 $ i_{3} $ 和电流 $ i_{1}, i_{2} $ 。假设图中各电源电压、电阻均为已知。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_174_708_514_1001.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_583_705_1071_979.jpg\" alt=\"Image\" width=\"28%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_1089_710_1414_942.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n<div style=\"text-align: center;\">(c)</div>\n\n<div style=\"text-align: center;\">图 2-4-5 例 2-3 附图</div>",
+        "answer": "先用电源转换方法将图 2-4-5(a) 中两个含电压源的支路进行化简。为此将图中每一含电压源的支路转换为与之等效的电流源电路，得到图 2-4-5(b) 的电路。再将此图中的两个电流源合并为一个电流源，此电流源的电流等于图 2-4-5(b)中两个电流源电流之和，即\n\n$$ i_{S}=\\frac{u_{S1}}{R_{1}}+\\frac{u_{S2}}{R_{2}} $$\n\n再将 $ R_{1}, R_{2} $ 并联，得\n\n$$ R^{\\prime}=\\frac{R_{1}R_{2}}{R_{1}+R_{2}} $$\n\n这样就将图 2-4-5(a) 的电路简化成图 2-4-5(c) 所示电路。由图(c) 的电路即可用分流公式求得\n\n$$ i_{3}=\\frac{R^{\\prime}}{R^{\\prime}+R_{3}}i_{S} $$\n\n由 $ i_{3} $ 求得 $ R_{3} $ 两端的电压为\n\n$$ u_{3}=R_{3}i_{3} $$\n\n由图 2-4-5(a) 的电路, 可得\n\n$$ \\begin{aligned}&i_{1}=\\frac{u_{S1}-u_{3}}{R_{1}}\\\\ &i_{2}=\\frac{u_{S2}-u_{3}}{R_{2}}\\\\ \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_003",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "电路中各支路的电流。\n\n解 图 2-5-2 的电路中,  $ R_{1}, R_{2} $ 和  $ R_{5} $ 组成一个三角形联接的电路;  $ R_{3}, R_{4} $ 和  $ R_{5} $ 组成另一个三角形联接的电路。将它们中的任一个转换为等效的星形电路, 便可用串联、并联方法将题中的电路化简。现将  $ R_{1}, R_{5} $ 和  $ R_{4} $ 化为星形联接的电路, 便得到等效电路如\n\n图 2-5-3 所示，图中电阻  $ R_{6}, R_{7}, R_{8} $\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_476_369_1233_725.jpg\" alt=\"Image\" width=\"44%\" /></div>\n\n<div style=\"text-align: center;\">图 2-5-2 例 2-4 附图</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_518_905_1203_1228.jpg\" alt=\"Image\" width=\"39%\" /></div>\n\n<div style=\"text-align: center;\">图 2-5-3 图 2-5-2 电路的等效电路</div>",
+        "answer": "可由式 $ （2-4-6） $求出：\n\n $$ R_{6}=\\frac{R_{1}R_{2}}{R_{1}+R_{2}+R_{5}}=\\frac{1\\times3}{1+2+3}=\\frac{1}{2}=0.5\\Omega $$ \n\n $$ \\frac{R_{7}}{R_{1}+R_{2}+R_{5}}=\\frac{1\\times2}{1+2+3}=\\frac{1}{3}=0.333\\Omega $$ \n\n $$ R_{8}=\\frac{R_{2}R_{5}}{R_{1}+R_{2}+R_{5}}=\\frac{3\\times2}{1+2+3}=1\\Omega $$ \n\n在此电路中, $ R_{7} $ 和  $ R_{3} $ 是串联的； $ R_{8} $ 和  $ R_{4} $ 是串联的，这两个串联支路是并联的。于是可求出：\n\n $$ I_{3}=\\frac{R_{8}+R_{4}}{R_{7}+R_{3}+R_{8}+R_{4}}I=\\frac{5}{10\\frac{1}{3}}=\\frac{15}{31}=0.484A $$ \n\n $$ I_{4}=\\frac{R_{7}+R_{3}}{R_{7}+R_{3}+R_{8}+R_{4}}I=\\frac{5\\frac{1}{3}}{10\\frac{1}{3}}=\\frac{16}{31}=0.516A $$ \n\n为求电流  $ I_{1}, I_{2}, I_{5} $，先求出②，③两点间的电压  $ U_{23} $，有\n\n $$ U_{23}=R_{3}I_{3}-R_{4}I_{4}=5\\times0.484-4\\times0.516=0.355V $$ \n\n于是求得\n\n $$ I_{5}=\\frac{U_{23}}{R_{5}}=\\frac{0.355}{2}=0.178\\ A $$ \n\n由 KCL, 可求得\n\n $$ I_{1}=I_{3}+I_{5}=0.484+0.178=0.662\\ A $$ \n\n $$ I_{2}=I_{4}-I_{5}=0.516-0.178=0.338\\ A $$"
+    },
+    {
+        "question_id": "EX_004",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "示。此例中的电路有5个支路(如将电流电源单独视为一支路)，但其中电流源支路中的电流 $ I_{s} $是已知的，所以只有4个未知电流。分别对节点①，②列写KCL方程，有\n\n节点 $ ^{①} $\n\n节点 $ ^{②} $\n\n $$ \\begin{aligned}&-I_{1}+I_{2}+I_{3}=0\\\\&-I_{3}+I_{4}-I_{S}=0\\end{aligned} $$ \n\n取回路 1,2，并取回路参考方向如图，列写回路 KVL 方程，有\n\n回路 1\n\n回路 2\n\n $$ \\begin{aligned}R_{1}I_{1}+R_{2}I_{2}=&U_{S1}\\\\-R_{2}I_{2}+R_{3}I_{3}+R_{4}I_{4}=&0\\\\U=&R_{4}I_{4}\\end{aligned} $$ \n\n电流源电压\n\n代入数字,得以下方程组:\n\n $$ \\begin{aligned}-\\boldsymbol{I}_{1}+\\boldsymbol{I}_{2}+\\boldsymbol{I}_{3}&=0\\\\-\\boldsymbol{I}_{3}+\\boldsymbol{I}_{4}&=1\\\\-\\boldsymbol{I}_{1}+6\\boldsymbol{I}_{2}&=15\\\\-6\\boldsymbol{I}_{2}+2\\boldsymbol{I}_{3}+5\\boldsymbol{I}_{4}&=0\\end{aligned} $$ ",
+        "answer": "由以上方程解得\n\n $$ I_{1}=3\\mathrm{A}\\qquad I_{2}=2\\mathrm{A} $$ \n\n $$ I_{3}=1A\\qquad I_{4}=2A $$ \n\n又得电流源电压\n\n $$ U=R_{4}I_{4}=5\\times2=10V $$ "
+    },
+    {
+        "question_id": "EX_005",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "用回路电流法求图 3-2-2 中各支路电流以及各电源所发出的功率。各电源电压和电阻值均给定，如图中所标明。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_421_612_1196_1086.jpg\" alt=\"Image\" width=\"45%\" /></div>\n\n<div style=\"text-align: center;\">图 3-2-2 例 3-3 附图</div>",
+        "answer": "取图中的三个网孔为独立回路，设各回路电流分别为 $ I_{t1}, I_{t2}, I_{t3} $，取顺时针方向为回路的参考方向。写出回路电压方程如下：\n\n$$ \\begin{aligned}&(R_{1}+R_{2})I_{l1}-R_{2}I_{l2}=U_{S1}-U_{S2}\\\\&-R_{2}I_{l1}+(R_{2}+R_{3}+R_{4})I_{l2}-R_{4}I_{l3}=U_{S2}\\\\&-R_{4}I_{l2}+(R_{4}+R_{5})I_{l3}=-U_{S3}\\\\ \\end{aligned} $$\n\n代入数字,得\n\n$$ \\begin{aligned}&5I_{t_{1}}-3I_{t_{2}}=25-24=1\\\\&-3I_{t_{1}}+20I_{t_{2}}-15I_{t_{3}}=24\\\\&-15I_{t_{2}}+17I_{t_{3}}=-\\ 11\\\\ \\end{aligned} $$\n\n用消去法解得回路电流\n\n$$ I_{\\iota_{1}}=2\\mathrm{A},\\quad I_{\\iota_{2}}=3\\mathrm{A},\\quad I_{\\iota_{3}}=2\\mathrm{A} $$\n\n于是得各支路电流\n\n$$ I_{1}=I_{11}=2A $$\n\n$$ I_{2}=I_{l2}-I_{l1}=3-2=1A $$\n\n$$ I_{3}=-I_{t2}=-3A $$\n\n$$ I_{4}=I_{l2}-I_{l3}=3-2=1A $$\n\n$$ I_{5}=-I_{13}=-2A $$\n\n图示左边支路中电压源发出的功率是\n\n$$ P_{1}=U_{S1}I_{1}=25\\times2=50\\mathbf{W} $$\n\n中间支路中电压源发出的功率是\n\n$$ P_{2}=U_{S2}I_{2}=24\\times1=24W $$\n\n右边的支路中电压源发出的功率是\n\n$$ P_{3}=U_{S3}I_{5}=-11\\times2=-22W $$\n\n$ P_{3} $值为负表明图示右边支路中的电压源实际上是在吸收功率,像电动机或被充电的电池那样工作。"
+    },
+    {
+        "question_id": "EX_006",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "列写用回路电流法求图 3-2-3 所示电路中各电流所需的方程，图中的受控电源是电压控制的电压源。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_452_1637_1256_2136.jpg\" alt=\"Image\" width=\"46%\" /></div>\n\n<div style=\"text-align: center;\">图 3-2-3 例 3-4 附图</div>",
+        "answer": "此例中的电路，虽有三个独立回路，但由于其中的电流电源的电流是已知的，所以只有两个未知的独立回路电流。设独立回路如图所示，写出回路电压方程如下:\n\n$$ \n\\begin{aligned}\n&(R_{1}+R_{2})I_{t1}-R_{2}I_{t2}=U_{s}+\\mu U_{1}\\\\\n&-R_{2}I_{t1}+(R_{2}+R_{3}+R_{4})I_{t2}+R_{4}I_{t3}=\\mu U_{1}\\\\ \n\\end{aligned} \n$$\n\n但已知回路电流 $ I_{13}=I_{S} $，又 $ U_{1}=R_{1}I_{11} $，代入上式，得\n\n$$ \n\\begin{aligned}\n&(R_{1}+R_{2}-\\mu R_{1})I_{i1}-R_{2}I_{i2}=U_{S}\\\\\n&-(\\mu R_{1}+R_{2})I_{i1}+(R_{2}+R_{3}+R_{4})I_{i2}=-R_{4}I_{S}\\\\ \n\\end{aligned} \n$$\n\n由上式可解出回路电流 $ I_{t1}, I_{t2} $，由之得到各支路电流为\n\n$$ \n\\begin{aligned}\n&I_{1}=I_{l1}\\quad&I_{3}=I_{l2}\\\\\n&I_{2}=I_{l1}-I_{l2}\\quad&I_{4}=I_{l2}+I_{S}\\\\ \n\\end{aligned} \n$$\n\n由以上所得方程可见，在含有受控源的电路里会有两个回路的互电阻不相等的情形，在此例中，第一个回路里，$ R_{12}=-R_{2} $，而在第二个回路里，$ R_{21}=-(\\mu R_{1}+R_{2}) $。"
+    },
+    {
+        "question_id": "EX_007",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 3-5 写出用节点电压法求图 3-3-6 电路中各节点电压和各支路电流所需的方程式。假定图中各元件参数、电压源电压、电流源电流均给定，其中的受控电源是电压控制的电压源。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_438_1557_1184_2171.jpg\" alt=\"Image\" width=\"43%\" /></div>\n\n<div style=\"text-align: center;\">图 3-3-6 例 3-3 附图</div>",
+        "answer": "解 设节点 $ ^{①} $为电位参考点，节点 $ ^{①} $， $ ^{②} $的电压分别为 $ u_{1},u_{2} $，先将受控电源当作独立电源，写出节点电压所满足的KCL方程：\n\n $$ \n\\begin{aligned}\n(G_{1}+G_{3}+G_{4})u_{1}-(G_{3}+G_{4})u_{2}&=G_{1}u_{S1}+i_{S2}-G_{4}u_{S4}\\\\\n-(G_{3}+G_{4})u_{1}+(G_{3}+G_{4}+G_{5}+G_{6})u_{2}\\\\\n&=G_{4}u_{S4}+G_{5}u_{S6}+G_{5}\\mu u_{3}\n\\end{aligned} \n$$ \n\n以上第二式右端的末项  $ G_{5}\\mu u_{3} $ 可以看作是将图中的受控电压源转换成电流源后流入节点 2 的电流。考虑到  $ u_{3}=u_{1}-u_{2} $，将这关系代入上式，得\n\n $$ \n\\begin{aligned}\n(G_{1}+G_{3}+G_{4})u_{1}-(G_{3}+G_{4})u_{2}&=G_{1}u_{S1}+i_{S2}-G_{4}u_{S4}\\\\\n-\n(G_{3}+G_{4}+\\mu G_{5})u_{1}+\\left[(G_{3}+G_{4}+G_{6}+(1+\\mu)G_{5})\\right]u_{2}\\\\\n&=G_{4}u_{S4}+G_{6}u_{S6}\n\\end{aligned} \n$$ \n\n由以上方程解出  $ u_{1}, u_{2} $，即可求出各支路电流：\n\n $$ \n\\begin{aligned}\n&i_{1}=G_{1}(u_{S1}-u_{1})\\\\\n&i_{3}=G_{3}(u_{1}-u_{2})\\\\\n&i_{4}=G_{4}(u_{1}-u_{2}+u_{S4})\\\\\n&i_{5}=G_{5}(u_{2}-\\mu u_{3})=G_{5}[(1+\\mu)u_{2}-\\mu u_{1}]\\\\\n&i_{6}=G_{6}(u_{S6}-u_{2})\\\\ \n\\end{aligned} \n$$"
+    },
+    {
+        "question_id": "EX_008",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 3-5-5 的电路是用运算放大器构成的同向输入放大器，求输出电压 $ u_{0} $ 与输入电压 $ u_{i} $ 之比。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_578_1571_1116_2042.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">图 3-5-5 同向输入的放大器</div>",
+        "answer": "在此电路中，输入电压经电阻 $ R_{s} $ 接至同向输入端 $ ^{+} $，由输入端流入 $ ^{+} $ 端的电流为零，所以 $ R_{s} $ 上并没有电压降，$ ^{+} $ 端的电位为 $ u_{+}=u_{i} $。输出端电压经 $ R_{1}, R_{2} $ 分压，使 $ ^{-} $ 端的电位为 $ u_{-} = \\frac{R_{2}}{R_{1}+R_{2}}u_{o} $。由于运算放大器的放大倍数 $ A\\rightarrow\\infty, u_{d}=u_{+}-u_{-}=0 $，所以 $ u_{+}=u_{-} $，于是得\n\n$$\n\\frac{R_{2}}{R_{1}+R_{2}}u_{o}=u_{i}\n$$\n\n$$\n\\frac{u_{o}}{u_{i}}=\\frac{R_{1}+R_{2}}{R_{2}}=1+\\frac{R_{1}}{R_{2}}\n$$"
+    },
+    {
+        "question_id": "EX_009",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 5-1 图 5-6-3 中示一二极管与一线性电阻并联接至电流电源的电路，其中二极管的特性为 $ i_{D}=0.1\\left(\\mathrm{e}^{40u_{\\mathrm{D}}}-1\\right) $; 电阻 R=0.5 $ \\Omega $, 电流源电流 $ i_{S}=1A $。求此电路中的电压 $ u(u=u_{\\mathrm{D}}) $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_591_1560_1106_1859.jpg\" alt=\"Image\" width=\"29%\" /></div>\n\n<div style=\"text-align: center;\">图 5-6-3 例 5-1 附图</div>",
+        "answer": "解 写出节点电压方程\n\n$$\n\\begin{aligned}f(u)&=\\frac{u}{R}+i_{\\mathrm{D}}-i_{S}\\\\&=\\frac{u}{0.5}+0.1(\\mathrm{e}^{40u_{\\mathrm{D}}}-1)-1\\\\&=2u+0.1\\mathrm{e}^{40u_{\\mathrm{D}}}-1.1=0\\end{aligned}\n$$\n\n用牛顿法求此方程的数值解，设第k次的近似解为 $ u_{k} $，则有迭代式\n\n$$\nu_{k+1}=u_{k}-\\left.\\frac{f(u_{k})}{\\left.\\frac{\\mathrm{d}f}{\\mathrm{d}u}\\right|_{u=u_{k}}}\\right.\n$$\n\n$ f(u) $ 在 $ u_{k} $ 处的导数为\n\n$$\n\\left.\\frac{\\mathrm{d}f}{\\mathrm{d}u}\\right|_{u=u_{k}}=2+4\\mathrm{e}^{40u_{k}}\n$$\n\n将此式代入前面的迭代式,即得\n\n$$\nu_{k+1}=u_{k}-\\frac{2u_{k}+0.1\\mathrm{e}^{40u_{k}}-1.1}{2+4\\mathrm{e}^{40u_{k}}}\n$$\n\n设初始值 $ u_{0}=0 $ ，经过 7 次迭代，得 u=0.0572V ，在此 u 值下 $ f(u)\\approx10^{-5}A $ ，可以认为此 u 值为足够精确的近似解。"
+    },
+    {
+        "question_id": "EX_010",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 6-3-1(a)所示电路在开关断开之前处于稳定状态，求开关断开瞬间各支路电流和电感电压的起始值 $ i_{1}(0^{+}) $，$ i_{2}(0^{+}), i_{3}(0^{+}), i_{C}(0^{+}), u_{L}(0^{+}) $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_237_1675_826_1973.jpg\" alt=\"Image\" width=\"34%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_865_1678_1498_2005.jpg\" alt=\"Image\" width=\"36%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\">图 6-3-1 例 6-1 附图</div>\n\n(a) 例 6-1 中需要求起始值的电路；\n\n(b) 求例 6-1 中电路起始值用的等效电路",
+        "answer": "开关断开前电路处于稳定状态, 可求得\n\n$$ i_{L}(0^{-}) = \\frac{U_{s}}{R_{1} + R_{3}} = \\frac{8}{3 + 5} = 1A $$\n\n$$ u_{C}(0^{-}) = i_{L}(0^{-}) R_{3} = 1 \\times 5 = 5 \\mathrm{V} $$\n\n由换路定则可知, 其起始状态为\n\n$$ i_{L}(0^{+}) = i_{L}(0^{-}) = 1 \\mathrm{A} $$\n\n$$ u_{C}(0^{+}) = u_{C}(0^{-}) = 5 \\mathrm{V} $$\n\n作出 $ t = 0^{+} $ 时的等效电路，如图 6-3-1(b) 所示，其中替代电容的电压源 $ u_{C}(0^{+}) = 5 \\mathrm{V} $，替代电感的电流源 $ i_{L}(0^{+}) = 1 \\mathrm{A} $，由此电路可求得待求各起始值："
+    },
+    {
+        "question_id": "EX_011",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 6-1 中需要求起始值的电路。\n\n(a) 例 6-1 中需要求起始值的电路；\n\n(b) 求例 6-1 中电路起始值用的等效电路\n\n图 6-3-1 例 6-1 附图\n\n已知开关断开前电路处于稳定状态，求解以下内容：\n\n1. $ i_{L}(0^{-}) $ 和 $ u_{C}(0^{-}) $ 的值。\n2. 根据换路定则，确定 $ i_{L}(0^{+}) $ 和 $ u_{C}(0^{+}) $。\n3. 在 $ t=0^{+} $ 时，作出等效电路并求解各起始值：$ i_{3}(0^{+}) $、$ i_{1}(0^{+}) $、$ i_{2}(0^{+}) $ 和 $ u_{L}(0^{+}) $。",
+        "answer": "解：\n\n开关断开前电路处于稳定状态，可求得：\n\n$$ i_{L}(0^{-}) = \\frac{U_{s}}{R_{1}+R_{3}} = \\frac{8}{3+5} = 1A $$\n\n$$ u_{C}(0^{-}) = i_{L}(0^{-}) R_{3} = 1 \\times 5 = 5\\mathrm{V} $$\n\n由换路定则可知，其起始状态为：\n\n$$ i_{L}(0^{+}) = i_{L}(0^{-}) = 1\\mathrm{A} $$\n\n$$ u_{C}(0^{+}) = u_{C}(0^{-}) = 5\\mathrm{V} $$\n\n作出 $ t=0^{+} $ 时的等效电路，如图 6-3-1(b) 所示，其中替代电容的电压源 $ u_{C}(0^{+}) = 5V $，替代电感的电流源 $ i_{L}(0^{+}) = 1A $，由此电路可求得待求各起始值：\n\n$$\n\\begin{aligned}\n&i_{3}(0^{+}) = i_{L}(0^{+}) = 1\\mathrm{A} \\\\\n&i_{1}(0^{+}) = 0 \\\\\n&i_{2}(0^{+}) = i_{1}(0^{+}) - i_{3}(0^{+}) = -1\\mathrm{A} \\\\\n&u_{L}(0^{+}) = u_{C}(0^{+}) + i_{2}(0^{+}) R_{2} - i_{3}(0^{+}) R_{3} = -2\\mathrm{V}\n\\end{aligned}\n$$"
+    },
+    {
+        "question_id": "EX_012",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 6-4-1 电路中，已知电容在开关闭合前已带有电荷，设 t=0 时开关闭合，电容电压 $ u_{C}(0^{-})=U_{0} $。开关闭合后由基尔霍夫定律可得 $ u_{C}=u_{R} $，将元件约束 $ u_{R}=Ri, i=-C \\frac{du_{C}}{dt} $ 代入上式，可得微分方程\n\n$$ RC\\frac{\\mathrm{d}u_{c}}{\\mathrm{d}t}+u_{c}=0 $$\n\n求满足该微分方程和起始条件的解答 $ u_{C} $，并进一步求出电流 $ i $。",
+        "answer": "首先，这是一个一阶齐次微分方程：\n\n$$ RC\\frac{\\mathrm{d}u_{c}}{\\mathrm{d}t}+u_{c}=0 $$\n\n由换路定则可知：\n\n$$ u_{c}(0^{+})=u_{c}(0^{-})=U_{0} $$\n\n齐次微分方程的通解形式为：\n\n$$ u_{C}=A\\mathrm{e}^{p t} $$\n\n将此解代入微分方程，得到特征方程：\n\n$$ RCp+1=0 $$\n\n解得特征根为：\n\n$$ p=-1/RC $$\n\n于是得到解答为：\n\n$$ u_{C}=A\\mathrm{e}^{-\\frac{t}{RC}} $$\n\n利用初始条件确定常数 A：\n\n$$ u_{C}(0)=\\left.A\\mathrm{e}^{-t/RC}\\right|_{t=0}=U_{0} $$\n\n所以：\n\n$$ u_{C}=U_{0}\\mathrm{e}^{-\\frac{t}{RC}} $$\n\n进一步求出电流：\n\n$$ i=-C\\frac{\\mathrm{d}u_{C}}{\\mathrm{d}t}=-C\\frac{\\mathrm{d}}{\\mathrm{d}t}U_{0}\\mathrm{e}^{-t/RC}=\\frac{U_{0}}{R}\\mathrm{e}^{-t/RC} $$\n\n也可以通过 $ i=u_{C}/R $ 求出：\n\n$$ i=\\frac{u_{C}}{R}=\\frac{U_{0}}{R}e^{-t/RC} $$"
+    },
+    {
+        "question_id": "EX_013",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "列写RL电路的微分方程，并求解电流 $ i(t) $ 的表达式。已知电路的微分方程为：\n\n$$ L\\frac{\\mathrm{d}i}{\\mathrm{d}t} + Ri = 0 $$\n\n并根据起始条件 $ i(0^{+}) = i(0^{-}) = I_{0} $，确定电流解答。",
+        "answer": "首先，列出该RL电路的微分方程：\n\n$$ L\\frac{\\mathrm{d}i}{\\mathrm{d}t} + Ri = 0 $$\n\n这是一个一阶齐次微分方程，假设解的形式为 $ i = Ae^{pt} $，代入后得到特征方程：\n\n$$ Lp + R = 0 $$\n\n解出特征根为：\n\n$$ p = -\\frac{R}{L} $$\n\n因此，电流的通解形式为：\n\n$$ i = A\\mathrm{e}^{-Rt/L} $$\n\n令时间常数 $ \\tau = \\frac{L}{R} $，则有：\n\n$$ i = A\\mathrm{e}^{-t/\\tau} $$\n\n由起始条件 $ i(0^{+}) = i(0^{-}) = I_{0} $，可得 $ A = I_{0} $。最终电流解答为：\n\n$$ i = I_{0}\\mathrm{e}^{-t/\\tau} $$"
+    },
+    {
+        "question_id": "EX_014",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "在RL电路放电过程中，求电阻上消耗的能量 $ W $。已知电流表达式为：\n\n$$ i = I_{0}\\mathrm{e}^{-t/\\tau} $$\n\n其中 $ \\tau = \\frac{L}{R} $。",
+        "answer": "电阻上消耗的能量 $ W $ 可通过以下公式计算：\n\n$$ W = \\int_{0}^{\\infty} Ri^{2}\\mathrm{d}t $$\n\n将电流表达式 $ i = I_{0}\\mathrm{e}^{-t/\\tau} $ 代入，得到：\n\n$$ W = \\int_{0}^{\\infty} R(I_{0}\\mathrm{e}^{-t/\\tau})^{2}\\mathrm{d}t $$\n\n化简后为：\n\n$$ W = \\int_{0}^{\\infty} RI_{0}^{2}\\mathrm{e}^{-2t/\\tau}\\mathrm{d}t $$\n\n进一步积分，结果为：\n\n$$ W = RI_{0}^{2} \\Big(-\\frac{\\tau}{2}\\mathrm{e}^{-2t/\\tau}\\Big)\\Big|_{0}^{\\infty} $$\n\n计算边界值，得到：\n\n$$ W = RI_{0}^{2} \\cdot \\frac{\\tau}{2} = \\frac{1}{2}LI_{0}^{2} $$\n\n即电阻上消耗的能量等于电感的初始储能。"
+    },
+    {
+        "question_id": "EX_015",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 6-2 图 6-5-10 所示为一输电线的等效电路，R 和 L 分别为发电机和输电线的总电阻和总电感，已知 R=0.06 $ \\Omega $，L=5.1 mH,  $ u_{s} = \\sqrt{2} $ 6.3  $ \\sin(314t + \\phi) $ kV。试计算输电线路发生短路时[设短路前 $ i(0^{-})=0 $]，线路中可能出现的最大瞬时电流。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_538_1664_1131_1992.jpg\" alt=\"Image\" width=\"34%\" /></div>\n\n<div style=\"text-align: center;\">图 6-5-10 输电线等效电路</div>",
+        "answer": "解 设短路电流 $ t=0 $时短路）\n\n $$ i=i_{q}+i_{z}=\\frac{U_{\\mathrm{m}}}{\\left|Z\\right|}\\sin\\left(314t+\\psi-\\varphi\\right)+A\\mathrm{e}^{-t/\\tau} $$ \n\n强制电流幅值为\n\n $$ I_{q m}=\\frac{U_{m}}{|Z|}=\\frac{\\sqrt{2}\\ 6300}{\\sqrt{R^{2}+\\omega^{2}L^{2}}}=\\frac{\\sqrt{2}\\ 6300}{\\sqrt{(0.06)^{2}+(1.6)^{2}}}=5500A $$ \n\n按短路瞬间出现最大自由分量来考虑，则有\n\n $$ i=i_{q}+i_{z}=5500\\sin\\left(314t+\\frac{\\pi}{2}\\right)-5500\\mathrm{e}^{-t/\\tau} $$ \n\n式中  $ \\tau=\\frac{L}{R}=\\frac{0.0051}{0.06}=0.085\\ s $，最大瞬时电流  $ |i_{\\max}| $ 出现在短路后的半个周期时，即  $ t=\\frac{T}{2}=0.01\\ s $ 时，可求出\n\n $$ \\begin{aligned}i_{\\max}&=5500\\mathrm{sin}\\left(\\pi+\\frac{\\pi}{2}\\right)-5500\\mathrm{e}^{-\\frac{0.01}{0.085}}\\\\&=-\\ 5500-4889=-\\ 10389\\mathrm{A}\\end{aligned} $$ \n\n所以  $ \\left|i_{\\max}\\right|=10389A $（接近于  $ 2I_{qm}=11000A $）。"
+    },
+    {
+        "question_id": "EX_016",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例中电路的时间常数 $ \\tau = L / R = 0.2 \\, s $。由图 6-6-6 各电路求出各相应情况下的响应，并最终求解全响应。\n\n已知：\n- 图(a)零输入响应为：\n  $$ i_{L f}=1\\mathrm{e}^{-t/\\tau}=1\\mathrm{e}^{-5t}\\mathrm{~A~} $$\n  $$ u_{L f}=-10\\mathrm{e}^{-5t}\\mathrm{~V~} $$\n- 图(b)电压源单独作用时的零状态响应为：\n  $$ i_{L e}^{\\prime}=0.6(1-\\mathrm{e}^{-5t})\\mathrm{~A~} $$\n  $$ u_{L e}{^{\\prime}}=6\\mathrm{e}^{-5i}\\mathrm{~V~} $$\n- 图(c)电流源单独作用时的零状态响应为：\n  $$ i^{\\prime\\prime}{}_{L e}=2(1-\\mathrm{e}^{-5t})\\mathrm{~A~} $$\n  $$ u_{_{L e}}^{\\prime\\prime}=20\\mathrm{e}^{-5t}\\mathrm{~V~} $$\n\n求：全响应 $ i_L $ 和 $ u_L $。",
+        "answer": "1. 零输入响应为：\n   $$ i_{L f}={\\mathrm{e}}^{-5t}\\mathrm{~A~} $$\n   $$ u_{L f}=-10\\mathrm{e}^{-5t}\\mathrm{V} $$\n\n2. 零状态响应为：\n   $$ i_{L e}=i_{L e}^{\\prime}+i_{L e}^{\\prime\\prime}=2.6(1-\\mathrm{e}^{-5t})A $$\n   $$ u_{L e}=u_{L e}^{\\prime}+u_{L e}^{\\prime\\prime}=26\\mathrm{e}^{-5t}\\mathrm{~V~} $$\n\n3. 全响应为：\n   $$ i_{L}=i_{L f}+i_{L e}=2.6-1.6\\mathrm{e}^{-5t}\\mathrm{~A~} $$\n   $$ u_{L}=u_{L f}+u_{L e}=16\\mathrm{e}^{-5t}\\mathrm{V} $$"
+    },
+    {
+        "question_id": "EX_017",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求图示电路在开关闭合后的电流 $ i_{1}, i_{2}, i_{L} $。",
+        "answer": "解：\n（1）求起始值。由换路定则，对电感电流有\n$$ i_{L}(0^{+})=i_{L}(0^{-})=\\frac{60}{20}=3\\mathrm{A} $$\n由 $ t=0^{+} $ 时电路可求出\n$$ i_{2}(0^{+})=1.5\\mathrm{A},\\qquad i_{1}(0^{+})=4.5\\mathrm{A} $$\n\n（2）求稳态值（视 L 为短路）\n$$ i_{2}(\\infty)=i_{L}(\\infty)=2\\mathrm{A} $$\n$$ i_{1}(\\infty)=4\\mathrm{A} $$\n\n（3）求时间常数 $ \\tau $。由电感 L 两端看进去的戴维南等效电阻 $ R_{i}=15\\Omega $，于是\n$$ \\tau=\\frac{L}{R_{i}}=\\frac{0.3}{15}=0.02s $$\n\n（4）写出待求电流表达式\n$$ \\begin{aligned}i_{L}=&i_{L}(\\infty)+[i_{L}(0^{+})-i_{L}(\\infty)]\\mathrm{e}^{-t/\\tau}\\\\=&2+(3-2)\\mathrm{e}^{-t/0.02}=2+\\mathrm{e}^{-50t}\\mathrm{A}\\\\i_{1}=&i_{1}(\\infty)+[i_{1}(0^{+})-i_{1}(\\infty)]\\mathrm{e}^{-t/\\tau}\\\\=&4+(4.5-4)\\mathrm{e}^{-t/0.02}=4+0.5\\mathrm{e}^{-50t}\\mathrm{A}\\\\i_{2}=&i_{2}(\\infty)+[i_{2}(0^{+})-i_{2}(\\infty)]\\mathrm{e}^{-t/\\tau}\\\\=&2+(1.5-2)\\mathrm{e}^{-t/0.02}=2-0.5\\mathrm{e}^{-50t}\\mathrm{A}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_018",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 6-5 RC 延时电路。图 6-7-4 中 RC 电路起延时作用，通过电压 $ u_{ab} $ 来控制一继电器，当 $ u_{ab} \\geqslant 2V $ 时继电器就动作。已知 S 闭合前 $ u_{C}(0)=0 $，现要求 S 闭合后经 5s 继电器动作。试选择 R, C 参数。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_234_1449_787_1817.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">图 6-7-4 例 6-5 附图</div>",
+        "answer": "解 利用三要素法求 $ u_{ab} $。由图 6-7-4 可见\n\n$$ u_{\\mathrm{a b}}=u_{C}-6 $$\n\n由于 $ u_{C}(0)=0 $，于是得\n\n$$ u_{\\mathrm{ab}}(0^{+})=u_{C}(0^{+})-6=0-6=-6\\mathrm{V} $$\n\n又由于 $ u_{c}(\\infty)=12V $，所以\n\n$$ u_{\\mathrm{ab}}(\\infty)=u_{\\mathrm{C}}(\\infty)-6=12-6=6\\mathrm{V} $$\n\n此电路的时间常数为\n\n$$ \\tau=R C $$\n\n所以\n\n$$ \\begin{aligned}u_{\\mathrm{ab}}&=u_{\\mathrm{ab}}(\\infty)+[u_{\\mathrm{ab}}(0^{+})-u_{\\mathrm{ab}}(\\infty)]\\mathrm{e}^{-t/\\tau}\\\\&=6-12\\mathrm{e}^{-t/RC}\\mathrm{V}\\end{aligned} $$\n\n$ u_{ab} $ 的曲线如图 6-7-5 中所示，现要求 $ t=5s $ 时， $ u_{ab}\\mid_{t=5}=2V $，代入上式，得\n\n$$ 2=6-12\\mathrm{e}^{-5/RC}\\quad,\\quad 即 \\mathrm{e}^{-5/\\tau}=\\frac{1}{3} $$\n\n可求出 $ \\tau = RC = 5 / \\ln 3 = 4.55s $ 。若选 $ C = 47\\mu F $ ，则 R = 96.8k $ \\Omega $ 。"
+    },
+    {
+        "question_id": "EX_019",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "例 6-6 微分电路和积分电路。图 6-7-6 中为用运算放大器构成的微分电路和积分电路。设运算放大器为理想运放，试用“虚短路、虚开路”模型求出输出电压 $ u_{0} $ 与输入电压 $ u_{i} $ 的关系式。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_394_1353_804_1700.jpg\" alt=\"Image\" width=\"23%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_883_1346_1321_1698.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\">图 6-7-6 微分和积分电路</div>\n\n<div style=\"text-align: center;\">(a) 微分电路；(b) 积分电路</div>",
+        "answer": "由图(a)可知\n\n$$ i_{C}=C\\frac{\\mathrm{d}u_{i}}{\\mathrm{d}t},\\quad i_{R}=-\\frac{u_{o}}{R} $$\n\n因为\n\n$$ i_{C}=i_{R} $$\n\n所以\n\n$$ C\\frac{\\mathrm{d}u_{i}}{\\mathrm{d}t}=-\\frac{u_{o}}{R} $$\n\n于是得\n\n$$ u_{o}=-\\frac{RC}{\\frac{du_{i}}{dt}} $$\n\n即输出电压与输入电压的导数成正比,所以此电路是微分电路。读者不难自行分析图(b)电路中输出电压 $ u_{0} $ 与输入电压 $ u_{i} $ 的积分成正比,所以该电路为积分电路。"
+    },
+    {
+        "question_id": "EX_020",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "因此，在 $ t=0^{+} $时建立的起始状态为 $ u_{C}(0^{+})=1/C $。再求 $ t>0^{+} $时的响应，这时  $ \\delta(t)=0 $ ，可视电流源为开路，电路中的响应都是零输入响应，可得\n\n $$ u_{C}=u_{C}(0^{+})\\mathrm{e}^{-t/R C}=\\frac{1}{C}\\mathrm{e}^{-t/R C} $$ \n\n $$ i_{C}=-\\frac{u_{C}}{R}=-\\frac{1}{R C}\\mathrm{e}^{-t/R C} $$ \n\n综合上述结果, 可得这一电路的冲激响应为：\n\n $$ u_{c}=\\frac{1}{C}\\mathrm{e}^{-i/R C}\\varepsilon(t) $$ \n\n $$ i_{C}=\\delta(t)-\\frac{1}{R C}\\mathrm{e}^{-t/R C}\\varepsilon(t) $$ \n\n $ u_{C}, i_{C} $ 的曲线如图 6-9-2 所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_423_1096_1314_1491.jpg\" alt=\"Image\" width=\"51%\" /></div>\n\n<div style=\"text-align: center;\">图 6-9-2  $ u_{c}, i_{c} $ 的冲激响应</div>",
+        "answer": "完整解答已包含在题目描述中。"
+    },
+    {
+        "question_id": "EX_021",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 6-9-3 表示单位冲激电压源  $ \\delta(t) $ 作用于一 R-L 串联电路，现求电感电流 i 和电压  $ u_{L} $ 的冲激响应。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_564_1832_1184_2148.jpg\" alt=\"Image\" width=\"36%\" /></div>\n\n<div style=\"text-align: center;\">图 6-9-3 R-L 电路冲激响应示例</div>\n\n由 KVL, 得\n\n $$ u_{L}+u_{R}=\\delta(t) $$ \n\n即\n\n $$ L\\frac{\\mathrm{d}i}{\\mathrm{d}t}+Ri=\\delta(t) $$ ",
+        "answer": "当  $ t=0^{-} $到  $ 0^{+} $即冲激电压源作用的区间，由式(6-9-5)可知，冲激电压都加在电感电压上，即  $ u_{L}=\\delta(t) $，而  $ u_{R} $ 中不含冲激电压。因为，如  $ u_{R} $ 中含冲激电压，则  $ i(i=u_{R}/R) $ 也将含有冲激电流，则  $ u_{L}=L\\frac{di}{dt} $ 将含有冲击函数的一阶导数，式(6-9-6)就将不成立，即不能满足 KVL。由此可得电流 i 在  $ t=0^{+} $时的值为\n\n $$ \\begin{aligned}i\\left(0^{+}\\right)&=i\\left(0^{-}\\right)+\\frac{1}{L}\\int_{0^{-}}^{0^{+}}u_{L}\\mathrm{d}t\\\\&=0+\\frac{1}{L}\\int_{0^{-}}^{0^{+}}\\delta(t)\\mathrm{d}t=\\frac{1}{L}\\end{aligned} $$ \n\n当  $ t>0^{+} $ 时，由于  $ \\delta(t)=0 $ ，可以将电压源视为短路，这时的响应便是零输入响应，可得\n\n $$ \\begin{aligned}&i=\\frac{1}{L}\\mathrm{e}^{-Rt/L}\\\\ &u_{L}=-Ri=-\\frac{R}{L}\\mathrm{e}^{-Rt/L}\\\\ \\end{aligned} $$ \n\n综合上述结果，可得 R-L 串联电路的冲激响应\n\n $$ i=\\frac{1}{L}\\mathrm{e}^{-Rt/L}\\varepsilon(t) $$ \n\n $$ u_{L}=\\delta(t)-\\frac{R}{L}\\mathrm{e}^{-Rt/L}\\varepsilon(t) $$ \n\n $ i,u_{L} $ 变化曲线如图 6-9-4 所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_394_338_1271_764.jpg\" alt=\"Image\" width=\"51%\" /></div>\n\n<div style=\"text-align: center;\">图 6-9-4 i,u_{L} 的冲激响应</div>"
+    },
+    {
+        "question_id": "EX_022",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 6-7 图 6-10-10 电路中，已知  $ R = 2\\Omega, L = 1H, u_{S}(t) = 10e^{-6t}\\varepsilon(t)V $，求电感电流  $ i_{L}(t) $。设  $ \\overline{i_{L}}(0^{-}) = 0 $。",
+        "answer": "解 用卷积公式求电感电流  $ i_{L} $ 。由式(6-9-7)已知此电路的冲激响应(这里指  $ i_{L} $)为\n\n $$ h(t)=\\frac{1}{L}\\mathrm{e}^{-(R/L)t}\\mathfrak{E}(t) $$ \n\n利用卷积积分，由式 $  (6-10-4)  $可得\n\n $$ \\begin{aligned}i_{L}=&\\int_{0}^{t}u_{S}(\\tau)h(t-\\tau)\\mathrm{d}\\tau\\\\=&\\int_{0}^{t}10\\mathrm{e}^{-6\\tau}\\frac{1}{L}\\mathrm{e}^{-(R/L)(t-\\tau)}\\mathrm{d}\\tau\\\\=&\\int_{0}^{t}10\\mathrm{e}^{-6\\tau}\\mathrm{e}^{-2(t-\\tau)}\\mathrm{d}\\tau\\\\=&10\\mathrm{e}^{-2t}\\int_{0}^{t}\\mathrm{e}^{-4\\tau}\\mathrm{d}\\tau\\\\=&2.5(\\mathrm{e}^{-2t}-\\mathrm{e}^{-6t})\\varepsilon(t)\\mathrm{V}\\end{aligned} $$ \n\n上述卷积积分中都借助于电路的冲激响应。还可利用电路的阶跃响应来求得电路对于任意激励下的零状态响应。这时应把激励分解为许多阶跃信号之和，分别求其响应然后叠加，用这种方法所得积分公式称为杜阿美尔积分，其原理与卷积类似，这里不作介绍。\n\n利用卷积可求得电路的零状态响应,如需要求得电路的全响应时,只需再计入电路的零输入响应即可。"
+    },
+    {
+        "question_id": "EX_023",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "在图 7-2-9 的振荡回路中, 已充电至 $ U_{0}=10kV $ 的电容通过电感放电产生一振荡电流, 要求电流最大值为 11kA, 振荡频率为 $ f=50Hz $, 试选择 L, C 的数值。",
+        "answer": "由 $ \\omega_{0}=2\\pi f=314\\ rad/s $，可得\n\n $$ \\frac{1}{\\sqrt{LC}}=\\omega_{0}=314\\mathrm{rad/s} $$ \n\n又知\n\n $$ \\frac{U_{0}}{\\omega_{0}L} $$"
+    },
+    {
+        "question_id": "EX_024",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "现仅讨论过阻尼 $ (\\alpha > \\omega_{0}) $ 情况。将起始条件式(7-3-9)代入式(7-3-5)，可得出\n\n$$\n\\left\\{\n\\begin{array}{l}\n1+A_{1}+A_{2}=0\\\\\np_{1}A_{1}+p_{2}A_{2}=0\n\\end{array}\n\\right.\n$$\n\n解之得 $ A_{1} $ 和 $ A_{2} $，并代入解答式 $ (7-3-5) $ 求得 $ u_{c} $ 和电流 $ i $ 的表达式。",
+        "answer": "由题目给出的方程组：\n\n$$\n\\left\\{\n\\begin{array}{l}\n1+A_{1}+A_{2}=0\\\\\np_{1}A_{1}+p_{2}A_{2}=0\n\\end{array}\n\\right.\n$$\n\n解得：\n\n$$\nA_{1} = \\frac{p_{2}}{p_{2}-p_{1}}, \\quad A_{2} = \\frac{-p_{1}}{p_{2}-p_{1}}\n$$\n\n将其代入解答式 $ (7-3-5) $，得到：\n\n$$\nu_{c}=\\left[1+\\frac{1}{p_{2}-p_{1}}(p_{1}\\mathrm{e}^{p_{2}t}-p_{2}\\mathrm{e}^{p_{1}t})\\right]\\varepsilon(t)\n$$\n\n由此求得电流为：\n\n$$\ni=C\\frac{\\mathrm{d}u_{c}}{\\mathrm{d}t}=\\left[\\frac{1}{L\\left(p_{2}-p_{1}\\right)}\\left(\\mathrm{e}^{p_{2}t}-\\mathrm{e}^{p_{1}t}\\right)\\right]\\varepsilon(t)\n$$"
+    },
+    {
+        "question_id": "EX_025",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "电路，含有 $ C_{1}, C_{2}, L $ 三个储能元件，已知其起始状态 $ u_{C1}(0), u_{C2}(0), i_{L}(0) $，列写电流 $ i_{2} $ 应满足的微分方程。现采用回路电流法。设回路电流 $ i_{1}, i_{2} $，列写出回路方程：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_486_1734_1202_2038.jpg\" alt=\"Image\" width=\"41%\" /></div>\n\n<div style=\"text-align: center;\">图 7-6-1 含有多个储能元件的电路示例之一</div>\n\n对回路 1\n\n$$ R_{1}i_{1}+\\frac{1}{C_{1}}\\int_{0}^{t}i_{1}(\\xi)\\mathrm{d}\\xi+u_{c1}(0)+L\\frac{\\mathrm{d}i_{1}}{\\mathrm{d}t}-L\\frac{\\mathrm{d}i_{2}}{\\mathrm{d}t}=u_{s} $$\n\n对回路 2\n\n$$ -\\;L\\;\\frac{\\mathrm{d}i_{1}}{\\mathrm{d}t}+R_{2}i_{2}+\\frac{1}{C_{2}}\\int_{0}^{t}i_{2}(\\xi)\\mathrm{d}\\xi+u_{C2}(0)+L\\;\\frac{\\mathrm{d}i_{2}}{\\mathrm{d}t}=0 $$\n\n式中 $ u_{C1}(0) $, $ u_{C2}(0) $ 分别为电容电压 $ u_{C1} $, $ u_{C2} $ 的起始值。",
+        "answer": "以上所列出的是一微分积分方程组，为导出某一个回路电流所满足的方程，需要从中消去另一个回路电流，应用微分、积分的算子符号可以使这样的消去过程得以简化。用算子 $ D = \\frac{d}{dt} $ 表示微分运算；用 $ \\frac{1}{D} $ 表示从 0 到 t 的积分运算，便可将上面的微分积分方程组，即式（7-6-2）和式（7-6-3）写成下面的形式：\n\n$$ \\begin{aligned}&\\left(R_{1}+\\frac{1}{C_{1}\\mathrm{D}}+L\\mathrm{D}\\right)i_{1}-L\\mathrm{D}i_{2}=u_{s}-u_{c_{1}}(0)\\\\&-L\\mathrm{D}i_{1}+\\left(R_{2}+\\frac{1}{C_{2}\\mathrm{D}}+L\\mathrm{D}\\right)i_{2}=-u_{c_{2}}(0)\\end{aligned}\\\\\\begin{aligned}&\\left(7-6-4\\right)\\\\\\end{aligned} $$\n\n为消去其中的 $ i_{2} $，将上式中的第一式乘以 $ \\left(R_{2}+\\frac{1}{C_{2}D}+LD\\right) $；第二式乘以 LD，再将第一个方程与第二个方程相加，便得\n\n$$ \\begin{aligned}&\\left(R_{1}+\\frac{1}{C_{1}\\mathrm{D}}+L\\mathrm{D}\\right)\\left(R_{2}+\\frac{1}{C_{2}\\mathrm{D}}+L\\mathrm{D}\\right)i_{1}-\\left(L\\mathrm{D}\\right)^{2}i_{1}\\\\&=\\left(R_{2}+\\frac{1}{C_{2}\\mathrm{D}}+L\\mathrm{D}\\right)\\left[u_{S}-u_{\\mathrm{C}1}(0)\\right]-L\\mathrm{D}u_{\\mathrm{C}2}(0)\\\\ \\end{aligned} $$\n\n将上式两端同乘以 $ C_{1}C_{2}D^{2} $，得\n\n$$ \\begin{aligned}&(LC_{1}\\mathbf{D}^{2}+R_{1}C_{1}\\mathbf{D}+1)(LC_{2}\\mathbf{D}^{2}+R_{2}C_{2}\\mathbf{D}+1)i_{1}\\\\&-L^{2}C_{1}C_{2}\\mathbf{D}^{4}i_{1}=(LC_{1}C_{2}\\mathbf{D}^{3}+R_{2}C_{1}C_{2}\\mathbf{D}^{2}+C_{1}\\mathbf{D})u_{5}\\\\ \\end{aligned} $$\n\n由于 $ u_{C_{1}}(0) $, $ u_{C_{2}}(0) $ 的时间导数为零，所以它们在上式中不再出现。整理上式，得\n\n$$ \\begin{aligned}\\left[(R_{1}+R_{2})\\mathrm{D}^{3}+\\left(\\frac{1}{C_{1}}+\\frac{1}{C_{2}}+\\frac{R_{1}R_{2}}{L}\\right)\\mathrm{D}^{2}\\right.\\\\ \\left.+\\frac{1}{L}\\Big(\\frac{R_{1}}{C_{2}}+\\frac{R_{2}}{C_{1}}\\Big)\\mathrm{D}+\\frac{1}{LC_{1}C_{2}}\\Big]i_{1}\\right.\\\\ =\\left(\\mathrm{D}^{3}+\\frac{R_{2}}{L}\\mathrm{D}^{2}+\\frac{\\mathrm{D}}{LC_{2}}\\right)u_{S}\\end{aligned} $$\n\n考虑到 $ D = \\frac{d}{dt}, D^{2} = \\frac{d^{2}}{dt^{2}}, D^{3} = \\frac{d^{3}}{dt^{3}} $，将上式中的各次幂的 D 算子换成相应的对 t 求导的符号。"
+    },
+    {
+        "question_id": "EX_026",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "例 8-1 有两个同频率的正弦电压和电流。 $ u(t) = 5\\sin(314t + 150^{\\circ}) $ V,  $ i(t) = 7\\sin(314t - 90^{\\circ}) $ A。它们的波形如图 8-1-3 所示。求电压 u 和电流 i 的相位差。",
+        "answer": "电压 u 和电流 i 的相位差为\n\n $$ \\varphi_{i}=\\psi_{u}-\\psi_{i}=240^{\\circ} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_429_1431_1280_1966.jpg\" alt=\"Image\" width=\"49%\" /></div>\n\n<div style=\"text-align: center;\">图 8-1-3 例 8-1 附图</div>\n\n上式结果表示电压 u 领先电流  $ i 240^{\\circ} $。通常用绝对值小于或等于 180°的角度来表示两个同频率正弦量的相位差。对此例中的电压、电流，我们说电压u落后于电流i120°。"
+    },
+    {
+        "question_id": "EX_027",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "例 8-2 将复数 $ A = 3 - j4 $ 化为指数表示形式。",
+        "answer": "解\n$$\n|A|=\\sqrt{3^{2}+4^{2}}=5\n$$\n$$\n\\operatorname{tg}\\theta=\\frac{-4}{3}\n$$\n由于 A 在第四象限, 所以\n$$\n\\theta=-53.1^{\\circ}\n$$\nA 的指数表示形式即是\n$$\nA=5/-\\underline{\\quad53.1^{\\circ}\\quad}\n$$"
+    },
+    {
+        "question_id": "EX_028",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "已知 $ i(t) = 10\\sqrt{2}\\cos(314t - 60^{\\circ}) $ A，求相量 $ \\dot{I} $。",
+        "answer": "将 $ i(t) $ 写成正弦函数，再表示成对应的复值函数的虚部：\n\n$$ i(t) = 10\\sqrt{2}\\sin(314t + 30^{\\circ}) $$\n\n$$\n\\begin{aligned}\n=& \\mathrm{Im}[10\\sqrt{2}\\mathrm{e}^{\\mathrm{j}30^{\\circ}}\\mathrm{e}^{\\mathrm{j}314t}] \\\\\n=& \\mathrm{Im}[10\\sqrt{2}\\sqrt{30^{\\circ}}\\mathrm{e}^{\\mathrm{j}314t}]\n\\end{aligned}\n$$\n\n于是得\n\n$$ \\dot{I} = 10\\underline{{/30^{\\circ}}}\\mathrm{A} $$"
+    },
+    {
+        "question_id": "EX_029",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设电压相量 $ \\dot{U} = 5/60^{\\circ} $ V，求它所代表的正弦电压。已知电压的角频率 $ \\omega = 1000\\mathrm{rad/s} $。",
+        "answer": "根据式 (8-4-2) 有\n\n$$\n\\begin{aligned}\nu =& \\mathrm{Im}\\left[5\\sqrt{2}\\left/\\underline{60}\\right.\\mathrm{e}^{\\mathrm{j}1000t}\\right] \\\\\n=& \\mathrm{Im}\\left[5\\sqrt{2}\\mathrm{e}^{\\mathrm{j}60^{\\circ}}\\mathrm{e}^{\\mathrm{j}1000t}\\right] \\\\\n=& 5\\sqrt{2}\\sin(1000t + 60^{\\circ})\\mathrm{V}\n\\end{aligned}\n$$"
+    },
+    {
+        "question_id": "EX_030",
+        "type": "概念辨析",
+        "difficulty": "中等",
+        "question": "例 8-6 已知正弦电流 $ i_{1}=4\\sqrt{2}\\sin(314t+30^{\\circ}) $ A, $ i_{2}= -3\\sqrt{2}\\cos(314t+30^{\\circ}) $ A，试画出代表它们的相量图，并求出它们之间的相位差。",
+        "answer": "解：\n$$\n\\begin{aligned}\ni_{2} &= -\\ 3\\ \\sqrt{2}\\cos(314t^{\\prime}+30^{\\circ}) \\\\\n&= -\\ 3\\ \\sqrt{2}\\sin(314t+120^{\\circ})\\ A\n\\end{aligned}\n$$\n设分别用 $ \\dot{I}_{1} $ 和 $ \\dot{I}_{2} $ 代表 $ i_{1} $ 和 $ i_{2} $ 的相量，则\n$$\n\\dot{I}_{1}=4\\sqrt{30^{\\circ}A}\n$$\n$$\n\\dot{I}_{2}=-3\\angle120^{\\circ}=3\\angle60^{\\circ}\n$$\n$$\n\\varphi=\\psi_{1}-\\psi_{2}=\\angle90^{\\circ}\n$$\n相量图如图 8-4-4 所示。电流 $ i_{1} $ 领先电流 $ i_{2}90^{\\circ} $。\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_600_1058_1116_1514.jpg\" alt=\"Image\" width=\"30%\" /></div>\n<div style=\"text-align: center;\">图 8-4-4 例 8-6 中的相量图</div>"
+    },
+    {
+        "question_id": "EX_031",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设有正弦时间函数\n\n$$ v_{1}=10\\ \\sqrt{2}\\sin(\\omega t+30^{\\circ}),\\quad v_{2}=5\\ \\sqrt{2}\\sin(\\omega t-40^{\\circ}) $$\n\n求 $ v=v_{1}+v_{2} $ 和 $ v^{\\prime}=v_{1}-v_{2} $。",
+        "answer": "用相量加法求 $ v $ 和 $ v^{\\prime} $。\n\n$ v_{1}, v_{2} $ 的相量分别为\n\n$$ \\dot{A}_{1}=10/30^{\\circ}=8.66+j5 $$\n\n$$ \\dot{A}_{2}=5/\\underline{\\quad40^{\\circ}\\quad}=3.83-\\quad\\dot{j}3.21 $$\n\n将 $ v $ 和 $ v' $ 的相量分别记为 $ \\dot{A} $ 和 $ \\dot{A}' $，则\n\n$$ \\begin{aligned}\\dot{A} \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_032",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "用相量加法求 $ v $ 和 $ v' $。已知 $ v_1, v_2 $ 的相量分别为：\n\n$$ \\dot{A}_{1}=10/30^{\\circ}=8.66+j5 $$\n\n$$ \\dot{A}_{2}=5/\\underline{\\quad40^{\\circ}\\quad}=3.83-\\quad\\dot{j}3.21 $$\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_457_751_1184_1403.jpg\" alt=\"Image\" width=\"42%\" /></div>\n\n<div style=\"text-align: center;\">图 8-4-5 用相量求正弦量的和、差的相量图</div>",
+        "answer": "将 $ v $ 和 $ v' $ 的相量分别记为 $ \\dot{A} $ 和 $ \\dot{A}' $，则\n\n$$ \\begin{aligned}\\dot{A}&=\\dot{A}_{1}+\\dot{A}_{2}=(8.66+3.83)+\\mathrm{j}(5-3.21)\\\\&=12.49+\\mathrm{j}1.79=12.6\\underline{/8.16^{\\circ}}\\end{aligned} $$\n\n$$ \\begin{aligned}\\dot{A}^{\\prime}&=\\dot{A}_{1}-\\dot{A}_{2}=(8.66-3.83)+\\mathrm{j}(5+3.21)\\\\&=4.83+\\mathrm{j}8.21=9.53\\underline{59.5^{\\circ}}\\end{aligned} $$\n\n由相量 $ \\dot{A}, \\dot{A}' $ 即可得出它们所代表的正弦时间函数为\n\n$$ \\begin{aligned}&v=12.6\\sqrt{2}\\sin(\\omega t+8.16^{\\circ})\\\\ &v^{\\prime}=9.53\\sqrt{2}\\sin(\\omega t+59.5^{\\circ})\\\\ \\end{aligned} $$\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_369_395_1168_927.jpg\" alt=\"Image\" width=\"46%\" /></div>\n\n<div style=\"text-align: center;\">图 8-4-6 两个相量的和、差</div>"
+    },
+    {
+        "question_id": "EX_033",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-8 设有一正弦交流电压 $ u=220\\sqrt{2}\\sin(1000t+30^{\\circ}) $ V，加到 0.4H 的电感上。(1) 求出流过电感的电流 $ i(t) $; (2) 画出电感电压和电流的相量图。",
+        "answer": "(1)\n\n $$ \\dot{I}=\\frac{\\dot{U}}{\\mathrm{j}\\omega L}=\\frac{220/30^{\\circ}}{\\mathrm{j}400}=0.55/\\mathrm{~-~}60^{\\circ}\\mathrm{~A~} $$ \n\n $$ i=0.55\\sqrt{2}\\sin(1000t-60^{\\circ})A $$ \n\n(2) 电压和电流相量图如图 8-6-5 所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_656_968_1030_1371.jpg\" alt=\"Image\" width=\"21%\" /></div>\n\n<div style=\"text-align: center;\">图 8-6-5 电感电压、电流相量图</div>"
+    },
+    {
+        "question_id": "EX_034",
+        "type": "概念辨析与绘图",
+        "difficulty": "中等",
+        "question": "例 8-10 已知一电路的时域模型如图 8-7-2(a) 所示。(1) 画出此电路的相量模型；(2) 定性画出此电路中各元件电压、电流的相量图。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_532_827_1085_1160.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_173_1233_729_1607.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_5_imgs_img_in_image_box_875_1307_1392_1620.jpg\" alt=\"Image\" width=\"30%\" /></div>\n\n<div style=\"text-align: center;\">(c)</div>\n\n<div style=\"text-align: center;\">图 8-7-2 例 8-10 附图</div>\n\n<div style=\"text-align: center;\">(a) 电路时域模型；(b) 电路相量模型；(c) 各元件上电压、电流相量图</div>",
+        "answer": "(1) 将电路中电压  $ u, u_{L}, u_{C} $ 和电流  $ i_{C}, i_{L} $ 和  $ i_{R} $ 用对应的电压相量  $ \\dot{U}, \\dot{U}_{L} $ 和  $ \\dot{U}_{C} $，电流相量  $ \\dot{I}_{C}, \\dot{I}_{L} $ 和  $ \\dot{I}_{R} $ 代替。元件 R, L 和 C 用相量模型代替，得到图 8-7-2(b) 所示电路的相量模型。\n\n(2) 选  $ \\dot{U}_{L} $ 为参考相量（设它的初相位为零），由元件的伏安关系得  $ \\dot{I}_{L} $ 落后  $ \\dot{U}_{L}90^{\\circ}, \\dot{I}_{R} $ 和  $ \\dot{U}_{L} $ 同相，根据 KCL  $ \\dot{I}_{C} = \\dot{I}_{L} + \\dot{I}_{R} $，由平行四边形法则得电容电流相量  $ \\dot{I}_{C} $，电容电压  $ \\dot{U}_{C} $ 落后  $ \\dot{I}_{C}90^{\\circ} $，最后由 KVL  $ \\dot{U} = \\dot{U}_{C} + \\dot{U}_{L} $ 得总电压相量  $ \\dot{U} $。相量图如图 8-7-2(c) 所示。"
+    },
+    {
+        "question_id": "EX_035",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-11 已知图 8-10-8 电路中， $ R=100\\Omega $， $ C=10\\mu F $， $ L=0.1H $。计算角频率分别为(1) $ \\omega=314rad/s $，(2) $ \\omega=1000rad/s $，(3) $ \\omega=4000rad/s $时此电路的复阻抗。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_541_720_1010_985.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n<div style=\"text-align: center;\">图 8-10-8 例 8-11 附图</div>",
+        "answer": "解 此电路的复导纳为  $ Y=\\frac{1}{R}+\\frac{1}{\\mathrm{j}\\omega L}+\\mathrm{j}\\omega C $。\n\n(1)  $ \\omega = 314 \\, \\text{rad/s} $\n\n $$ \\mathrm{Y}_{1}=\\frac{1}{100}+\\frac{1}{\\mathrm{j}314\\times0.1}+\\mathrm{j}314\\times10^{-5}=(0.01-\\mathrm{j}0.0287)\\mathrm{S} $$ \n\n $$ Z_{1}=\\frac{1}{0.01-j0.0287}=(10.8+j31.1)\\Omega $$ \n\n此并联电路在  $ \\omega=314rad/s $ 时呈感性。\n\n(2)  $ \\omega = 1000 \\, \\text{rad/s} $\n\n $$ Y_{2}=\\frac{1}{100}+\\frac{1}{j1000\\times0.1}+j1000\\times10^{-5}=0.01\\mathrm{~S~}. $$ \n\n $$ Z_{2}=100\\ \\Omega $$ \n\n当  $ \\omega=1000\\mathrm{rad/s} $ 时, 电容和电感的电纳互相抵消, 等效阻抗就只是一个电阻 R。\n\n(3)  $ \\omega = 4000 \\, rad/s $\n\n $$ Y_{3}=\\frac{1}{100}+\\frac{1}{j4000\\times0.1}+j4000\\times10^{-5}=(0.01+j0.0375)S $$ \n\n $$ Z_{3}=\\frac{1}{0.01+j0.0375}=(6.64-j24.9)\\Omega $$ \n\n当  $ \\omega=4000rad/s $ 时，本例中 RLC 并联电路呈容性。"
+    },
+    {
+        "question_id": "EX_036",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求图 8-11-3 所示电路在正弦稳态下各支路中的电流。已知 $ U=100V $，频率 $ f=50Hz $，$ R=20\\Omega $，$ L=0.2H $，$ C=100\\mu F $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_587_1611_1128_1949.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">图 8-11-3 例 8-12 附图</div>",
+        "answer": "设各支路电流分别为 $ \\dot{I}_{R}, \\dot{I}_{L} $ 和 $ \\dot{I}_{C} $ 。依已知条件可计算：\n\n电源角频率\n\n$$ \\omega=2\\pi f=2\\pi\\times50=314.2\\mathrm{rad/s} $$\n\n电感的电抗\n\n$$ \\omega L=314.2\\times0.2=62.84\\Omega $$\n\n电容的电抗\n\n$$ -\\frac{1}{\\omega C}=-\\frac{1}{314.2\\times10^{-4}}=-31.83\\Omega $$\n\n电路的入端阻抗\n\n$$ \\begin{aligned}Z&=R+\\frac{\\mathrm{j}\\omega L\\frac{1}{\\mathrm{j}\\omega C}}{\\mathrm{j}\\omega L+\\frac{1}{\\mathrm{j}\\omega C}}=R+\\frac{\\frac{L}{C}}{\\mathrm{j}\\left(\\omega L-\\frac{1}{\\omega C}\\right)}\\\\&=20+\\frac{0.2\\times10^{4}}{\\mathrm{j}(62.84-31.83)}=(20-\\mathrm{j}64.50)\\\\&=67.53/\\underline{\\quad-72.77^{\\circ}}\\Omega\\\\ \\end{aligned} $$\n\n得电流\n\n$$ \\dot{I}_{R}=\\frac{\\dot{U}}{Z}=\\frac{100/0^{\\circ}}{67.53/-72.77^{\\circ}}=1.481/72.77^{\\circ}\\mathrm{~A~} $$\n\n运用分流公式, 得"
+    },
+    {
+        "question_id": "EX_037",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 8-12-1 所示电路中，已知方程如下：\n\n $$ \n\\begin{aligned}\n&(10+\\mathrm{j}16)\\dot{I}_{1}-10\\dot{I}_{2}=40\\underline{/0^{\\circ}}\\\\\n&-10\\dot{I}_{1}+(10-\\mathrm{j}5)\\dot{I}_{2}=-30\\underline{/90^{\\circ}}\n\\end{aligned} \n $$ \n\n求解电流 $ \\dot{I}_1 $、$ \\dot{I}_2 $ 以及电阻 $ R $ 上的电压 $ u_R(t) $。",
+        "answer": "对以上方程求解，得：\n\n $$ \n\\dot{I}_{1}=\\frac{\\left|\\begin{array}{cc}40&-10\\\\-j30&10-j5\\end{array}\\right|}{\\left|\\begin{array}{cc}10+j16&-10\\\\-10&10-j5\\end{array}\\right|}=\\frac{400-j500}{80+j110}=4.71/\\underline{\\quad105^{\\circ}}\\mathrm{A} \n $$ \n\n $$ \n\\dot{I}_{2}=\\frac{\\left|\\begin{array}{cc}10+\\mathrm{j}16&40\\\\-10&-\\mathrm{j}30\\end{array}\\right|}{\\left|\\begin{array}{cc}10+\\mathrm{j}16&-10\\\\-10&10-\\mathrm{j}5\\end{array}\\right|}=\\frac{880-\\mathrm{j}300}{80+\\mathrm{j}110}=6.84/\\underline{\\quad72.8^{\\circ}}\\mathrm{A} \n $$ \n\n $$ \n\\dot{U}_{R}=R(\\dot{I}_{1}-\\dot{I}_{2})=\\frac{10(-480-\\mathrm{j}200)}{80+\\mathrm{j}110}=38.2\\underline{{149^{\\circ}}}\\mathrm{V} \n $$ \n\n最终得：\n\n $$ \nu_{R}(t)=38.2\\ \\sqrt{2}\\sin(400t+149^{\\circ})\\mathrm{~V~} $$"
+    },
+    {
+        "question_id": "EX_038",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-15 求图 8-12-3(a) 所示电路的戴维南等效电路。已知 $ \\dot{I}_{S}=0.2/0^{\\circ} $ A, $ R=250\\Omega $, $ X_{c}=-250\\Omega $, 受控源为流控电流源, $ \\beta=0.5 $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_518_374_1070_753.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>",
+        "answer": "解 在图(a)电路中,对a点写KCL方程,得\n\n$$ \\dot{I}_{c}=\\dot{I}_{s}+\\beta\\dot{I}_{c}=0.2/0^{\\circ}+0.5\\dot{I}_{c} $$\n\n即\n\n$$ \\dot{I}_{c}=0.4\\angle0^{\\circ}\\mathrm{~A~} $$\n\n于是开路电压为\n\n$$ \\begin{aligned}&\\dot{U}_{o}=R\\beta\\dot{I}_{c}+\\mathrm{j}X_{c}\\dot{I}_{c}=(250\\times0.5-\\mathrm{j}250)\\dot{I}_{c}\\\\&=(125-\\mathrm{j}250)\\times0.4/\\mathrm{~^{\\circ}~}=111.8/\\mathrm{~^{\\circ}~}-63.4\\mathrm{~^{\\circ}~V}\\\\ \\end{aligned} $$\n\n为确定内阻抗 $ Z_{0} $，令图(a)电路中的独立电流源的电流为零，保留受控电流源，在所得的电路两端加电压 $ \\dot{U} $ (图 b)，求其中的电流 $ \\dot{I} $，再用 $ Z_{0} = \\dot{U} / \\dot{I} $ 来确定内阻抗。\n\n由欧姆定律得\n\n$$ \\dot{I}_{c}=\\frac{\\dot{U}}{\\overline{R}+\\mathrm{j}X_{c}}=\\frac{\\dot{U}}{250-\\mathrm{j}250} $$\n\n由 KCL\n\n$$ \\dot{I}=\\dot{I}_{c}-0.5\\dot{I}_{c}=0.5\\dot{I}_{c} $$\n\n因此\n\n$$ Z_{o}=\\frac{\\dot{U}}{\\dot{I}}=\\frac{\\dot{U}}{0.5\\dot{I}_{c}}=(500-\\mathrm{j}500)\\Omega $$\n\n于是得图 8-12-3(a) 电路的戴维南等效电路如图(c)所示。"
+    },
+    {
+        "question_id": "EX_039",
+        "type": "概念辨析",
+        "difficulty": "困难",
+        "question": "例 8-16 图 8-12-4 所示为电桥电路，已知 $ Z_{2}=R_{2} $， $ Z_{3}=R_{3} $， $ 1/Z_{1}=G+\\mathrm{j}\\omega C $， $ Z_{4}=R_{X}+\\mathrm{j}\\omega L_{X} $。问在什么条件下电桥平衡？怎样由平衡时各桥臂的电阻、电容值测出 $ R_{X} $ 和 $ L_{X} $ 的值。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_297_859_807_1246.jpg\" alt=\"Image\" width=\"29%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>",
+        "answer": "解 电桥平衡时，有\n\n$$ \\dot{I}_{o}=0\\quad 且 \\quad\\dot{U}_{o}=0 $$\n\n即应有\n\n$$ \\frac{Z_{2}}{Z_{1}+Z_{2}}\\dot{U}_{s}-\\frac{Z_{4}}{Z_{3}+Z_{4}}\\dot{U}_{s}=0 $$\n\n由上式得出电桥平衡条件为\n\n$$ \\bar{Z}_{1}Z_{4}=Z_{2}Z_{3} $$"
+    },
+    {
+        "question_id": "EX_040",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-17 图 8-12-5(a)电路中，已知 $ I = \\sqrt{3} A, I_{1} = I_{2} = 1 A, R_{1} = 10 \\Omega $ 。求电感线圈的电阻 $ R_{2} $ 和感抗 $ X_{2} $ 。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_346_1036_806_1577.jpg\" alt=\"Image\" width=\"26%\" /></div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_980_1059_1304_1546.jpg\" alt=\"Image\" width=\"18%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\">图 8-12-5 例 8-17 附图</div>\n\n(a) 电路图；(b) 电压、电流相量图",
+        "answer": "解 图 8-12-5(a) 电路的相量图如图(b) 所示。已知 $ I=\\sqrt{3}A $, $ I_{1}=I_{2}=1A $, 由三角知识可得出 $ \\dot{I}_{1} $ 和 $ \\dot{I}_{2} $ 两个电流相量间夹角为 $ 60^{\\circ} $。由此可得\n\n $$ U_{R}=U\\cos60^{\\circ}=0.5U $$ \n\n $$ U_{x}=U\\sin60^{\\circ}=0.866U $$ \n\n而\n\n $$ U=R_{1}I_{1}=10V $$ \n\n最后可得\n\n $$ R_{2}=\\frac{U_{R}}{I_{2}}=5\\Omega $$ \n\n $$ X_{2}=\\frac{U_{X}}{I_{2}}=8.66\\Omega $$ \n\n还可以直接根据电流有效值、电压有效值和阻抗模量之间的关系，列出关于 $ R_{2} $ 和 $ X_{2} $ 的两个方程，联立求解方程可得出结果。"
+    },
+    {
+        "question_id": "EX_041",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-18 求图 8-13-3 所示电路中 $ 4\\Omega $ 电阻吸收的平均功率并分别求出各电源所发出的平均功率。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_398_341_1241_726.jpg\" alt=\"Image\" width=\"49%\" /></div>\n\n<div style=\"text-align: center;\">图 8-13-3 例 8-18 附图</div>",
+        "answer": "解 设回路电流 $ \\dot{I}_{1} $ 和 $ \\dot{I}_{2} $ 如图中所示方向。记 $ 4\\Omega $ 电阻所吸收的功率为 $ P_{R} $; 40V 电源和 20V 电源发出的平均功率分别为 $ P_{1} $ 和 $ P_{2} $。\n\n回路电压方程为\n\n$$\n\\begin{aligned}&(4-\\mathrm{j}4)\\dot{I}_{1}-4\\dot{I}_{2}=40\\angle0^{\\circ}\\\\&-4\\dot{I}_{1}+(4+\\mathrm{j}4)\\dot{I}_{2}=-20\\angle0^{\\circ}\\end{aligned}\n$$\n\n解出\n\n$$\n\\begin{aligned}\n\\dot{I}_{1}&=5+\\mathrm{j}10=11.18\\underline{/63.4^{\\circ}}\\mathrm{A}\\\\\n\\dot{I}_{2}&=5+\\mathrm{j}5=7.07\\underline{/45^{\\circ}}\\mathrm{A}\\\\\n\\dot{I}_{R}&=\\mathrm{j}5=5\\underline{/90^{\\circ}}\\mathrm{A}\n\\end{aligned}\n$$\n\n所以， $ 4\\Omega $ 电阻吸收的平均功率 $ P_{R} $ 为\n\n$$\nP_{R}=I_{R}^{2}R=25\\times4=100W\n$$\n\n40V 电源发出的平均功率为\n\n$$\nP_{1}=40\\times11.18\\cos(0^{\\circ}-63.4^{\\circ})=200\\mathrm{W}\n$$\n\n20V 电源发出的平均功率为\n\n$$\nP_{2}=-20\\times7.07\\cos(0^{\\circ}-45^{\\circ})=-100W\n$$"
+    },
+    {
+        "question_id": "EX_042",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-19 一台额定功率为  $ 1 \\, kW $ 的电动机接到电压有效值为  $ 220 \\, V $，频率为  $ 50 \\, Hz $ 的电源，如图 8-13-4 所示。已知电动机的功率因数  $ \\lambda = \\cos\\theta = 0.8 $（滞后），和电动机并联的电容为  $ 30 \\mu F $。求负载电路的功率因数。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_884_644_1381_986.jpg\" alt=\"Image\" width=\"28%\" /></div>\n\n<div style=\"text-align: center;\">图 8-13-4 例 8-19 附图</div>",
+        "answer": "设电源电压  $ \\dot{U}=220\\angle0^{\\circ}V $\n\n由式 $ （8-13-2） $得\n\n $$ I_{\\mathrm{M}}=\\frac{P}{U\\cos\\theta}=\\frac{1000}{220\\times0.8}=5.682\\mathrm{~A} $$ \n\n又已知电动机的功率因数\n\n $$ \\cos\\theta=0.8\\quad( 滞后 ) $$ \n\n得\n\n $$ \\theta\\rightleftharpoons36.87^{\\circ} $$ \n\n因此电动机中电流\n\n $$ \\dot{I}_{M}=5.682/\\mathrm{~-~}36.87^{\\circ}\\mathrm{~A~} $$ \n\n电容中电流\n\n $$ \\dot{I}_{\\mathrm{c}}=\\frac{\\dot{U}}{-\\mathrm{j}\\frac{1}{\\omega C}}=\\frac{220/0^{\\circ}}{-\\mathrm{j}106.1}=\\mathrm{j}2.074\\mathrm{A} $$ \n\n于是得总电流\n\n $$ \\dot{I}=\\dot{I}_{\\mathrm{M}}+\\dot{I}_{\\mathrm{C}}=4.546-\\mathrm{j}1.335=4.74/\\mathrm{~A~} $$ \n\n并联负载电路的功率因数为\n\n $$ \\lambda=\\cos\\varphi=\\cos\\left[0^{\\circ}-(-16.4^{\\circ})\\right]=0.959\\quad( 滞后 ) $$ \n\n从此例看到，并入电容后电路的功率因数由滞后的0.8提高到0.959。由于电容不消耗平均功率，电动机在并入电容前后吸收的功率不变，在接有和未接有电容的两种情况下，电源发出的功率均为1kW，但电源所提供的电流却由5.682A减为4.74A。输电线上电流的减少，就能够减少线路损失的功率。"
+    },
+    {
+        "question_id": "EX_043",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-20 图 8-14-7 所示电路中，已知 $ \\dot{I}_{S}=10/0^{\\circ} $ A， $ Z_{1}=-j5\\Omega, Z_{2}=(6+j4)\\Omega, \\beta=7 $ 。求各元件的复功率。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_619_1337_1094_1852.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n<div style=\"text-align: center;\">图 8-14-7 例 8-20 附图</div>",
+        "answer": "解 用节点电压法列方程，得\n\n$$ \\left(\\frac{1}{Z_{1}}+\\frac{1}{Z_{2}}\\right)\\dot{U}=\\dot{I}_{s}+\\frac{\\beta\\dot{I}_{2}}{Z_{1}} $$\n\n代入数据,求得\n\n$$ \\dot{U}=(50+\\mathrm{j}250)\\mathrm{~V~} $$\n\n$$ \\dot{I}_{2}=\\frac{\\dot{U}}{Z_{2}}=25(1+\\mathrm{j}1)\\mathrm{A} $$\n\n$$ \\dot{I}_{1}=\\dot{I}_{s}-\\dot{I}_{2}=(-15-\\mathrm{j}25)\\mathrm{~A~} $$\n\n电流源 $ I_{s} $ 发出复功率\n\n$$ \\bar{S}=\\dot{U}\\dot{I}_{s}^{*}=(50+\\dot{j}250)\\times10=(500+\\dot{j}2500)\\mathrm{~VA~} $$\n\n$ Z_{2} $ 吸收的复功率\n\n$$ \\overline{S}_{2}=\\dot{U}\\dot{I}_{2}^{*}\\;=\\;Z_{2}\\dot{I}_{2}\\dot{I}_{2}^{*}\\;=\\;I_{2}^{2}Z_{2}=\\left(7500+\\mathrm{j}5000\\right)\\mathrm{VA} $$\n\n$ Z_{1} $ 吸收的复功率\n\n$$ \\tilde{S}_{1}=I_{1}^{2}Z_{1}=-\\mathrm{~j4250~V A} $$\n\n受控源吸收的复功率\n\n$$ \\bar{S}_{3}=\\beta\\dot{I}_{2}\\dot{I}_{1}^{*}\\;=\\;(\\dot{U}-Z_{1}\\dot{I}_{1})\\dot{I}_{1}^{*}\\;=\\;(-7000+\\mathrm{j}1750)\\;\\mathrm{V A} $$\n\n电路元件吸收的总复功率为三个元件的复功率之和\n\n$$ \\overline{S}_{1}+\\overline{S}_{2}+\\overline{S}_{3}=(500+j2500)\\mathrm{~VA~} $$\n\n它与电源发出的复功率相等。"
+    },
+    {
+        "question_id": "EX_044",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 8-21 已知图 8-14-8 电路中, 电动机的端电压为 U, 功率为 P, 功率因数为 $ \\cos\\varphi_{1} $ 。为了使电路的功率因数提高到 $ \\cos\\varphi_{2} $, 需并联多大的电容(设电源角频率为 $ \\omega $)。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_222_1397_712_1734.jpg\" alt=\"Image\" width=\"28%\" /></div>\n\n<div style=\"text-align: center;\">图 8-14-8 例 8-21 附图</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_6_imgs_img_in_image_box_905_1237_1440_1739.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">图 8-14-9 例 8-21 电路的相量图</div>",
+        "answer": "以电源电压为参考相量，画出图 8-14-8 所示电路的相量，如图 8-14-9 所示。并入电容前，电源提供的电流就是流过电动机的电流 $ \\dot{I}_{M} $。接入电容后，电路中便有了电容电流 $ \\dot{I}_{C}, \\dot{I}_{C} $ 与 $ \\dot{I}_{M} $ 之和即是这时的总电流 $ \\dot{I} $，它与电源电压之间的相位差为 $ \\varphi_{2} $，从图中可见 $ \\varphi_{2} < \\varphi_{1} $，电路的功率因数便得以提高。下面计算所需的电容值。\n\n由图 8-14-9, 可得出\n\n$$ I_{\\mathrm{M}}\\mathrm{c o s}\\varphi_{1}=I\\mathrm{c o s}\\varphi_{2}=\\frac{P}{U} $$\n\n流过电容的电流\n\n$$ I_{C}=I_{M}\\mathrm{s i n}\\varphi_{1}-I\\mathrm{s i n}\\varphi_{2}=\\frac{P}{U}(\\mathrm{t g}\\varphi_{1}-\\mathrm{t g}\\varphi_{2}) $$\n\n又\n\n$$ I_{C}=U\\omega C $$\n\n代入前式，得\n\n$$ C=\\frac{P}{\\omega U^{2}}(\\mathrm{t g}\\varphi_{1}-\\mathrm{t g}\\varphi_{2}) $$\n\n从图 8-14-9 可以看出，当选择 $ I_{c}=I_{M}\\sin\\varphi_{1} $ 时，则电流相量 $ \\dot{I} $ 和电压相量 $ \\dot{U} $ 同相，功率因数 $ \\cos\\varphi=1 $。若再增大电容，使 $ I_{c}>I_{M}\\sin\\varphi_{1} $，这时功率因数反而会下降。一般并联电容时，不必将功率因数提高到 1，因为这样做将增加电容设备的投资，而功率因数改善并不显著，通常达到 0.9 左右即可。"
+    },
+    {
+        "question_id": "EX_045",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 9-1 已知图 9-3-3 所示变压器电路中， $ R_{1}=3\\Omega $， $ \\omega L_{1}=40\\Omega $， $ R_{2}=10\\Omega $， $ \\omega L_{2}=120\\Omega $， $ \\omega M=30\\Omega $，原边接电源电压 $ \\dot{U}_{S}=10/0^{\\circ}V $，副边接负载电阻 $ R=90\\Omega $。求原边电流 $ \\dot{I}_{1} $ 和通过互感耦合传送到副边回路的功率。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_7_imgs_img_in_image_box_798_629_1445_970.jpg\" alt=\"Image\" width=\"37%\" /></div>\n\n<div style=\"text-align: center;\">图 9-3-3 变压器电路</div>",
+        "answer": "解 变压器原边回路总阻抗\n\n $$ Z_{11}=R_{1}+\\mathrm{j}\\omega L_{1}=(3+\\mathrm{j}40)\\Omega $$ \n\n副边回路总阻抗\n\n $$ Z_{22}=R+R_{2}+\\mathrm{j}\\omega L_{2}=(100+\\mathrm{j}120)\\ \\Omega $$ \n\n由式 $ （9-3-2） $可得原边电流\n\n $$ \\begin{aligned}\\dot{I}_{1}=&\\frac{\\dot{U}_{s}}{Z_{11}+\\frac{(\\omega M)^{2}}{Z_{22}}}=\\frac{10\\mathrm{\\ \\frac{/0^{\\circ}}{}}\\}}{3+\\mathrm{j}40+\\frac{900}{100+\\mathrm{j}120}}\\\\=&0.2767\\mathrm{\\ \\frac{/-79.38^{\\circ}\\mathrm{A}}{}}\\end{aligned} $$ \n\n副边电流\n\n $$ \\begin{aligned}\\dot{I}_{2}=&\\frac{\\mathrm{j}\\omega M\\dot{I}_{1}}{Z_{22}}=\\frac{\\mathrm{j}30\\times0.2767/-79.38^{\\circ}}{100+\\mathrm{j}120}\\\\=&0.05314/-39.57^{\\circ}\\m"
+    },
+    {
+        "question_id": "EX_046",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 9-2 求图 9-3-6 所示电路 ab 端钮的入端阻抗。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_7_imgs_img_in_image_box_498_1785_1087_2110.jpg\" alt=\"Image\" width=\"34%\" /></div>\n\n<div style=\"text-align: center;\">图 9-3-6 例 9-2 附图</div>",
+        "answer": "解 图 9-3-6 所示电路的去耦等效电路如图 9-3-7 所示。很容易根据阻抗串并联公式得到入端阻抗为\n\n$$ Z_{ab}=10+j15+\\frac{j10(20+j5)}{20+j15}=(13.2+j22.6)\\Omega $$\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_7_imgs_img_in_image_box_524_344_1193_683.jpg\" alt=\"Image\" width=\"38%\" /></div>\n\n<div style=\"text-align: center;\">图 9-3-7 例 9-2 电路的去耦等效电路</div>"
+    },
+    {
+        "question_id": "EX_047",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "例 10-1 已知一接收器中的串联谐振回路的参数为 $ C = 150 \\, \\text{pF}, L = 250 \\mu \\text{H}, R = 20 \\Omega $，求电路的谐振频率 $ f_{0} $ 和品质因数 Q。",
+        "answer": "解：\n\n$$\n\\begin{aligned}\n&\\omega_{0}=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{150\\times10^{-12}\\times250\\times10^{-6}}}\\\\\n&\\quad=5.15\\times10^{6}\\,\\mathrm{rad/s}\\\\\n\\end{aligned}\n$$\n\n$$\nf_{0}=\\frac{\\omega_{0}}{2\\pi}=820\\,\\mathrm{kHz}\n$$\n\n$$\n\\omega_{0}L=5.15\\times10^{6}\\times250\\times10^{-6}=1290\\,\\Omega\n$$\n\n$$\nQ=\\frac{\\omega_{0}L}{R}=\\frac{1290}{20}=64.5\n$$"
+    },
+    {
+        "question_id": "EX_048",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "已知一接收器中的串联谐振回路的参数为 $ C = 150 \\, \\text{pF}, L = 250 \\mu \\text{H}, R = 20 \\Omega $，求电路的谐振频率 $ f_{0} $ 和品质因数 Q。",
+        "answer": "解：\n$$\n\\begin{aligned}\n&\\omega_{0}=\\frac{1}{\\sqrt{LC}}=\\frac{1}{\\sqrt{150\\times10^{-12}\\times250\\times10^{-6}}} \\\\\n&\\quad=5.15\\times10^{6} \\, \\text{rad/s} \\\\\n\\end{aligned}\n$$\n\n$$\nf_{0}=\\frac{\\omega_{0}}{2\\pi}=820 \\, \\mathrm{k Hz}\n$$\n\n$$\n\\omega_{0}L=5.15\\times10^{6}\\times250\\times10^{-6}=1290 \\, \\Omega\n$$\n\n$$\nQ=\\frac{\\omega_{0}L}{R}=\\frac{1290}{20}=65\n$$"
+    },
+    {
+        "question_id": "EX_049",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "图 11-2-2 中，设激励为 $ \\dot{U}_{1} $，响应为 $ \\dot{I}_{2} $，求网络函数 $ N(s)=\\frac{\\dot{I}_{2}}{\\dot{U}_{1}} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_7_imgs_img_in_image_box_448_1735_1188_2040.jpg\" alt=\"Image\" width=\"43%\" /></div>\n\n<div style=\"text-align: center;\">图 11-2-2 例 11-1 附图</div>",
+        "answer": "用回路法列写回路方程为\n\n$$\n\\begin{aligned}\n&(R_{1}+sL)\\dot{I}_{1}-sL\\dot{I}_{2}=\\dot{U}_{1}\\\\\n&-sL\\dot{I}_{1}+\\left(R_{2}+sL+\\frac{1}{sC}\\right)\\dot{I}_{2}=0\n\\end{aligned}\n$$\n\n消去 $ \\dot{I}_{1} $ 得\n\n$$\nN(s)=\\frac{\\dot{I}_{2}}{\\dot{U}_{1}}=\\frac{L s^{2}}{(R_{1}+R_{2})L s^{2}+\\left(R_{1}R_{2}+\\frac{L}{C}\\right)s+\\frac{R_{1}}{C}}\n$$\n\n给定某一确定的复频率 $ s $，可得出在该 $ s $ 值下的网络函数值。如果我们讨论正弦稳态情形，即 $ s = j\\omega $，则只要在网络函数中将 $ s $ 代以 $ j\\omega $，即可，如对例 11-1 有\n\n$$\n\\begin{aligned}\nN(\\mathrm{j}\\omega)&=\\frac{L(\\mathrm{j}\\omega)^{2}}{(R_{1}+R_{2})L(\\mathrm{j}\\omega)^{2}+\\left(R_{1}R_{2}+\\frac{L}{C}\\right)\\mathrm{j}\\omega+\\frac{R_{1}}{C}}\\\\\n&=\\frac{-L\\omega^{2}}{-(R_{1}+R_{2})L\\omega^{2}+\\frac{R_{1}}{C}+\\mathrm{j}\\omega\\left(R_{1}R_{2}+\\frac{L}{C}\\right)}\n\\end{aligned}\n$$"
+    },
+    {
+        "question_id": "EX_050",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 11-2 画出网络函数 $ N(s)=\\frac{360s}{(s+6)^{2}} $ 的幅频波特图。",
+        "answer": "解 将网络函数写成标准形式：\n\n$$ N(s)=\\frac{10s}{\\left(1+\\frac{s}{6}\\right)^{2}}=\\frac{\\frac{s}{0.1}}{\\left(1+\\frac{s}{6}\\right)^{2}} $$\n\n$$ N(\\mathrm{j}\\omega)=\\frac{\\frac{\\mathrm{j}\\omega}{0.1}}{\\left(1+\\frac{\\mathrm{j}\\omega}{6}\\right)^{2}} $$\n\n$$ M(\\omega)=20\\lg\\left|\\frac{\\mathrm{j}\\omega}{0.1}\\right|-40\\lg\\left|1+\\frac{\\mathrm{j}\\omega}{6}\\right| $$\n\n其波特图示于图 11-5-8 中(粗线所示)。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_322_1032_1227_1686.jpg\" alt=\"Image\" width=\"52%\" /></div>\n\n<div style=\"text-align: center;\">图 11-5-8 例 11-2 的幅频波特图</div>"
+    },
+    {
+        "question_id": "EX_051",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "例 11-3 画出图 11-4-5 中有源 RC 电路的网络函数的波特图。",
+        "answer": "解式 $ (11-4-1) $ 中已得出这个两级电路的网络函数为\n\n$$ N(s)=N_{1}(s)N_{2}(s)=\\frac{s+6}{s+2}\\cdot\\frac{-1}{s+3} $$\n\n$$ \\frac{-(s+6)}{(s+2)(s+3)} $$\n\n在 s = -6 处有零点，在 s = -2, -3 处有极点。写成一阶基本因子形式为\n\n$$ N(j\\omega)=\\frac{-\\left(1+j\\frac{\\omega}{6}\\right)}{\\left(1+j\\frac{\\omega}{2}\\right)\\left(1+j\\frac{\\omega}{3}\\right)} $$\n\n幅频特性\n\n$$ \\begin{aligned}M(\\omega)&=20\\lg\\left|N(\\mathrm{j}\\omega)\\right|=20\\lg\\left|1+\\mathrm{j}\\frac{\\omega}{6}\\right|\\\\&-20\\lg\\left|1+\\mathrm{j}\\frac{\\omega}{2}\\right|-20\\lg\\left|1+\\mathrm{j}\\frac{\\omega}{3}\\right|\\end{aligned} $$\n\n先画出各基本因子 $ \\left(1+\\mathrm{j}\\frac{\\omega}{6}\\right) $，$ \\left(1+\\mathrm{j}\\frac{\\omega}{2}\\right)^{-1} $，$ \\left(1+\\mathrm{j}\\frac{\\omega}{3}\\right)^{-1} $ 的幅频的近似折线，分别用 A，B，C 标明。将三条折线相加，就得到总的幅频波特图，示于图 11-5-9 中。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_293_1354_1468_2134.jpg\" alt=\"Image\" width=\"68%\" /></div>\n\n<div style=\"text-align: center;\">图 11-5-9 例 11-3 的幅频波特图</div>\n\n相频特性\n\n$$ \\theta(\\omega)=180^{\\circ}+\\operatorname{arctg}\\frac{\\omega}{6}-\\operatorname{arctg}\\frac{\\omega}{2}-\\operatorname{arctg}\\frac{\\omega}{3} $$\n\n同理，可分别画出各基本因子 $ \\left(1+\\mathrm{j}\\frac{\\omega}{6}\\right) $，$ \\left(1+\\mathrm{j}\\frac{\\omega}{3}\\right)^{-1} $，$ \\left(1+\\mathrm{j}\\frac{\\omega}{2}\\right)^{-1} $ 的相频近似折线如图 11-5-10 中所示，分别用 A，B，C 标明，将三条折线相加，再加上 $ 180^{\\circ} $ 常数项，就得到总的相频波特图。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_chart_box_138_934_1383_1645.jpg\" alt=\"Image\" width=\"72%\" /></div>\n\n<div style=\"text-align: center;\">图 11-5-10 例 11-3 的相频波特图</div>"
+    },
+    {
+        "question_id": "EX_052",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "已知幅频波特图，如图 11-5-11(a) 所示(为了简化问题，不考虑相频波特图)，试写出一个网络函数 $ N(s) $，使它具有此幅频特性。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_278_605_1543_1140.jpg\" alt=\"Image\" width=\"73%\" /></div>\n\n<div style=\"text-align: center;\">图 11-5-11 例 11-4 附图</div>\n\n(a) 给定的幅频波特图；(b) 用以合成 $ M(\\omega) $ 的三个基本因子的幅频波特图",
+        "answer": "首先判断待求网络函数包含哪些基本因子, 不难看出图(a) 中折线可由图(b) 中三条基本折线合成, 网络函数可表示为\n\n$$ N(s)=\\frac{K}{\\left(1+\\frac{s}{100}\\right)\\left(1+\\frac{s}{2000}\\right)} $$\n\n令 $ s = j\\omega $，就有\n\n$$ N(\\mathrm{j}\\omega)=\\frac{K}{\\left(1+\\frac{\\mathrm{j}\\omega}{100}\\right)\\left(1+\\frac{\\mathrm{j}\\omega}{2000}\\right)} $$\n\n现进一步确定 K，由图(a) 中波特图可知\n\n$$ 20\\lg K - 20\\lg\\frac{2000}{100} - 40\\lg\\frac{3000}{2000} = 0 $$\n\n可解出 $ K = 45 $，于是得待求网络函数为\n\n$$ N(s)=\\frac{45}{\\left(1+\\frac{s}{100}\\right)\\left(1+\\frac{s}{2000}\\right)} $$"
+    },
+    {
+        "question_id": "EX_053",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 12-1 图 12-2-4 示一对称三相电路，对称三相电源的相电压为 220V，对称三相负载阻抗  $ Z = 100 / 30^\\circ \\Omega $，输电线阻抗  $ Z_t = 1 + j2 \\Omega $，求三相负载的电压和电流。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_381_1132_1247_1572.jpg\" alt=\"Image\" width=\"50%\" /></div>\n\n<div style=\"text-align: center;\">图 12-2-4 例 12-1 附图</div>",
+        "answer": "解 设  $ \\dot{U}_{A}=200\\ \\mathrm{~/~Q~}^{\\circ}\\mathrm{~V} $。取 A 相的等效电路如图 12-2-5 所示。线电流\n\n $$ \\begin{aligned}\\dot{I}_{\\mathrm{A}}&=\\frac{\\dot{U}_{\\mathrm{A}}}{Z+Z_{t}}=\\frac{220\\ \\mathrm{/0^{\\circ}}}{100\\ \\mathrm{/30^{\\circ}}+1+\\mathrm{j}2}=\\frac{220\\ \\mathrm{/0^{\\circ}}}{101.9\\ \\mathrm{/30.7^{\\circ}}}\\\\ &=2.159\\ \\mathrm{/}-30.7^{\\circ}\\mathrm{A}\\end{aligned} $$ \n\n将 $ i_{A} $的相位后移或前移 $ 120^{\\circ} $即得\n\n $$ \\dot{I}_{\\mathrm{B}}=2.159\\mathrm{~\\overline{~}-150.7^{\\circ}~A},\\quad\\dot{I}_{\\mathrm{C}}=2.159\\mathrm{~\\overline{~}89.3^{\\circ}~A} $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_565_323_1170_748.jpg\" alt=\"Image\" width=\"35%\" /></div>\n\n<div style=\"text-align: center;\">图 12-2-5 例 12-1 电路的一相等效电路</div>\n\n三相负载相电压\n\n $$ \\begin{aligned}\\dot{U}_{\\mathrm{an}}=&Z\\dot{I}_{\\mathrm{A}}=100\\ \\underline{/30^{\\circ}}\\times2.159\\ \\underline{/-30.7^{\\circ}}\\\\=&215.9\\ \\underline{/-0.7^{\\circ}}\\mathrm{V}\\end{aligned} $$ \n\n由对称性可得\n\n $$ \\dot{U}_{\\mathrm{bn}}=215.9\\mathrm{~\\overline{~}-~}120.7^{\\circ}\\mathrm{~V~},\\quad\\dot{U}_{\\mathrm{cn}}=215.9\\mathrm{~\\overline{~}119.3^{\\circ}\\mathrm{~V~}} $$"
+    },
+    {
+        "question_id": "EX_054",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 12-2 一对称三相电路如图 12-2-11 所示。对称三相电源电压 $ \\dot{U}_{A}=220\\ \\dot{/}0^{\\circ}\\mathrm{V} $，负载阻抗 $ Z=60\\ \\dot{/}60^{\\circ}\\Omega $，线路阻抗 $ Z_{i}=1+\\mathrm{j}1\\Omega $，求电路中电压和电流。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_375_808_1233_1264.jpg\" alt=\"Image\" width=\"49%\" /></div>\n\n<div style=\"text-align: center;\">图 12-2-11 例 12-2 附图</div>",
+        "answer": "解 将三角形联接的对称三相负载变换成星形联接的对称三相负载。取经变换后的电路中的一相等效电路如图 12-2-12 所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_8_imgs_img_in_image_box_518_1570_1112_1975.jpg\" alt=\"Image\" width=\"34%\" /></div>\n\n<div style=\"text-align: center;\">图 12-2-12 例 12-2 电路的一相等效电路</div>\n\n线电流\n\n$$ \\begin{aligned}\\dot{I}_{\\mathrm{A}}&=\\frac{\\dot{U}_{\\mathrm{A}}}{Z_{l}+Z/3}=\\frac{220\\left/0^{\\circ}\\right.}{1+\\mathrm{j}1+20\\left/60^{\\circ}\\right.}\\\\&=\\frac{220\\left/0^{\\circ}\\right.}{21.37\\left/59.0^{\\circ}\\right.}=10.3\\left/-\\underline{59.0^{\\circ}}\\mathrm{A}\\right.\\end{aligned} $$\n\n负载相电流\n\n$$ \\dot{I}_{\\mathrm{ab}}=\\frac{1}{\\sqrt{3}}\\dot{I}_{\\mathrm{A}}\\frac{1}{30^{\\circ}}=5.95\\frac{1}{129.0^{\\circ}}\\mathrm{A} $$\n\n等效星形负载相电压\n\n$$ \\dot{U}_{\\mathrm{a n}}=\\frac{1}{3}Z\\dot{I}_{\\mathrm{A}}=20\\angle60^{\\circ}\\times10.3\\angle-59=206\\angle1^{\\circ}\\mathrm{V} $$\n\n负载线电压(也是三角形负载相电压)\n\n$$ \\dot{U}_{ab}=\\sqrt{3}\\dot{U}_{an}\\angle30^{\\circ}=356.8\\angle31^{\\circ}V $$\n\n线路上的压降\n\n$$ \\begin{aligned}\\dot{U}_{AI}&=Z_{i}\\dot{I}_{A}=(1+\\mathrm{j}1)\\times10.3\\underline{\\mathrm{/}-59.0^{\\circ}}\\\\&=14.6\\underline{\\mathrm{/}-14^{\\circ}}\\mathrm{V}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_055",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "对称三相电源线电压为 380V，接有两组对称三相负载，如图 12-4-3 所示。一组负载接成星形，每相负载阻抗 $ Z_{1}=30+j40\\ \\Omega $；另一组是三相电动机负载，电动机的功率是 1.7kW，功率因数是 0.8（滞后）。(1) 求线电流及电源发出的总功率；(2) 画出用二功率表法测电动机功率时，功率表的接线图，并求每一功率表的指示值。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_497_934_1178_1394.jpg\" alt=\"Image\" width=\"39%\" /></div>\n\n<div style=\"text-align: center;\">图 12-4-3 例 12-5 附图</div>",
+        "answer": "解 题中的电动机可用一星形联接的对称三相负载替代,每相阻抗设为 $ Z_{M} $ 。作出图 12-4-3 电路的一相等效电路如图 12-4-4 所示。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_550_1716_1153_2111.jpg\" alt=\"Image\" width=\"35%\" /></div>\n\n<div style=\"text-align: center;\">图 12-4-4 例 12-5 中三相电路的一相等效电路</div>\n\n设 $ \\dot{U}_{A}=220\\ \\dot{0}^{\\circ}\\ V $，星形负载的线电流\n\n$$ \\d $$"
+    },
+    {
+        "question_id": "EX_056",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "题中的电动机可用一星形联接的对称三相负载替代，每相阻抗设为 $ Z_{M} $。作出图 12-4-3 电路的一相等效电路如图 12-4-4 所示。设 $ \\dot{U}_{A}=220\\ \\dot{0}^{\\circ}\\ V $，求星形负载的线电流、电动机负载的功率、总功率以及用二功率表法测电动机功率时两个功率表的指示值。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_497_934_1178_1394.jpg\" alt=\"Image\" width=\"39%\" /></div>\n\n<div style=\"text-align: center;\">图 12-4-3 例 12-5 附图</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_550_1716_1153_2111.jpg\" alt=\"Image\" width=\"35%\" /></div>\n\n<div style=\"text-align: center;\">图 12-4-4 例 12-5 中三相电路的一相等效电路</div>",
+        "answer": "解：\n\n1. 星形负载的线电流计算如下：\n   $$ \\dot{I}_{\\mathrm{A}1}=\\frac{\\dot{U}_{\\mathrm{A}}}{Z_{1}}=\\frac{220/0^{\\circ}}{30+j40}=4.4/-\\frac{53.1^{\\circ}}{A} $$\n\n2. 对电动机负载，有：\n   $$ P=\\sqrt{3}U_{l}I_{A2}\\cos\\varphi $$\n   $$ I_{A2}=\\frac{P}{\\sqrt{3}U_{i}\\cos\\varphi}=\\frac{1700}{\\sqrt{3}\\times380\\times0.8}=3.23A $$\n\n3. 又由 $ \\cos\\varphi=0.8 $（滞后），得：\n   $$ \\varphi=36.9^{\\circ} $$\n   而：\n   $$ \\varphi=\\varphi_{u_{\\mathrm{A}}}\\mathrm{~--~}\\varphi_{i\\mathrm{A}2} $$\n   所以：\n   $$ \\varphi_{A2}=\\varphi_{u_{A}}-\\varphi=0-36.9^{\\circ}=-36.9^{\\circ} $$\n   于是得：\n   $$ I_{A2}=I_{A2}/\\varphi_{A2}=3.23/\\frac{36.9^{\\circ}}{A} $$\n\n4. A 相线电流为 $ \\dot{I}_{A1} $ 与 $ \\dot{I}_{A2} $ 之和，即：\n   $$ \\begin{aligned}\\dot{I}_{\\mathrm{A}}&=\\dot{I}_{\\mathrm{A}1}+\\dot{I}_{\\mathrm{A}2}=4.4\\underline{/-53.1^{\\circ}}+3.23\\underline{/-36.9^{\\circ}}\\\\&=7.56\\underline{/-46.2^{\\circ}}\\mathrm{A}\\end{aligned} $$\n\n5. $ \\dot{U}_{A} $ 与 $ \\dot{I}_{A} $ 间的相位差 $ \\varphi^{\\prime}=0^{\\circ}+46.2^{\\circ} $，于是得三相电源发出的总功率：\n   $$ \\begin{array}{l} \\displaystyle \\rho = \\frac{3}{3} U_{l} I_{A} \\cos \\varphi^{\\prime} \\\\ \\displaystyle \\qquad = \\frac{3}{3} \\times 380 \\times 7.56 \\times \\cos 46.2^{\\circ} \\\\ \\displaystyle \\qquad = 3.44 \\text{kW} \\end{array} $$\n\n6. 用二功率表法测电动机功率的接线图如图 12-4-5 所示。\n\n   <div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_519_299_1173_585.jpg\" alt=\"Image\" width=\"38%\" /></div>\n\n   <div style=\"text-align: center;\">图 12-4-5 二功率表法测电动机功率的接线图</div>\n\n   $ \\dot{U}_{AC} $ 与 $ \\dot{I}_{A2} $ 间的相位差 $ \\varphi_{1} = -30^{\\circ} + 36.9^{\\circ} = 6.9^{\\circ} $，于是得功率表 $ w_{1} $ 的指示值为：\n   $$ \\begin{aligned}P_{1}&=U_{\\mathrm{AC}}I_{\\mathrm{A}2}\\cos\\varphi_{1}=380\\times3.23\\times\\cos6.9^{\\circ}\\\\&=1218.5\\mathrm{W}\\end{aligned} $$\n\n7. $ \\dot{U}_{BC} $ 与 $ \\dot{I}_{B2} $ 间的相位差 $ \\varphi_{2}=30^{\\circ}+36.9^{\\circ}=66.9^{\\circ} $，于是得功率表②的指示值为：\n   $$ \\begin{aligned}P_{2}&=U_{\\mathrm{BC}}I_{\\mathrm{B2}}\\cos\\varphi_{2}=380\\times3.23\\times\\cos66.9^{\\circ}\\\\&=481.6\\mathrm{W}\\end{aligned} $$\n\n8. 两个功率表指示值之和为：\n   $$ P_{1}+P_{2}=1218.5+481.6=1700.1\\mathrm{W}\\approx1.7\\mathrm{kW} $$"
+    },
+    {
+        "question_id": "EX_057",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 13-2 求图 13-2-8 波形的傅里叶级数展开式。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_912_665_1428_1086.jpg\" alt=\"Image\" width=\"30%\" /></div>\n\n<div style=\"text-align: center;\">图 13-2-8 例 13-2 附图</div>",
+        "answer": "解 此例中的  $ f(t) $ 是奇函数，又有对称的波形。因此它的傅里叶级数只包含正弦函数的奇次谐波。直流分量、余弦函数项及正弦函数的偶次谐波项均为零。由式(13-2-4)有\n\n $$ \\begin{aligned}b_{b}&=\\frac{2}{T}\\int_{-\\frac{T}{2}}^{\\frac{T}{2}}f(t)\\mathrm{sink}\\omega\\mathrm{dt}\\\\&=\\frac{4}{T}\\int_{0}^{\\frac{T}{2}}f(t)\\mathrm{sink}\\omega\\mathrm{dt}\\\\&=\\frac{4}{T}\\int_{0}^{\\frac{T}{2}}U_{0}\\mathrm{sink}\\omega\\mathrm{dt}\\\\&=\\frac{4U_{0}}{k\\pi}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_058",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "已知电流源 $ i_s = 10 + 5\\sin\\omega t + 2\\sin2\\omega t $ A，电阻 $ R = 2\\Omega $，电感 $ L = 0.3H $，电容 $ C_1 = 5\\mu F $，$ C_2 = 10\\mu F $，角频率 $ \\omega = 500\\mathrm{rad/s} $，求电容电压 $ u_C(t) $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_229_1016_778_1320.jpg\" alt=\"Image\" width=\"31%\" /></div>\n<div style=\"text-align: center;\">(a)</div>\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_884_1047_1442_1308.jpg\" alt=\"Image\" width=\"32%\" /></div>\n<div style=\"text-align: center;\">(b)</div>\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_194_1383_784_1699.jpg\" alt=\"Image\" width=\"34%\" /></div>\n<div style=\"text-align: center;\">(c)</div>\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_869_1379_1459_1699.jpg\" alt=\"Image\" width=\"34%\" /></div>\n<div style=\"text-align: center;\">(d)</div>\n<div style=\"text-align: center;\">图 13-3-2 例 13-4 附图</div>\n\n(a) 电路图；\n(b) 直流分量的电路图；\n(c) 基波分量的电路图；\n(d) 二次谐波的电路图。",
+        "answer": "解：\n电流源 $ i_s $ 的直流分量单独作用时，可按图 13-3-2(b) 的电路来计算。由电路可求得：\n$$ U_{c0} = 2 \\times 10 = 20\\mathrm{~V~} $$\n\n电流源 $ i_s $ 的基波分量单独作用时，可按图 13-3-2(c) 的电路来计算。整个电路的入端导纳为：\n$$ Y = \\frac{1}{2} + \\frac{1}{-\\mathrm{j}400} + \\frac{1}{-\\mathrm{j}50} \\approx 0.5 \\left/ \\frac{2.58^\\circ}{} \\right.S $$\n入端阻抗为：\n$$ Z = \\frac{1}{Y} = 2 \\underline{\\text{--2.58^\\circ}}\\Omega $$\n$$ \\dot{U}_1 = Z \\dot{I}_1 = \\frac{5}{\\sqrt{2}} \\frac{10^\\circ \\times 2 \\frac{1}{2} - 2.58^\\circ = 5 \\sqrt{2} \\frac{1}{2} - 2.58^\\circ V}{} $$\n$$ \\dot{U}_{c1} = \\dot{U}_1 \\frac{-\\mathrm{~j}200}{\\mathrm{~j}150 - \\mathrm{~j}200} = 4 \\dot{U}_1 = 20 \\sqrt{2}\\mathrm{~\\frac{~}{~}-2.58^\\circ~}\\mathrm{V} $$\n电容上基波电压的瞬时值表达式为：\n$$ u_{C1} = 40 \\mathrm{sin}(\\omega t - 2.58^\\circ)\\mathrm{~V~} $$\n\n电流源 $ i_s $ 的二次谐波分量单独作用时，可按图 13-3-2(d) 的电路来计算。此电路中，L 与 $ C_2 $ 串联支路阻抗为 $ \\mathrm{j}200\\Omega $，$ C_1 $ 支路阻抗为 $ -\\mathrm{j}200\\Omega $，两支路发生并联谐振。\n整个电路的入端阻抗为：\n$$ Z = R = 2\\Omega $$\n$$ \\dot{U}_2 = R \\dot{I}_2 = 2 \\times 2 / \\sqrt{2}\\ \\underline{/0^\\circ} = 2 \\sqrt{2}\\ \\underline{/0^\\circ}\\ V $$\n$$ \\dot{U}_{c_2} = \\dot{U}_2 \\frac{-\\mathrm{j}100}{\\mathrm{j}300 - \\mathrm{j}100} = -\\frac{\\dot{U}_2}{2} = \\sqrt{2} \\mathrm{\\frac{1}{180^\\circ}} \\mathrm{V} $$\n电容上二次谐波电压的瞬时值表达式为：\n$$ u_{C2} = 2 \\sin(2 \\omega t + 180^\\circ)V $$\n\n将各谐波瞬时值相加，求得电容电压为：\n$$ \\begin{aligned} u_C &= U_{C0} + u_{C1} + u_{C2} \\\\ &= 20 + 40 \\sin\\left(\\omega t - 2.58^\\circ\\right) + 2 \\sin\\left(2 \\omega t + 180^\\circ\\right) \\\\ &= 20 + 40 \\sin\\left(\\omega t - 2.58^\\circ\\right) - 2 \\sin 2 \\omega t \\mathrm{~V} \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_059",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "周期性锯齿波形电流如图 13-4-1 所示，求它的有效值。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_476_615_1171_955.jpg\" alt=\"Image\" width=\"40%\" /></div>\n\n<div style=\"text-align: center;\">图 13-4-1 例 13-5 附图</div>",
+        "answer": "图中所示锯齿波的表达式为\n\n$$ i\\left(t\\right)=\\frac{I_{0}}{T}t\\quad0<t<T $$\n\n根据有效值的定义可得它的有效值为\n\n$$ \\begin{aligned}I&=\\sqrt{\\frac{1}{T}\\int_{0}^{T}i^{2}\\mathrm{d}t}=\\sqrt{\\frac{1}{T}\\int_{0}^{T}(\\frac{I_{0}}{T}t)^{2}\\mathrm{d}t}\\\\&=\\sqrt{\\frac{1}{T}\\left(\\frac{I_{0}^{2}}{T^{2}}\\times\\left.\\frac{1}{3}t^{3}\\right|_{0}^{T}\\right)}=\\frac{I_{0}}{\\sqrt{3}}\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_060",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "周期性非正弦电压、电流分别为\n\n$$ \\begin{aligned}&u=100+50\\sin\\omega t+10\\sin2\\omega t\\mathrm{~V~}\\\\ &i=10+4\\sin(\\omega t+30^{\\circ})+2\\sin(3\\omega t-45^{\\circ})\\mathrm{~A~}\\\\ \\end{aligned} $$\n\n求电压、电流的有效值。",
+        "answer": "$$ \\begin{aligned}U&=\\sqrt{U_{0}^{2}+U_{1}^{2}+U_{2}^{2}}=\\sqrt{100^{2}+\\left(\\frac{50}{\\sqrt{2}}\\right)^{2}+\\left(\\frac{10}{\\sqrt{2}}\\right)^{2}}\\\\&=100.9V\\end{aligned} $$\n\n$$ \\begin{aligned}I&=\\sqrt{I_{0}^{2}+I_{1}^{2}+I_{3}^{2}}=\\sqrt{10^{2}+\\left(\\frac{4}{\\sqrt{2}}\\right)^{2}+\\left(\\frac{2}{\\sqrt{2}}\\right)^{2}}\\\\&=10.5\\ A\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_061",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 13-8 在图 13-4-6(a) 所示电路中, 已知  $ u = 100 + 100\\sin\\omega t + 50\\sin2\\omega t $ V,  $ \\omega L = 10\\Omega $,  $ R = 20\\Omega $,  $ 1/\\omega C = 20\\Omega $, 求电流 i 的有效值及此电路吸收的平均功率。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_239_750_793_1073.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_946_738_1489_1072.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">(c)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_240_1158_775_1487.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_944_1150_1488_1483.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">(d)</div>\n\n<div style=\"text-align: center;\">图 13-4-6 例 13-8 附图</div>\n\n<div style=\"text-align: center;\">(b) 直流分量的电路图；</div>",
+        "answer": "解 直流分量单独作用时可以用图 13-4-6（b）的电路进行计算。电流 i 中直流分量为\n\n$$ I_{0}=\\frac{100}{20}=5A $$\n\n电源中直流电压所发出的功率为\n\n$$ P_{0}=U_{0}I_{0}=100\\times5=500\\mathrm{W} $$\n\n基波单独作用时，可按图 13-4-6(c) 所示的电路计算，其中， $ \\dot{U}_{1} $ 为 $ -\\frac{100}{\\sqrt{2}} $  $ \\angle0^{\\circ}V $。此电路对基波的入端阻抗为\n\n$$ Z_{1}=j10+\\frac{20(-j20)}{20-j20}=10\\ \\Omega $$\n\n电源中基波电流为\n\n$$ \\dot{I}_{1}=\\frac{\\dot{U}_{1}}{Z_{1}}=\\frac{\\frac{100}{\\sqrt{2}}\\angle0^{\\circ}}{10}=7.07\\angle0^{\\circ}\\mathrm{A} $$\n\n电源中的基波发出的功率为\n\n$$ \\begin{aligned}P_{1}&=U_{1}I_{1}\\cos\\varphi_{1}=70.7\\times7.07\\times\\cos0^{\\circ}\\\\&=499.8\\ W\\end{aligned} $$\n\n二次谐波单独作用时，可按图 13-4-6(d) 的电路计算，其中， $ \\dot{U}_{2}=\\frac{50}{\\sqrt{2}}\\angle0^{\\circ}V $ 。此电路对二次谐波的入端阻抗为\n\n$$ Z_{2}=j20+\\frac{20(-j10)}{20-j10}=4.02+j12=12.66\\angle71.5^{\\circ}\\Omega $$\n\n电源中二次谐波电流为\n\n$$ \\dot{I}_{2}=\\frac{\\dot{U}_{2}}{Z_{2}}=\\frac{\\frac{50}{\\sqrt{2}}\\angle0^{\\circ}}{12.66\\angle71.5^{\\circ}}=2.79\\angle-71.5^{\\circ}\\mathrm{A} $$\n\n电源中二次谐波电压所发出的功率为\n\n$$ \\begin{aligned}P_{2}&=U_{2}I_{2}\\cos\\varphi_{2}=35.35\\times2.79\\times\\cos71.5^{\\circ}\\\\ &=31.3W\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_062",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "例 13-9 一三相电路如图 13-5-5(a) 所示。三相对称非正弦电源中  $ u_{A} = \\sqrt{2} 220\\sin\\omega t + \\sqrt{2} 100\\sin3\\omega t $ V。电路中  $ R = 300\\Omega $， $ L = 0.2H $， $ C = 10\\mu F $， $ \\omega = 314\\text{rad/s} $，求线电压  $ U_{AB} $、线电流  $ I_{A} $、中线电流  $ I_{N} $ 和中点电压  $ U_{nN} $。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_219_872_865_1248.jpg\" alt=\"Image\" width=\"37%\" /></div>\n\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_881_865_1418_1217.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n<div style=\"text-align: center;\">(b)</div>",
+        "answer": "## 解 根据叠加定理进行计算。\n\n三相电源中的基波是正序对称三相电压,基波作用的电路是对称三相电路。电路中中点间电压为零,中线电流也等于零。取其中一相的等效电路如图 13-5-5(b)所示。于是有\n\n $$ \\dot{U}_{\\mathrm{A1}}=220\\angle0^{\\circ}\\mathrm{~V~} $$ \n\n $$ \\frac{1}{\\omega C}=\\frac{1}{314\\times10\\times10^{-6}}=318\\Omega $$ \n\n $$ Z_{1}=R-j\\frac{1}{\\omega C}=300-j318=437.2/-46.7^{\\circ}\\Omega $$ \n\n $$ \\dot{I}_{\\mathrm{A}1}=\\frac{\\dot{U}_{\\mathrm{A}1}}{Z_{1}}=\\frac{220\\left/0^{\\circ}\\right.}{437.2\\left/-\\right.46.7^{\\circ}}=0.503\\left/\\frac{46.7^{\\circ}}{A}\\right. $$ \n\n $$ \\dot{U}_{\\mathrm{AB1}}=\\sqrt{3}\\dot{U}_{\\mathrm{A1}}\\frac{30^{\\circ}}{10^{\\circ}}=380\\frac{30^{\\circ}}{10^{\\circ}}\\mathrm{V} $$ \n\n $$ \\dot{I}_{\\mathrm{N}1}=0,\\quad\\dot{U}_{\\mathrm{n N}1}=0 $$"
+    },
+    {
+        "question_id": "EX_063",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "三相电源中三次谐波单独作用时，可按图 13-5-5(c) 的电路来计算。已知：\n\n- 三相电源中三次谐波电压是零序电压，线电压 $ U_{AB3}=0 $，中线电流 $ \\dot{I}_{N3}=3\\dot{I}_{A3} $。\n- 使用图 13-5-5(d) 的一相等效电路计算，其中接入了 3 倍的原中线阻抗以保持中点间电压 $ \\dot{U}_{nN3} $ 不变。\n\n求：\n\n1. A 线中的三次谐波电流 $ \\dot{I}_{A3} $；\n2. 中线电流 $ \\dot{I}_{N3} $；\n3. 中点间电压 $ \\dot{U}_{nN3} $；\n4. 线电压 $ \\dot{U}_{AB3} $。\n\n附图如下：\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_219_872_865_1248.jpg\" alt=\"Image\" width=\"37%\" /></div>\n<div style=\"text-align: center;\">(a)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_881_865_1418_1217.jpg\" alt=\"Image\" width=\"31%\" /></div>\n<div style=\"text-align: center;\">(b)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_216_1318_870_1741.jpg\" alt=\"Image\" width=\"38%\" /></div>\n<div style=\"text-align: center;\">(c)</div>\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_9_imgs_img_in_image_box_895_1326_1452_1725.jpg\" alt=\"Image\" width=\"32%\" /></div>\n<div style=\"text-align: center;\">(d)</div>",
+        "answer": "### 解答过程：\n\n#### 1. 计算 A 线中的三次谐波电流 $ \\dot{I}_{A3} $：\n\n根据题目给出的公式：\n$$\n\\dot{I}_{A3} = \\frac{\\dot{U}_{A3}}{R + \\mathrm{j}9\\omega L - \\mathrm{j}\\frac{1}{3\\omega C}}\n$$\n代入数据：\n$$\n\\dot{I}_{A3} = \\frac{100/0^\\circ}{300 + \\mathrm{j}459.2} = \\frac{100/0^\\circ}{548.5/56.8^\\circ}\n$$\n进一步化简得：\n$$\n\\dot{I}_{A3} = 0.182/\\mathrm{~-~}56.8^\\circ \\, \\mathrm{A}\n$$\n\n#### 2. 计算中线电流 $ \\dot{I}_{N3} $：\n\n根据公式 $ \\dot{I}_{N3} = 3\\dot{I}_{A3} $：\n$$\n\\dot{I}_{N3} = 3 \\cdot 0.182/\\mathrm{~-~}56.8^\\circ = 0.546/\\mathrm{~-~}56.8^\\circ \\, \\mathrm{A}\n$$\n\n#### 3. 计算中点间电压 $ \\dot{U}_{nN3} $：\n\n根据公式 $ \\dot{U}_{nN3} = \\mathrm{j}9\\omega L \\dot{I}_{A3} $：\n$$\n\\dot{U}_{nN3} = \\mathrm{j}9\\omega L \\cdot 0.182/\\mathrm{~-~}56.8^\\circ = 103~/33.2^\\circ \\, \\mathrm{V}\n$$\n\n#### 4. 计算线电压 $ \\dot{U}_{AB3} $：\n\n根据题意，线电压 $ \\dot{U}_{AB3} = 0 $。\n\n#### 综合结果：\n\n在基波和三次谐波共同作用下：\n\n- 线电流有效值为：\n$$\nI_{A} = \\sqrt{I_{A1}^{2} + I_{A3}^{2}} = \\sqrt{0.503^{2} + 0.182^{2}} = 0.535 \\, \\mathrm{A}\n$$\n\n- 线电压的有效值为：\n$$\nU_{AB} = \\sqrt{U_{AB1}^{2} + U_{AB3}^{2}} = \\sqrt{380^{2} + 0^{2}} = 380 \\, \\mathrm{V}\n$$\n\n- 中线电流的有效值为：\n$$\nI_{N} = \\sqrt{I_{N1}^{2} + I_{N3}^{2}} = \\sqrt{0^{2} + 0.546^{2}} = 0.546 \\, \\mathrm{A}\n$$\n\n- 中点电压的有效值为：\n$$\nU_{nN} = \\sqrt{U_{nN1}^{2} + U_{nN3}^{2}} = \\sqrt{0^{2} + 103^{2}} = 103 \\, \\mathrm{V}\n$$"
+    }
+]
