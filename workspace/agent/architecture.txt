@@ -1,0 +1,8 @@
+workspace/
+├── agent/
+│   ├── agent.py
+│   ├── config.py
+│   ├── rag.py
+│   ├── tool_executor.py
+│   └── submission.json
+└── rag/
