@@ -1,0 +1,1367 @@
+[
+    {
+        "question_id": "EX_001",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ a_{n}=\\frac{2n^{2}+n+2}{n^{2}-3} $，证明  $ \\lim_{n\\to\\infty}a_{n}=2 $.",
+        "answer": "证明 当  $ n \\geqslant 8 $ 时，有\n\n $$ \\left|a_{n}-2\\right|=\\frac{n+8}{n^{2}-3}\\leqslant\\frac{2n}{\\frac{1}{2}n^{2}}=\\frac{4}{n}. $$ \n\n由此知， $ \\forall\\varepsilon>0 $，可取自然数 $ N\\geqslant\\max\\left\\{8,\\frac{4}{\\varepsilon}\\right\\} $，当n>N时，\n\n $$ \\left|a_{n}-2\\right|\\leqslant\\frac{4}{n}<\\varepsilon, $$ \n\n所以 $ \\lim_{n\\to\\infty}a_n=2. $"
+    },
+    {
+        "question_id": "EX_002",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "证明  $ \\lim_{n\\to\\infty}\\sqrt[n]{n}=1. $",
+        "answer": "证明 记  $ a_{n}=\\sqrt[n]{n}-1 $，则当  $ n\\geqslant2 $ 时，\n\n $$ n=(1+a_{n})^{n}\\geqslant\\frac{1}{2}n(n-1)a_{n}^{2}\\geqslant\\frac{1}{4}n^{2}a_{n}^{2}, $$ \n\n从而  $ 0 < a_{n} \\leqslant \\frac{2}{\\sqrt{n}} $. 所以  $ \\forall \\varepsilon > 0 $，取自然数  $ N \\geqslant \\max\\left\\{2, \\frac{4}{\\varepsilon^{2}}\\right\\} $，则当 n > N 时，有\n\n $$ 0<a_{n}\\leqslant\\frac{2}{\\sqrt{n}}<\\varepsilon. $$ \n\n由极限定义得 $ \\lim_{n\\to\\infty}\\sqrt[n]{n}=1 $"
+    },
+    {
+        "question_id": "EX_003",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "设 $ \\lim_{n\\to\\infty}a_n=A $. 求证：\n\n(1)  $ \\lim_{n\\to\\infty}e^{a_n}=e^A $;\n\n(2) 如果 A > 0,  $ a_{n} > 0 $, n = 1, 2,  $ \\cdots $, 则  $ \\lim_{n \\to \\infty} \\ln a_{n} = \\ln A $;\n\n(3)  $ \\lim_{n\\to\\infty}\\frac{\\ln n}{n}=0. $",
+        "answer": "证明 (1)  $ \\forall \\varepsilon > 0 $,\n\n $$ \\begin{aligned}&|\\mathbf{e}^{a_{n}}-\\mathbf{e}^{A}|<\\varepsilon\\\\ \\Leftrightarrow\\quad|\\mathbf{e}^{a_{n}-A}-1|<\\varepsilon\\mathbf{e}^{-A}\\\\ \\Leftrightarrow\\quad1-\\varepsilon\\mathbf{e}^{-A}<\\mathbf{e}^{a_{n}-A}<1+\\varepsilon\\mathbf{e}^{-A}\\\\ \\Leftrightarrow\\quad\\ln(1-\\varepsilon\\mathbf{e}^{-A})<a_{n}-A<\\ln(1+\\varepsilon\\mathbf{e}^{-A}).\\end{aligned} $$ \n\n不妨设  $ \\varepsilon < \\varepsilon^{A} $，令  $ \\delta = \\min \\left\\{ -\\ln(1 - \\varepsilon e^{-A}), \\ln(1 + \\varepsilon e^{-A}) \\right\\} $，则  $ \\delta > 0 $。由于  $ \\lim_{n \\to \\infty} a_n = A $，故  $ \\exists N \\in \\mathbb{N} $，使得当  $ n > N $ 时，就有  $ \\left| a_n - A \\right| < \\delta $。于是当  $ n > N $ 时，不等式（1）成立。从而有  $ \\left| e^{a_n} - e^{A} \\right| < \\varepsilon $。由极限定义即得  $ \\lim_{n \\to \\infty} e^{a_n} = e^{A} $。\n\n(2) $ \\forall\\varepsilon>0 $，要使 $ \\left|\\ln a_{n}-\\ln A\\right|<\\varepsilon $，只需\n\n $$ -\\varepsilon<\\ln\\frac{a_{n}}{A}<\\varepsilon, $$ \n\n亦即\n\n $$ A(\\mathrm{e}^{-\\varepsilon}-1)<a_{n}-A<A(\\mathrm{e}^{\\varepsilon}-1). $$ \n\n令  $ \\delta = \\min\\{A(1 - e^{-t}), A(e^{t} - 1)\\} $，显然  $ \\delta > 0 $。由于  $ \\lim_{n \\to \\infty} a_n = A $，故  $ \\exists N \\in \\mathbb{N} $，使得当  $ n > N $ 时，就有  $ |a_n - A| < \\delta $。于是当  $ n > N $ 时，不等式（2）成立。从而有  $ |\\ln a_n - \\ln A| < \\varepsilon $。由极限定义即得  $ \\lim_{n \\to \\infty} \\ln a_n = \\ln A $。\n\n(3) 由例 1.2.3 知， $ \\lim_{n\\to\\infty}\\sqrt[n]{n}=1 $。再由(2)即得"
+    },
+    {
+        "question_id": "EX_004",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 $ \\lim_{n\\to\\infty}a_n=A $，证明： $ \\lim_{n\\to\\infty}a_n^2=A^2 $。",
+        "answer": "由于  $ \\lim_{n\\to\\infty}a_n=A $，根据性质 4，存在正数 M，使得  $ \\left|a_{n}\\right|\\leqslant M(n=1,2,\\cdots) $.\n\n另一方面， $ \\forall\\varepsilon>0,\\exists N\\in\\mathbb{N} $，使得当 $ n>N $时，有 $ \\left|a_{n}-A\\right|<\\frac{\\varepsilon}{M+\\left|A\\right|} $。于是当 $ n>N $时\n\n $ |a_{n}^{2}-A^{2}|=|a_{n}+A|\\cdot|a_{n}-A|\\leqslant(M+|A|)|a_{n}-A|<\\varepsilon. $\n\n所以 $ \\lim_{n\\to\\infty}a_{n}^{2}=A^{2} $"
+    },
+    {
+        "question_id": "EX_005",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求 $ \\lim_{n\\to\\infty}\\frac{n^{2}-n+1}{2n^{2}+3n-2} $",
+        "answer": "解 由于  $ \\lim_{n\\to\\infty}\\frac{1}{n}=0,\\lim_{n\\to\\infty}\\frac{1}{n^{2}}=0 $ ，应用定理 1.3.1 便得到\n\n $$ \\lim_{n\\to\\infty}\\frac{n^{2}-n+1}{2n^{2}+3n-2}=\\lim_{n\\to\\infty}\\frac{1-\\frac{1}{n}+\\frac{1}{n^{2}}}{2+\\frac{3}{n}-\\frac{2}{n^{2}}}=\\frac{1-\\lim_{n\\to+\\infty}\\frac{1}{n}+\\lim_{n\\to+\\infty}\\frac{1}{n^{2}}}{2+3\\lim_{n\\to+\\infty}\\frac{1}{n}-2\\lim_{n\\to+\\infty}\\frac{1}{n^{2}}}=\\frac{1}{2}. $$"
+    },
+    {
+        "question_id": "EX_006",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 a, b 为实数，满足  $ 0 < |a| < 1, 0 < |b| < 1 $，求  $ \\lim_{n \\to +\\infty} \\frac{1 + a + a^2 + \\cdots + a^n}{1 + b + b^2 + \\cdots + b^n} $.",
+        "answer": "解 注意到\n\n $$ 1+a+a^{2}+\\cdots+a^{n}=\\frac{1-a^{n+1}}{1-a},\\quad 1+b+b^{2}+\\cdots+b^{n}=\\frac{1-b^{n+1}}{1-b}, $$ \n\n所以\n\n $$ \\lim_{n\\to\\infty}\\frac{1+a+a^{2}+\\cdots+a^{n}}{1+b+b^{2}+\\cdots+b^{n}}=\\lim_{n\\to\\infty}\\frac{1-b}{1-a}\\cdot\\frac{1-a^{n+1}}{1-b^{n+1}}. $$ \n\n由于 $ |a|<1 $ 且 $ |b|<1 $，有 $ \\lim_{n\\to\\infty}a^{n+1}=0 $，$ \\lim_{n\\to\\infty}b^{n+1}=0 $，因此\n\n $$ \\lim_{n\\to\\infty}\\frac{1+a+\\cdots+a^{n}}{1+b+\\cdots+b^{n}}=\\frac{1-b}{1-a}\\cdot\\frac{1-0}{1-0}=\\frac{1-b}{1-a}. $$"
+    },
+    {
+        "question_id": "EX_007",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求 $ \\lim_{n\\to\\infty}\\left(\\sqrt{n+3}-\\sqrt{n-1}\\right) $",
+        "answer": "$ \\forall n \\in \\mathbb{N}^* $，有\n\n $$ 0\\leqslant\\sqrt{n+3}-\\sqrt{n-1}=\\frac{4}{\\sqrt{n+3}+\\sqrt{n-1}}<\\frac{4}{\\sqrt{n}}. $$ \n\n不难看出 $ \\lim_{n\\to\\infty}\\frac{4}{\\sqrt{n}}=0 $。另外，由常数 $ a_{n}=0(n=1,2,\\cdots) $组成的数列以0为极限。\n\n于是由定理 1.3.2 就得到  $ \\lim_{n\\to\\infty}\\left(\\sqrt{n+3}-\\sqrt{n-1}\\right)=0. $"
+    },
+    {
+        "question_id": "EX_008",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 $ a_{1},a_{2},\\cdots,a_{m} $是m个非负数，求证：\n\n $$ \\lim_{n\\to\\infty}(a_{1}^{n}+a_{2}^{n}+\\cdots+a_{m}^{n})^{\\frac{1}{n}}=\\max_{1\\leq k\\leq m}a_{k}. $$",
+        "answer": "记  $ a = \\max_{1 \\leq k \\leq m} a_{k} $，则\n\n $$ a\\leqslant(a_{1}^{n}+a_{2}^{n}+\\cdots+a_{m}^{n})^{\\frac{1}{n}}\\leqslant(m a^{n})^{\\frac{1}{n}}=a m^{\\frac{1}{n}}. $$ \n\n由例 1.3.6 知  $ \\lim_{n\\to\\infty}m^{\\frac{1}{n}}=1 $，应用夹逼原理即得所要结论."
+    },
+    {
+        "question_id": "EX_009",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 $ c>0, a_{1}=\\sqrt{c}, a_{n+1}=\\sqrt{c+a_{n}} $ ( $ n\\geqslant1 $). 试证明数列 $ \\{a_{n}\\} $ 收敛，并求其极限值.",
+        "answer": "证明：首先验证单调性。由于\n $$ a_{2}=\\sqrt{c+a_{1}}=\\sqrt{c+\\sqrt{c}}>\\sqrt{c}=a_{1}, $$ \n假设对某个 $ n\\geq 2 $，有 $ a_{n}>a_{n-1} $，则\n $$ a_{n+1}=\\sqrt{c+a_{n}}>\\sqrt{c+a_{n-1}}=a_{n}. $$ \n由数学归纳法可知，数列 $ \\{a_n\\} $ 单调递增。\n\n再证有界性。注意到\n $$ a_1 = \\sqrt{c} < \\sqrt{c + 2\\sqrt{c} + 1} = \\sqrt{(\\sqrt{c}+1)^2} = \\sqrt{c}+1. $$ \n假设 $ a_n < \\sqrt{c}+1 $，则\n $$ a_{n+1} = \\sqrt{c + a_n} < \\sqrt{c + \\sqrt{c} + 1} < \\sqrt{c + 2\\sqrt{c} + 1} = \\sqrt{c}+1. $$ \n因此，由数学归纳法知，对所有 $ n\\in\\mathbb{N}^* $，均有 $ a_n < \\sqrt{c}+1 $，即数列有上界。\n\n综上，$ \\{a_n\\} $ 单调递增且有上界，故收敛。设其极限为 $ L $，即 $ \\lim_{n\\to\\infty} a_n = L $。在递推式\n $$ a_{n+1} = \\sqrt{c + a_n} $$ \n两边取极限得\n $$ L = \\sqrt{c + L}. $$ \n两边平方得\n $$ L^2 = c + L \\quad \\Rightarrow \\quad L^2 - L - c = 0. $$ \n解得\n $$ L = \\frac{1 \\pm \\sqrt{1 + 4c}}{2}. $$ \n由于 $ a_n > 0 $，故极限 $ L > 0 $，因此取正根：\n $$ L = \\frac{1 + \\sqrt{1 + 4c}}{2}. $$ \n所以，数列 $ \\{a_n\\} $ 收敛，且极限为 $ \\frac{1 + \\sqrt{1 + 4c}}{2} $. "
+    },
+    {
+        "question_id": "EX_010",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "令 $ x_{n}=\\frac{1}{\\ln n}\\left(1+\\frac{1}{2}+\\cdots+\\frac{1}{n}\\right) $，求 $ \\lim_{n\\to\\infty}x_{n} $。",
+        "answer": "解：在 Stolz 定理中令 $ a_{n}=1+\\frac{1}{2}+\\cdots+\\frac{1}{n}, b_{n}=\\ln n $（$ n=1,2,\\cdots $），则有\n $$ \\lim_{n\\to\\infty}\\frac{a_{n+1}-a_{n}}{b_{n+1}-b_{n}}=\\lim_{n\\to\\infty}\\frac{\\frac{1}{n+1}}{\\ln(n+1)-\\ln n}=\\lim_{n\\to\\infty}\\frac{1}{(n+1)\\ln\\left(1+\\frac{1}{n}\\right)}. $$\n由于 $ \\ln\\left(1+\\frac{1}{n}\\right)\\sim \\frac{1}{n} $（当 $ n\\to\\infty $），故\n $$ (n+1)\\ln\\left(1+\\frac{1}{n}\\right) \\sim (n+1)\\cdot\\frac{1}{n} \\to 1, $$\n因此\n $$ \\lim_{n\\to\\infty}\\frac{a_{n+1}-a_{n}}{b_{n+1}-b_{n}} = 1. $$\n应用 Stolz 定理即得\n $$ \\lim_{n\\to\\infty}x_n=\\lim_{n\\to\\infty}\\frac{a_n}{b_n}=1. $$"
+    },
+    {
+        "question_id": "EX_011",
+        "type": "极限计算",
+        "difficulty": "中等",
+        "question": "令  $ c_{n}=\\frac{1^{k}+2^{k}+\\cdots+n^{k}}{n^{k+1}} $（其中 k 为自然数），求  $ \\lim_{n\\to\\infty}c_{n} $",
+        "answer": "解 在 Stolz 定理中令  $ a_{n}=1^{k}+2^{k}+\\cdots+n^{k}, b_{n}=n^{k+1} (n=1,2,\\cdots) $，则有\n\n $ b_n - b_{n-1} = n^{k+1} - (n-1)^{k+1} = n^k + n^{k-1}(n-1) + \\cdots + (n-1)^k, $\n\n所以\n\n $$ \\begin{aligned}\\lim_{n\\rightarrow\\infty}\\frac{a_{n}-a_{n-1}}{b_{n}-b_{n-1}}&=\\lim_{n\\rightarrow\\infty}\\frac{n^{k}}{n^{k}+n^{k-1}(n-1)+\\cdots+(n-1)^{k}}\\\\&=\\lim_{n\\rightarrow\\infty}\\left[1+\\frac{n-1}{n}+\\cdots+\\left(\\frac{n-1}{n}\\right)^{k}\\right]^{-1}\\\\&=\\frac{1}{k+1},\\end{aligned} $$ \n\n应用 Stolz 定理即得\n\n $$ \\lim_{n\\to\\infty}c_{n}=\\lim_{n\\to\\infty}\\frac{a_{n}}{b_{n}}=\\frac{1}{k+1}. $$"
+    },
+    {
+        "question_id": "EX_012",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设数列 $ \\{x_{n}\\} $ 满足条件 $ \\sum_{k=1}^{\\infty}|x_{k+1}-x_{k}|\\leqslant M $（$ n=1,2,\\cdots $），其中 $ M $ 为常数。证明数列 $ \\{x_{n}\\} $ 收敛。",
+        "answer": "令 $ y_{1}=0,\\ y_{n}=\\sum_{k=1}^{n-1}|x_{k+1}-x_{k}| $（$ n=2,3,\\cdots $），则 $ \\{y_{n}\\} $ 单调递增且有上界 $ M $，所以 $ \\{y_{n}\\} $ 收敛，从而是柯西列。于是 $ \\forall\\varepsilon>0,\\ \\exists N\\in\\mathbb{N} $，当 $ n>N $ 时，$ \\forall p\\in\\mathbb{N} $，有\n\n$$\n0\\leqslant y_{n+p}-y_{n}<\\varepsilon.\n$$\n\n进而得\n\n$$\n\\left|x_{n+p}-x_{n}\\right|=\\left|\\sum_{k=n}^{n+p-1}(x_{k+1}-x_{k})\\right|\\leqslant\\sum_{k=n}^{n+p-1}|x_{k+1}-x_{k}|=y_{n+p}-y_{n}<\\varepsilon.\n$$\n\n即 $ \\{x_{n}\\} $ 是柯西列。应用柯西收敛原理便知 $ \\{x_{n}\\} $ 收敛。"
+    },
+    {
+        "question_id": "EX_013",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "考察函数  $ f(x)=\\frac{1}{a^{x}+1}-\\frac{1}{2} $ 的奇偶性.",
+        "answer": "解  $ f(-x)=\\frac{1}{a^{-x}+1}-\\frac{1}{2}=\\frac{a^{x}}{1+a^{x}}-\\frac{1}{2} $\n\n $ =\\frac{1}{2}-\\frac{1}{a^{x}+1}=-f(x), $\n\n所以  $ f(x) $ 是 R 上的奇函数."
+    },
+    {
+        "question_id": "EX_014",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "对于符号函数\n\n $$ \\mathrm{sgn}(x)=\\left\\{\\begin{aligned}&1,&x>0,\\\\ &0,&x=0,\\\\ &-1,&x<0,\\end{aligned}\\right. $$ \n\n显然有  $ \\lim_{x\\to0^{-}}\\mathrm{sgn}(x)=-1,\\quad\\lim_{x\\to0^{+}}\\mathrm{sgn}(x)=1. $ 进而知  $ \\lim_{x\\to0}\\mathrm{sgn}(x) $ 不存在.",
+        "answer": "由于左极限为 -1，右极限为 1，二者不相等，因此极限 $ \\lim_{x\\to0}\\mathrm{sgn}(x) $ 不存在。"
+    },
+    {
+        "question_id": "EX_015",
+        "type": "概念辨析",
+        "difficulty": "基础",
+        "question": "对于函数  $ f(x)=\\mathrm{e}^{\\frac{1}{x}} $， $ \\lim_{x\\to0^{-}}f(x)=0 $， $ \\lim_{x\\to0^{+}}f(x) $ 不存在.",
+        "answer": "当 $ x \\to 0^- $ 时，$ \\frac{1}{x} \\to -\\infty $，故 $ f(x) = e^{1/x} \\to 0 $；当 $ x \\to 0^+ $ 时，$ \\frac{1}{x} \\to +\\infty $，故 $ f(x) \\to +\\infty $，极限不存在（趋于无穷）。"
+    },
+    {
+        "question_id": "EX_016",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "求证：开区间 $ (a,b) $上的单调函数在每一点处的左右极限都存在.",
+        "answer": "设 f 在  $ (a, b) $ 上单调递增， $ x_{0} \\in (a, b) $，则  $ f(x) \\leqslant f(x_{0})(x \\in (a, x_{0})) $。于是数集  $ \\{f(x) \\mid x \\in (a, x_{0})\\} $ 非空有上界。记 A 为其上确界，则  $ f(x_{0}) \\geqslant A $，且  $ \\forall \\varepsilon > 0 $，存在  $ x^{*} \\in (a, x_{0}) $ 使得  $ f(x^{*}) > A - \\varepsilon $。由于 f 单增，故对所有的  $ x \\in (x^{*}, x_{0}) $ 都有\n\n $$ A-\\varepsilon<f(x)\\leqslant A, $$ \n\n所以  $ \\lim_{x\\to x_{0}^{-}}f(x)=A. $\n\n完全类似地，数集 $ \\{f(x)\\mid x\\in(x_{0},b)\\} $非空有下界。记B为其下确界，则 $ f(x_{0})\\leqslant B $，且\n\n $$ \\lim_{x\\to x_{0}^{+}}f(x)=B. $$ \n\n若 f 在  $ (a,b) $ 上单调递减， $ x_{0}\\in(a,b) $，则同理可证：\n\n $$ \\lim_{x\\to x_{0}^{-}}f(x)\\geqslant f(x_{0})\\geqslant\\lim_{x\\to x_{0}^{+}}f(x). $$"
+    },
+    {
+        "question_id": "EX_017",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设 $ a > 1 $，求证 $ \\lim_{x \\to +\\infty} a^{-x} = 0 $.",
+        "answer": "证明：$ \\forall\\varepsilon>0 $，为使 $ \\left|a^{-x}-0\\right|=a^{-x}<\\varepsilon $，只需使 $ x>\\log_{a}\\frac{1}{\\varepsilon} $。于是，若取正数 $ M\\geqslant\\log_{a}\\frac{1}{\\varepsilon} $，那么只要 $ x>M $，就有\n\n $$ \\left|a^{-x}-0\\right|=a^{-x}<\\varepsilon, $$ \n\n于是 $ \\lim_{x\\to+\\infty}a^{-x}=0. $"
+    },
+    {
+        "question_id": "EX_018",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求证 $ \\lim_{x\\to+\\infty}\\left[\\ln(x+1)-\\ln x\\right]=0. $",
+        "answer": "证明：注意到 $ \\left|\\ln(x+1)-\\ln x-0\\right|=\\ln\\left(1+\\frac{1}{x}\\right)\\ (x>0) $. $ \\forall\\varepsilon>0 $，为使 $ \\ln\\left(1+\\frac{1}{x}\\right)<\\varepsilon $，只需使 $ 1+\\frac{1}{x}<\\mathrm{e}^{\\varepsilon} $，即 $ x>\\frac{1}{\\mathrm{e}^{\\varepsilon}-1} $. 于是取 $ M=\\frac{1}{\\mathrm{e}^{\\varepsilon}-1} $，则当 $ x>M $ 时，有 $ \\left|\\ln(x+1)-\\ln x\\right|<\\varepsilon $，故 $ \\lim_{x\\to+\\infty}\\left[\\ln(x+1)-\\ln x\\right]=0 $. "
+    },
+    {
+        "question_id": "EX_019",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求证 $ \\lim_{x\\to\\infty}\\sqrt{\\frac{x^{2}+1}{x^{2}-1}}=1. $",
+        "answer": "证明：注意到\n\n $$ \\begin{aligned}\\left|\\sqrt{\\frac{x^{2}+1}{x^{2}-1}}-1\\right|&=\\frac{\\sqrt{x^{2}+1}-\\sqrt{x^{2}-1}}{\\sqrt{x^{2}-1}}\\\\&=\\frac{2}{\\sqrt{x^{2}-1}\\left(\\sqrt{x^{2}+1}+\\sqrt{x^{2}-1}\\right)},\\end{aligned} $$ \n\n由于 $ x \\to \\infty $，不妨设 $ |x| > \\sqrt{2} $。从而有\n\n $$ \\left|\\sqrt{\\frac{x^{2}+1}{x^{2}-1}}-1\\right|<\\frac{2}{\\left|x\\right|}. $$ \n\n于是，$ \\forall\\varepsilon>0 $，取 $ M=\\max\\left\\{\\sqrt{2},\\,\\frac{2}{\\varepsilon}\\right\\} $，则当 $ |x|>M $ 时，有 $ \\left|\\sqrt{\\frac{x^{2}+1}{x^{2}-1}}-1\\right|<\\varepsilon $，故 $ \\lim_{x\\to\\infty}\\sqrt{\\frac{x^{2}+1}{x^{2}-1}}=1. $"
+    },
+    {
+        "question_id": "EX_020",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "求证 $ \\lim_{x\\to0}\\frac{\\sin x}{x}=1. $",
+        "answer": "证明 不妨设 $ -\\frac{\\pi}{2}<x<\\frac{\\pi}{2} $. 如图 2.3.1 所示, 当  $ 0<x<\\frac{\\pi}{2} $ 时,  $ \\triangle OAC $ 的面积 < 扇形 OAC 的面积 <  $ \\triangle OAB $ 的面积, 即\n\n $$ \\sin x<x<\\tan x. $$ \n\n由此可得\n\n $$ \\cos x<\\frac{\\sin x}{x}<1. $$ \n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_436_308_634_500.jpg\" alt=\"Image\" width=\"27%\" /></div>\n\n\n<div style=\"text-align: center;\">图 2.3.1</div>\n\n\n注意到此不等式对于 $ -\\frac{\\pi}{2}<x<\\frac{\\pi}{2} $成立，且 $ \\lim_{x\\to0}\\cos x=1 $（例2.2.1），于是由夹逼定理得到\n\n $$ \\lim_{x\\to0}\\frac{\\sin x}{x}=1. $$"
+    },
+    {
+        "question_id": "EX_021",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求极限： $ \\lim_{x\\to0}\\frac{1-\\cos x}{x^{2}} $",
+        "answer": "$$ \\lim_{x\\to0}\\frac{1-\\cos x}{x^{2}}=\\lim_{x\\to0}\\frac{2\\sin^{2}(x/2)}{x^{2}}=\\frac{1}{2}\\lim_{x\\to0}\\left[\\frac{\\sin(x/2)}{x/2}\\right]^{2}=\\frac{1}{2}\\cdot1^{2}=\\frac{1}{2} $$"
+    },
+    {
+        "question_id": "EX_022",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求极限： $ \\lim_{x\\to0}\\frac{\\sin(\\tan x)}{\\sin x} $",
+        "answer": "解 令  $ u = \\tan x $，则当  $ x \\to 0 $ 时， $ u \\to 0 $。由定理 2.2.3 可得\n\n $$ \\lim_{x\\to0}\\frac{\\sin(\\tan x)}{\\sin x}=\\lim_{x\\to0}\\frac{\\sin(\\tan x)}{\\tan x}\\cdot\\lim_{x\\to0}\\frac{1}{\\cos x}=\\lim_{x\\to0}\\frac{\\sin u}{u}=1. $$"
+    },
+    {
+        "question_id": "EX_023",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "证明： $ \\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}=\\lim_{t\\to0}(1+t)^{\\frac{1}{t}}=\\mathrm{e}. $",
+        "answer": "证明 注意到当  $ x \\geqslant 1 $ 时，\n\n $$ \\left(1+\\frac{1}{\\left\\lbrack x\\right\\rbrack+1}\\right)^{\\left\\lbrack x\\right\\rbrack}\\leqslant\\left(1+\\frac{1}{x}\\right)^{x}\\leqslant\\left(1+\\frac{1}{\\left\\lbrack x\\right\\rbrack}\\right)^{\\left\\lbrack x\\right\\rbrack+1}. $$ \n\n由于 $ \\lim_{n\\to\\infty}\\left(1+\\frac{1}{n}\\right)^n=e $，易见 $ \\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor}\\right)^{|x|}=e $。运用极限的四则运算可得\n\n $ \\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor}\\right)^{[x]+1}=\\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor}\\right)^{[x]}\\cdot\\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor}\\right)=e, $\n\n $ \\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor+1}\\right)^{[x]}=\\lim_{x\\to+\\infty}\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor+1}\\right)^{[x]+1}\\cdot\\left(1+\\frac{1}{\\left\\lfloor x\\right\\rfloor+1}\\right)^{-1}=e. $\n\n于是由夹逼原理得到\n\n $$ \\lim_{x\\to+\\infty}\\left(1+\\frac{1}{x}\\right)^{x}=e. $$ \n\n还需要证明  $ \\lim_{x\\to-\\infty}\\left(1+\\frac{1}{x}\\right)^x= $ e. 由于  $ \\lim_{x\\to+\\infty}\\left(1+\\frac{1}{x}\\right)^x= $ e，故  $ \\forall\\varepsilon>0,\\exists M>0 $ 使得当 x>M 时有\n\n $$ \\left|\\left(1+\\frac{1}{x}\\right)^{x}-\\mathrm{e}\\right|<\\varepsilon, $$ \n\n注意到 $ \\left(1+\\frac{1}{x}\\right)^{x+1}=\\left(1+\\frac{1}{-x-1}\\right)^{-x-1} $，于是当 $ x<-(M+1) $时有\n\n $$ \\left|\\left(1+\\frac{1}{x}\\right)^{x+1}-\\mathrm{e}\\right|=\\left|\\left(1+\\frac{1}{-x-1}\\right)^{-x-1}-\\mathrm{e}\\right|<\\varepsilon, $$ \n\n因此  $ \\lim_{x\\to-\\infty}\\left(1+\\frac{1}{x}\\right)^{x+1}= $ e. 进而知\n\n $$ \\lim_{x\\to-\\infty}\\left(1+\\frac{1}{x}\\right)^{x}=\\lim_{x\\to-\\infty}\\left(1+\\frac{1}{x}\\right)^{x+1}\\cdot\\left(1+\\frac{1}{x}\\right)^{-1}=e. $$ \n\n所以 $ \\lim_{x\\to\\infty}\\left(1+\\frac{1}{x}\\right)^{x}=\\mathrm{e} $"
+    },
+    {
+        "question_id": "EX_024",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "证明 $\\lim_{x\\to0}\\sin\\frac{1}{x}$ 不存在。",
+        "answer": "对于下面两个收敛于 0 的点列\n\n $$ x_{n}=\\frac{1}{2n\\pi},\\quad y_{n}=\\frac{1}{2n\\pi+\\frac{\\pi}{2}}\\quad(n\\in\\mathbb{N}), $$ \n\n有\n\n $$ \\lim_{n\\to+\\infty}f(x_{n})=\\lim_{n\\to+\\infty}\\sin(2n\\pi)=0, $$\n\n而\n\n $$ \\lim_{n\\to+\\infty}f(y_{n})=\\lim_{n\\to+\\infty}\\sin\\left(2n\\pi+\\frac{\\pi}{2}\\right)=\\lim_{n\\to+\\infty}1=1. $$\n\n由于两个趋于 0 的点列对应的函数值极限不相等，故 $\\lim_{x\\to0}\\sin\\frac{1}{x}$ 不存在。"
+    },
+    {
+        "question_id": "EX_025",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "求证：(1) $ \\lim_{x\\to x_{0}}e^{x}=e^{x_{0}} $; (2)当 $ x_{0}>0 $时, $ \\lim_{x\\to x_{0}}\\ln x=\\ln x_{0} $",
+        "answer": "证明 （1）根据例1.2.4，对于任取的点列 $ \\{x_{n}\\} $，当 $ x_{n}\\rightarrow x_{0} $时，便有 $ \\lim_{n\\to\\infty}e^{x_{n}}=e^{x_{0}} $，应用定理2.3.4即得 $ \\lim_{n\\to\\infty}e^{x}=e^{x_{0}} $.\n\n类似地可证得(2)."
+    },
+    {
+        "question_id": "EX_026",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ \\lim_{x\\to x_{0}}u(x)=a>0,\\quad\\lim_{x\\to x_{0}}v(x)=b $ , 则  $ \\lim_{x\\to x_{0}}u(x)^{v(x)}=a^{b} $",
+        "answer": "证明 由例 2.2.4, $ \\lim_{n\\to\\infty}\\ln x=\\ln a $. 应用定理 2.3.3 便知\n\n $$ \\lim_{x\\to x_{0}}\\ln u(x)=\\ln a, $$ \n\n于是\n\n $$ \\lim_{x\\to x_{0}}v(x)\\ln u(x)=\\lim_{x\\to x_{0}}v(x)\\lim_{x\\to x_{0}}\\ln u(x)=b\\ln a, $$ \n\n再由例 2.3.7， $ \\lim_{u\\to u_{0}}e^{u}=e^{u_{0}} $，若在定理 2.3.3 中取  $ f(u)=e^{u} $， $ g(x)=v(x)\\ln u(x) $，\n\n即得\n\n $$ \\lim_{x\\to x_{0}}u\\left(x\\right)^{v(x)}=\\lim_{x\\to x_{0}}e^{\\left\\lbrack v(x)\\ln u(x)\\right\\rbrack}=e^{b\\ln a}=a^{b}. $$ \n\n不难看出，例 2.3.8 中的极限过程  $ x \\rightarrow x_{0} $ 也可以换成其他五种极限过程的任一种."
+    },
+    {
+        "question_id": "EX_027",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设  $ a \\neq 0 $，求极限  $ \\lim_{x \\to +\\infty} \\left( \\frac{x + a}{x - a} \\right)^x $.",
+        "answer": "解 注意到\n\n $$ \\left(\\frac{x+a}{x-a}\\right)^{x}=\\left[\\left(1+\\frac{2a}{x-a}\\right)^{\\frac{x-a}{2a}}\\right]^{\\frac{2a x}{x-a}}, $$ \n\n由于\n\n $$ \\lim_{x\\to+\\infty}\\left(1+\\frac{2a}{x-a}\\right)^{\\frac{x-a}{2a}}=\\mathrm{e},\\quad\\lim_{x\\to+\\infty}\\frac{2ax}{x-a}=2a, $$ \n\n由例 2.3.8 的结论得到\n\n $$ \\lim_{x\\to+\\infty}\\left(\\frac{x+a}{x-a}\\right)^{x}=\\lim_{x\\to+\\infty}\\left[\\left(1+\\frac{2a}{x-a}\\right)^{\\frac{x-a}{2a}}\\right]^{\\frac{2a x}{x-a}}=\\mathrm{e}^{2a}. $$"
+    },
+    {
+        "question_id": "EX_028",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求极限 $ \\lim_{x\\to0}(\\cos x)^{\\frac{1}{x^{2}}} $",
+        "answer": " $$ \\left(\\cos x\\right)^{\\frac{1}{x^{2}}}=\\left(1-2\\sin^{2}\\frac{x}{2}\\right)^{\\frac{-1}{2\\sin^{2}\\frac{x}{2}}}\\cdot\\frac{2\\sin^{2}\\frac{x}{2}}{-x^{2}} $$ \n\n注意到当  $ x \\rightarrow 0 $ 时，\n\n $$ u(x)=\\left(1-2\\sin^{2}\\frac{x}{2}\\right)^{\\frac{-1}{2\\sin^{2}\\frac{x}{2}}}\\rightarrow\\mathrm{e}, $$ \n\n $$ v(x)=\\frac{2\\sin^{2}\\frac{x}{2}}{-x^{2}}\\rightarrow-\\frac{1}{2}. $$ \n\n利用例 2.3.8 的结论便得到\n\n $$ \\lim_{x\\to0}\\left(\\cos x\\right)^{\\frac{1}{x^{2}}}=\\lim_{x\\to0}u\\left(x\\right)^{v\\left(x\\right)}=\\mathrm{e}^{-\\frac{1}{2}}. $$ "
+    },
+    {
+        "question_id": "EX_029",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求下列极限：\n\n(1)  $ \\lim_{x\\to0}\\frac{\\sin3x}{\\sin5x} $; \n\n(2)  $ \\lim_{x\\to0}\\frac{1-\\cos(1-\\cos x)}{x^{4}} $; \n\n(3)  $ \\lim_{x\\to0}\\frac{\\sqrt{1+2x^{4}}-\\sqrt[3]{1-x^{4}}}{\\sin^{2}x(1-\\cos x)} $. ",
+        "answer": "解（1）当  $ x \\rightarrow 0 $ 时， $ \\sin kx \\sim kx $，所以\n\n $$ \\lim_{x\\to0}\\frac{\\sin3x}{\\sin5x}=\\frac{3}{5}\\lim_{x\\to0}\\frac{\\sin3x}{3x}\\cdot\\frac{5x}{\\sin5x}=\\frac{3}{5}. $$ \n\n(2) 当  $ x \\rightarrow 0 $ 时， $ 1 - \\cos x \\sim \\frac{1}{2} x^{2} $，所以\n\n $$ \\begin{aligned}\\lim_{x\\rightarrow0}\\frac{1-\\cos(1-\\cos x)}{x^{4}}&=\\frac{1}{8}\\lim_{x\\rightarrow0}\\frac{1-\\cos(1-\\cos x)}{\\frac{1}{2}\\left(1-\\cos x\\right)^{2}}\\cdot\\left(\\frac{1-\\cos x}{x^{2}/2}\\right)^{2}\\\\&=\\frac{1}{8}\\times1\\times1^{2}=\\frac{1}{8}.\\end{aligned} $$ \n\n(3) 当  $ x \\to 0 $ 时， $ \\sqrt{1+2x^{4}}-1 \\sim x^{4} $， $ \\sqrt[3]{1-x^{4}}-1 \\sim \\frac{-1}{3}x^{4} $，所以\n\n $$ \\begin{aligned}&\\lim_{x\\rightarrow0}\\frac{\\sqrt{1+2x^{4}}-\\sqrt[3]{1-x^{4}}}{\\sin^{2}x(1-\\cos x)}\\\\ &=\\ 2\\lim_{x\\rightarrow0}\\left(\\frac{\\sqrt{1+2x^{4}}-1}{x^{4}}+\\frac{1}{3}\\ \\frac{\\sqrt[3]{1-x^{4}}-1}{-x^{4}/3}\\right)\\cdot\\frac{x^{2}}{\\sin^{2}x}\\cdot\\frac{\\frac{x^{2}}{2}}{(1-\\cos x)}\\\\ &=2\\Big(1+\\frac{1}{3}\\Big)\\times1\\times1=\\frac{8}{3}.\\\\ \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_030",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 m>0 为奇数，则多项式  $ f(x)=x^{m}+a_{1}x^{m-1}+\\cdots+a_{m-1}x+a_{m} $ 至少有一个实根，其中  $ a_{1},a_{2},\\cdots,a_{m} $ 为实数.",
+        "answer": "注意到当  $ x \\to +\\infty $ 时， $ f(x) \\to +\\infty $，而当  $ x \\to -\\infty $ 时  $ f(x) \\to -\\infty $，故存在正数 M，使得  $ f(-M) < 0 $，且  $ f(M) > 0 $。在  $ [-M, M] $ 上对 f 应用定理 2.6.1 便知在区间  $ (-M, M) $ 内  $ f(x) $ 至少有一个实根。"
+    },
+    {
+        "question_id": "EX_031",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 f 在  $ \\langle a, b \\rangle $ 上连续（即 f 在  $ (a, b) $ 内连续，并且当  $ \\langle a, b \\rangle $ 的某个端点在  $ \\langle a, b \\rangle $ 内时，f 在此端点处单侧连续），则 f 的值域 J 构成一个区间.",
+        "answer": "要证 J 构成一个区间，只需证  $ \\forall y_{1}, y_{2} \\in J $，且  $ y_{1} < y_{2} $，有  $ [y_{1}, y_{2}] \\subseteq J $ 即可.\n\n由于 J 是 f 的值域，故  $ \\exists x_{1}, x_{2} \\in (a, b) $ 使得  $ f(x_{1}) = y_{1}, f(x_{2}) = y_{2} $. 而  $ \\langle a, b \\rangle $ 也是一个区间，所以  $ \\left[x_{1}, x_{2}\\right] \\subseteq \\langle a, b \\rangle $ （或  $ \\left[x_{2}, x_{1}\\right] \\subseteq \\langle a, b \\rangle $）。对 f 在  $ \\left[x_{1}, x_{2}\\right] $ 上应用介值定理即知， $ \\left[y_{1}, y_{2}\\right] $ 中每个点 y 都在 f 的值域内，即  $ \\left[y_{1}, y_{2}\\right] \\subseteq J $，所以 J 构成一个区间。"
+    },
+    {
+        "question_id": "EX_032",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设 $ f(x) \\equiv C $，求 $ f'(x) $。",
+        "answer": "解 对任意 x，由导数定义\n\n $$ f^{\\prime}(x)=\\lim_{\\Delta x\\to0}\\frac{f(x+\\Delta x)-f(x)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{C-C}{\\Delta x}=0. $$ \n\n这就是说，常值函数在任一点的导数等于0。"
+    },
+    {
+        "question_id": "EX_033",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "$ f(x)=\\sin x $，求 $ f'(x) $。",
+        "answer": "解 由导数定义，\n\n $$ \\lim_{\\Delta x\\to0}\\frac{\\sin(x+\\Delta x)-\\sin(x)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{2\\sin\\frac{\\Delta x}{2}\\cos\\left(x+\\frac{\\Delta x}{2}\\right)}{\\Delta x}. $$ \n\n注意到：\n\n $$ \\lim_{\\Delta x\\to0}\\frac{2\\sin\\frac{\\Delta x}{2}}{\\Delta x}=1,\\quad \\lim_{\\Delta x\\to0}\\cos\\left(x+\\frac{\\Delta x}{2}\\right)=\\cos x, $$ \n\n就得到\n\n $$ \\left(\\sin x\\right)^{\\prime}=\\cos x. $$"
+    },
+    {
+        "question_id": "EX_034",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设 $ f(x)=\\sin x $，求 $ f'(x) $。",
+        "answer": "解 由导数定义，\n\n $$ \\lim_{\\Delta x\\to0}\\frac{\\sin(x+\\Delta x)-\\sin(x)}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{2\\sin\\frac{\\Delta x}{2}\\cos\\left(x+\\frac{\\Delta x}{2}\\right)}{\\Delta x}. $$ \n\n注意到：\n\n $$ \\lim_{\\Delta x\\to0}\\frac{2\\sin\\frac{\\Delta x}{2}}{\\Delta x}=1,\\quad\\lim_{\\Delta x\\to0}\\cos\\left(x+\\frac{\\Delta x}{2}\\right)=\\cos x, $$ \n\n就得到\n\n $$ \\left(\\sin x\\right)^{\\prime}=\\lim_{\\Delta x\\rightarrow0}\\frac{\\sin\\left(x+\\Delta x\\right)-\\sin x}{\\Delta x}=\\cos x. $$ \n\n类似地，可得 $ \\left(\\cos x\\right)^{\\prime}=-\\sin x. $"
+    },
+    {
+        "question_id": "EX_035",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 $ a>0 $，且 $ a\\neq1 $，$ f(x)=a^{x} $，$ g(x)=\\log_{a}x $，求 $ f'(x) $ 与 $ g'(x) $。",
+        "answer": "解 (1)  $  f'(x) = \\lim_{\\Delta x \\to 0} \\frac{a^{x + \\Delta x} - a^{x}}{\\Delta x} = a^{x} \\lim_{\\Delta x \\to 0} \\frac{a^{\\Delta x} - 1}{\\Delta x} = a^{x} \\ln a  $.\n\n(2) 当 $ x > 0 $ 时，\n\n $$ \\begin{aligned}g^{\\prime}(x)&=\\lim_{\\Delta x\\to0}\\frac{\\log_{a}(x+\\Delta x)-\\log_{a}x}{\\Delta x}=\\lim_{\\Delta x\\to0}\\frac{1}{x}\\log_{a}\\left(1+\\frac{\\Delta x}{x}\\right)^{\\frac{x}{\\Delta x}}\\\\&=\\frac{1}{x}\\log_{a}e=\\frac{1}{x\\ln a}.\\end{aligned} $$ \n\n特别地，当 $ a=e $ 时，导数的表达式最简单：\n\n $$ \\left(\\mathrm{e}^{x}\\right)^{\\prime}=\\mathrm{e}^{x},\\quad\\left(\\ln x\\right)^{\\prime}=\\frac{1}{x}. $$ \n\n这正是以 $ e $ 为底数的指数函数与对数函数被广泛使用的重要原因。"
+    },
+    {
+        "question_id": "EX_036",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 $ f(x)=x^{a} $，求 $ f'(x) $。",
+        "answer": "解 当 $ x \\neq 0 $ 时，\n\n $$ f^{\\prime}(x)=\\lim_{\\Delta x\\to0}\\frac{(x+\\Delta x)^{a}-x^{a}}{\\Delta x}=x^{a-1}\\lim_{\\Delta x\\to0}\\frac{\\left(1+\\frac{\\Delta x}{x}\\right)^{a}-1}{\\frac{\\Delta x}{x}}=a x^{a-1}. $$ \n\n上面等式中只需要求 $ x $ 使得运算过程中各个表达式都有意义即可。所以，\n\n(1) 若 $ a=k $ 为正整数，则 $ f(x)=x^{k} $ 在 $ x=0 $ 点的导数也存在：\n\n $$ f^{\\prime}(0)=\\lim_{\\Delta x\\to0}\\frac{(\\Delta x)^{k}-0^{k}}{\\Delta x}=\\left\\{\\begin{aligned}1,\\quad k=1,\\\\ 0,\\quad k\\neq1,\\end{aligned}\\right. $$ \n\n即\n\n $$ (x^{k})^{\\prime}=k x^{k-1}\\quad(x\\in\\mathbb{R}); $$ \n\n(2) 若 $ a=k $ 为负整数，则\n\n $$ (x^{k})^{\\prime}=kx^{k-1}\\quad(x\\neq0)\\;; $$ \n\n(3) 若 $ a $ 为非零实数，则\n\n $$ (x^{a})^{\\prime}=a x^{a-1}\\quad(x>0). $$"
+    },
+    {
+        "question_id": "EX_037",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "函数 $ f(x)=|x| $ 在 $ x_{0}=0 $ 点不可导。",
+        "answer": "证明 事实上，\n\n $$ \\lim_{\\Delta x\\to0^{\\pm}}\\frac{|\\Delta x|-0}{\\Delta x}=\\pm1. $$ \n\n左、右极限不相等，即极限不存在，所以 $ f(x)=|x| $ 在 $ x=0 $ 处不可导。"
+    },
+    {
+        "question_id": "EX_038",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "▶ 例 3.1.5\n\n函数  $ f(x)=|x| $ 在  $ x_{0}=0 $ 点不可导.",
+        "answer": "证明 事实上，\n\n $$ \\lim_{\\Delta x\\to0^{\\pm}}\\frac{|\\Delta x|-0}{\\Delta x}=\\pm1. $$ \n\n左、右极限不相等，即极限不存在，所以  $ f(x)=|x| $ 在  $ x_{0}=0 $ 点不可导。"
+    },
+    {
+        "question_id": "EX_039",
+        "type": "分析题",
+        "difficulty": "中等",
+        "question": "▶ 例 3.1.6\n\n问函数  $ f(x)=x^{2}D(x) $ 在哪些点可导？其中  $ D(x) $ 是狄利克雷函数.",
+        "answer": "解  $ f(x) $ 在  $ x_{0}=0 $ 点可导且  $ f^{\\prime}(0)=0 $;\n\n $$ f^{\\prime}(0)=\\lim_{\\Delta x\\to0}\\frac{x^{2}D(x)-0}{x}=0. $$ \n\n但是除  $ x_{0}=0 $ 点外， $ f(x)=x^{2}D(x) $ 在任何一点  $ x_{0}\\neq0 $ 处甚至不连续，从而不可导."
+    },
+    {
+        "question_id": "EX_040",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设函数  $ f(x)=\\left\\{\\begin{aligned}&x+1,&x\\leqslant0,\\\\&\\mathrm{e}^{x},&x>0,\\end{aligned}\\right. $ 求  $ f^{\\prime}(0) $.",
+        "answer": "解 先计算  $ f(x) $ 在  $ x_{0}=0 $ 点的左、右导数：\n\n $$ f_{-}^{\\prime}(0)=\\lim_{x\\to0^{-}}\\frac{f(x)-f(0)}{x}=\\lim_{x\\to0^{-}}\\frac{x+1-1}{x}=1, $$ \n\n $$ f_{+}^{\\prime}(0)=\\lim_{x\\to0^{+}}\\frac{f(x)-f(0)}{x}=\\lim_{x\\to0^{+}}\\frac{\\mathrm{e}^{x}-1}{x}=1. $$ \n\n所以  $ f(x) $ 在  $ x_{0}=0 $ 点可导且  $ f^{\\prime}(0)=1 $."
+    },
+    {
+        "question_id": "EX_041",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设旋转抛物面由抛物线 $ y=\\frac{x^{2}}{2p}(p>0) $ 绕 y 轴旋转而成。求证：放在焦点 $ F\\left(0,\\frac{p}{2}\\right) $ 处的光源所发出的光，经过抛物面反射后成为平行于 y 轴的光束。",
+        "answer": "证明 设 $ M\\left(t,\\frac{t^{2}}{2p}\\right) $ 为抛物线上任一点，作抛物线过点 M 的切线与 y 轴交于点 P（如图 3.1.2 所示）。要证 MC 平行于 y 轴，只需证 $ \\angle FPM = \\angle CMQ $。根据光的反射定律，入射角等于反射角，即 $ \\angle FMP = \\angle CMQ $。因而只需证 $ \\angle FPM = \\angle FMP $，亦即 $ \\triangle FPM $ 为等腰三角形。抛物线过点 $ M(t, \\frac{t^{2}}{2p}) $ 的切线 MP 的斜率为 $ y'(t) = \\frac{t}{p} $，因而切线 MP 的方程为\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_440_707_626_841.jpg\" alt=\"Image\" width=\"25%\" /></div>\n\n\n<div style=\"text-align: center;\">图 3.1.2</div>\n\n $$ y=\\frac{t}{p}(x-t)+\\frac{t^{2}}{2p}, $$ \n\n于是点 P 的坐标为 $ P\\left(0,\\frac{-t^{2}}{2p}\\right) $. 直接计算线段 $ \\overline{FM} $ 与 $ \\overline{FP} $ 的长度可得\n\n $$ \\overline{FM}=\\sqrt{t^{2}+\\left(\\frac{p}{2}-\\frac{t^{2}}{2p}\\right)^{2}}=\\frac{p}{2}+\\frac{t^{2}}{2p}=\\overline{FP}. $$ \n\n所以 MC 平行于 y 轴。"
+    },
+    {
+        "question_id": "EX_042",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设  $ f(x)=\\frac{\\ln x}{x}+\\mathrm{e}^{x}\\sin x $，求  $ f'(x) $.",
+        "answer": "根据定理 3.2.1，\n\n $$ f^{\\prime}(x)=\\left(\\frac{\\ln x}{x}\\right)^{\\prime}+(e^{x}\\sin x)^{\\prime}=\\frac{1-\\ln x}{x^{2}}+e^{x}\\sin x+e^{x}\\cos x. $$"
+    },
+    {
+        "question_id": "EX_043",
+        "type": "推导题",
+        "difficulty": "基础",
+        "question": "求正切函数  $ \\tan x $ 与正割函数  $ \\sec x = \\frac{1}{\\cos x} $ 的导数.",
+        "answer": "\n $$ \\begin{aligned}\\left(\\tan x\\right)^{\\prime}&=\\left(\\frac{\\sin x}{\\cos x}\\right)^{\\prime}=\\frac{\\left(\\sin x\\right)^{\\prime}\\cos x-\\left(\\cos x\\right)^{\\prime}\\sin x}{\\cos^{2}x}\\\\&=\\frac{\\cos^{2}x+\\sin^{2}x}{\\cos^{2}x}=\\frac{1}{\\cos^{2}x}\\quad;\\end{aligned} $$ \n\n $$ \\left(\\sec x\\right)^{\\prime}=\\left(\\frac{1}{\\cos x}\\right)^{\\prime}=\\frac{\\sin x}{\\cos^{2}x}=\\sec x\\tan x. $$"
+    },
+    {
+        "question_id": "EX_044",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ f(x)=(x-x_{0})^{k}g(x) $，其中  $ k\\in\\mathbb{N}^{*} $， $ g(x) $ 在  $ x_{0} $ 点连续且  $ g(x_{0})\\neq0 $，此时称点  $ x_{0} $ 为  $ f(x) $ 的 k 重零点。求证：若  $ g(x) $ 在点  $ x_{0} $ 的某个邻域内可导，那么点  $ x_{0} $ 为  $ f^{\\prime}(x) $ 的 k-1 重零点。",
+        "answer": "\n $$ \\begin{align*}f^{\\prime}(x)&=k\\left(x-x_{0}\\right)^{k-1}g(x)+\\left(x-x_{0}\\right)^{k}g^{\\prime}(x)\\\\&=\\left(x-x_{0}\\right)^{k-1}(kg(x)+\\left(x-x_{0}\\right)g^{\\prime}(x)).\\end{align*} $$ \n\n而  $ kg(x) + (x - x_{0})g'(x) $ 在点  $ x_{0} $ 的值为  $ kg(x_{0}) \\neq 0 $，所以点  $ x_{0} $ 为  $ f'(x) $ 的 k - 1 重零点."
+    },
+    {
+        "question_id": "EX_045",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设  $ f(x)=\\ln\\left|x+\\sqrt{x^{2}+a^{2}}\\right| $，求  $ f'(x) $.",
+        "answer": "$$ f^{\\prime}(x)=\\frac{\\left(x+\\sqrt{x^{2}+a^{2}}\\right)^{\\prime}}{x+\\sqrt{x^{2}+a^{2}}}=\\frac{1+\\frac{1}{2}\\left(x^{2}+a^{2}\\right)^{-\\frac{1}{2}}\\cdot2x}{x+\\sqrt{x^{2}+a^{2}}}=\\frac{1}{\\sqrt{x^{2}+a^{2}}}. $$"
+    },
+    {
+        "question_id": "EX_046",
+        "type": "推导题",
+        "difficulty": "中等",
+        "question": "设  $ u(x) $,  $ v(x) $ 都在点 x 处可导，且  $ u(x) > 0 $,  $ f(x) = u(x)^{v(x)} $, 求  $ f'(x) $.",
+        "answer": "$$ \\begin{align*}f^{\\prime}(x)&=(\\mathrm{e}^{v(x)\\ln u(x)})^{\\prime}=\\mathrm{e}^{v(x)\\ln u(x)}(v(x)\\ln u(x))^{\\prime}\\\\&=u(x)^{v(x)}\\Big(v^{\\prime}(x)\\ln u(x)+v(x)\\frac{u^{\\prime}(x)}{u(x)}\\Big).\\end{align*} $$"
+    },
+    {
+        "question_id": "EX_047",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "设  $ f(x)=\\left(\\frac{x+1}{x-1}\\right)^{1/2}(x^{2}(2x+3))^{1/3} $，求  $ f'(x) $.",
+        "answer": "$$ \\ln|f(x)|=\\frac{1}{2}\\left(\\ln|x+1|-\\ln|x-1|\\right)+\\frac{1}{3}\\left(2\\ln|x|+\\ln|2x+3|\\right). $$ \n\n将此等式左端看作 x 的复合函数，应用定理 3.2.2，对等式两端关于 x 求导，可得\n\n$$ \\begin{aligned}\\frac{f^{\\prime}(x)}{f(x)}&=\\frac{1}{2}\\Big(\\frac{1}{x+1}-\\frac{1}{x-1}\\Big)+\\frac{1}{3}\\Big(\\frac{2}{x}+\\frac{2}{(2x+3)}\\Big)\\\\&=\\frac{-1}{x^{2}-1}+\\frac{2(x+1)}{x(2x+3)},\\end{aligned} $$ \n\n$$ f^{\\prime}(x)=\\left(\\frac{x+1}{x-1}\\right)^{1/2}(x^{2}(2x+3))^{1/3}\\left(\\frac{-1}{x^{2}-1}+\\frac{2(x+1)}{x(2x+3)}\\right). $$"
+    },
+    {
+        "question_id": "EX_048",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求反正弦函数 $ \\arcsin x $ 与反正切函数 $ \\arctan x $ 的导数。",
+        "answer": "解 由于 $ y=\\arcsin x $ 与 $ x=\\sin y $ 互为反函数，根据定理 3.2.3，\n\n $$ \\left(\\arcsin x\\right)^{\\prime}=\\frac{1}{\\left(\\sin y\\right)^{\\prime}}=\\frac{1}{\\cos y}=\\frac{1}{\\sqrt{1-\\sin^{2}y}}=\\frac{1}{\\sqrt{1-x^{2}}}。 $$ \n\n类似地，由于 $ y=\\arctan x $ 与 $ x=\\tan y $ 互为反函数，故\n\n $$ \\left(\\arctan x\\right)^{\\prime}=\\frac{1}{\\left(\\tan x\\right)^{\\prime}}=\\cos^{2}y=\\frac{1}{1+\\tan^{2}y}=\\frac{1}{1+x^{2}}。 $$ \n\n同理可得\n\n $$ \\left(\\operatorname{arccos}x\\right)^{\\prime}=\\frac{-1}{\\sqrt{1-x^{2}}}\\ ;\\quad\\left(\\operatorname{arccot}x\\right)^{\\prime}=\\frac{-1}{1+x^{2}}。 $$"
+    },
+    {
+        "question_id": "EX_049",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求函数 $ y=e^{x}+\\arctan x $ 的反函数 $ x=x(y) $ 的导数。",
+        "answer": "解 函数 $ y=e^{x}+\\arctan x $ 在 R 上严格单调递增且可导，且\n\n $$ y^{^{\\prime}}=e^{x}+\\frac{1}{x^{2}+1}=\\frac{e^{x}\\left(x^{2}+1\\right)+1}{x^{2}+1}。 $$ \n\n根据定理 3.2.3，其反函数 $ x = x(y) $ 可导并且\n\n $$ x^{\\prime}(y)=\\frac{1}{y^{\\prime}(x)}=\\frac{x^{2}+1}{\\mathrm{e}^{x}(x^{2}+1)+1}， $$ \n\n其中右端表达式中的 x 理解为 $ x = x(y) $，因而右端表达式为 y 的复合函数。"
+    },
+    {
+        "question_id": "EX_050",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "由方程 $ xy - e^{x} + e^{y} = 0 $ 确定了隐函数 $ y = y(x) $，求 $ y'(x) $.",
+        "answer": "解 由题设，若将 $ y=y(x) $ 代入方程，则方程两边是恒等的，两边对 x 求导即得\n\n $$ x y^{\\prime}+y-\\mathrm{e}^{x}+y^{\\prime}\\mathrm{e}^{y}=0, $$ \n\n所以\n\n $$ y^{\\prime}=\\frac{\\mathrm{e}^{x}-y}{\\mathrm{e}^{y}+x}. $$"
+    },
+    {
+        "question_id": "EX_051",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求曲线 $ x^{2} + y \\cos x - 2 e^{xy} = 0 $ 在点 $ M(0,2) $ 处的切线方程.",
+        "answer": "解 方程两边关于 x 求导得\n\n $$ 2x+y^{\\prime}\\cos x-y\\sin x-2(y+xy^{\\prime})\\mathrm{e}^{xy}=0, $$ \n\n $$ y^{\\prime}=\\frac{2y\\mathrm{e}^{xy}+y\\sin x-2x}{\\cos x-2x\\mathrm{e}^{xy}}, $$ \n\n故曲线在点 $ M(0,2) $ 处的切线斜率为 $ y^{\\prime}|_{M(0,2)}=4 $，所以曲线在点 $ M(0,2) $ 处的切线方程为\n\n $$ y=4x+2. $$"
+    },
+    {
+        "question_id": "EX_052",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设函数 $ y = f(x) $ 由参数方程 $ \\left\\{\\begin{aligned} x &= t + e^{t}, \\\\ y &= t^{2} + e^{2t} \\end{aligned}\\right. $ 确定，求 $ \\frac{dy}{dx} $.",
+        "answer": "解 $ \\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{y^{\\prime}(t)}{x^{\\prime}(t)}=\\frac{2(t+\\mathrm{e}^{2t})}{1+\\mathrm{e}^{t}}. $"
+    },
+    {
+        "question_id": "EX_053",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "将极坐标曲线 $ \\rho = a(1 + \\cos\\varphi) $, $ a > 0 $（心脏线，如图 3.2.2 所示），表示成以极角 $ \\varphi $ 为参数的参数方程，并求 $ \\frac{dy}{dx} $.\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_290_265_434_372.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n<div style=\"text-align: center;\">图 3.2.2</div>",
+        "answer": "解 心脏线的参数方程可写成\n\n $$ x=a(1+\\cos\\varphi)\\cos\\varphi, $$ \n\n $$ y=a(1+\\cos\\varphi)\\sin\\varphi,\\quad\\varphi\\in\\left[0,2\\pi\\right], $$ \n\n所以\n\n $$ \\frac{\\mathrm{d}y}{\\mathrm{d}x}=-\\frac{\\cos\\varphi+\\cos2\\varphi}{\\sin\\varphi+\\sin2\\varphi}. $$"
+    },
+    {
+        "question_id": "EX_054",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设 $ \\left\\{\\begin{aligned}x=a\\cos^{3}\\theta,\\\\ y=a\\sin^{3}\\theta\\end{aligned}\\right. $  $ (a>0) $，求 $ \\frac{dy}{dx} $",
+        "answer": "解\n\n $$ \\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{3a\\sin^{2}\\theta\\cos\\theta}{-3a\\cos^{2}\\theta\\sin\\theta}=-\\tan\\theta, $$ \n\n此例中的曲线称为星形线(见图 3.2.3).\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_290_733_431_863.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n<div style=\"text-align: center;\">图 3.2.3</div>"
+    },
+    {
+        "question_id": "EX_055",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设参数方程为\n$$\n\\left\\{\\begin{aligned}\nx &= a\\cos^{3}\\theta,\\\\\ny &= a\\sin^{3}\\theta\n\\end{aligned}\\right. \\quad (a>0),\n$$\n求 $ \\frac{dy}{dx} $。",
+        "answer": "$$\n\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{3a\\sin^{2}\\theta\\cos\\theta}{-3a\\cos^{2}\\theta\\sin\\theta}=-\\tan\\theta,\n$$\n此例中的曲线称为星形线(见图 3.2.3).\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_1_imgs_img_in_image_box_290_733_431_863.jpg\" alt=\"Image\" width=\"19%\" /></div>\n\n\n<div style=\"text-align: center;\">图 3.2.3</div>"
+    },
+    {
+        "question_id": "EX_056",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "$ y=\\sin x, $ 求  $ y^{(n)} $",
+        "answer": "解  $ y'=\\cos x=\\sin\\left(x+\\frac{\\pi}{2}\\right) $， $ y''=-\\sin x=\\sin\\left(x+2\\frac{\\pi}{2}\\right) $，…，不难验证：\n\n $$ y^{(n)}=\\sin\\left(x+\\frac{n\\pi}{2}\\right)\\quad(n=0,1,2,\\cdots). $$ \n\n同理可得\n\n $$ \\left(\\cos x\\right)^{(n)}=\\cos\\left(x+\\frac{n\\pi}{2}\\right)\\quad(n=0,1,2,\\cdots). $$"
+    },
+    {
+        "question_id": "EX_057",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求函数  $ y=\\ln(1+x) $ 的 n 阶导数.",
+        "answer": "解  $ y'=(1+x)^{-1}, y''=-(1+x)^{-2}, y'''=2!(1+x)^{-3}, \\cdots, y^{(n)} = (-1)^{n-1}(n-1)!(1+x)^{-n}. $"
+    },
+    {
+        "question_id": "EX_058",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "$ y=\\frac{1}{x^{2}-x-2} $，求 $ y^{(n)} $",
+        "answer": "解  $ y=\\frac{1}{3}\\left(\\frac{1}{x-2}-\\frac{1}{x+1}\\right) $.\n\n所以\n\n $$ \\begin{align*}y^{(n)}&=\\frac{1}{3}\\left(\\frac{1}{x-2}\\right)^{(n)}-\\frac{1}{3}\\left(\\frac{1}{x+1}\\right)^{(n)}\\\\&=\\frac{1}{3}(-1)^{n}n!(x-2)^{-(n+1)}-\\frac{1}{3}(-1)^{n}n!(x+1)^{-(n+1)}\\\\&=\\frac{(-1)^{n}n!}{3}\\left[\\frac{1}{(x-2)^{n+1}}-\\frac{1}{(x+1)^{n+1}}\\right].\\end{align*} $$"
+    },
+    {
+        "question_id": "EX_059",
+        "type": "隐函数求导",
+        "difficulty": "中等",
+        "question": "设由方程 $ x^{2}+xy+y^{2}=1 $ 确定了隐函数 $ y=y(x) $，求 $ y''(x) $。",
+        "answer": "解 方程两端对 x 求导得\n\n $$ 2x+y+xy^{\\prime}+2yy^{\\prime}=0, $$ \n\n故\n\n $$ y^{\\prime}=-\\frac{2x+y}{x+2y}. $$ \n\n进而有\n\n $$ \\begin{aligned}y^{\\prime \\prime}&=-\\frac{(2+y^{\\prime})(x+2y)-(2x+y)(1+2y^{\\prime})}{(x+2y)^{2}}=3\\frac{xy^{\\prime}-y}{(x+2y)^{2}}\\\\&=3\\frac{-x\\bullet\\frac{2x+y}{x+2y}-y}{(x+2y)^{2}}=-6\\frac{x^{2}+xy+y^{2}}{(2x+y)^{3}}=\\frac{-6}{(2x+y)^{3}}.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_060",
+        "type": "参数方程求导",
+        "difficulty": "中等",
+        "question": "设 $ y=y(x) $ 由参数方程 $ \\left\\{\\begin{aligned}x=a(t-\\sin t),\\\\ y=a(1-\\cos t)\\end{aligned}\\right. $ 确定，试求 $ \\frac{dy}{dx} $ 与 $ \\frac{d^{2}y}{dx^{2}} $。",
+        "answer": "解\n\n$$\\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{y'(t)}{x'(t)}=\\frac{a\\sin t}{a(1-\\cos t)}=\\frac{\\sin t}{1-\\cos t},$$\n\n $$ \\begin{aligned}\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}x^{2}}&=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\frac{\\mathrm{d}y}{\\mathrm{d}x}\\Big)=\\frac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\frac{\\sin t}{(1-\\cos t)}\\Big)=\\frac{\\frac{\\mathrm{d}}{\\mathrm{d}t}\\Big(\\frac{\\sin t}{1-\\cos t}\\Big)}{\\frac{\\mathrm{d}x}{\\mathrm{d}t}}\\\\&=\\frac{\\frac{(1-\\cos t)\\cos t-\\sin^{2}t}{(1-\\cos t)^{2}}}{a(1-\\cos t)}=\\frac{-1}{a(1-\\cos t)^{2}}.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_061",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "若 $ f'(x) $ 在 $ (a,b) $ 内恒等于零，则 f 在 $ (a,b) $ 内为常数.",
+        "answer": "证明 只要证对于 $ (a,b) $内任意两点 $ x_{1}<x_{2} $，有 $ f(x_{1})=f(x_{2}) $即可。对 $ f $在 $ [x_{1},x_{2}] $上应用拉格朗日中值公式便知， $ \\exists\\xi\\in(x_{1},x_{2}) $使得\n\n $$ f(x_{1})-f(x_{2})=f^{\\prime}(\\xi)(x_{1}-x_{2})=0, $$"
+    },
+    {
+        "question_id": "EX_062",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "若 f 在 $ (a, b) $ 内可导，并且存在常数 L > 0，使得\n\n $$ \\mid f^{\\prime}(x)\\mid\\leqslant L\\quad(a<x<b), $$ \n\n则 f 在 $ (a,b) $ 内满足利普希茨条件，即 $ \\forall x_{1},x_{2}\\in(a,b) $，有\n\n $$ \\mid f(x_{1})-f(x_{2})\\mid\\leqslant L\\mid x_{1}-x_{2}\\mid. $$",
+        "answer": "证明 $ \\forall x_{1}, x_{2} \\in (a, b) $，对 $ f $ 在 $ [x_{1}, x_{2}] $ 上应用定理 4.1.4 便知， $ \\exists \\xi \\in (x_{1}, x_{2}) $ 使得\n\n $$ \\mid f(x_{1})-f(x_{2})\\mid=\\mid f^{\\prime}(\\xi)(x_{1}-x_{2})\\mid\\leqslant L\\mid x_{1}-x_{2}\\mid. $$"
+    },
+    {
+        "question_id": "EX_063",
+        "type": "不等式证明",
+        "difficulty": "中等",
+        "question": "证明：\n\n $$ \\frac{x}{1+x}<\\ln(1+x)<x\\quad(x>-1,x\\neq0). $$",
+        "answer": "证明 根据拉格朗日中值公式(6)，当 x > -1 时，\n\n $$ \\ln(1+x)=\\ln(1+x)-\\ln(1+0)=\\frac{x}{1+\\theta x}(0<\\theta<1). $$ \n\n由于当 x > -1 且 $ x \\neq 0 $ 时，\n\n $$ \\frac{x}{1+x}<\\frac{x}{1+\\theta x}<x, $$ \n\n从而不等式(7)成立."
+    },
+    {
+        "question_id": "EX_064",
+        "type": "方程根的个数证明",
+        "difficulty": "中等",
+        "question": "证明下列方程恰有两个不同的实根：\n\n $$ x^{4}+2x^{3}+6x^{2}-4x-5=0. $$",
+        "answer": "证明 令 $ f(x)=x^{4}+2x^{3}+6x^{2}-4x-5. $ 易见， $ f(0)=-5<0 $，且\n\n $$ \\lim_{x\\to\\pm\\infty}f(x)=+\\infty, $$ \n\n从而 $ \\exists a<0 $ 与 b>0 使得 $ f(a)>0, f(b)>0 $。由连续函数的介值性质可知方程 $ f(x)=0 $ 至少有两个实根。\n\n另一方面，假定 $ f(x) $ 至少有三个实零点，则由罗尔定理知 $ f'(x) $ 至少有两个实零点，进而 $ f''(x) $ 至少有一个实零点。然而，根据二次多项式根与系数的关系，\n\n $$ f^{\\prime \\prime}(x)=12x^{2}+12x+12 $$ \n\n无实零点，所以 $ f(x) $ 恰有两个实零点。"
+    },
+    {
+        "question_id": "EX_065",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设函数 f 与 g 在 $ [a, b] $ 上连续，在 $ (a, b) $ 内可导。如果 $ f(a) = f(b) = 0 $，求证：存在 $ \\xi \\in (a, b) $，使得\n\n $$ f^{\\prime}(\\xi)+g^{\\prime}(\\xi)f(\\xi)=0. $$",
+        "answer": "令 $ h(x)=f(x)\\mathrm{e}^{g(x)} $，则 $ h(x) $ 在 $ [a,b] $ 上连续，在 $ (a,b) $ 内可导，且 $ h(a)=h(b)=0 $。应用罗尔定理便知存在 $ \\xi\\in(a,b) $，使得 $ h'(\\xi)=0 $，即\n\n $$ h^{\\prime}(\\xi)=\\left[f^{\\prime}(\\xi)+g^{\\prime}(\\xi)f(\\xi)\\right]\\mathrm{e}^{g(\\xi)}=0, $$ \n\n从而等式成立。"
+    },
+    {
+        "question_id": "EX_066",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "设函数 f 在 $ [a,b] $ 上可导. 求证：\n\n(1) 若 $ f_{+}^{\\prime}(a)f_{-}^{\\prime}(b)<0 $，则存在 $ \\xi\\in(a,b) $，使得 $ f^{\\prime}(\\xi)=0 $;\n\n(2) 若 $ f_{+}^{\\prime}(a) \\neq f_{-}^{\\prime}(b) $，则对介于 $ f_{+}^{\\prime}(a) $ 与 $ f_{-}^{\\prime}(b) $ 之间的任何实数 $ \\lambda $，存在 $ \\xi \\in (a, b) $，使得 $ f'(\\xi) = \\lambda $ （关于导函数的达布定理）.",
+        "answer": "（1）不妨设 $ f_{+}^{\\prime}(a)>0,f_{-}^{\\prime}(b)<0 $ （否则，可考虑 $ -f(x) $，即\n\n $$ \\lim_{x\\to a^{+}}\\frac{f(x)-f(a)}{x-a}>0\\ ;\\quad\\lim_{x\\to b^{-}}\\frac{f(x)-f(b)}{x-b}<0. $$ \n\n于是可以分别找到 $ x_{1}, x_{2} \\in (a, b) $，使得 $ f(x_{1}) > f(a) $ 且 $ f(x_{2}) > f(b) $，由此知 f 在 $ [a, b] $ 上的最大值在开区间 $ (a, b) $ 内某个点 $ \\xi $ 处取得，再由费马定理即知 $ f'(\\xi) = 0 $.\n\n(2) 令 $  g(x) = f(x) - \\lambda x  $，则 $  g(x)  $ 在 $ [a, b] $ 上可导且 $  g'(a)g'(b) < 0  $，由(1)，存在 $ \\xi \\in (a, b) $，使得 $  g'(\\xi) = 0  $，即 $  f'(\\xi) = \\lambda  $."
+    },
+    {
+        "question_id": "EX_067",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\lim_{x\\to0}\\frac{e^{x}-e^{-x}-2x}{x-\\sin x} $",
+        "answer": "逐次应用洛必达法则可得\n $$ \\begin{aligned}\\lim_{x\\to0}\\frac{\\mathrm{e}^{x}-\\mathrm{e}^{-x}-2x}{x-\\sin x}&=\\lim_{x\\to0}\\frac{\\mathrm{e}^{x}+\\mathrm{e}^{-x}-2}{1-\\cos x}\\\\&=\\lim_{x\\to0}\\frac{\\mathrm{e}^{x}-\\mathrm{e}^{-x}}{\\sin x}=\\lim_{x\\to0}\\frac{\\mathrm{e}^{x}+\\mathrm{e}^{-x}}{\\cos x}=2.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_068",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ \\lim_{x\\to0^{+}}\\frac{\\ln\\cot x}{\\ln x} $",
+        "answer": "解 逐次应用洛必达法则可得\n\n $$ \\lim_{x\\to0^{+}}\\frac{\\ln\\cot x}{\\ln x}=\\lim_{x\\to0^{+}}\\frac{\\frac{1}{\\cot x}\\cdot\\frac{-1}{\\sin^{2}x}}{\\frac{1}{x}}=-\\lim_{x\\to0^{+}}\\frac{x}{\\sin x\\cos x}=-1. $$"
+    },
+    {
+        "question_id": "EX_069",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ \\lim_{x\\to+\\infty}\\frac{\\frac{\\pi}{2}-\\arctan x}{x^{-1}} $",
+        "answer": "解  $ \\lim_{x\\to+\\infty}\\frac{\\frac{\\pi}{2}-\\arctan x}{x^{-1}}=\\lim_{x\\to+\\infty}\\frac{\\frac{-1}{1+x^{2}}}{-x^{-2}}=1. $"
+    },
+    {
+        "question_id": "EX_070",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "设  $ f(x) $ 在  $ (a, +\\infty) $ 内可导且  $ \\lim_{x \\to +\\infty} [f'(x) + f(x)] = a $，证明  $ \\lim_{x \\to +\\infty} f(x) = a $， $ \\lim_{x \\to +\\infty} f'(x) = 0 $.",
+        "answer": "证明 由定理 4.2.3，\n\n $$ \\begin{aligned}\\lim_{x\\to+\\infty}f(x)&=\\lim_{x\\to+\\infty}\\frac{\\mathrm{e}^{x}f(x)}{\\mathrm{e}^{x}}=\\lim_{x\\to+\\infty}\\frac{(\\mathrm{e}^{x}f(x))^{\\prime}}{(\\mathrm{e}^{x})^{\\prime}}\\\\&=\\lim_{x\\to+\\infty}(f(x)+f^{\\prime}(x))=a.\\end{aligned} $$ \n\n进而知  $ \\lim_{x\\to+\\infty}f'(x)=0. $"
+    },
+    {
+        "question_id": "EX_071",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\lim_{x\\to1}\\left(\\frac{x}{x-1}-\\frac{1}{\\ln x}\\right) $",
+        "answer": "解 这是一个 $ \\infty-\\infty $型的不定型，通分化作 $ \\frac{0}{0} $型：\n\n $$ \\begin{aligned}\\lim_{x\\to1}\\left(\\frac{x}{x-1}-\\frac{1}{\\ln x}\\right)&=\\lim_{x\\to1}\\frac{x\\ln x-x+1}{(x-1)\\ln x}\\\\&=\\lim_{x\\to1}\\frac{\\ln x}{\\frac{x-1}{x}+\\ln x}=\\lim_{x\\to1}\\frac{\\frac{1}{x}}{\\frac{1}{x^{2}}+\\frac{1}{x}}=\\frac{1}{2}.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_072",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ \\lim_{x\\to0^{+}}x^{a}\\ln x\\ (a>0) $.",
+        "answer": " $$ \\lim_{x\\to0^{+}}x^{a}\\ln x=\\lim_{x\\to0^{+}}\\frac{\\ln x}{x^{-a}}=\\lim_{x\\to0^{+}}\\frac{x^{-1}}{-a x^{-a-1}}=\\lim_{x\\to0^{+}}\\frac{-x^{a}}{a}=0. $$ "
+    },
+    {
+        "question_id": "EX_073",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "计算 $ \\lim_{x\\to0}\\left(\\frac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}} $",
+        "answer": "解 令  $ y=\\left(\\frac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}} $，则  $ \\ln y=\\frac{\\ln\\sin x-\\ln x}{x^{2}}\\left(\\frac{0}{0}\\text{型}\\right) $。由定理 4.2.1，\n\n $$ \\begin{aligned}\\lim_{x\\to0}&\\frac{\\ln(\\sin x/x)}{x^{2}}=\\lim_{x\\to0}\\frac{\\frac{x}{\\sin x}\\cdot\\frac{x\\cos x-\\sin x}{x^{2}}}{2x}\\\\&=\\lim_{x\\to0}\\frac{x\\cos x-\\sin x}{2x^{2}\\sin x}=\\lim_{x\\to0}\\frac{-x\\sin x}{4x\\sin x+2x^{2}\\cos x}=-\\frac{1}{6},\\end{aligned} $$ \n\n所以\n\n $$ \\lim_{x\\to0}\\left(\\frac{\\sin x}{x}\\right)^{\\frac{1}{x^{2}}}=\\lim_{x\\to0}\\mathrm{e}^{\\ln y}=\\mathrm{e}^{-\\frac{1}{6}}. $$"
+    },
+    {
+        "question_id": "EX_074",
+        "type": "公式推导",
+        "difficulty": "基础",
+        "question": "写出 $ f(x)=\\ln(1+x) $ 带皮亚诺余项的 n 阶麦克劳林公式。",
+        "answer": " $$ f^{(k)}(x)=(-1)^{k-1}(k-1)!(1+x)^{-k}\\quad(k=1,2,\\cdots), $$ \n所以\n\n $$ \\ln(1+x)=x-\\frac{x^{2}}{2}+\\frac{x^{3}}{3}-\\cdots+(-1)^{n-1}\\frac{x^{n}}{n}+o(x^{n}). $$ "
+    },
+    {
+        "question_id": "EX_075",
+        "type": "公式推导",
+        "difficulty": "基础",
+        "question": "写出 $ f(x)=(1+x)^{a}(a\\neq0) $ 带皮亚诺余项的 n 阶麦克劳林公式。",
+        "answer": " $$ f^{(k)}(x)=a(a-1)\\cdots(a-k+1)(1+x)^{a-k}\\quad(k=1,2,\\cdots), $$ \n所以\n\n $$ (1+x)^{a}=1+ax+\\frac{a(a-1)}{2!}x^{2}+\\cdots+\\frac{a(a-1)\\cdots(a-n+1)}{n!}x^{n}+o(x^{n}). $$ "
+    },
+    {
+        "question_id": "EX_076",
+        "type": "间接展开法应用",
+        "difficulty": "中等",
+        "question": "求 $ f(x)=\\frac{1}{2x-x^{2}} $ 在点 $ x_{0}=1 $ 处带皮亚诺余项的 2n 阶泰勒公式。",
+        "answer": "在例 4.3.4 中，若取 a=-1，则得函数 $ \\frac{1}{1+t} $ 的 n 阶麦克劳林公式为\n\n $$ \\frac{1}{1+t}=1-t+t^{2}-\\cdots+(-1)^{n}t^{n}+o(t^{n})\\quad(t\\rightarrow0). $$ \n\n用-t代替t，即得\n\n $$ \\frac{1}{1-t}=1+t+t^{2}+\\cdots+t^{n}+o(t^{n})\\quad(t\\rightarrow0). $$ \n\n再令 $ t=(x-1)^{2} $，则当 $ x\\rightarrow1 $ 时有\n\n $$ \\begin{aligned}\\frac{1}{2x-x^{2}}&=\\frac{1}{1-(x-1)^{2}}\\\\&=1+(x-1)^{2}+(x-1)^{4}+\\cdots+(x-1)^{2n}+o((x-1)^{2n}).\\end{aligned} $$ \n\n根据定理 4.3.3，此式即为 f 在点 $ x_{0}=1 $ 处带皮亚诺余项的 2n 阶泰勒公式."
+    },
+    {
+        "question_id": "EX_077",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "#### ▶ 例 4.3.7\n\n求 e 的近似值，使得误差不大于  $ 10^{-5} $",
+        "answer": "解  $ e^{x} $ 带拉格朗日余项的 n 阶麦克劳林公式为\n\n $$ \\mathrm{e}^{x}=1+x+\\frac{x^{2}}{2!}+\\cdots+\\frac{x^{n}}{n!}+\\frac{\\mathrm{e}^{\\xi}}{(n+1)!}x^{n+1}\\quad(\\xi\\in(0,x)). $$ \n\n取 x=1 即得\n\n $$ \\mathrm{e}=1+1+\\frac{1}{2!}+\\cdots+\\frac{1}{n!}+\\frac{\\mathrm{e}^{\\xi}}{(n+1)!}\\quad(\\xi\\in(0,1)). $$ \n\n若取 n=8 ，则\n\n $$ \\frac{\\mathrm{e}^{\\xi}}{(8+1)!}<\\frac{3}{9!}<10^{-5}. $$ \n\n所以\n\n $$ \\mathrm{e}\\approx1+1+\\frac{1}{2!}+\\cdots+\\frac{1}{8!}\\approx2.71828. $$"
+    },
+    {
+        "question_id": "EX_078",
+        "type": "极限计算",
+        "difficulty": "中等",
+        "question": "#### ▶ 例 4.3.8 ……\n\n求极限  $ \\lim_{x\\to0^{+}}\\frac{e^{\\sin^{2}x}-\\cos(2\\sqrt{x})-2x}{x^{2}} $",
+        "answer": "解 由例 4.3.6，\n\n $$ \\mathrm{e}^{\\sin^{2}x}=1+x^{2}+\\frac{1}{6}x^{4}+o(x^{4})\\quad(x\\rightarrow0), $$ \n\n $$ \\begin{align*}\\cos\\big(2\\sqrt{x}\\big)&=1-\\frac{1}{2}\\left(2\\sqrt{x}\\right)^{2}+\\frac{1}{4!}\\left(2\\sqrt{x}\\right)^{4}+o(x^{2})\\\\&=1-2x+\\frac{2}{3}x^{2}+o(x^{2})\\ (x\\to0^{+}),\\end{align*} $$ \n\n所以\n\n $$ \\lim_{x\\to0^{+}}\\frac{\\mathrm{e}^{\\sin^{2}x}-\\cos(2\\sqrt{x})-2x}{x^{2}}=\\lim_{x\\to0^{+}}\\frac{\\frac{1}{3}x^{2}+o(x^{2})}{x^{2}}=\\frac{1}{3}. $$"
+    },
+    {
+        "question_id": "EX_079",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求 a 与 k 的值使得极限  $ \\lim_{x\\to0}\\frac{e^{ax^{k}}-\\cos(x^{2})}{x^{8}} $ 存在，并求出极限值.",
+        "answer": "将函数  $ \\cos(x^{2}) $ 与  $ e^{ax^{k}} $ 分别展开为带皮亚诺余项的麦克劳林公式：\n\n $$ \\cos(x^{2})=1-\\frac{1}{2!}x^{4}+\\frac{1}{4!}x^{8}+o(x^{8})\\quad(x\\rightarrow0), $$ \n\n $$ \\mathrm{e}^{ax^{k}}=1+ax^{k}+\\frac{1}{2}(ax^{k})^{2}+o(x^{2k})\\quad(x\\rightarrow0). $$ \n\n于是\n\n $$ \\mathrm{e}^{a x^{k}}-\\cos(x^{2})=\\frac{1}{2}x^{4}+a x^{k}+\\frac{a^{2}}{2}x^{2k}-\\frac{1}{4!}x^{8}+o(x^{2k})+o(x^{8}). $$ \n\n由此知，当  $ a=-\\frac{1}{2} $ 且 k=4 时，极限  $ \\lim_{x\\to0}\\frac{\\mathrm{e}^{ax^{k}}-\\cos(x^{2})}{x^{8}}=\\frac{1}{12} $"
+    },
+    {
+        "question_id": "EX_080",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "试证明不等式\n\n $$ \\left|\\frac{\\sin x-\\sin y}{x-y}-\\cos y\\right|\\leqslant\\frac{1}{2}\\mid x-y\\mid\\quad(x,y\\in\\mathbb{R}). $$",
+        "answer": "将函数  $ \\sin x $ 在点 y 处展开为带拉格朗日余项的 1 阶泰勒公式：\n\n $$ \\sin x=\\sin y+(x-y)\\cos y-\\frac{1}{2}\\left(x-y\\right)^{2}\\sin\\xi, $$ \n\n其中  $ \\xi $ 介于 x, y 之间。因此\n\n $$ \\left|\\frac{\\sin x-\\sin y}{x-y}-\\cos y\\right|=\\frac{1}{2}\\mid(x-y)\\sin\\xi\\mid\\leqslant\\frac{1}{2}\\mid x-y\\mid. $$"
+    },
+    {
+        "question_id": "EX_081",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求函数  $ f(x)=x^{4}-2x^{2} $ 的单调递增与单调递减区间.",
+        "answer": "解  $ f^{\n\\prime}(x)=4x^{3}-4x=4x(x-1)(x+1) $，因此在区间 $ (-∞,-1) $与 $ (0,1) $内 $ f^{\n\\prime}(x)<0 $，而在区间 $ (-1,0) $与 $ (1,+∞) $内 $ f^{\n\\prime}(x)>0 $。根据定理4.4.1便知在区间 $ (-∞,-1) $与 $ (0,1) $内 $ f(x) $单调递减，而在区间 $ (-1,0) $与 $ (1,+∞) $内 $ f(x) $单调递增。"
+    },
+    {
+        "question_id": "EX_082",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "证明不等式  $ e^{x} > x $.",
+        "answer": "证明 考虑函数  $ f(x)=\\mathrm{e}^{x}-x $，有  $ f^{\n\\prime}(x)=\\mathrm{e}^{x}-1 $。于是在区间  $ (0,+\\infty) $ 内  $ f^{\n\\prime}(x)>0 $，从而  $ f(x) $ 严格单调递增；在区间  $ (-∞,0) $ 内  $ f^{\n\\prime}(x)<0 $，从而  $ f(x) $ 严格单调递减。再注意到  $ f(0)=1>0 $，便知  $ f(x)>0 $，即  $ \\mathrm{e}^{x}>x $。"
+    },
+    {
+        "question_id": "EX_083",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "证明不等式：(1) $ \\sin x<x(x>0) $; (2) $ \\cos x>1-\\frac{x^{2}}{2}(x\\neq0) $.",
+        "answer": "证明 (1) 考虑函数  $ f(x)=x-\\sin x $，有  $ f'(x)=1-\\cos x \\geqslant 0 $，且  $ f'(x) $ 在任何开区间内不恒等于零。根据定理 4.4.1 便知  $ f(x) $ 在区间  $ [0, +\\infty) $ 内严格单调递增。而  $ f(0)=0 $，所以当 x>0 时， $ f(x)>0 $，即  $ \\sin x<x $。\n\n(2) 不等式两端都是偶函数，因而只需考虑 x>0 的情形。令  $ g(x)=\\cos x-1+\\frac{x^{2}}{2} $，由(1)， $ g'(x)=-\\sin x+x>0(x>0) $。根据定理 4.4.1 便知  $ g(x) $ 在区间  $ [0,+\\infty) $ 内严格单调递增。而  $ g(0)=0 $，所以当 x>0 时， $ g(x)>0 $，即  $ \\cos x>1-\\frac{x^{2}}{2} $。"
+    },
+    {
+        "question_id": "EX_084",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "证明不等式：(1) $ \\sin x < x \\ (x > 0) $; (2) $ \\cos x > 1 - \\frac{x^{2}}{2} \\ (x \\neq 0) $.",
+        "answer": "证明 (1) 考虑函数 $ f(x) = x - \\sin x $，有 $ f'(x) = 1 - \\cos x \\geqslant 0 $，且 $ f'(x) $ 在任何开区间内不恒等于零。根据定理 4.4.1 便知 $ f(x) $ 在区间 $ [0, +\\infty) $ 内严格单调递增。而 $ f(0) = 0 $，所以当 $ x > 0 $ 时，$ f(x) > 0 $，即 $ \\sin x < x $。\n\n(2) 不等式两端都是偶函数，因而只需考虑 $ x > 0 $ 的情形。令 $ g(x) = \\cos x - 1 + \\frac{x^{2}}{2} $，则 $ g'(x) = -\\sin x + x $。由(1)知，当 $ x > 0 $ 时，$ x - \\sin x > 0 $，即 $ g'(x) > 0 $。因此 $ g(x) $ 在 $ [0, +\\infty) $ 上严格单调递增。又 $ g(0) = 0 $，故当 $ x > 0 $ 时，$ g(x) > 0 $，即 $ \\cos x > 1 - \\frac{x^{2}}{2} $。由于两边均为偶函数，该不等式对所有 $ x \\neq 0 $ 成立。"
+    },
+    {
+        "question_id": "EX_085",
+        "type": "应用优化问题（几何建模）",
+        "difficulty": "中等",
+        "question": "有一块边长为 $ a $ 的正方形铁皮，在它的四个角截去同样的小正方形做成一个无盖方盒。问截去怎样边长的小正方形，才能使做成的无盖方盒容积最大？",
+        "answer": "设截去的小正方形边长为 $ x $，则所做成的无盖方盒容积为\n\n $$ V(x)=x\\left(a-2x\\right)^{2}\\quad(0\\leqslant x\\leqslant a/2). $$ \n\n只需要求出函数  $ V(x)=x(a-2x)^{2} $ 在  $ [0,a/2] $ 上的最大值点即可.\n\n $$ V^{\\prime}(x)=(a-6x)(a-2x), $$ \n\n $ V(x) $ 在  $ (0,a/2) $ 内有唯一驻点  $ x=\\frac{a}{6} $. 而  $ V''\\left(\\frac{a}{6}\\right)=-4a<0 $, 故  $ x=\\frac{a}{6} $ 为  $ V(x) $ 的极大值点. 再注意到  $ V(x) $ 在两个端点处为零, 即得  $ x=\\frac{a}{6} $ 为  $ V=x(a-2x)^{2} $ 的最大值点. 所以, 当截去的小正方形边长为  $ \\frac{a}{6} $ 时, 做成的方盒容积最大."
+    },
+    {
+        "question_id": "EX_086",
+        "type": "应用题（物理建模+极值问题）",
+        "difficulty": "中等",
+        "question": "光学中关于光线传播的费马原理是说，光线总是沿着需要时间最少的路径传播。现设有两种介质，它们以平面为分界面。光线从第一种介质中点 A 射向第二种介质中点 B，设光在这两种介质中的速度分别为 $ v_{1} $ 与 $ v_{2} $，试根据费马原理确定光线的传播路径。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_402_687_633_776.jpg\" alt=\"Image\" width=\"32%\" /></div>\n\n图 4.4.1",
+        "answer": "解 过 A, B 两点作垂直于分界面的平面 $ \\pi $ 与分界面相交于一条分界线 l。光线从点 A 出发经过分界线 l 上点 P 折射到点 B（图 4.4.1）。从 A, B 两点分别向 l 引垂线相交于垂足 M, Q，令\n\n $$ AM=h,BQ=b,MQ=d,MP=x, $$ \n\n则光线从点 A 出发经过分界线 L 上点 P 折射到点 B 所用的时间为\n\n $$ T(x)=\\frac{1}{v_{1}}\\sqrt{x^{2}+h^{2}}+\\frac{1}{v_{2}}\\sqrt{(d-x)^{2}+b^{2}}, $$ \n\n对函数 $ T(x) $ 求导：\n\n $$ T^{\\prime}(x)=\\frac{x}{v_{1}\\sqrt{x^{2}+h^{2}}}-\\frac{d-x}{v_{2}\\sqrt{(d-x)^{2}+b^{2}}}, $$ \n\n $$ T^{\\prime \\prime}(x)=\\frac{h^{2}}{v_{1}(x^{2}+h^{2})^{\\frac{3}{2}}}+\\frac{b^{2}}{v_{2}\\left[(d-x)^{2}+b^{2}\\right]^{\\frac{3}{2}}}. $$ \n\n $ T^{\\prime\\prime}(x)>0 $，故 $ T^{\\prime}(x) $严格单调递增。由于 $ T^{\\prime}(0)<0,T^{\\prime}(d)>0 $，从而 $ T^{\\prime}(x) $有唯一驻点 $ x_{0}\\in(0,d) $，且在 $ [0,x_{0}) $内取负值，在 $ (x_{0},d) $内取正值。进而知 $ T(x) $在 $ [0,x_{0}) $内严格单调递减，在 $ (x_{0},d) $内严格单调递增，所以 $ x_{0} $为 $ T(x) $的最小值点，并且 $ x_{0} $满足等式\n\n $$ \\frac{x_{0}}{v_{1}\\sqrt{x_{0}^{2}+h^{2}}}=\\frac{d-x_{0}}{v_{2}\\sqrt{(d-x_{0})^{2}+b^{2}}}. $$ \n\n若记 $ \\angle APM=\\alpha,\\angle BPQ=\\beta $，则上面等式可改写为\n\n $$ \\frac{\\cos\\alpha}{v_{1}}=\\frac{\\cos\\beta}{v_{2}}. $$ \n\n这正是光的折射定律。"
+    },
+    {
+        "question_id": "EX_087",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "指出曲线  $ y=(x-1)^{3}(x+1) $ 的下凸与上凸区间以及拐点.",
+        "answer": "解  $ y' = 2(x - 1)^{2}(2x + 1) $， $ y'' = 12x(x - 1) $.\n\n于是曲线的下凸区间是 $ (-∞,0] $与 $ [1,+∞) $，上凸区间是 $ [0,1] $，拐点是 $ (0,-1) $和 $ (1,0) $."
+    },
+    {
+        "question_id": "EX_088",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ x_{1}, x_{2}, \\cdots, x_{n} $ 是正实数，求证：\n\n $$ \\sqrt[n]{x_{1}x_{2}\\cdots x_{n}}\\leqslant\\frac{x_{1}+x_{2}+\\cdots+x_{n}}{n}. $$",
+        "answer": "证明 考虑函数  $ f(x)=\\ln x, x \\in (0, +\\infty) $. 因为  $ f''(x)=-\\frac{1}{x^{2}}<0 $，所以 f 是区间  $ (0, +\\infty) $ 上的上凸函数. 于是\n\n $$ \\ln\\left(\\frac{x_{1}+x_{2}+\\cdots+x_{n}}{n}\\right)\\geqslant\\frac{\\ln x_{1}+\\ln x_{2}+\\cdots+\\ln x_{n}}{n}=\\ln\\left(x_{1}x_{2}\\cdots x_{n}\\right)^{\\frac{1}{n}}. $$ \n\n由对数函数的单调性,即得不等式(8)."
+    },
+    {
+        "question_id": "EX_089",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求函数  $ f(x)=\\frac{(x-1)^{3}}{(x+1)^{2}} $ 的渐近线.",
+        "answer": "解 显然，当  $ x \\rightarrow -1 $ 时， $ f(x) \\rightarrow \\infty $，所以直线 x = -1 是  $ y = f(x) $ 的一条竖直渐近线。另一方面，\n\n $$ \\lim_{x\\to\\infty}\\frac{f(x)}{x}=1,\\quad\\lim_{x\\to\\infty}[f(x)-x]=-6, $$ \n\n所以直线 y=x-6 为  $ y=f(x) $ 的一条斜渐近线."
+    },
+    {
+        "question_id": "EX_090",
+        "type": "函数作图",
+        "difficulty": "中等",
+        "question": "作函数  $ f(x)=x^{3}+x^{2}-x-1 $ 的图形.",
+        "answer": "解  $ f(x)=(x+1)^{2}(x-1) $ 在  $ \\mathbb{R} $ 上定义且有零点  $ x=\\pm1 $，\n\n $$ f^{\\prime}(x)=3x^{2}+2x-1=(3x-1)(x+1), $$ \n\n $$ f^{\\prime \\prime}(x)=6x+2. $$ \n\n故 f 有驻点 x = -1 与  $ x = \\frac{1}{3} $. 由于  $ f''(-1) < 0, f''\\left(\\frac{1}{3}\\right) > 0 $, 因此 x = -1 是 f 的极大值点,  $ x = \\frac{1}{3} $ 是 f 的极小值点.\n\n在 $ \\left(-\\infty,-\\frac{1}{3}\\right) $内， $ f''(x)<0 $，故 $ f(x) $上凸，在 $ \\left(-\\frac{1}{3},+\\infty\\right) $内， $ f''(x)>0 $，\n\n故  $ f(x) $ 下凸.\n\n在 $ (-∞,-1) $与 $ \\left(\\frac{1}{3},+∞\\right) $内， $ f'(x)>0 $，因此f在 $ (-∞,-1) $与 $ \\left(\\frac{1}{3},+∞\\right) $内严格单调递增；在 $ \\left(-1,\\frac{1}{3}\\right) $内， $ f'(x)<0 $，因此f在 $ \\left(-1,\\frac{1}{3}\\right) $内严格单调递减.\n\n此外， $ f(x) $ 无渐近线。"
+    },
+    {
+        "question_id": "EX_091",
+        "type": "函数作图题",
+        "difficulty": "中等",
+        "question": "作函数  $ f(x)=\\frac{(x+1)^{2}}{x} $ 的图形。",
+        "answer": "解 f 的定义域是  $ (-∞,0)∪(0,+∞) $， $ f(-1)=0 $，\n\n $$ f^{\\prime}(x)=\\frac{(x-1)(x+1)}{x^{2}},\\quad f^{\\prime \\prime}(x)=\\frac{2}{x^{3}}. $$ \n\nf 有驻点 x = -1 与 x = 1 。由于  $ f''(-1) < 0, f''(1) > 0 $ ，因此 x = -1 是 f 的极大值点，x = 1 是 f 的极小值点。\n\n在 $ (-∞,0) $内， $ f''(x)<0 $，故 $ f(x) $上凸，在 $ (0,+∞) $内， $ f''(x)>0 $，故 $ f(x) $ 下凸。\n\n在 $ (-∞,-1) $与 $ (1,+∞) $内， $ f'(x)>0 $，因此f在 $ (-∞,-1) $与 $ (1,+∞) $内严格单调递增；在 $ (-1,0) $与 $ (0,1) $内， $ f'(x)<0 $，因此f在 $ (-1,0) $与 $ (0,1) $内严格单调递减。此外，\n\n $$ \\lim_{x\\to0}f(x)=\\infty,\\quad\\lim_{x\\to\\infty}\\frac{f(x)}{x}=1,\\quad\\lim_{x\\to\\infty}\\left[f(x)-x\\right]=2, $$ \n\n所以直线 x=0 是  $ f(x) $ 的竖直渐近线，直线  $ y=x+2 $ 为  $ f(x) $ 的斜渐近线。\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_2_imgs_img_in_image_box_189_399_530_661.jpg\" alt=\"Image\" width=\"47%\" /></div>\n\n<div style=\"text-align: center;\">图 4.6.1</div>"
+    },
+    {
+        "question_id": "EX_092",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "求证：狄利克雷函数  $ D(x) $ 在  $ [0,1] $ 上不可积.",
+        "answer": "证明 对于  $ [0,1] $ 的任一分割 T:  $ 0 = x_{0} < x_{1} < \\cdots < x_{n} = 1 $, f 在每个子区间  $ [x_{i-1}, x_{i}] $ 中的上、下确界分别是 1 与 0，从而\n\n $$ U(D,T)-L(D,T)=\\sum_{i=1}^{n}(1-0)(x_{i}-x_{i-1})=1. $$ \n\n因此  $ D(x) $ 在  $ [0,1] $ 上不可积."
+    },
+    {
+        "question_id": "EX_093",
+        "type": "证明题",
+        "difficulty": "基础",
+        "question": "证明 $ f(x)=\\cos x $ 在 $ \\mathbb{R} $ 上一致连续.",
+        "answer": "证明 $ \\forall x, y \\in \\mathbb{R} $,\n\n $$ \\left|\\cos x-\\cos y\\right|=\\left|2\\sin\\frac{x+y}{2}\\sin\\frac{x-y}{2}\\right|\\leqslant\\left|x-y\\right|. $$ \n\n于是，$ \\forall \\varepsilon > 0 $，取 $ \\delta = \\varepsilon $，则 $ \\forall x, y \\in \\mathbb{R} $，只要 $ |x - y| < \\delta $ 便有\n\n $$ \\left|\\cos x-\\cos y\\right|<\\varepsilon. $$ \n\n所以 $ f(x)=\\cos x $ 在 $ \\mathbb{R} $ 上一致连续."
+    },
+    {
+        "question_id": "EX_094",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "证明 $ f(x)=\\sin\\frac{1}{x} $ 在 $ (0,1) $ 上不一致连续.",
+        "answer": "证明 $ \\forall n\\in\\mathbb{N}^{*} $，取 $ x_{n}=\\frac{1}{2n\\pi+\\frac{\\pi}{2}} $，$ y_{n}=\\frac{1}{2n\\pi} $，则 $ x_{n},y_{n}\\in(0,1) $，并且\n\n $$ y_{n}-x_{n}=\\frac{1}{2n\\pi}-\\frac{1}{2n\\pi+\\frac{\\pi}{2}}<\\frac{1}{n^{2}}, $$ \n\n $$ f(x_{n})-f(y_{n})=\\sin\\frac{1}{x_{n}}-\\sin\\frac{1}{y_{n}}=\\sin\\left(2n\\pi+\\frac{\\pi}{2}\\right)=1. $$ \n\n所以，若取 $ 0 < \\varepsilon < 1 $，则 $ \\forall \\delta > 0 $，只要 $ 1/n^{2} < \\delta $，便有 $ |x_{n} - y_{n}| < \\delta $，并且\n\n $$ f(x_{n})-f(y_{n})=1>\\varepsilon. $$ \n\n所以 $ f(x)=\\sin\\frac{1}{x} $ 在 $ (0,1) $ 上不一致连续."
+    },
+    {
+        "question_id": "EX_095",
+        "type": "证明题",
+        "difficulty": "困难",
+        "question": "设 f 在闭区间 $ [a, b] $ 上连续，则 f 在 $ [a, b] $ 上一致连续.",
+        "answer": "证明 假定 f 在 $ [a, b] $ 上不是一致连续的，即存在 $ \\varepsilon_0 > 0 $，使得 $ \\forall \\delta > 0 $，都可以找到 $ x_\\delta, y_\\delta \\in [a, b] $ 满足 $ |x_\\delta - y_\\delta| < \\delta $，并且\n\n $$ \\mid f(x_{\\delta})-f(y_{\\delta})\\mid\\geqslant\\varepsilon_{0}. $$ \n\n分别取 $ \\delta=1,\\frac{1}{2},\\cdots,\\frac{1}{n},\\cdots $ ,则得 $ [a,b] $ 中两个点列 $ x_{1},x_{2},\\cdots,x_{n},\\cdots $ 与 $ y_{1},y_{2},\\cdots,y_{n},\\cdots $ ，满足 $ \\left|x_{n}-y_{n}\\right|<\\frac{1}{n} $ 并且\n\n $$ |f(x_{n})-f(y_{n})|\\geqslant\\varepsilon_{0}(n=1,2,\\cdots). $$ \n\n由于 $ \\{x_{n}\\} $有界，故存在收敛子列（定理1.5.1） $ \\{x_{n_{k}}\\}:x_{n_{k}}\\to x_{0}\\in[a,b] $.再由 $ |x_{n}-y_{n}|<\\frac{1}{n} $知 $ y_{n_{k}}\\to x_{0} $.而f在点 $ x_{0} $连续，于是\n\n $$ \\lim_{k\\to\\infty}(f(x_{n_{k}})-f(y_{n_{k}}))= f(x_{0})-f(x_{0})=0, $$ \n\n这与前述不等式相矛盾. 所以 f 在 $ [a,b] $ 上一致连续."
+    },
+    {
+        "question_id": "EX_096",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 $ f \\in C[a, +\\infty) $，且 $ \\lim_{x \\to +\\infty} f(x) = A $。试证明 $ f(x) $ 在 $ [a, +\\infty) $ 上一致连续。",
+        "answer": "证明：$ \\forall \\varepsilon > 0 $，由于 $ \\lim_{x \\to +\\infty} f(x) = A $，$ \\exists M \\geqslant a $，使得当 $ x \\geqslant M $ 时，有\n $$ \\mid f(x)-A\\mid<\\frac{\\varepsilon}{4}, $$ \n于是 $ \\forall x, y \\in [M, +\\infty) $，有\n $$ \\mid f(x)-f(y)\\mid<\\frac{\\varepsilon}{2}. $$ \n另一方面，$ f\\in C[a,M] $，由定理5.1.2，f在区间 $ [a,M] $上一致连续。故 $ \\exists\\delta>0 $，使得 $ \\forall x,y\\in[a,M] $，只要 $ |x-y|<\\delta $，就有不等式(12)成立。由此知 $ \\forall x,y\\in[a,+\\infty) $，且 $ |x-y|<\\delta $，\n\n(1) 若 $ x, y \\in [a, M] $ 或 $ x, y \\in [M, +\\infty) $，则不等式 (12) 成立；\n\n(2) 若 $ x \\in [a, M] $, $ y \\in [M, +\\infty) $，则 $ |x - M| < \\delta $, $ |M - y| < \\delta $，于是\n $$ \\mid f(x)-f(y)\\mid\\leqslant\\mid f(x)-f(M)\\mid+\\mid f(M)-f(y)\\mid<\\varepsilon, $$ \n所以 $ f(x) $ 在 $ [a, +\\infty) $ 上一致连续."
+    },
+    {
+        "question_id": "EX_097",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "若 $ f \\in C[a, b] $，则 $ f \\in R[a, b] $.",
+        "answer": "证明：由定理 5.1.2 有限闭区间上的连续函数一定是一致连续的，所以 $ \\forall \\varepsilon > 0, \\exists \\delta > 0 $，使得 $ \\forall x, y \\in [a, b] $，只要 $ |x - y| < \\delta $，就有\n $$ \\mid f(x)-f(y)\\mid<\\frac{\\varepsilon}{b-a}. $$ \n令 T 为将 $ [a, b] $ n 等分的分割，则 $ |T| = \\frac{b - a}{n} < \\delta $，且由 (13) 式，\n $$ 0\\leqslant M_{i}-m_{i}<\\frac{\\varepsilon}{b-a}(i=1,2,\\cdots,n), $$ \n于是\n $$ U(f,T)-L(f,T)=\\sum_{i=1}^{n}(M_{i}-m_{i})(x_{i}-x_{i-1})<\\frac{\\varepsilon}{b-a}\\bullet(b-a)=\\varepsilon. $$ \n应用定理 5.1.1 即得 $ f \\in R[a, b] $."
+    },
+    {
+        "question_id": "EX_098",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ f \\\\( C[0,1] $，且  $ m \\leqslant f(x) \\leqslant M, x \\in [0,1] $。又设 g 为  $ [m,M] $ 上连续的下凸函数，求证：\n\n $$ g\\Big(\\int_{0}^{1}f(x)\\mathrm{d}x\\Big)\\leqslant\\int_{0}^{1}g(f(x))\\mathrm{d}x. $$",
+        "answer": "证明 f 与 g 连续，故  $ g \\circ f $ 连续。根据定理 5.1.3，f 与  $ g \\circ f $ 在  $ [0,1] $ 上可积。又因为 g 是  $ [m,M] $ 上的下凸函数，所以  $ \\forall n \\in \\mathbb{N}^* $，\n\n $$ g\\Big(\\sum_{i=1}^{n}\\frac{1}{n}f\\Big(\\frac{i}{n}\\Big)\\Big)\\leqslant\\sum_{i=1}^{n}\\frac{1}{n}g\\Big(f\\Big(\\frac{i}{n}\\Big)\\Big). $$ \n\n令  $ n \\rightarrow \\infty $ 即得(14)式."
+    },
+    {
+        "question_id": "EX_099",
+        "type": "不等式证明题",
+        "difficulty": "中等",
+        "question": "设  $ f \\in C[a, b] $，求证：\n\n $$ \\left(\\int_{a}^{b}f(x)\\cos x\\mathrm{d}x\\right)^{2}+\\left(\\int_{a}^{b}f(x)\\sin x\\mathrm{d}x\\right)^{2}\\leqslant\\left(\\int_{a}^{b}\\left|f(x)\\right|\\mathrm{d}x\\right)^{2}. $$ ",
+        "answer": "证明 应用柯西不等式，\n\n $$ \\begin{align*}\\left(\\int_{a}^{b}f(x)\\cos x\\mathrm{d}x\\right)^{2}&\\leqslant\\left[\\int_{a}^{b}\\sqrt{\\mid f(x)\\mid}\\bullet\\left(\\sqrt{\\mid f(x)\\mid}\\cos x\\right)\\mathrm{d}x\\right]^{2}\\\\&\\leqslant\\int_{a}^{b}\\mid f(x)\\mid\\mathrm{d}x\\bullet\\int_{a}^{b}\\mid f(x)\\mid\\cos^{2}x\\mathrm{d}x.\\end{align*} $$ \n\n同理，\n\n $$ \\left(\\int_{a}^{b}f(x)\\sin x\\mathrm{d}x\\right)^{2}\\leqslant\\int_{a}^{b}\\left|f(x)\\right|\\mathrm{d}x\\bullet\\int_{a}^{b}\\left|f(x)\\right|\\sin^{2}x\\mathrm{d}x. $$ \n\n二式相加，即得不等式(5)."
+    },
+    {
+        "question_id": "EX_100",
+        "type": "极限计算与积分估计",
+        "difficulty": "中等",
+        "question": "求证  $ \\lim_{n\\to+\\infty}\\int_{n}^{n+x}\\frac{\\sin x}{x}dx=0 $",
+        "answer": "证明 由定理 5.2.2 可知，存在  $ \\xi_{n} \\in [n, n + \\pi] $，使\n\n $$ \\left|\\int_{n}^{n+\\pi}\\frac{\\sin x}{x}\\mathrm{d}x\\right|=\\left|\\pi\\left(\\frac{\\sin\\xi_{n}}{\\xi_{n}}\\right)\\right|\\leqslant\\frac{\\pi}{n}\\rightarrow0(n\\rightarrow\\infty). $$ "
+    },
+    {
+        "question_id": "EX_101",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 $ f \\in C[a, b] $，定义函数\n$$ F(x) = \\int_{a}^{x} (x - t) f(t) \\, dt $$\n求 $ F''(x) $。",
+        "answer": "首先将 $ F(x) $ 拆分为：\n$$ F(x)=x\\int_{a}^{x}f(t)\\mathrm{d}t-\\int_{a}^{x}t f(t)\\mathrm{d}t. $$ \n对 $ x $ 求导得：\n$$ F'(x)=\\int_{a}^{x}f(t)dt+xf(x)-xf(x)=\\int_{a}^{x}f(t)dt, $$\n再次求导得到：\n$$ F''(x) = f(x). $$"
+    },
+    {
+        "question_id": "EX_102",
+        "type": "极限计算",
+        "difficulty": "困难",
+        "question": "求极限\n$$ \\lim_{x\\to+\\infty}\\frac{\\left(\\int_{0}^{x}e^{t^{2}}dt\\right)^{2}}{\\int_{0}^{x}e^{2t^{2}}dt}. $$",
+        "answer": "应用洛必达法则：\n$$\n\\text{原极限} =\\lim_{x\\to+\\infty}\\frac{2\\mathrm{e}^{x^{2}}\\int_{0}^{x}\\mathrm{e}^{t^{2}}\\mathrm{d}t}{\\mathrm{e}^{2x^{2}}}=\\lim_{x\\to+\\infty}\\frac{2\\int_{0}^{x}\\mathrm{e}^{t^{2}}\\mathrm{d}t}{\\mathrm{e}^{x^{2}}}.\n$$\n再次使用洛必达法则：\n$$\n=\\lim_{x\\to+\\infty}\\frac{2\\mathrm{e}^{x^{2}}}{2x\\mathrm{e}^{x^{2}}}=\\lim_{x\\to+\\infty}\\frac{1}{x}=0.\n$$"
+    },
+    {
+        "question_id": "EX_103",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{\\cos^{2}x\\cdot\\sin^{2}x} $",
+        "answer": "解  $ \\int\\frac{\\mathrm{d}x}{\\cos^{2}x\\sin^{2}x}=\\int\\frac{\\sin^{2}x+\\cos^{2}x}{\\cos^{2}x\\sin^{2}x}\\mathrm{d}x=\\int\\left(\\frac{1}{\\cos^{2}x}+\\frac{1}{\\sin^{2}x}\\right)\\mathrm{d}x $\n\n $ =\\tan x-\\cot x+C. $"
+    },
+    {
+        "question_id": "EX_104",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{a^{2}-x^{2}}(a>0) $",
+        "answer": "解\n\n $$ \\begin{aligned}\\int\\frac{\\mathrm{d}x}{a^{2}-x^{2}}&=\\int\\frac{1}{2a}\\Big(\\frac{1}{a+x}+\\frac{1}{a-x}\\Big)\\mathrm{d}x\\\\&=\\frac{1}{2a}(\\ln\\mid a+x\\mid+\\ln\\mid a-x\\mid)+C=\\frac{1}{2a}\\ln\\left|\\frac{a+x}{a-x}\\right|+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_105",
+        "type": "分段函数积分",
+        "difficulty": "困难",
+        "question": "计算 $ \\int e^{|x|}dx. $",
+        "answer": "解 首先找到  $ e^{|x|} $ 在 R 上的一个原函数  $ F(x) $. 当  $ x \\geqslant 0 $ 时，取  $ F(x) = e^{x} $. 为保证  $ F(x) $ 在连接点 x = 0 处连续，当 x < 0 时，应取  $ F(x) = -e^{-x} + 2 $. 从而\n\n $$ \\int\\mathbf{e}^{|x|}\\mathrm{d}x=F(x)+C. $$"
+    },
+    {
+        "question_id": "EX_106",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int2xe^{x^{2}}dx. $",
+        "answer": "令  $ u = x^{2} $，则 du = 2xdx，于是\n\n $$ \\int2x\\mathrm{e}^{x^{2}}\\mathrm{d}x=\\int\\mathrm{e}^{u}\\mathrm{d}u=\\mathrm{e}^{u}+C=\\mathrm{e}^{x^{2}}+C. $$"
+    },
+    {
+        "question_id": "EX_107",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int\\cot xdx. $",
+        "answer": "令  $ u = \\sin x, du = \\cos x dx $，应用凑微分法，\n\n $$ \\int\\cot x\\mathrm{d}x=\\int\\frac{\\cos x}{\\sin x}\\mathrm{d}x=\\int\\frac{\\mathrm{d}u}{u}=\\ln|u|+C=\\ln|\\sin x|+C. $$ \n\n同理可得\n\n $$ \\int\\tan x\\mathrm{d}x=-\\ln|\\cos x|+C. $$"
+    },
+    {
+        "question_id": "EX_108",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{\\sqrt{a^{2}-x^{2}}} $",
+        "answer": "$$ \\int\\frac{\\mathrm{d}x}{\\sqrt{a^{2}-x^{2}}}=\\int\\frac{\\mathrm{d}\\left(\\frac{x}{a}\\right)}{\\sqrt{1-\\left(\\frac{x}{a}\\right)^{2}}}=\\arcsin\\frac{x}{a}+C. $$"
+    },
+    {
+        "question_id": "EX_109",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\sec xdx. $",
+        "answer": "应用凑微分法结合例 5.4.3 的结果可以得到\n\n $$ \\int\\sec x\\mathrm{d}x=\\int\\frac{\\cos x}{\\cos^{2}x}\\mathrm{d}x=\\int\\frac{\\mathrm{d}(\\sin x)}{1-\\sin^{2}x}=\\frac{1}{2}\\ln\\left|\\frac{1+\\sin x}{1-\\sin x}\\right|+C. $$ \n\n注意到\n\n $$ \\frac{1+\\sin x}{1-\\sin x}=\\frac{(1+\\sin x)^{2}}{1-\\sin^{2}x}=\\left(\\frac{1+\\sin x}{\\cos x}\\right)^{2}=\\left(\\sec x+\\tan x\\right)^{2}, $$ \n\n所以又有\n\n $$ \\int\\sec x\\mathrm{d}x=\\ln|\\sec x+\\tan x|+C. $$ \n\n同理可得\n\n $$ \\int\\csc x\\mathrm{d}x=\\frac{1}{2}\\ln\\left|\\frac{1-\\cos x}{1+\\cos x}\\right|+C=\\ln|\\csc x-\\cot x|+C. $$"
+    },
+    {
+        "question_id": "EX_110",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{x(1+x^{5})} $",
+        "answer": "解法一  \n$$ \\int\\frac{\\mathrm{d}x}{x(1+x^{5})}=\\int\\left[\\frac{1}{x}-\\frac{x^{4}}{1+x^{5}}\\right]\\mathrm{d}x=\\ln|x|-\\frac{1}{5}\\ln|1+x^{5}|+C. $$"
+    },
+    {
+        "question_id": "EX_111",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\sqrt{a^{2}-x^{2}}dx\\left(a>0\\right) $",
+        "answer": "解 设法做变换将被积函数中的根号去掉.为此采用第二换元法，令  $ x = a \\sin t $，则  $ \\left|t\\right| \\leqslant \\frac{\\pi}{2} $ 对应  $ \\left|x\\right| \\leqslant a $，并且  $ \\mathrm{d}x = a \\cos t \\mathrm{d}t, \\sqrt{a^{2} - x^{2}} = a \\sqrt{1 - \\sin^{2} t} = a \\cos t. $ 于是\n\n$$ \\begin{aligned}\\int\\sqrt{a^{2}-x^{2}}\\mathrm{d}x&=a^{2}\\int\\cos^{2}t\\mathrm{d}t=\\frac{1}{2}a^{2}\\int(1+\\cos2t)\\mathrm{d}t\\\\&=\\frac{1}{2}a^{2}\\left(t+\\frac{1}{2}\\sin2t\\right)+C.\\end{aligned} $$\n\n注意到  $ t \\in [-\\pi/2, \\pi/2] $ 时， $ t = \\arcsin \\frac{x}{a} $，且\n\n$$ \\frac{1}{2}\\sin2t=\\sin t\\cos t=\\sin t\\sqrt{1-\\sin^{2}t}=\\frac{x}{a}\\sqrt{1-\\frac{x^{2}}{a^{2}}}=\\frac{x}{a^{2}}\\sqrt{a^{2}-x^{2}}, $$\n\n所以\n\n$$ \\int\\sqrt{a^{2}-x^{2}}\\mathrm{d}x=\\frac{a^{2}}{2}(t+\\frac{1}{2}\\sin2t)+C=\\frac{a^{2}}{2}\\arcsin\\frac{x}{a}+\\frac{x}{2}\\sqrt{a^{2}-x^{2}}+C. $$"
+    },
+    {
+        "question_id": "EX_112",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{1+\\sqrt[3]{1+x}} $",
+        "answer": "解 令  $ u=\\sqrt[3]{1+x} $，则  $ x=u^{3}-1 $， $ dx=3u^{2}du $，于是\n\n$$ \\begin{aligned}\\int\\frac{\\mathrm{d}x}{1+\\sqrt[3]{1+x}}&=\\int\\frac{3u^{2}\\mathrm{d}u}{1+u}=3\\int\\left(u-1+\\frac{1}{1+u}\\right)\\mathrm{d}u\\\\&=3\\big[\\frac{1}{2}u^{2}-u+\\ln(u+1)\\big]+C\\\\&=3\\Big[\\frac{1}{2}\\left(1+x\\right)^{\\frac{2}{3}}-\\sqrt[3]{1+x}+\\ln\\big(1+\\sqrt[3]{1+x}\\big)\\Big]+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_113",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\frac{\\mathrm{d}x}{x^{2}\\sqrt{1+x^{2}}} $",
+        "answer": "解法一 令  $ x=\\tan t\\left(|t|<\\pi/2\\right) $，则  $ \\mathrm{d}x=\\frac{\\mathrm{d}t}{\\cos^{2}t} $，因此\n\n$$ \\int\\frac{\\mathrm{d}x}{x^{2}\\sqrt{1+x^{2}}}=\\int\\frac{\\cos t}{\\tan^{2}t}\\cdot\\frac{\\mathrm{d}t}{\\cos^{2}t}=\\int\\frac{\\cos t}{\\sin^{2}t}\\mathrm{d}t=\\frac{-1}{\\sin t}+C. $$\n\n由于\n\n$$ \\frac{1}{\\sin^{2}t}=\\frac{\\sin^{2}t+\\cos^{2}t}{\\sin^{2}t}=1+\\frac{1}{\\tan^{2}t}=1+\\frac{1}{x^{2}}=\\frac{1+x^{2}}{x^{2}}, $$\n\n注意到 t>0 对应 x>0, t<0 对应 x<0, 于是"
+    },
+    {
+        "question_id": "EX_114",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int x\\cos x\\,dx. $",
+        "answer": "解 令  $ u(x)=x, v(x)=\\sin x $，则  $ v'(x)=\\cos x $。应用分部积分法可得\n\n $$ \\int x\\cos x\\,dx=x\\sin x-\\int\\sin x\\,dx=x\\sin x+\\cos x+C. $$"
+    },
+    {
+        "question_id": "EX_115",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int\\ln x\\,dx. $",
+        "answer": "解 令  $ u(x)=\\ln x, v(x)=x $，则  $ v'(x)=1 $。于是\n\n $$ \\int\\ln x\\,dx=x\\ln x-\\int x\\cdot\\frac{1}{x}\\,dx=x\\ln x-x+C. $$"
+    },
+    {
+        "question_id": "EX_116",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int\\arcsin x \\, dx $. ",
+        "answer": "令  $ u(x)=\\arcsin x, v(x)=x. $ 我们有\n\n $$ \\int\\arcsin x\\mathrm{d}x=x\\arcsin x-\\int\\frac{x\\mathrm{d}x}{\\sqrt{1-x^{2}}}=x\\arcsin x+\\sqrt{1-x^{2}}+C. $$"
+    },
+    {
+        "question_id": "EX_117",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int3x^{2}\\arctan x\\,dx $. ",
+        "answer": "令  $ u(x)=\\arctan x, v(x)=x^{3} $ 则有\n\n $$ \\begin{aligned}\\int3x^{2}\\arctan x\\mathrm{d}x&=x^{3}\\arctan x-\\int\\frac{x^{3}}{1+x^{2}}\\mathrm{d}x\\\\&=x^{3}\\arctan x-\\int\\left(x-\\frac{x}{1+x^{2}}\\right)\\mathrm{d}x\\\\&=x^{3}\\arctan x-\\frac{1}{2}x^{2}+\\frac{1}{2}\\ln(1+x^{2})+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_118",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "计算 $ \\int\\sqrt{a^{2}+x^{2}}\\,dx. $",
+        "answer": "应用分部积分法，\n\n $$ \\begin{aligned}\\int\\sqrt{x^{2}+a^{2}}\\mathrm{d}x&=x\\sqrt{x^{2}+a^{2}}-\\int\\frac{x^{2}\\mathrm{d}x}{\\sqrt{x^{2}+a^{2}}}\\\\&=x\\sqrt{x^{2}+a^{2}}-\\int\\sqrt{x^{2}+a^{2}}\\mathrm{d}x+\\int\\frac{a^{2}\\mathrm{d}x}{\\sqrt{x^{2}+a^{2}}}.\\end{aligned} $$ \n\n移项得\n\n $$ \\int\\sqrt{x^{2}+a^{2}}\\mathrm{d}x=\\frac{x}{2}\\sqrt{x^{2}+a^{2}}+\\frac{a^{2}}{2}\\int\\frac{\\mathrm{d}x}{\\sqrt{x^{2}+a^{2}}}, $$ \n\n从常用不定积分表知道\n\n $$ \\int\\frac{\\mathrm{d}x}{\\sqrt{x^{2}+a^{2}}}=\\ln\\left|x+\\sqrt{x^{2}+a^{2}}\\right|+C, $$ \n\n所以\n\n $$ \\int\\sqrt{x^{2}+a^{2}}\\mathrm{d}x=\\frac{x}{2}\\sqrt{x^{2}+a^{2}}+\\frac{a^{2}}{2}\\ln\\left|x+\\sqrt{x^{2}+a^{2}}\\right|+C. $$ \n\n同理可得\n\n $$ \\int\\sqrt{x^{2}-a^{2}}\\mathrm{d}x=\\frac{x}{2}\\sqrt{x^{2}-a^{2}}-\\frac{a^{2}}{2}\\ln\\left|x+\\sqrt{x^{2}-a^{2}}\\right|+C. $$"
+    },
+    {
+        "question_id": "EX_119",
+        "type": "联立求解型数值计算",
+        "difficulty": "困难",
+        "question": "计算  $ I=\\int e^{ax}\\cos bx\\,dx $ 与  $ J=\\int e^{ax}\\sin bx\\,dx $ ( $ ab \\neq 0 $).",
+        "answer": "应用分部积分法得到\n\n $$ \\int\\mathrm{e}^{ax}\\cos bx\\mathrm{d}x=\\int\\mathrm{e}^{ax}\\mathrm{d}\\left(\\frac{1}{b}\\sin bx\\right)=\\frac{1}{b}\\mathrm{e}^{ax}\\sin bx-\\frac{a}{b}\\int\\mathrm{e}^{ax}\\sin bx\\mathrm{d}x; $$ \n\n $$ \\int\\mathrm{e}^{ax}\\sin bx\\mathrm{d}x=\\int\\mathrm{e}^{ax}\\mathrm{d}\\left(-\\frac{1}{b}\\cos bx\\right)=-\\frac{1}{b}\\mathrm{e}^{ax}\\cos bx+\\frac{a}{b}\\int\\mathrm{e}^{ax}\\cos bx\\mathrm{d}x. $$ \n\n将 $ \\int e^{ax}\\sin bx\\,dx $ 和 $ \\int e^{ax}\\cos bx\\,dx $ 作为未知量，解上面的方程组，便得到\n\n $$ \\int\\mathrm{e}^{ax}\\cos bx\\mathrm{d}x=\\frac{1}{a^{2}+b^{2}}\\mathrm{e}^{ax}\\left(b\\sin bx+a\\cos bx\\right)+C; $$ \n\n $$ \\int\\mathrm{e}^{ax}\\sin bx\\mathrm{d}x=\\frac{1}{a^{2}+b^{2}}\\mathrm{e}^{ax}\\left(a\\sin bx-b\\cos bx\\right)+C. $$"
+    },
+    {
+        "question_id": "EX_120",
+        "type": "递推积分计算题",
+        "difficulty": "中等",
+        "question": "计算积分  $ I_{n}=\\int\\left(x^{2}+b^{2}\\right)^{-n}dx\\quad(n\\geqslant1) $",
+        "answer": "解 应用分部积分法，对任何自然数  $ k \\geqslant 1 $，有\n\n $$ \\begin{aligned}I_{k}&=\\int\\frac{\\mathrm{d}x}{(x^{2}+b^{2})^{k}}=\\frac{x}{(x^{2}+b^{2})^{k}}+2k\\int\\frac{x^{2}}{(x^{2}+b^{2})^{k+1}}\\mathrm{d}x\\\\&=\\frac{x}{(x^{2}+b^{2})^{k}}+2k\\int\\Big(\\frac{1}{(x^{2}+b^{2})^{k}}-\\frac{b^{2}}{(x^{2}+b^{2})^{k+1}}\\Big)\\mathrm{d}x\\\\&=x\\left(x^{2}+b^{2}\\right)^{-k}+2k I_{k}-2k b^{2}I_{k+1}.\\\\ \\end{aligned} $$ \n\n从而得到关于 $ I_{k} $的递推公式：\n\n $$ I_{k+1}=\\frac{1}{2k b^{2}}\\big[x(x^{2}+b^{2})^{-k}+(2k-1)I_{k}\\big]. $$ \n\n当 k=1 时，直接计算可得\n\n $$ I_{1}=\\int\\frac{\\mathrm{d}x}{x^{2}+b^{2}}=\\frac{1}{b}\\int\\frac{\\mathrm{d}\\left(\\frac{x}{b}\\right)}{1+\\left(\\frac{x}{b}\\right)^{2}}=\\frac{1}{b}\\arctan\\left(\\frac{x}{b}\\right)+C. $$ \n\n再由递推公式便可逐次得到 $ I_{2}, I_{3}, \\cdots, I_{n} $ 的表达式."
+    },
+    {
+        "question_id": "EX_121",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{2x^{2}+2x+13}{(x-2)(x^{2}+1)^{2}}\\mathrm{d}x. $",
+        "answer": "解 设被积函数有分解式\n\n $$ \\frac{2x^{2}+2x+13}{(x-2)(x^{2}+1)^{2}}=\\frac{A}{x-2}+\\frac{Bx+C}{x^{2}+1}+\\frac{Dx+E}{(x^{2}+1)^{2}} $$ \n\n其中 A, B, C, D, E 是待定常数。将上式右端通分合并，等式两端分子应相等：\n\n $$ \\begin{aligned}2x^{2}+2x+13&=(A+B)x^{4}+(C-2B)x^{3}+(2A+B-2C+D)x^{2}\\\\&+(C-2B+E-2D)x+(A-2C-2E),\\end{aligned} $$ \n\n比较两端同幂次的系数，得\n\n $$ \\begin{cases}A+B=0,\\\\C-2B=0,\\\\2A+B-2C+D=2,\\\\C-2B+E-2D=2,\\\\A-2C-2E=13,\\end{cases} $$ \n\n解此方程组，得到\n\n $$ A=1,B=-1,C=-2,D=-3,E=-4. $$ \n\n于是\n\n $$ \\frac{2x^{2}+2x+13}{(x-2)(x^{2}+1)^{2}}=\\frac{1}{x-2}-\\frac{x+2}{x^{2}+1}-\\frac{3x+4}{(x^{2}+1)^{2}} $$ \n\n所以\n\n $$ \\begin{aligned}&I=\\int\\frac{\\mathrm{d}x}{x-2}-\\int\\frac{x+2}{x^{2}+1}\\mathrm{d}x-\\int\\frac{3x+4}{(x^{2}+1)^{2}}\\mathrm{d}x\\\\&=\\frac{1}{2}\\frac{3-4x}{x^{2}+1}+\\frac{1}{2}\\ln\\frac{(x-2)^{2}}{x^{2}+1}-4\\arctan x+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_122",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{x^{3}+1}{x^{4}-3x^{3}+3x^{2}-x}dx. $",
+        "answer": "解 将被积函数的分母作因式分解：\n\n $$ x^{4}-3x^{3}+3x^{2}-x=x\\left(x-1\\right)^{3}, $$ \n\n所以被积函数应有分解式：\n\n $$ \\frac{x^{3}+1}{x^{4}-3x^{3}+3x^{2}-x}=\\frac{A}{x}+\\frac{B}{x-1}+\\frac{C}{(x-1)^{2}}+\\frac{D}{(x-1)^{3}}, $$ \n\n右端通分相加，可得\n\n $$ x^{3}+1=(A+B)x^{3}+(-3A-2B+C)x^{2}+(3A+B-C+D)x-A. $$ \n\n再比较等式两端同幂次的系数，有\n\n $$ A=-1,B=2,C=1,D=2, $$ \n\n于是\n\n $$ \\begin{aligned}I=&-\\int\\frac{\\mathrm{d}x}{x}+2\\int\\frac{\\mathrm{d}x}{x-1}+\\int\\frac{\\mathrm{d}x}{(x-1)^{2}}+2\\int\\frac{\\mathrm{d}x}{(x-1)^{3}}\\\\=&-\\ln|x|+2\\ln|x-1|-\\frac{1}{x-1}-\\frac{1}{(x-1)^{2}}+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_123",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求 $ \\int\\frac{1+\\sin x}{1+\\cos x}dx. $",
+        "answer": "解 令  $ t=\\tan\\frac{x}{2} $，则有\n\n $$ 1+\\sin x=1+\\frac{2t}{1+t^{2}}=\\frac{(1+t)^{2}}{1+t^{2}}, $$ \n\n $$ 1+\\cos x=1+\\frac{1-t^{2}}{1+t^{2}}=\\frac{2}{1+t^{2}}. $$ \n\n于是\n\n $$ \\begin{aligned}\\int\\frac{1+\\sin x}{1+\\cos x}\\mathrm{d}x&=\\int\\frac{1}{2}\\left(1+t\\right)^{2}\\frac{2}{1+t^{2}}\\mathrm{d}t=\\int\\left(1+\\frac{2t}{1+t^{2}}\\right)\\mathrm{d}t\\\\&=t+\\ln(1+t^{2})+C=\\tan\\frac{x}{2}-2\\ln\\left|\\cos\\frac{x}{2}\\right|+C.\\end{aligned} $$ \n\n但是，在很多情况下，采用万能变换将积分化为有理式的方法计算过程比较烦琐，因此，常需要寻求其他更简便的积分方法。例如，例5.5.3也可如下求解：\n\n $$ \\begin{aligned}\\int\\frac{1+\\sin x}{1+\\cos x}\\mathrm{d}x&=\\int\\frac{1}{2\\cos^{2}\\frac{x}{2}}\\mathrm{d}x+\\int\\frac{\\sin x}{1+\\cos x}\\mathrm{d}x\\\\&=\\tan\\frac{x}{2}-\\ln(1+\\cos x)+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_124",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{\\tan x}{a^{2}\\cos^{2}x+b^{2}\\sin^{2}x}dx. $",
+        "answer": "解 令  $ t = \\tan x $，则\n\n $$ I=\\int\\frac{\\tan x}{a^{2}+b^{2}\\tan^{2}x}\\cdot\\frac{1}{\\cos^{2}x}\\mathrm{d}x=\\frac{1}{2b^{2}}\\ln(a^{2}+b^{2}\\tan^{2}x)+C. $$"
+    },
+    {
+        "question_id": "EX_125",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{\\sin2x}{\\cos^{2}x+2\\sin x}dx. $",
+        "answer": "解 令  $ t=\\sin x $，则  $ \\cos^{2}x+2\\sin x=1+2t-t^{2} $， $ dt=\\cos x\\,dx $，于是\n\n $$ \\begin{aligned}I&=\\int\\frac{\\sin2x}{\\cos^{2}x+2\\sin x}\\mathrm{d}x=\\int\\frac{2t\\mathrm{d}t}{1+2t-t^{2}}\\\\&=\\int\\frac{2t-2}{1+2t-t^{2}}\\mathrm{d}t+\\int\\frac{2\\mathrm{d}t}{2-(t-1)^{2}}\\\\&=-\\ln|1+2t-t^{2}|+\\frac{1}{\\sqrt{2}}\\ln\\left|\\frac{\\sqrt{2}-1+t}{\\sqrt{2}+1-t}\\right|+C\\\\&=-\\ln|\\cos^{2}x+2\\sin x|+\\frac{1}{\\sqrt{2}}\\ln\\left|\\frac{\\sqrt{2}-1+\\sin x}{\\sqrt{2}+1-\\sin x}\\right|+C.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_126",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{\\mathrm{d}x}{\\sqrt[3]{(x-1)(x+1)^{2}}} $",
+        "answer": "解 令  $ t=\\sqrt[3]{\\frac{x+1}{x-1}} $，则  $ x=\\frac{t^{3}+1}{t^{3}-1} $， $ \\mathrm{d}x=\\frac{-6t^{2}}{(t^{3}-1)^{2}}\\mathrm{d}t $，于是\n\n $$ \\begin{aligned}I=&\\int\\sqrt[3]{\\frac{x+1}{x-1}}\\ \\frac{\\mathrm{d}x}{x+1}=\\int\\frac{-3}{t^{3}-1}\\mathrm{d}t=\\int\\left(\\frac{-1}{t-1}+\\frac{t+2}{t^{2}+t+1}\\right)\\mathrm{d}t\\\\=&-\\ln\\mid t-1\\mid+\\frac{1}{2}\\ln\\mid t^{2}+t+1\\mid+\\sqrt{3}\\arctan\\frac{2t+1}{\\sqrt{3}}+C\\\\=&\\frac{1}{2}\\ln\\frac{t^{3}-1}{(t-1)^{3}}+\\sqrt{3}\\arctan\\frac{2t+1}{\\sqrt{3}}+C\\\\=&\\left.\\frac{1}{2}\\ln\\mid x-1\\mid-\\frac{3}{2}\\ln\\left|\\sqrt[3]{\\frac{x+1}{x-1}}-1\\right|\\right.\\\\&\\left.+\\sqrt{3}\\arctan\\left[\\frac{2}{\\sqrt{3}}\\left(\\sqrt[3]{\\frac{x+1}{x-1}}-\\frac{1}{2}\\right)\\right]+C.\\right.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_127",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int\\frac{\\sqrt{x^{2}-2x+2}}{x-1}dx. $",
+        "answer": "解 令  $ x - 1 = \\tan t \\left(|t| < \\frac{\\pi}{2}\\right) $，则  $ \\sqrt{x^{2} - 2x + 2} = \\sqrt{\\tan^{2}t + 1} = \\frac{1}{\\cos t} $， $ dx = \\frac{dt}{\\cos^{2}t} $，所以\n\n $$ \\begin{aligned}&I=\\int\\frac{1}{\\sin t}\\bullet\\frac{\\mathrm{d}t}{\\cos^{2}t}=\\int\\frac{-\\sin t\\mathrm{d}t}{(\\cos^{2}t-1)\\cos^{2}t}\\\\ &=\\int\\Big(\\frac{1}{\\cos^{2}t-1}-\\frac{1}{\\cos^{2}t}\\Big)(-\\sin t)\\mathrm{d}t=\\frac{1}{\\cos t}+\\frac{1}{2}\\ln\\Big|\\frac{\\cos t-1}{\\cos t+1}\\Big|+C\\\\ &=\\sqrt{x^{2}-2x+2}+\\ln\\Big|\\frac{\\sqrt{x^{2}-2x+2}-1}{x-1}\\Big|+C.\\\\ \\end{aligned} $$\n\n注 本题也可采用下面更为简便的解法：\n\n令  $ u=\\sqrt{x^{2}-2x+2} $，则  $ u^{2}-1=(x-1)^{2} $， $ u\\mathrm{d}u=(x-1)\\mathrm{d}x $。因此\n\n $$ \\begin{aligned}&I=\\int\\frac{u^{2}}{(x-1)^{2}} \\cdot \\frac{(x-1)}{u} \\, du = \\int \\frac{u}{x-1} \\, du = \\int \\frac{u}{\\sqrt{u^2 - 1}} \\, du = \\sqrt{u^2 - 1} + \\ln \\left| u + \\sqrt{u^2 - 1} \\right| + C \\\\ &= \\sqrt{x^2 - 2x + 2 - 1} + \\ln \\left| \\sqrt{x^2 - 2x + 2} + \\sqrt{x^2 - 2x + 1} \\right| + C \\\\ &= \\sqrt{(x-1)^2} + \\ln \\left| \\sqrt{x^2 - 2x + 2} + |x - 1| \\right| + C \\\\ &= |x - 1| + \\ln \\left( \\sqrt{x^2 - 2x + 2} + |x - 1| \\right) + C. \\end{aligned} $$\n\n结合原解法结果可验证一致性（注意绝对值与对数恒等变形）。"
+    },
+    {
+        "question_id": "EX_128",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设  $ f \\\\(in R[-a, a](a > 0) $，求证：\n\n $$ \\int_{-a}^{a}f(x)\\mathrm{d}x=\\left\\{\\begin{aligned}&2\\int_{0}^{a}f(x)\\mathrm{d}x,&f \\text{ 为偶函数} ,\\\\ &0,&f \\text{ 为奇函数} .\\end{aligned}\\right. $$ ",
+        "answer": "证明 对于积分 $ \\int_{-a}^{0}f(x)dx $，令x=-t，则有\n\n $$ \\int_{-a}^{0}f(x)\\mathrm{d}x=-\\int_{a}^{0}f(-t)\\mathrm{d}t=\\int_{0}^{a}f(-t)\\mathrm{d}t=\\int_{0}^{a}f(-x)\\mathrm{d}x, $$ \n\n所以\n\n $$ \\begin{aligned}\\int_{-a}^{a}f(x)\\mathrm{d}x&=\\int_{0}^{a}f(x)\\mathrm{d}x+\\int_{-a}^{0}f(x)\\mathrm{d}x\\\\&=\\int_{0}^{a}f(x)\\mathrm{d}x+\\int_{0}^{a}f(-x)\\mathrm{d}x\\\\&=\\int_{0}^{a}\\left[f(x)+f(-x)\\right]\\mathrm{d}x\\\\&=\\begin{cases}2\\int_{0}^{a}f(x)\\mathrm{d}x,&f \\text{ 为偶函数} ,\\\\0,&f \\text{ 为奇函数} .\\end{cases}\\end{aligned} $$ "
+    },
+    {
+        "question_id": "EX_129",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "设 f 是以 T 为周期的连续函数，则  $ \\forall a \\in \\mathbb{R} $，有\n\n $$ \\int_{a}^{a+T}f(x)\\mathrm{d}x=\\int_{0}^{T}f(x)\\mathrm{d}x. $$ ",
+        "answer": "证明\n\n $$ \\int_{a}^{a+T}f(x)\\mathrm{d}x=\\int_{a}^{0}f(x)\\mathrm{d}x+\\int_{0}^{T}f(x)\\mathrm{d}x+\\int_{T}^{a+T}f(x)\\mathrm{d}x. $$ \n\n对于积分 $ \\int_{T}^{a+T}f(x)dx $，令 $ x=t+T $，注意到f的周期性，可得\n\n $$ \\begin{aligned}\\int_{T}^{a+T}f(x)\\mathrm{d}x&=\\int_{0}^{a}f(t+T)\\mathrm{d}t=\\int_{0}^{a}f(t)\\mathrm{d}t\\\\&=-\\int_{a}^{0}f(x)\\mathrm{d}x.\\end{aligned} $$ \n\n结合(2)式与(3)式便得到(1)式."
+    },
+    {
+        "question_id": "EX_130",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "计算  $ I=\\int_{0}^{\\pi}\\frac{x\\sin x}{1+\\cos^{2}x}dx. $",
+        "answer": "解 令  $ x = \\pi - t $，则\n\n $$ I=\\int_{\\pi}^{0}\\frac{(\\pi-t)\\sin(\\pi-t)}{1+\\cos^{2}(\\pi-t)}(-\\mathrm{d}t)=\\int_{0}^{\\pi}\\frac{(\\pi-t)\\sin t}{1+\\cos^{2}t}\\mathrm{d}t=\\int_{0}^{\\pi}\\frac{\\pi\\sin t}{1+\\cos^{2}t}\\mathrm{d}t-I, $$ \n\n于是\n\n $$ I=\\frac{\\pi}{2}\\int_{0}^{\\pi}\\frac{\\sin t}{1+\\cos^{2}t}\\mathrm{d}t=-\\frac{\\pi}{2}\\arctan(\\cos t)\\Big|_{0}^{\\pi}. $$"
+    },
+    {
+        "question_id": "EX_131",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int_{0}^{1}x\\ln^{2}x\\mathrm{d}x. $",
+        "answer": "$$ \\begin{aligned}\\int_{0}^{1}x\\ln^{2}x\\mathrm{d}x&=\\frac{1}{2}x^{2}\\ln^{2}x\\mid_{0}^{1}-\\int_{0}^{1}x\\ln x\\mathrm{d}x\\\\&=\\frac{-1}{2}x^{2}\\ln x\\mid_{0}^{1}+\\frac{1}{2}\\int_{0}^{1}x\\mathrm{d}x=\\frac{1}{4}.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_132",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int_{0}^{1}e^{\\sqrt{x}}dx. $",
+        "answer": "令  $ t=\\sqrt{x} $，则  $ \\mathrm{d}x=2t\\mathrm{d}t,t\\in[0,1] $ 对应  $ x\\in[0,1],t=0,1 $ 分别对应 x=0,1，所以\n\n $$ \\int_{0}^{1}\\mathrm{e}^{\\sqrt{x}}\\mathrm{d}x=\\int_{0}^{1}\\mathrm{e}^{t}2t\\mathrm{d}t=\\left.\\mathrm{e}^{t}2t\\right|_{0}^{1}-2\\int_{0}^{1}\\mathrm{e}^{t}\\mathrm{d}t=2\\mathrm{e}-2\\mathrm{e}^{t}\\left|_{0}^{1}\\right.=2. $$"
+    },
+    {
+        "question_id": "EX_133",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "计算  $ I=\\int_{\\frac{1}{e}}^{e}\\left|\\ln x\\right|\\mathrm{d}x. $",
+        "answer": "令  $ t=\\ln x $，则  $ x=e^{t} $ 且  $ t\\in[-1,1] $ 对应  $ x\\in[1/e,e] $。因此\n\n $$ I=\\int_{\\frac{1}{e}}^{e}\\mid\\ln x\\mid\\mathrm{d}x=\\int_{-1}^{1}\\mid t\\mid\\mathrm{e}^{t}\\mathrm{d}t=\\int_{0}^{1}t\\mathrm{e}^{t}\\mathrm{d}t-\\int_{-1}^{0}t\\mathrm{e}^{t}\\mathrm{d}t. $$ \n\n而\n\n $$ \\int_{0}^{1}t\\mathrm{e}^{t}\\mathrm{d}t=t\\mathrm{e}^{t}\\left|_{0}^{1}\\right.-\\int_{0}^{1}\\mathrm{e}^{t}\\mathrm{d}t=t\\mathrm{e}^{t}\\left|_{0}^{1}\\right.-\\mathrm{e}^{t}\\left|_{0}^{1}\\right.=1; $$ \n\n $$ \\int_{-1}^{0}t\\mathrm{e}^{t}\\mathrm{d}t=t\\mathrm{e}^{t}\\mid_{-1}^{0}-\\int_{-1}^{0}\\mathrm{e}^{t}\\mathrm{d}t=t\\mathrm{e}^{t}\\mid_{-1}^{0}-\\mathrm{e}^{t}\\mid_{-1}^{0}=-\\frac{1}{e}. $$ \n\n所以  $ I=1 - (-\\frac{1}{e}) = 1 + \\frac{1}{e} $。\n\n【注：原文此处存在明显计算错误与符号混乱（如误写为 \\mathrm{e}^{\\prime}），已根据标准方法修正。】"
+    },
+    {
+        "question_id": "EX_134",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算  $ I=\\int_{0}^{\\frac{1}{2}}\\arcsin x \\, dx. $",
+        "answer": "解法一 用分部积分法，\n\n $$ \\begin{aligned}&I=x\\arcsin x\\left|_{0}^{\\frac{1}{2}}\\right.-\\int_{0}^{\\frac{1}{2}}\\frac{x\\,\\mathrm{d}x}{\\sqrt{1-x^{2}}}\\\\&=\\frac{\\pi}{12}+\\sqrt{1-x^{2}}\\left|_{0}^{\\frac{1}{2}}\\right.\\\\&=\\frac{\\pi}{12}+\\frac{\\sqrt{3}}{2}-1.\\end{aligned} $$ \n\n解法二 令  $ t=\\arcsin x $，则  $ \\mathrm{d}x=\\cos t\\,\\mathrm{d}t,\\ t\\in\\left[0,\\frac{\\pi}{6}\\right] $ 对应  $ x\\in\\left[0,\\frac{1}{2}\\right] $. 所以\n\n $$ I=\\int_{0}^{\\pi/6}t\\cos t\\,\\mathrm{d}t=t\\sin t\\bigg|_{0}^{\\pi/6}-\\int_{0}^{\\pi/6}\\sin t\\,\\mathrm{d}t=\\frac{\\pi}{12}+\\frac{\\sqrt{3}}{2}-1. $$"
+    },
+    {
+        "question_id": "EX_135",
+        "type": "证明题",
+        "difficulty": "中等",
+        "question": "求证：\n\n $$ \\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x\\,\\mathrm{d}x=\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n}x\\,\\mathrm{d}x\\quad(n\\in\\mathbb{N}); $$ \n\n并求其值 $ I_{n} $",
+        "answer": "证明 令  $ x=\\frac{\\pi}{2}-t $，则有\n\n $$ \\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x\\,\\mathrm{d}x=-\\int_{\\frac{\\pi}{2}}^{0}\\sin^{n}\\left(\\frac{\\pi}{2}-t\\right)\\,\\mathrm{d}t=-\\int_{\\frac{\\pi}{2}}^{0}\\cos^{n}t\\,\\mathrm{d}t=\\int_{0}^{\\frac{\\pi}{2}}\\cos^{n}t\\,\\mathrm{d}t. $$ \n\n为计算  $ I_{n}=\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n}x\\,\\mathrm{d}x $ 的值，使用分部积分法，\n\n $$ \\begin{aligned}I_{n}&=-\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-1}x\\cdot(\\cos x)^{\\prime}\\,\\mathrm{d}x\\\\&=-\\cos x\\sin^{n-1}x\\bigg|_{0}^{\\frac{\\pi}{2}}+(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-2}x\\cdot\\cos^{2}x\\,\\mathrm{d}x\\\\&=(n-1)\\int_{0}^{\\frac{\\pi}{2}}\\sin^{n-2}x(1-\\sin^{2}x)\\,\\mathrm{d}x=(n-1)I_{n-2}-(n-1)I_{n}.\\end{aligned} $$ \n\n由此得到\n\n $$ I_{n}=\\frac{n-1}{n}I_{n-2}. $$ \n\n这是一个关于 $ I_{n} $的递推公式。反复利用这个递推公式，并注意到\n\n $$ I_{0}=\\int_{0}^{\\frac{\\pi}{2}}\\mathrm{d}x=\\frac{\\pi}{2},\\quad I_{1}=\\int_{0}^{\\frac{\\pi}{2}}\\sin x\\,\\mathrm{d}x=1, $$ \n\n可得\n\n $$ I_{2n}=\\frac{2n-1}{2n}\\cdot\\frac{2n-3}{2n-2}\\cdot\\cdots\\cdot\\frac{1}{2}\\cdot\\frac{\\pi}{2}, $$ \n\n $$ I_{2n-1}=\\frac{2n-2}{2n-1}\\cdot\\frac{2n-4}{2n-3}\\cdot\\cdots\\cdot\\frac{2}{3}. $$ \n\n记\n\n $$ (2n)!!=2n\\cdot(2n-2)\\cdots2, $$ \n\n $$ (2n-1)!!=(2n-1)\\cdot(2n-3)\\cdots3\\cdot1 $$ \n\n(称为双阶乘)，则有\n\n $$ I_{2n}=\\frac{(2n-1)!!}{(2n)!!}\\cdot\\frac{\\pi}{2},\\quad I_{2n-1}=\\frac{(2n-2)!!}{(2n-1)!!}. $$"
+    },
+    {
+        "question_id": "EX_136",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设平面区域 D 由曲线 $ y = x^{2} $ 及 $ x = y^{2} $ 围成，试求 D 的面积 S.",
+        "answer": "两曲线的交点为原点 $ (0,0) $与点 $ (1,1) $，所以\n\n$$\n\\begin{aligned}\n&\\boldsymbol{S}=\\int_{0}^{1}\\sqrt{x}\\,\\mathrm{d}x-\\int_{0}^{1}x^{2}\\,\\mathrm{d}x\\\\\n&\\quad=\\int_{0}^{1}\\left(\\sqrt{x}-x^{2}\\right)\\,\\mathrm{d}x=\\frac{1}{3}.\n\\end{aligned}\n$$"
+    },
+    {
+        "question_id": "EX_137",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求双纽线 $ \\rho^{2}=2a^{2}\\cos2\\theta $ 所围成的区域 D（见图 5.7.2）的面积 S.\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_243_757_480_886.jpg\" alt=\"Image\" width=\"33%\" /></div>\n\n\n<div style=\"text-align: center;\">图 5.7.2</div>",
+        "answer": "解 显然 D 关于 x 轴与 y 轴都是对称的，并且 D 在第一象限中的部分为\n\n $$ D_{1}=\\left\\{(\\rho,\\theta)\\mid0\\leqslant\\rho\\leqslant\\sqrt{2}a\\sqrt{\\cos2\\theta},0\\leqslant\\theta\\leqslant\\frac{\\pi}{2}\\right\\}. $$ \n\n所以所求面积为\n\n $$ S=4\\int_{0}^{\\frac{\\pi}{4}}a^{2}\\cos2\\theta\\mathrm{d}\\theta=2a^{2}. $$"
+    },
+    {
+        "question_id": "EX_138",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求心脏线 $ \\rho = a(1 + \\cos\\theta) $ 所围成的区域 D（见图 5.7.3）的面积 S.\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_294_288_438_421.jpg\" alt=\"Image\" width=\"20%\" /></div>\n\n\n<div style=\"text-align: center;\">图 5.7.3</div>",
+        "answer": "解 显然 D 关于 x 轴对称，因此\n\n $$ \\begin{aligned}&S=2\\int_{0}^{\\pi}\\frac{1}{2}a^{2}(1+\\cos\\theta)^{2}\\mathrm{d}\\theta=a^{2}\\int_{0}^{\\pi}(1+2\\cos\\theta+\\cos^{2}\\theta)\\mathrm{d}\\theta\\\\&=\\frac{1}{2}a^{2}\\int_{0}^{\\pi}(3+4\\cos\\theta+\\cos2\\theta)\\mathrm{d}\\theta=\\frac{3}{2}\\pi a^{2}.\\\\ \\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_139",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求圆  $ x = R \\cos \\theta, y = R \\sin \\theta, 0 \\leqslant \\theta \\leqslant 2\\pi $ 的弧长 L.",
+        "answer": "由弧长公式 $  (4)  $，\n\n $$ L=\\int_{0}^{2\\pi}\\sqrt{x^{\\prime}(\\theta)^{2}+y^{\\prime}(\\theta)^{2}}\\mathrm{d}\\theta=\\int_{0}^{2\\pi}R\\mathrm{d}\\theta=2\\pi R. $$"
+    },
+    {
+        "question_id": "EX_140",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求旋转线的一拱  $ x=a(t-\\sin t) $， $ y=a(1-\\cos t) $， $ 0 \\leqslant t \\leqslant 2\\pi $（如图 5.7.5 所示）的弧长 L.\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_250_646_477_737.jpg\" alt=\"Image\" width=\"31%\" /></div>\n\n\n<div style=\"text-align: center;\">图 5.7.5</div>",
+        "answer": "由弧长公式 $  (4)  $，\n\n $$ \\begin{aligned}L&=\\int_{0}^{2\\pi}\\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}}\\mathrm{d}t=\\sqrt{2}a\\int_{0}^{2\\pi}\\sqrt{1-\\cos t}\\mathrm{d}t\\\\&=2a\\int_{0}^{2\\pi}\\sin\\frac{t}{2}\\mathrm{d}t=8a.\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_141",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求心脏线 $ \\rho = a(1 + \\cos\\theta),\\ -\\pi \\leqslant \\theta \\leqslant \\pi,\\ (a > 0) $ 的弧长 $ L $。",
+        "answer": "由公式 $ (6) $,\n\n$$\nL = \\int_{-\\pi}^{\\pi} \\sqrt{\\rho(\\theta)^2 + \\rho'(\\theta)^2}\\, \\mathrm{d}\\theta = 2a \\int_{-\\pi}^{\\pi} \\cos\\frac{\\theta}{2}\\, \\mathrm{d}\\theta = 8a.\n$$"
+    },
+    {
+        "question_id": "EX_142",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求圆 $ x = R \\cos t $, $ y = R \\sin t $, $ 0 \\leqslant t \\leqslant 2\\pi $ 的曲率.",
+        "answer": "解 由曲率公式 $ (9) $,\n\n$$\nk=\\frac{\\left|x^{\\prime}(t)y^{\\prime \\prime}(t)-x^{\\prime \\prime}(t)y^{\\prime}(t)\\right|}{\\left((x^{\\prime}(t))^{2}+(y^{\\prime}(t))^{2}\\right)^{\\frac{3}{2}}}=\\frac{1}{R}.\n$$"
+    },
+    {
+        "question_id": "EX_143",
+        "type": "数值计算与推导",
+        "difficulty": "中等",
+        "question": "求抛物线  $ y=x^{2} $ 上任一点处的曲率、曲率半径与曲率中心.",
+        "answer": "解 抛物线上任一点  $ M(x, x^{2}) $ 处的曲率为\n\n $$ k=\\frac{\\left|y^{\\prime \\prime}(x)\\right|}{(1+(y^{\\prime}(x))^{2})^{3/2}}=\\frac{2}{(1+4x^{2})^{3/2}}, $$ \n\n曲率半径为\n\n $$ R=\\frac{1}{k}=\\frac{1}{2}\\left(1+4x^{2}\\right)^{3/2}. $$ \n\n抛物线在点  $ M(x, x^{2}) $ 处的法线方程为\n\n $$ Y-x^{2}=-\\frac{1}{2x}(X-x), $$ \n\n曲率中心  $ O(X,Y) $ 应满足等式\n\n $$ (X-x)^{2}+(Y-x^{2})^{2}=R^{2}, $$ \n\n还在点  $ M(x,x^{2}) $ 处的法线上，且当 x>0 时 X<x；当 x<0 时 X>x，所以\n\n $$ \\left(X-x\\right)^{2}+\\frac{1}{4x^{2}}\\left(X-x\\right)^{2}=\\frac{1}{4}\\left(1+4x^{2}\\right)^{3}, $$ \n\n $$ X=-4x^{3},\\quad Y=\\frac{1}{2}+3x^{2}. $$ \n\n即抛物线在点  $ M(x, x^{2}) $ 处的曲率中心是  $ O\\left(-4x^{3}, \\frac{1}{2} + 3x^{2}\\right) $."
+    },
+    {
+        "question_id": "EX_144",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求曲线 $ y=\\sin x\\ (0 \\leqslant x \\leqslant \\pi) $ 绕 x 轴旋转所得到的旋转体的体积 V.",
+        "answer": "解 根据公式 $  (11)  $,\n\n $$ V=\\pi\\int_{0}^{\\pi}\\sin^{2}x\\mathrm{d}x=\\frac{\\pi^{2}}{2}. $$"
+    },
+    {
+        "question_id": "EX_145",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求旋轮线\n\n $$ x=a(t-\\sin t),\\quad y=a(1-\\cos t)\\quad(0\\leqslant t\\leqslant2\\pi) $$ \n\n绕 x 轴旋转所得到的旋转体体积.",
+        "answer": "解  $ t \\in [0, 2\\pi] $ 对应于  $ x \\in [0, 2a\\pi] $，且  $ x'(t) = a(1 - \\cos t) \\geqslant 0 $。再由公式(11)可得\n\n $$ \\begin{aligned}V&=\\pi\\int_{0}^{2a\\pi}y^{2}\\mathrm{d}x=\\pi\\int_{0}^{2\\pi}y(t)^{2}x^{\\prime}(t)\\mathrm{d}t\\\\&=\\pi\\int_{0}^{2\\pi}a^{3}(1-\\cos t)^{3}\\mathrm{d}t=5\\pi^{2}a^{3},\\end{aligned} $$"
+    },
+    {
+        "question_id": "EX_146",
+        "type": "推导题",
+        "difficulty": "困难",
+        "question": "设  $ f(x) $ 在  $ [0,a] $ 上连续，单调递减，且  $ f(a)=0 $。求由区域  $ D=\\{(x,y)\\mid0\\leqslant x\\leqslant a,0\\leqslant y\\leqslant f(x)\\} $ 绕 y 轴旋转一周所得到的旋转体体积 V。",
+        "answer": "解  $ \\forall t\\in[0,a] $，令  $ V(t) $ 为区域  $ D_{t}=\\{(x,y)\\mid0\\leqslant x\\leqslant t,0\\leqslant y\\leqslant f(x)\\} $ 绕 y 轴旋转一周所得到的旋转体体积。任给 t 的增量  $ \\Delta t>0,\\Delta V=V(t+\\Delta t)-V(t) $ 为一个壁厚为  $ \\Delta t $ 的圆筒。记  $ f(x) $ 在区间  $ [t,t+\\Delta t] $ 上的上、下确界分别为  $ \\widetilde{M} $ 与  $ \\widetilde{m} $，则  $ \\Delta V $ 应介于  $ 2\\pi t\\widetilde{m}\\Delta t $ 与  $ 2\\pi(t+\\Delta t)\\widetilde{M}\\Delta t $。注意到  $ f(x) $ 在  $ [0,a] $ 上连续，于是当  $ \\Delta t\\to0 $ 时，\n\n $$ 2\\pi t\\bar{m}\\Delta t=2\\pi t f(t)\\Delta t+o(\\Delta t)\\quad; $$ \n\n $$ 2\\pi(t+\\Delta t)\\;\\vec{M}\\Delta t=2\\pi t f(t)\\Delta t+o(\\Delta t). $$ \n\n从而  $ V(t) $ 的微分\n\n $$ \\mathrm{d}V(t)=2\\pi t f(t)\\mathrm{d}t. $$ \n\n由此知\n\n $$ V=V(a)-V(0)=\\int_{0}^{a}2\\pi x f(x)\\mathrm{d}x $$"
+    },
+    {
+        "question_id": "EX_147",
+        "type": "应用题（物理建模与积分计算）",
+        "difficulty": "中等",
+        "question": "设 $ C: x = x(t), y = y(t), a \\leqslant t \\leqslant b $ 是一条光滑的平面曲线，C 上点 $ M(x(t), y(t)) $ 处的线密度为 $ \\rho(t) $，其中 $ \\rho(t) \\in C[a, b] $。求 C 的质量 m 与重心坐标 $ (\\bar{x}, \\bar{y}) $。",
+        "answer": "解 由物理学中知道，若平面质点系 $ (x_{1},y_{1}),(x_{2},y_{2}),\\cdots,(x_{n},y_{n}) $ 的质量分别为 $ m_{1},m_{2},\\cdots,m_{n} $，则此质点系的重心坐标 $ (\\bar{x},\\bar{y}) $ 是\n\n $$ \\bar{x}=\\frac{\\sum_{i=1}^{n}x_{i}m_{i}}{\\sum_{i=1}^{n}m_{i}},\\quad\\bar{y}=\\frac{\\sum_{i=1}^{n}y_{i}m_{i}}{\\sum_{i=1}^{n}m_{i}}. $$ \n\n任给参数区间 $ [a,b] $的分割 $ T:a=t_{0}<t_{1}<\\cdots<t_{n}=b $，相应地可得曲线C的分割\n\n $$ \\widetilde{T}:A=M_{0}(x(a),y(a)),M_{1}(x(t_{1}),y(t_{1})),\\cdots,M_{n}(x(t_{n}),y(t_{n}))=B. $$ \n\n当分割 T 的长度 $ \\left|T\\right| $ 充分小时，可以把小弧段 $ \\widehat{M_{i-1}M_{i}} $ 看作质量集中在点 $ M_{i}(x(t_{i}), y(t_{i})) $ 处的一个质点， $ \\widehat{M_{i-1}M_{i}} $ 的线密度可以近似地看作常密度 $ \\rho(t_{i}) $，\n\n $$ \\widehat{M_{i-1}M_{i}}\\  的弧长 \\approx\\ \\sqrt{x^{\\prime}\\left(t_{i}\\right)^{2}+y^{\\prime}\\left(t_{i}\\right)^{2}}\\left(t_{i}-t_{i-1}\\right). $$ \n\n从而 $ M_{i-1}M_{i} $可近似地看作点 $ M_{i}(x(t_{i}),y(t_{i})) $处质量为\n\n $$ m_{i}=\\rho(t_{i})\\sqrt{x^{\\prime}(t_{i})^{2}+y^{\\prime}(t_{i})^{2}}(t_{i}-t_{i-1}) $$ \n\n的一个质点。所以质点系 $ M_{1}(x(t_{1}),y(t_{1})),\\cdots,M_{n}(x(t_{n}),y(t_{n})) $ 的质量与重心坐标的横坐标分别为\n\n $$ \\sum_{i=1}^{n}\\rho(t_{i})\\ \\sqrt{x^{\\prime}(t_{i})^{2}+y^{\\prime}(t_{i})^{2}}(t_{i}-t_{i-1}) $$ \n\n与\n\n $$ \\frac{\\sum_{i=1}^{n}x(t_{i})\\rho(t_{i})\\sqrt{x^{\\prime}(t_{i})^{2}+y^{\\prime}(t_{i})^{2}}(t_{i}-t_{i-1})}{\\sum_{i=1}^{n}\\rho(t_{i})\\sqrt{x^{\\prime}(t_{i})^{2}+y^{\\prime}(t_{i})^{2}}(t_{i}-t_{i-1})}. $$ \n\n注意到上面两个和式分别为函数\n\n $$ \\rho(t)\\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}} \\text{ 与 } x(t)\\rho(t)\\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}} $$ \n\n关于分割 T 的一个黎曼和，令 $ |T|\\rightarrow0 $ 即得\n\n $$ m=\\int_{a}^{b}\\rho(t)\\ \\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}}\\mathrm{d}t, $$ \n\n $$ \\bar{x}=\\frac{1}{m}\\int_{a}^{b}x(t)\\rho(t)\\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}}\\mathrm{d}t. $$ \n\n同理，\n\n $$ \\bar{y}=\\frac{1}{m}\\int_{a}^{b}y(t)\\rho(t)\\sqrt{x^{\\prime}(t)^{2}+y^{\\prime}(t)^{2}}\\mathrm{d}t. $$"
+    },
+    {
+        "question_id": "EX_148",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 f 是 $ [-a, a] $ 上非负连续的偶函数，$ D = \\{(x, y) \\mid |x| \\leqslant a, 0 \\leqslant y \\leqslant f(x)\\} $。求 D 的形心坐标（即面密度 $ \\rho \\equiv 1 $ 时的重心坐标）$ (\\bar{x}, \\bar{y}) $。",
+        "answer": "解 由 D 的对称性知道, $ \\bar{x}=0 $. D 的面积为 $ \\sigma=\\int_{-a}^{a}f(x)\\mathrm{d}x $. 为求 $ \\bar{y} $, 任取\n\n$ x \\in [-a, a] $，及“很小的”增量 $ \\Delta x, D $ 中对应的细长形区域 $ \\{(t, y) \\mid x \\leqslant t \\leqslant x + \\Delta x, 0 \\leqslant y \\leqslant f(x)\\} $ 可看作质量集中在 $ \\left(x, \\frac{1}{2}f(x)\\right) $ 点，质量为 $ f(x) \\cdot \\Delta x $ 的质点（见图 5.7.9）。于是\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_3_imgs_img_in_image_box_451_280_627_387.jpg\" alt=\"Image\" width=\"24%\" /></div>\n\n\n $$ \\bar{y}=\\frac{1}{\\sigma}\\int_{-a}^{a}\\frac{1}{2}f(x)\\cdot f(x)\\mathrm{d}x=\\frac{1}{2\\sigma}\\int_{-a}^{a}f\\left(x\\right)^{2}\\mathrm{d}x $$ \n\n<div style=\"text-align: center;\">图 5.7.9</div>\n\n\n所以，D的形心坐标 $ \\left(\\bar{x},\\bar{y}\\right)=\\left(0,\\frac{1}{2\\sigma}\\int_{-a}^{a}f\\left(x\\right)^{2}\\mathrm{d}x\\right) $，其中\n\n $$ \\sigma=\\int_{-a}^{a}f(x)\\mathrm{d}x. $$"
+    },
+    {
+        "question_id": "EX_149",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "设有长度为 $ l $ 的细杆一端有转轴垂直于细杆。细杆的线密度为 $ \\rho $。求细杆绕转轴转动的转动惯量（不计转轴直径）。",
+        "answer": "解 由物理学中知道, 质量为 $ m $ 的质点绕一转轴转动的转动惯量为 $ J = mr^{2} $, 其中 $ r $ 为质点到转轴的距离.\n\n取细杆与转轴的交点为原点，细杆所在直线为 $ x $ 轴，则细杆所在的区间为 $ [0, l] $. 细杆的线密度可表示为 $ \\rho(x) $（可以是变密度）. 任取 $ x \\in [0, l] $ 及 $ x $ 的增量 $ \\Delta x $，位于 $ [x, x + \\Delta x] $ 上的一小段细杆可以看作一个质点，其质量为 $ \\rho(x) \\Delta x $，且与转轴的距离为 $ x $. 于是这一小段细杆绕转轴的转动惯量为\n\n$$\n\\Delta J\\approx x^{2}\\rho(x)\\Delta x,\n$$\n\n从而细杆绕转轴的转动惯量为\n\n$$\nJ=\\int_{0}^{l}\\mathrm{d}J=\\int_{0}^{l}x^{2}\\rho(x)\\mathrm{d}x.\n$$"
+    },
+    {
+        "question_id": "EX_150",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设有质量均匀分布的细杆，长度为 $ l $，质量为 $ M $。在细杆的延长线上，与细杆距离为 $ a $ 处有一质量为 $ m $ 的质点 $ P $。求细杆对质点 $ P $ 的引力。",
+        "answer": "解 将坐标原点取在质点 $ P $ 处，细杆所在直线为 $ x $ 轴，则细杆所在区间为\n\n$$\n[a,a+l].\n$$\n\n任取 $ x\\in[a,a+l] $ 及 $ x $ 的增量 $ \\Delta x $，位于 $ [x,x+\\Delta x] $ 上的一小段细杆可以看作一个质点，其质量为 $ \\frac{M}{l}\\Delta x $，于是这一小段细杆对质点 $ P $ 的引力为\n\n$$\n\\Delta F\\approx k\\frac{m\\left(\\frac{M}{l}\\Delta x\\right)}{x^{2}} \\quad (k \\text{ 为引力常数}).\n$$\n\n于是整条细杆对质点 $ P $ 的引力为\n\n$$\nF=\\int_{a}^{a+l}\\mathrm{d}F=\\int_{a}^{a+l}\\frac{kMm}{l}\\cdot\\frac{\\mathrm{d}x}{x^{2}}=\\frac{kMm}{a\\left(l+a\\right)}.\n$$"
+    },
+    {
+        "question_id": "EX_151",
+        "type": "物理应用题",
+        "difficulty": "困难",
+        "question": "从地面垂直向上发射质量为 $ m $ 的物体，欲使物体达到距地面为 $ H $ 的高度，在忽略空气阻力的情况下，物体的初速度 $ v_{0} $ 至少应为多少？\n\n若要使物体克服地球引力，升高至无穷远处，那么至少需要多大的初速度？",
+        "answer": "解 这个问题可以换一种提法，即如果将物体放到 $ H $ 高度，使其自由下落。为了使物体到地面时具有速度 $ v_{0} $，$ H $ 应为多少？\n\n取地心为坐标原点，地心与物体连线为 $ x $ 轴。当物体位于高度 $ x $ 时，地球对物体的引力为\n\n$$\nF(x)=-k\\frac{Mm}{x^{2}},\n$$\n\n其中 $ M $ 是地球质量, $ k $ 为比例常数. 记地球半径为 $ R $. 当物体位于地面时, 地球引力为\n\n$$\n-k\\frac{Mm}{R^{2}}=-mg,\n$$\n\n于是 $ k=\\frac{R^{2}g}{M} $，所以\n\n$$\nF(x)=-mgR^{2}x^{-2}.\n$$\n\n由此知物体从高度 $ H $ 落至地面，地球引力所做的功为\n\n$$\n\\int_{R+H}^{R}F(x)\\mathrm{d}x=\\int_{R+H}^{R}-mg\\frac{R^{2}}{x^{2}}\\mathrm{d}x=mgR^{2}\\left(\\frac{1}{R}-\\frac{1}{R+H}\\right).\n$$\n\n这个功应等于物体所获得的动能，即\n\n$$\n\\frac{1}{2}m v_{0}^{2}=m g R^{2}\\left(\\frac{1}{R}-\\frac{1}{R+H}\\right),\n$$\n\n于是\n\n$$\nv_{0}=\\sqrt{2gR^{2}\\left(\\frac{1}{R}-\\frac{1}{R+H}\\right)}.\n$$\n\n所以将物体自地面垂直发射到高度 $ H $，初速度 $ v_{0} $ 至少要等于上述值。\n\n若要使物体克服地球引力，升高至无穷远处，那么至少需要多大的初速度？\n\n在上式中令 $ H \\rightarrow +\\infty $，可得 $ v_{0} = \\sqrt{2gR} $。这就是使得物体脱离地球引力的最低速度，称为第二宇宙速度。"
+    },
+    {
+        "question_id": "EX_152",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 $ p>0 $，讨论广义积分 $ \\int_{1}^{+\\infty}\\frac{dx}{x^{p}} $ 的收敛性。",
+        "answer": "解  $ \\int_{1}^{A}\\frac{\\mathrm{d}x}{x^{p}}=\\left\\{\\begin{aligned}&\\ln A,&p=1,\\\\&\\frac{A^{1-p}-1}{1-p},&p\\neq1.\\end{aligned}\\right. $\n\n于是当 $ p>1 $ 时， $ \\lim_{A\\to+\\infty}\\int_{1}^{A}\\frac{\\mathrm{d}x}{x^{p}}=\\frac{1}{p-1} $; 当  $ 0<p\\leqslant1 $ 时， $ \\int_{1}^{A}\\frac{\\mathrm{d}x}{x^{p}}\\rightarrow+\\infty(A\\rightarrow+\\infty) $. 所以，广义积分  $ \\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{x^{p}} $ 当  $ 0<p\\leqslant1 $ 时发散；当 $ p>1 $ 时收敛."
+    },
+    {
+        "question_id": "EX_153",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 $ p>0 $. 讨论广义积分 $ \\int_{e}^{+\\infty}\\frac{dx}{x(\\ln x)^{p}} $ 的收敛性.",
+        "answer": "解  $ \\int_{e}^{A}\\frac{\\mathrm{d}x}{x(\\ln x)^{p}}=\\left\\{\\begin{aligned}&\\ln(\\ln A),&p=1,\\\\&\\frac{(\\ln A)^{1-p}-1}{1-p},&p\\neq1.\\end{aligned}\\right. $\n\n于是当 $ p>1 $ 时， $ \\lim_{A\\to+\\infty}\\int_{e}^{A}\\frac{\\mathrm{d}x}{x(\\ln x)^{p}}=\\frac{1}{p-1} $; 当  $ 0<p\\leqslant1 $ 时， $ \\int_{e}^{A}\\frac{\\mathrm{d}x}{x(\\ln x)^{p}}\\rightarrow+\\infty(A\\rightarrow+\\infty) $. 所以，广义积分  $ \\int_{e}^{+\\infty}\\frac{\\mathrm{d}x}{x(\\ln x)^{p}} $ 当  $ 0<p\\leqslant1 $ 时发散；当 $ p>1 $ 时收敛."
+    },
+    {
+        "question_id": "EX_154",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "计算广义积分 $ \\int_{-\\infty}^{+\\infty}\\frac{dx}{e^{x}+e^{2-x}} $",
+        "answer": "解\n\n $$ \\begin{aligned}\\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{\\mathrm{e}^{x}+\\mathrm{e}^{2-x}}&=\\lim_{A\\rightarrow+\\infty}\\int_{1}^{A}\\frac{\\mathrm{d}x}{\\mathrm{e}^{2-x}\\left[\\mathrm{e}^{2x-2}+1\\right]}=\\frac{1}{\\mathrm{e}}\\lim_{A\\rightarrow+\\infty}\\int_{1}^{A}\\frac{\\mathrm{e}^{x-1}\\mathrm{d}x}{(\\mathrm{e}^{x-1})^{2}+1}\\\\&=\\frac{1}{\\mathrm{e}}\\lim_{A\\rightarrow+\\infty}\\arctan\\mathrm{e}^{x-1}\\bigg|_{1}^{A}=\\frac{\\pi}{4\\mathrm{e}},\\end{aligned} $$ \n\n $$ \\int_{-\\infty}^{1}\\frac{\\mathrm{d}x}{\\mathrm{e}^{x}+\\mathrm{e}^{2-x}}=\\frac{1}{\\mathrm{e}}\\lim_{A\\to-\\infty}\\int_{A}^{1}\\frac{\\mathrm{e}^{x-1}\\mathrm{d}x}{(\\mathrm{e}^{x-1})^{2}+1}=\\left.\\frac{1}{\\mathrm{e}}\\lim_{A\\to-\\infty}\\arctan\\mathrm{e}^{x-1}\\right|_{A}^{1}=\\frac{\\pi}{4}\\mathrm{e}, $$ \n\n所以\n\n $$ \\int_{-\\infty}^{+\\infty}\\frac{\\mathrm{d}x}{\\mathrm{e}^{x}+\\mathrm{e}^{2-x}}=\\frac{\\pi}{2\\mathrm{e}}. $$ "
+    },
+    {
+        "question_id": "EX_155",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "计算 $ \\int_{0}^{1}\\ln x \\, dx $.",
+        "answer": "解 x=0 为瑕点，依定义，\n\n $$ \\int_{0}^{1}\\ln x\\mathrm{d}x=\\lim_{\\delta\\to0^{+}}\\int_{\\delta}^{1}\\ln x\\mathrm{d}x=\\lim_{\\delta\\to0^{+}}(x\\ln x-x)\\mid_{\\delta}^{1}=-1. $$"
+    },
+    {
+        "question_id": "EX_156",
+        "type": "收敛性分析",
+        "difficulty": "中等",
+        "question": "设 $ p>0 $. 讨论瑕积分 $ \\int_{0}^{1}\\frac{dx}{x^{p}} $ 的收敛性.",
+        "answer": "解 x=0 为瑕点.\n\n $$ \\int_{\\delta}^{1}\\frac{\\mathrm{d}x}{x^{p}}=\\left\\{\\begin{aligned}&\\ln\\frac{1}{\\delta},&p=1,\\\\&\\frac{1-\\delta^{1-p}}{1-p},&p\\neq1.\\end{aligned}\\right. $$ \n\n于是当 $ 0 < p < 1 $ 时， $ \\lim_{\\delta \\to 0^{+}} \\int_{\\delta}^{1} \\frac{dx}{x^{p}} = \\frac{1}{1 - p} $；当 $ p \\geqslant 1 $ 时， $ \\int_{\\delta}^{1} \\frac{dx}{x^{p}} \\to +\\infty $（当 $ \\delta \\to 0^{+} $）。所以，瑕积分 $ \\int_{0}^{1} \\frac{dx}{x^{p}} $ 当 $ 0 < p < 1 $ 时收敛；当 $ p \\geqslant 1 $ 时发散。"
+    },
+    {
+        "question_id": "EX_157",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int_{-1}^{1}\\frac{dx}{\\sqrt{1-x^{2}}} $.",
+        "answer": "解 $ x=\\pm1 $ 为瑕点，依定义，\n\n $$ \\int_{-1}^{1}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}=\\int_{-1}^{0}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}+\\int_{0}^{1}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}. $$\n\n由于被积函数为偶函数，只需计算一半再乘以2：\n\n $$ \\int_{0}^{1}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}=\\lim_{\\delta\\rightarrow0^{+}}\\int_{0}^{1-\\delta}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}=\\lim_{\\delta\\rightarrow0^{+}}\\arcsin(1-\\delta)=\\frac{\\pi}{2}. $$\n\n同理，$ \\int_{-1}^{0}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}=\\frac{\\pi}{2} $，故\n\n $$ \\int_{-1}^{1}\\frac{\\mathrm{d}x}{\\sqrt{1-x^{2}}}=\\frac{\\pi}{2}+\\frac{\\pi}{2}=\\pi. $$"
+    },
+    {
+        "question_id": "EX_158",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "计算 $ \\int_{0}^{+\\infty}\\frac{dx}{\\sqrt{x}(1+x)} $",
+        "answer": "解 x=0 为瑕点，\n\n $$ \\int_{0}^{1}\\frac{\\mathrm{d}x}{\\sqrt{x}\\left(1+x\\right)}=\\lim_{\\delta\\rightarrow0^{+}}\\int_{\\delta}^{1}\\frac{\\mathrm{d}x}{\\sqrt{x}\\left(1+x\\right)}=2\\lim_{\\delta\\rightarrow0^{+}}\\arctan\\sqrt{x}\\mid_{\\delta}^{1}=\\frac{\\pi}{2}. $$ \n\n同时，\n\n $$ \\int_{1}^{+\\infty}\\frac{\\mathrm{d}x}{\\sqrt{x}\\left(1+x\\right)}=\\lim_{A\\rightarrow+\\infty}\\int_{1}^{A}\\frac{\\mathrm{d}x}{\\sqrt{x}\\left(1+x\\right)}=2\\lim_{A\\rightarrow+\\infty}\\arctan\\sqrt{x}\\bigg|_{1}^{A}=\\frac{\\pi}{2}. $$ \n\n即上面两积分皆收敛，从而原广义积分收敛，并且 $ \\int_{0}^{+\\infty}\\frac{dx}{\\sqrt{x}(1+x)}=\\pi $"
+    },
+    {
+        "question_id": "EX_159",
+        "type": "收敛性分析与绝对收敛性讨论",
+        "difficulty": "中等",
+        "question": "设 $ \\alpha > 0 $. 讨论广义积分 $ \\int_{1}^{+\\infty} \\frac{\\sin x}{x^{\\alpha}} dx $ 与 $ \\int_{1}^{+\\infty} \\frac{\\cos x}{x^{\\alpha}} dx $ 的收敛性与绝对收敛性.",
+        "answer": "解 任取 $ A_{2} > A_{1} > 1 $，应用分部积分法，\n\n $$ \\begin{aligned}\\left|\\int_{A_{1}}^{A_{2}}\\frac{\\sin x}{x^{\\alpha}}\\mathrm{d}x\\right|&=\\left| -\\frac{\\cos x}{x^{\\alpha}}\\Big|_{A_{1}}^{A_{2}} - \\alpha\\int_{A_{1}}^{A_{2}}\\frac{\\cos x}{x^{\\alpha+1}}\\mathrm{d}x \\right| \\\\ &\\leqslant \\frac{1}{A_{1}^{\\alpha}} + \\frac{1}{A_{2}^{\\alpha}} + \\alpha\\int_{A_{1}}^{A_{2}}\\frac{\\mathrm{d}x}{x^{\\alpha+1}} = \\frac{2}{A_{1}^{\\alpha}}. \\end{aligned} $$ \n\n于是，$ \\forall\\varepsilon>0 $（不妨设 $ \\varepsilon<2 $），若取 $ M=\\left(\\frac{2}{\\varepsilon}\\right)^{1/\\alpha} $，只要 $ A_{2}>A_{1}>M $ 就有\n\n $$ \\left|\\int_{A_{1}}^{A_{2}}\\frac{\\sin x}{x^{\\alpha}}\\mathrm{d}x\\right|\\leqslant\\frac{2}{A_{1}^{\\alpha}}<\\varepsilon. $$ \n\n根据定理 6.2.1 便知广义积分 $ \\int_{1}^{+\\infty}\\frac{\\sin x}{x^{\\alpha}}dx $ 收敛.\n\n同理可证广义积分 $ \\int_{1}^{+\\infty}\\frac{\\cos x}{x^{\\alpha}}dx $ 收敛.\n\n另一方面，当 $ \\alpha>1 $时，\n\n $$ \\int_{A_{1}}^{A_{2}}\\frac{\\left|\\sin x\\right|}{x^{\\alpha}}\\mathrm{d}x\\leqslant\\int_{A_{1}}^{A_{2}}\\frac{\\mathrm{d}x}{x^{\\alpha}}\\leqslant\\frac{1}{\\alpha-1}\\cdot\\frac{1}{A_{1}^{\\alpha-1}}\\rightarrow0\\quad(A_{1}\\rightarrow+\\infty). $$ \n\n由此知广义积分 $ \\int_{1}^{+\\infty}\\frac{\\sin x}{x^{\\alpha}}dx $ 绝对收敛。同理，当 $ \\alpha>1 $ 时，$ \\int_{1}^{+\\infty}\\frac{\\cos x}{x^{\\alpha}}dx $ 亦绝对收敛。\n\n当 $ 0 < \\alpha \\leqslant 1 $ 时，\n\n $$ \\int_{1}^{A}\\frac{|\\sin x|}{x^{\\alpha}}\\mathrm{d}x \\geqslant \\int_{1}^{A}\\frac{\\sin^{2}x}{x}\\mathrm{d}x = \\frac{1}{2}\\left(\\int_{1}^{A}\\frac{1}{x}\\mathrm{d}x - \\int_{1}^{A}\\frac{\\cos 2x}{x}\\mathrm{d}x\\right). $$ \n\n由于 $ \\int_{1}^{A}\\frac{1}{x}\\,dx = \\ln A \\to +\\infty $（当 $ A \\to +\\infty $），而 $ \\int_{1}^{+\\infty}\\frac{\\cos 2x}{x}\\,dx $ 收敛（由 Dirichlet 判别法），故右边趋于 $ +\\infty $，因此 $ \\int_{1}^{+\\infty}\\frac{|\\sin x|}{x^{\\alpha}}\\,dx $ 发散。所以当 $ 0 < \\alpha \\leq 1 $ 时，该积分条件收敛。"
+    },
+    {
+        "question_id": "EX_160",
+        "type": "收敛性与绝对收敛性分析",
+        "difficulty": "中等",
+        "question": "讨论瑕积分 $ \\int_{0}^{1}\\frac{1}{x}\\sin\\frac{1}{x}dx $ 的收敛性与绝对收敛性。",
+        "answer": "解：$ x=0 $ 为瑕点。作变换 $ t=\\frac{1}{x} $，$ \\forall \\delta \\in (0,1) $，可得\n\n$$\n\\int_{\\delta}^{1}\\frac{1}{x}\\sin\\frac{1}{x}\\mathrm{d}x=\\int_{1}^{\\delta^{-1}}\\frac{\\sin t}{t}\\mathrm{d}t,\n$$\n\n$$\n\\int_{\\delta}^{1}\\left|\\frac{1}{x}\\sin\\frac{1}{x}\\right|\\mathrm{d}x=\\int_{1}^{\\delta^{-1}}\\left|\\frac{\\sin t}{t}\\right|\\mathrm{d}t.\n$$\n\n由于 $ \\int_{1}^{+\\infty}\\frac{\\sin t}{t}dt $ 条件收敛，根据上面两等式便知积分 $ \\int_{0}^{1}\\frac{1}{x}\\sin\\frac{1}{x}dx $ 条件收敛。"
+    },
+    {
+        "question_id": "EX_161",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "判别下列取积分的收敛性.\n\n $$ \\int_{0}^{1}\\sqrt{\\cot x}\\mathrm{d}x\\;;\\;(2)\\int_{0}^{1}\\frac{\\ln x}{x^{p}}\\mathrm{d}x\\;;\\;(3)\\int_{0}^{1}\\frac{\\cos x}{x}\\bullet\\sin\\frac{1}{x}\\mathrm{d}x. $$",
+        "answer": "解（1）x=0 为瑕点。由于\n\n $$ \\lim_{x\\to0^{+}}\\frac{\\sqrt{\\cot x}}{\\frac{1}{\\sqrt{x}}}=\\lim_{x\\to0^{+}}\\sqrt{\\cos x}\\cdot\\sqrt{\\frac{x}{\\sin x}}=1, $$ \n\n且取积分 $ \\int_{0}^{1}\\frac{dx}{\\sqrt{x}} $收敛，根据定理6.2.9可知取积分 $ \\int_{0}^{1}\\sqrt{\\cot x}dx $收敛.\n\n(2) 当  $ p \\geqslant 1 $ 时，\n\n $$ \\frac{-x^{-p}\\ln x}{x^{-p}}=-\\ln x\\geqslant1,\\quad x\\in\\left(0,\\frac{1}{\\mathrm{e}}\\right). $$ \n\n而取积分 $ \\int_{0}^{1}x^{-p}dx $发散，根据定理6.2.8可知取积分 $ \\int_{0}^{1}-x^{-p}\\ln xdx $发散 $ (-\\ln x\\geqslant0) $，从而取积分 $ \\int_{0}^{1}x^{-p}\\ln xdx $发散.\n\n当 p<1 时，取  $ q\\in(p,1) $，于是取积分  $ \\int_{0}^{1}x^{-q}dx $ 收敛。注意到\n\n $$ \\lim_{x\\to0^{+}}\\frac{-x^{-p}\\ln x}{x^{-q}}=-\\lim_{x\\to0^{+}}x^{q-p}\\ln x=0, $$ \n\n根据定理 6.2.9 可知取积分  $ \\int_{0}^{1}-x^{-p}\\ln x dx $ 收敛，从而原取积分收敛.\n\n（3）由例6.2.5中已知，取积分 $ \\int_{0}^{1}\\frac{1}{x}\\sin\\frac{1}{x}dx $收敛.而函数 $ \\cos x $在区间 $ (0,1) $上单调有界，根据阿贝尔判别法（定理6.2.11）即得原取积分收敛."
+    },
+    {
+        "question_id": "EX_162",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "设 p>0. 讨论广义积分  $ \\int_{0}^{+\\infty}\\frac{\\ln(1+x)}{x^{p}}dx $ 的收敛性.",
+        "answer": "解 原积分收敛，当且仅当下面两个积分同时收敛：\n\n $$ \\int_{0}^{1}\\frac{\\ln(1+x)}{x^{p}}\\mathrm{d}x,\\quad\\int_{1}^{+\\infty}\\frac{\\ln(1+x)}{x^{p}}\\mathrm{d}x. $$ \n\n对于前者，注意到\n\n $$ \\lim_{x\\to0^{+}}x^{p-1}\\frac{\\ln(1+x)}{x^{p}}=1, $$ \n\n以及取积分 $ \\int_{0}^{1}\\frac{dx}{x^{p-1}} $当p-1<1时收敛， $ p-1\\geqslant1 $时发散.根据定理6.2.9，取积分 $ \\int_{0}^{1}\\frac{\\ln(1+x)}{x^{p}}dx $当p<2时收敛， $ p\\geqslant2 $时发散.\n\n对于无穷限积分 $ \\int_{1}^{+\\infty}\\frac{\\ln(1+x)}{x^{p}}dx $，显然当 $ 0<p\\leqslant1 $时发散，而当p>1时，取 $ q\\in(1,p) $.注意到 $ \\int_{1}^{+\\infty}\\frac{dx}{x^{q}} $收敛并且\n\n $$ \\lim_{x\\to+\\infty}x^{q}\\cdot\\frac{\\ln(1+x)}{x^{p}}=0, $$ \n\n根据定理 6.2.3 便知积分  $ \\int_{1}^{+\\infty}\\frac{\\ln(1+x)}{x^{p}}dx $ 当 p>1 时收敛.\n\n综上所述，当1<p<2时，原广义积分收敛，否则发散。"
+    },
+    {
+        "question_id": "EX_163",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "考察积分  $ \\mathrm{B}(\\alpha,\\beta)=\\int_{0}^{1}x^{\\alpha-1}(1-x)^{\\beta-1}\\mathrm{d}x $ 的收敛性.",
+        "answer": "解 由于取积分  $ \\int_{0}^{1}x^{\\alpha-1}dx $ 当且仅当  $ \\alpha>0 $ 时收敛，并且\n\n $$ \\lim_{x\\to0^{+}}\\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{x^{\\alpha-1}}=1. $$ \n\n根据定理 6.2.9 便知，当  $ \\alpha > 0 $ 时，取积分  $ \\int_{0}^{\\frac{1}{2}} x^{\\alpha-1} (1 - x)^{\\beta-1} dx $ 收敛，否则发散.\n\n同理，考虑 $ x \\to 1^- $ 时的行为，令 $ y = 1 - x $，则被积函数变为 $ (1 - y)^{\\alpha - 1} y^{\\beta - 1} $，类似地，\n\n $$ \\lim_{x\\to1^{-}}\\frac{x^{\\alpha-1}(1-x)^{\\beta-1}}{(1-x)^{\\beta-1}} = 1, $$\n\n而积分 $ \\int_{0}^{1}(1-x)^{\\beta-1}dx $ 收敛当且仅当 $ \\beta > 0 $。因此，由定理 6.2.9，积分 $ \\int_{\\frac{1}{2}}^{1} x^{\\alpha-1}(1-x)^{\\beta-1}dx $ 收敛当且仅当 $ \\beta > 0 $。\n\n综上，Beta 函数 $ \\mathrm{B}(\\alpha, \\beta) $ 收敛当且仅当 $ \\alpha > 0 $ 且 $ \\beta > 0 $。"
+    },
+    {
+        "question_id": "EX_164",
+        "type": "数值计算与建模",
+        "difficulty": "基础",
+        "question": "镭是一种放射性元素，它的质量不断衰变，半衰期是1600年，即经过1600年其质量变为原来的一半。已知镭的衰变速度与其质量成正比，若开始时镭的质量为1，问经过t年时间后剩下的镭的质量是多少？",
+        "answer": "解 设经过 t 年时间后剩下的镭的质量是  $ m=m(t) $，则其衰变速度应为  $ m'(t) $.\n\n另一方面，镭的衰变速度与其质量  $ m(t) $ 成正比，记比例系数为 k，于是  $ m = m(t) $ 应满足下列常微分方程：\n\n $$ m^{\\prime}=-km. $$ \n\n不难验证，此微分方程有解\n\n $$ m(t)=C\\mathrm{e}^{-kt}, $$ \n\n其中 C 为任意常数。注意到当 t=0 时，镭的质量为  $ m(0)=1 $，于是 C=1。所以经过 t 年时间后剩下的镭的质量是  $ m(t)=\\mathrm{e}^{-kt} $。\n\n再由镭的半衰期是1600年可确定比例系数为k:\n\n $$ m(1600)=\\mathrm{e}^{-k1600}=\\frac{1}{2}, $$ \n\n $$ k=\\frac{\\ln2}{1600}\\approx0.000433. $$"
+    },
+    {
+        "question_id": "EX_165",
+        "type": "物理建模与微分方程求解",
+        "difficulty": "中等",
+        "question": "设有高为 H、半径为 R 的圆柱形水塔装满水，塔底部有半径为 r 的圆形出水孔。设水流出的速度为  $ v = \\mu \\sqrt{2gh} $，其中  $ \\mu $ 为小于 1 的正常数，g 为重力加速度，h 为水面高度。若从某个时刻开启出水孔，问水从出水孔全部流出需要多长时间？",
+        "answer": "解 设出水孔开启后经过时间 t，水塔水面高度为  $ h = h(t) $，则在 t 到  $ t + \\Delta t $ 这段时间内，流出的水总量近似地为  $ \\pi r^{2} \\mu \\sqrt{2gh(t)} \\Delta t $。另一方面，水塔水面高度由  $ h(t) $ 变到  $ h(t + \\Delta t) $，从而在 t 到  $ t + \\Delta t $ 这段时间流出的水总量应为  $ -\\pi R^{2} \\left[h(t + \\Delta t) - h(t)\\right] $。由此可得\n\n $$ \\pi r^{2}\\mu\\;\\sqrt{2g h\\left(t\\right)}\\;\\Delta t\\approx-\\;\\pi R^{2}\\big[h(t+\\Delta t)-h(t)\\big]. $$ \n\n于是 $ h=h(t) $应满足下列常微分方程：\n\n $$ h^{\\prime}=-\\frac{r^{2}}{R^{2}}\\mu\\sqrt{2gh}. $$ \n\n不难验证，此微分方程有解\n\n $$ h(t)=\\left(C-\\frac{r^{2}\\mu\\sqrt{g}}{\\sqrt{2}R^{2}}t\\right)^{2}, $$ \n\n其中 C 为任意常数。注意到当 t=0 时，水塔水面高度为  $ h(0)=H $，于是  $ C=\\sqrt{H} $。\n\n设经过时间 T 水从出水孔全部流出，则应有\n\n $$ h(T)=\\left(\\sqrt{H}-\\frac{r^{2}\\mu\\sqrt{g}}{\\sqrt{2}R^{2}}T\\right)^{2}=0. $$ \n\n所以经过时间  $ T=\\frac{\\sqrt{2}R^{2}\\sqrt{H}}{r^{2}\\mu\\sqrt{g}} $，水从出水孔全部流出。"
+    },
+    {
+        "question_id": "EX_166",
+        "type": "微分方程应用题（旋转体体积）",
+        "difficulty": "中等",
+        "question": "设函数 $ f $ 在 $ [0, +\\infty) $ 内非负连续，$ f(0)=0, f(1)=\\frac{1}{2} $. 若由曲线 $ y=f(x) $、直线 $ x=t $ 与 $ x $ 轴所围成的平面图形绕 $ x $ 轴所成的旋转体体积为\n\n$$\nV(t)=\\frac{\\pi}{3}t^{2}f(t),\n$$\n\n试求 $ f(x) $.",
+        "answer": "解 由题设条件，旋转体体积为\n\n$$\n\\pi\\int_{0}^{t}\\left[f(x)\\right]^{2}\\mathrm{d}x=\\frac{\\pi}{3}t^{2}f(t),\n$$\n\n两端求导，即得\n\n$$\n3\\big[f(t)\\big]^{2}=t^{2}f^{\\prime}(t)+2t f(t).\n$$\n\n将自变量换回 $ x $，得\n\n$$\nx^{2}f^{\\prime}(x)+2xf(x)=3\\left[f(x)\\right]^{2},\n$$\n\n于是函数 $ y = f(x) $ 满足下列常微分方程：\n\n$$\nx^{2}y^{\\prime}+2xy=3y^{2}.\n$$\n\n不难验证，此微分方程有解\n\n$$\ny=\\frac{x}{1-Cx^{3}},\n$$\n\n其中 $ C $ 为任意常数。再由 $ f(1)=\\frac{1}{2} $，可得 $ C=-1 $。所以\n\n$$\nf(x)=\\frac{x}{1+x^{3}}.\n$$"
+    },
+    {
+        "question_id": "EX_167",
+        "type": "物理建模（单摆运动）",
+        "difficulty": "中等",
+        "question": "设长度为 $ l $ 的细绳一端系于高处固定点，另一端系有质量为 $ m $ 的小球。将小球看做一个质点，并忽略细绳的质量与空气阻力，小球在以 $ l $ 为半径的圆周上来回振动。小球与细绳构成的系统称为单摆。试求单摆的运动规律。",
+        "answer": "解 设细绳的固定点为原点，$ x $轴垂直向下方向为正方向，单摆在 $ xOy $ 平面内作圆周运动（如图 7.1.1 所示）。\n\n设在时刻 $ t $，细绳与 $ x $ 轴正方向的夹角为 $ \\theta(t) $，则小球的线速度为 $ v(t)=l\\theta'(t) $，加速度为 $ v'(t)=l\\theta''(t) $。此时小球受到重力作用，重力在小球运动方向上的分力为 $ mg\\sin\\theta $（$ g $ 为重力加速度）。根据牛顿第二运动定律，可得小球的运动规律满足下列方程：\n\n$$\nml\\theta^{\\prime \\prime}=-mg\\sin\\theta,\n$$\n\n<div style=\"text-align: center;\"><img src=\"merged_images/part_4_imgs_img_in_image_box_517_760_629_886.jpg\" alt=\"Image\" width=\"15%\" /></div>\n\n\n<div style=\"text-align: center;\">图 7.1.1</div>\n\n即\n\n$$\n\\theta^{\\prime\\prime}+\\frac{g}{l}\\sin\\theta=0.\n$$"
+    },
+    {
+        "question_id": "EX_168",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求方程  $ y' = e^{x-y} $ 的通解.",
+        "answer": "将方程改写为\n $$ \\mathrm{e}^{y}\\mathrm{d}y=\\mathrm{e}^{x}\\mathrm{d}x, $$ \n两端积分可得原方程的通解为  $ e^{y}=e^{x}+C $ 或  $ y=\\ln(e^{x}+C) $."
+    },
+    {
+        "question_id": "EX_169",
+        "type": "初值问题求解",
+        "difficulty": "基础",
+        "question": "求解初值问题  $ \\left\\{\\begin{aligned}y^{\\prime}&=y^{2}\\cos x,\\\\ y(0)&=1.\\end{aligned}\\right. $",
+        "answer": "将方程  $ y' = y^{2} \\cos x $ 改写为\n $$ y^{-2}\\mathrm{d}y=\\cos x\\mathrm{d}x, $$ \n两端积分可得它的通解为\n $$ -1/y=\\sin x+C. $$ \n代入初值条件  $ y(0)=1 $，得到 C=-1。于是所求特解为\n $$ y=\\frac{1}{1-\\sin x}. $$"
+    },
+    {
+        "question_id": "EX_170",
+        "type": "通解推导",
+        "difficulty": "中等",
+        "question": "求方程  $ y'=\\frac{-xy}{x+1} $ 的通解.",
+        "answer": "将方程改写为\n $$ \\frac{\\mathrm{d}y}{y}=\\frac{-x}{x+1}\\mathrm{d}x, $$ \n两端积分可得原方程的通解为\n $$ \\ln\\mid y\\mid=\\ln\\mid x+1\\mid-x+C_{1}, $$ \n两边去对数得到\n $$ \\mid y\\mid=\\mathrm{e}^{c_{1}}\\mid x+1\\mid\\mathrm{e}^{-x}. $$ \n两边再去绝对值，注意到  $ y \\equiv 0 $ 也是原方程的解，即得原方程的通解为\n $$ y=C(x+1)\\mathrm{e}^{-x}. $$"
+    },
+    {
+        "question_id": "EX_171",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ y' = -\\frac{6x^{3} + 3xy^{2}}{2y^{3} + 3yx^{2}}. $",
+        "answer": "这是一个齐次方程. 令  $ u=\\frac{y}{x} $，则原方程可化为\n\n $$ x u^{\\prime}+u=-\\frac{6+3u^{2}}{2u^{3}+3u}. $$ \n\n整理得\n\n $$ \\frac{1}{2}\\cdot\\frac{2u^{3}+3u}{u^{4}+3u^{2}+3}\\mathrm{d}u=-\\frac{\\mathrm{d}x}{x}. $$ \n\n两端积分得\n\n $$ \\frac{1}{4}\\ln(u^{4}+3u^{2}+3)=-\\ln|x|+C_{1}, $$ \n\n即\n\n $$ x^{4}(u^{4}+3u^{2}+3)=\\mathrm{e}^{4C_{1}}. $$ \n\n代入 u=y/x 即得原方程的通解为\n\n $$ 3x^{4}+3x^{2}y^{2}+y^{4}=C\\quad (C>0). $$"
+    },
+    {
+        "question_id": "EX_172",
+        "type": "变量代换求解",
+        "difficulty": "中等",
+        "question": "求解方程  $ y'=(x+y+3)^{2} $",
+        "answer": "作变量代换  $ u=x+y+3 $，则  $ y^{\\prime}=u^{\\prime}-1 $，代入原方程可得\n\n $$ u^{\\prime}=u^{2}+1. $$ \n\n解之得\n\n $$ u=\\tan(x+C). $$ \n\n所以原方程的通解为\n\n $$ y=\\tan(x+C)-x-3. $$"
+    },
+    {
+        "question_id": "EX_173",
+        "type": "变量代换求解",
+        "difficulty": "困难",
+        "question": "求解方程  $ y'=\\frac{x-y+1}{x+y-3}. $",
+        "answer": "注意到\n\n $$ \\left\\{\\begin{aligned}x-y+1&=(x-1)-(y-2),\\\\ x+y-3&=(x-1)+(y-2).\\end{aligned}\\right. $$\n\n作变量代换  $ u=\\frac{y-2}{x-1} $，则  $ y^{\\prime}=(x-1)u^{\\prime}+u $，代入原方程可得\n\n $$ (x-1)u^{\\prime}+u=\\frac{1-u}{1+u}, $$ \n\n即\n\n $$ \\frac{(1+u)\\mathrm{d}u}{1-2u-u^{2}}=\\frac{\\mathrm{d}x}{x-1}. $$ \n\n两端积分可得\n\n $$ \\ln|x-1|=-\\frac{1}{2}\\ln|1-2u-u^{2}|+C_{1}. $$ \n\n化简得\n\n $$ (x-1)^{2}(1-2u-u^{2})=\\pm\\mathrm{e}^{C_{1}}. $$ \n\n将  $ u=\\frac{y-2}{x-1} $ 代入，即得\n\n $$ (x-1)^{2}-2(x-1)(y-2)-(y-2)^{2}=\\pm\\mathrm{e}^{C_{1}}. $$"
+    },
+    {
+        "question_id": "EX_174",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求方程  $ y'-2xy=2xe^{x^{2}} $ 满足  $ y(0)=1 $ 的特解.",
+        "answer": "解 原方程对应的齐次线性方程为  $ y' - 2xy = 0 $. 解之得： $ y = C e^{x^2} $\n\n设原方程有解  $ y=C(x)e^{x^{2}} $，其中  $ C(x) $ 为待定函数。将其代入原方程，可得  $ C'(x)=2x $，于是  $ C(x)=x^{2}+C $。所以原方程的通解为  $ y=(x^{2}+C)e^{x^{2}} $。"
+    },
+    {
+        "question_id": "EX_175",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ \\frac{dy}{dx}+\\frac{1}{x}y=\\frac{\\sin x}{x} $. ",
+        "answer": "解法一 原方程对应的线性齐次方程为  $ y'+\\frac{y}{x}=0 $. 解之得： $ y=\\frac{C}{x} $\n\n设原方程有解  $ y=\\frac{C(x)}{x} $，其中  $ C(x) $ 为待定函数。将其代入原方程，可得  $ C'(x)=\\sin x $，于是  $ C(x)=-\\cos x+C $。所以原方程的通解为  $ y=\\frac{1}{x}(C-\\cos x) $。\n\n解法二 应用公式(5)，原方程的通解为\n\n $$ y(x)=\\mathrm{e}^{-\\int\\frac{1}{x}\\mathrm{d}x}\\left(C+\\int\\frac{\\sin x}{x}\\mathrm{e}^{\\int\\frac{1}{x}\\mathrm{d}x}\\mathrm{d}x\\right) = \\frac{1}{x}\\left(C + \\int \\sin x \\, dx \\right) = \\frac{1}{x}(C - \\cos x). $$"
+    },
+    {
+        "question_id": "EX_176",
+        "type": "应用题（微分方程建模）",
+        "difficulty": "中等",
+        "question": "设一房间中的空气容量为 $ 1000 \\, m^3 $，其中二氧化碳含量为 4.1%，现开动换气机，以每分钟 $ 100 \\, m^3 $ 的速度把室外二氧化碳含量为 0.1% 的新鲜空气送入室内。假设室内二氧化碳的分布总是均匀的，求 x 分钟后室内二氧化碳含量的百分数。又问经过多少时间后室内二氧化碳含量才能下降到 1.1%。",
+        "answer": "解 设在时刻 x 分钟时室内二氧化碳含量为 $ y(x)\\% $，此时室内二氧化碳的总量为 $ 1000 \\times y(x)\\% $，于是在时刻 $ x + \\Delta x $ 分钟时室内二氧化碳的总量为\n\n $$ 1000\\times y(x+\\Delta x)\\%=(1000-100\\Delta x)\\times y(x)\\%+100\\Delta x\\times0.1\\%. $$ \n\n所以\n\n $$ \\Delta y=y(x+\\Delta x)-y(x)=\\frac{1}{10}\\big[0.1-y(x)\\big]\\Delta x. $$ \n\n由此知 $ y(x) $ 应满足以下方程：\n\n $$ y^{\\prime}=\\frac{1}{10}(0.1-y), $$ \n\n这是一个一阶线性常微分方程，它对应的齐次方程为 $ y' = -\\frac{y}{10} $。解之得 $ y = Ce^{-\\frac{x}{10}} $。\n\n设原方程有解 $ y=C(x)\\mathrm{e}^{-\\frac{x}{10}} $，将其代入原方程，可得 $ C'(x)=\\frac{1}{100}\\mathrm{e}^{\\frac{x}{10}} $，于是\n\n $$ C(x)=\\frac{1}{10}\\mathrm{e}^{\\frac{x}{10}}+C. $$ \n\n所以原方程的通解为 $ y=Ce^{-\\frac{x}{10}}+0.1 $\n\n注意到 $ y(0)=4.1 $ ，可得 C=4 ，所以 x 分钟后室内二氧化碳含量的百分数为\n\n $$ y(x)=4\\mathrm{e}^{-\\frac{x}{10}}+0.1. $$ \n\n如果 $ y(x)=4e^{-\\frac{x}{10}}+0.1=1.1 $，则 $ 4e^{-\\frac{x}{10}}=1 $。由此可得 $ x=20\\ln2 $。所以经过 $ 20\\ln2 $ 分钟后室内二氧化碳含量才能下降到 1.1%。"
+    },
+    {
+        "question_id": "EX_177",
+        "type": "微分方程求解（伯努利方程）",
+        "difficulty": "中等",
+        "question": "求解方程  $ y' - y + 2\\frac{x}{y} = 0. $",
+        "answer": "解 这是一个伯努利方程, $ \\alpha=-1 $. 令 $ z=y^{2} $，则 $ z^{\\prime}=2yy^{\\prime} $. 于是原方程可化为\n\n $ z^{\\prime}-2z+4x=0. $\n\n(8)\n\n它对应的齐次方程为  $ z' = 2z $. 解之得  $ z = C e^{2x} $.\n\n设方程(8)有解  $ z=C(x)e^{2x} $，将其代入方程(8)，可得  $ C'(x)=-4xe^{-2x} $，于是  $ C(x)=(2x+1)e^{-2x}+C. $ 从而方程(8)的通解为  $ z=Ce^{2x}+2x+1 $.\n\n所以原方程的通解为\n\n $$ y^{2}=C\\mathrm{e}^{2x}+2x+1. $$"
+    },
+    {
+        "question_id": "EX_178",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ xy'' - 3y'' = 2x - 3. $",
+        "answer": "解  $ p(x)=y''(x) $，则原方程可化为\n\n $$ p^{\\prime}-3\\frac{p}{x}=2-\\frac{3}{x}, $$ \n\n这是一阶线性方程，它对应的齐次方程为  $ p^{\\prime}-3\\frac{p}{x}=0 $。解之得  $ p=Cx^{3} $。\n\n设方程有解  $ p=C(x)x^{3} $，将其代入方程，可得  $ C'(x)=\\frac{2}{x^{3}}-\\frac{3}{x^{4}} $，于是\n\n $$ C(x)=x^{-3}-x^{-2}+C_{1}. $$ \n\n所以方程的通解为  $ p=1-x+C_{1}x^{3} $. 再由  $ p(x)=y''(x) $ 可得\n\n $$ y^{\\prime}=x-\\frac{1}{2}x^{2}+C_{1}x^{4}+C_{2}, $$ \n\n于是原方程的通解为\n\n $$ y=\\frac{1}{2}x^{2}-\\frac{1}{6}x^{3}+C_{1}x^{5}+C_{2}x+C_{3}. $$"
+    },
+    {
+        "question_id": "EX_179",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ xy'' - y' = x^{2} $",
+        "answer": "解  $ p(x)=y'(x) $，则原方程可化为\n\n $$ xp^{\\prime}-p=x^{2}, $$ \n\n从而\n\n $$ \\frac{\\mathrm{d}}{\\mathrm{d}x}\\Big(\\frac{p(x)}{x}-x\\Big)=\\frac{x p^{\\prime}(x)-p(x)}{x^{2}}-1=0, $$ \n\n所以 $ \\frac{p(x)}{x}-x=C $，即 $ y'(x)=p(x)=x^{2}+Cx $。进而知原方程的通解为\n\n $$ y=\\frac{1}{3}x^{3}+C_{1}x^{2}+C_{2}. $$"
+    },
+    {
+        "question_id": "EX_180",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ yy''=2(y')^{2} $",
+        "answer": "解 令  $ y' = p $，并将 p 看作 y 的函数： $ p = p(y) $，则  $ y''(x) = p \\frac{\\mathrm{d}p}{\\mathrm{d}y} $，从而原方程化为\n\n $$ y\\frac{\\mathrm{d}p}{\\mathrm{d}y}=2p. $$ \n\n解之得  $ p=-C_{1}y^{2} $，因而  $ y'=-C_{1}y^{2} $，即  $ -y^{-2}dy=C_{1}dx. $ 积分之，得到  $ \\frac{1}{y}=C_{1}x+ C_{2} $. 所以原方程的通解为  $ y=\\frac{1}{C_{1}x+C_{2}} $"
+    },
+    {
+        "question_id": "EX_181",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "已知齐次方程  $ x^{2}y''-2y=0 $ 有解  $ y_{1}(x)=x^{2} $，求解下列非齐次方程：\n\n $$ x^{2}y^{\\prime \\prime}-2y=x^{4}, $$",
+        "answer": "解 为求解方程(10)，设  $ y(x)=x^{2}c(x) $ 为方程(10)的解，将其代入方程(10)，可得\n\n $$ x^{4}c^{\\prime \\prime}+4x^{3}c^{\\prime}=x^{4}, $$ \n\n令  $ p(x)=c'(x) $，则有\n\n $$ xp^{\\prime}+4p=x. $$ \n\n此方程对应的齐次方程为  $ xp' + 4p = 0 $。解之得， $ p(x) = ax^{-4} $。所以可设方程(11)有解  $ p(x) = \\alpha(x)x^{-4} $，代入方程(11)可得  $ \\alpha' = x^{4} $， $ \\alpha(x) = \\frac{1}{5}x^{5} + C $，因此方程(11)有解  $ p(x) = \\frac{x}{5} + Cx^{-4} $，进而知  $ c(x) = \\frac{x^{2}}{10} + C_{1}x^{-3} + C_{2} $。所以  $ y(x) = \\frac{x^{4}}{10} + C_{1}\\frac{1}{x} + C_{2}x^{2} $ 为方程(10)的解。\n\n所以原方程的通解为\n\n $$ y(x)=\\frac{x^{4}}{10}+C_{1}\\frac{1}{x}+C_{2}x^{2}. $$"
+    },
+    {
+        "question_id": "EX_182",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "已知齐次方程  $ xy''-(x+1)y'+y=0 $ 的两个线性无关解  $ x+1 $ 与  $ e^{x} $，求非齐次方程  $ xy''-(x+1)y'+y=x^{2}e^{x} $ 的通解.",
+        "answer": "解 使用常数变易法，设此方程有形如  $ Y(x)=(x+1)c_{1}(x)+\\mathrm{e}^{x}c_{2}(x) $ 的特解，其中  $ c_{1}(x) $ 与  $ c_{2}(x) $ 为待定函数。为确定  $ c_{1}(x) $ 与  $ c_{2}(x) $，增加条件\n\n $$ (x+1)c_{1}^{\n\\prime}+\\mathrm{e}^{x}c_{2}^{\n\\prime}=0, $$ \n\n于是\n\n $$ Y^{\n\\prime}=c_{1}+\\mathrm{e}^{x}c_{2},\\quad Y^{\n\\prime \\prime}=\\mathrm{e}^{x}c_{2}+c_{1}^{\n\\prime}+\\mathrm{e}^{x}c_{2}^{\n\\prime}. $$ \n\n将  $ Y, Y' $,  $ Y'' $ 代入原非齐次方程，并整理后得\n\n $$ c_{1}^{\n\\prime}+\\mathrm{e}^{x}c_{2}^{\n\\prime}=x\\mathrm{e}^{x}. $$ \n\n联立(15)式与(16)式所成的方程组，可以解得  $ c_{1}^{\n\\prime}=-e^{x}, c_{2}^{\n\\prime}=x+1 $ 。于是可取  $ c_{1}=-e^{x}, c_{2}=\\frac{1}{2}x^{2}+x $ ，因此  $ Y(x)=\\left(\\frac{x^{2}}{2}-1\\right)e^{x} $ 。所以所求非齐次方程的通解为\n\n $$ y(x)=\\left(\\frac{x^{2}}{2}-1\\right)\\mathrm{e}^{x}+C_{1}(x+1)+C_{2}\\mathrm{e}^{x}. $$"
+    },
+    {
+        "question_id": "EX_183",
+        "type": "数值计算",
+        "difficulty": "基础",
+        "question": "求方程  $ y'' + 2y' + 2y = 0 $ 的通解.",
+        "answer": "解 此方程的特征方程为  $ \\lambda^{2}+2\\lambda+2=0 $，它的特征根为  $ \\lambda=-1\\pm i $，因而此方程有两个线性无关解  $ e^{-x}\\cos x $ 与  $ e^{-x}\\sin x $，所以它的通解为： $ y(x)=e^{-x}(C_{1}\\cos x+C_{2}\\sin x) $."
+    },
+    {
+        "question_id": "EX_184",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ y'' - 5y'' + 8y' - 4y = 0 $.",
+        "answer": "解 此方程的特征方程为  $ \\lambda^{3}-5\\lambda^{2}+8\\lambda-4=0 $，它的特征根为  $ \\lambda_{1}=\\lambda_{2}=2 $， $ \\lambda_{3}=1 $。因而此方程有三个线性无关解  $ e^{2x}, x e^{2x} $ 与  $ e^{x} $。所以它的通解为\n\n $$ y(x)=C_{1}\\mathrm{e}^{2x}+C_{2}x\\mathrm{e}^{2x}+C_{3}\\mathrm{e}^{x}. $$"
+    },
+    {
+        "question_id": "EX_185",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程  $ y^{(4)}+2y''+y=0. $",
+        "answer": "解 特征方程为  $ \\lambda^{4}+2\\lambda^{2}+1=0 $，它有一对二重共轭复根  $ \\pm i $，因而此方程有四个线性无关解  $ \\cos x, \\sin x, x \\cos x, x \\sin x $。所以它的通解为\n\n $$ y(x)=C_{1}\\cos x+C_{2}\\sin x+C_{3}x\\cos x+C_{4}x\\sin x. $$"
+    },
+    {
+        "question_id": "EX_186",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求方程  $ y'' - 2y' + y = 6(x + 1)e^{x} $ 的通解.",
+        "answer": "解 此方程的特征方程为  $ \\lambda^{2}-2\\lambda+1=0 $，它有二重根  $ \\lambda=1 $，故可设原方程有形如  $ Y(x)=x^{2}(Ax+B)e^{x} $ 的特解，将它代入原方程得到： $ (6Ax+2B)e^{x}=6(x+1)e^{x} $。比较两端系数可得 A=1, B=3，于是原方程有特解  $ Y(x)=x^{2}(x+3)e^{x} $。所以原方程的通解为  $ y(x)=\\left[C_{1}+C_{2}x+x^{2}(x+3)\\right]e^{x} $。"
+    },
+    {
+        "question_id": "EX_187",
+        "type": "数值计算",
+        "difficulty": "困难",
+        "question": "求解方程  $ y''' - y'' - y' + y = 4(x + 1)\\cos x. $",
+        "answer": "解 根据欧拉公式, $ 4(x+1)e^{ix}=4(x+1)\\cos x+i4(x+1)\\sin x. $ 考虑方程\n\n $$ y^{\\prime \\prime \\prime}-y^{\\prime \\prime}-y^{\\prime}+y=4(x+1)\\mathrm{e}^{ix}. $$ \n\n方程(8)的特征根为  $ \\lambda_{1}=\\lambda_{2}=1,\\lambda_{3}=-1 $ ，由于 i 不是方程(8)的特征根，故可设方程(8)有形如  $ Y(x)=(Ax+B)e^{ix} $ 的特解. 将它代入方程(8)得到\n\n $$ \\left[2(1-\\mathrm{i})(A x+B)-2A(2+\\mathrm{i})\\right]\\mathrm{e}^{\\mathrm{i}x}=4(x+1)\\mathrm{e}^{\\mathrm{i}x}. $$ \n\n比较两端系数得  $ A=1+\\mathrm{i}, B=3\\mathrm{i} $. 于是方程(8)有特解  $ Y(x)=\\left[(1+\\mathrm{i})x+3\\mathrm{i}\\right]\\mathrm{e}^{\\mathrm{i}x} $. 根据命题 7.5.1,  $ Y(x) $ 的实部  $ \\mathrm{Re}Y(x)=x\\cos x-(x+3)\\sin x $ 为原方程的解. 所以原方程的通解为  $ y(x)=C_{1}e^{x}+C_{2}xe^{x}+C_{3}e^{-x}+x\\cos x-(x+3)\\sin x $。"
+    },
+    {
+        "question_id": "EX_188",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "长 19.6m 的均匀链条悬挂在高处一个无摩擦的小滑轮上。运动开始时一端长 10.8m，另一端长 8.8m。问链条滑过滑轮需要多长时间？",
+        "answer": "解 设经过时刻 $ x $，链条下滑了 $ y $ 米。记重力加速度为 $ g $，链条的线密度为 $ \\rho $，则在 $ x $ 时刻链条受到的向下的力为\n\n$$\nF=(10.8+y)\\rho g-(8.8-y)\\rho g=(2+2y)\\rho g.\n$$\n\n另一方面，$ F=ma=19.6\\rho y^{\\prime\\prime} $，所以 $ y=y(x) $ 满足下列方程：\n\n$$\n19.6\\rho y^{\\prime \\prime}=(2+2y)\\rho g,\n$$\n\n即（取 $ g=9.8\\,\\mathrm{m/s^{2}} $）\n\n$$\ny^{\\prime \\prime}-y=1.\n$$\n\n显然，$ y(x)\\equiv-1 $ 是此方程的一个特解。方程的特征根是 $ \\lambda=\\pm1 $，从而方程的通解为 $ y(x)=C_{1}\\mathrm{e}^{x}+C_{2}\\mathrm{e}^{-x}-1 $。注意到初始条件 $ y(0)=y^{\\prime}(0)=0 $，即\n\n$$\nC_{1}+C_{2}=1,\\quad C_{1}-C_{2}=0,\n$$\n\n于是 $ C_{1}=C_{2}=1/2 $，所以\n\n$$\ny(x)=\\frac{1}{2}\\mathrm{e}^{x}+\\frac{1}{2}\\mathrm{e}^{-x}-1.\n$$\n\n当链条滑过滑轮时，$ y=8.8\\,\\mathrm{m} $，所用时间 $ x $ 满足\n\n$$\n\\frac{1}{2}\\mathrm{e}^{x}+\\frac{1}{2}\\mathrm{e}^{-x}-1=8.8,\n$$\n\n即 $ \\cosh x = 9.8 $，解得\n\n$$\nx=\\ln\\left(9.8+\\sqrt{(9.8)^{2}-1}\\right)\\approx2.97.\n$$\n\n所以链条滑过滑轮所用时间为 2.97 秒。"
+    },
+    {
+        "question_id": "EX_189",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求方程  $ x^{2}y'' + xy' + y = 2x $ 的通解.",
+        "answer": "令  $ t=\\ln|x| $，则有\n\n $$ \\frac{\\mathrm{d}y}{\\mathrm{d}x}=\\frac{1}{x}\\frac{\\mathrm{d}y}{\\mathrm{d}t},\\quad\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}x^{2}}=\\frac{1}{x^{2}}\\Big(\\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}-\\frac{\\mathrm{d}y}{\\mathrm{d}t}\\Big). $$ \n\n当 x>0 时，原方程可化为\n\n $$ \\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}+y=2\\mathrm{e}^{t}. $$ \n\n它的特征根为  $ \\lambda = \\pm i $。可设此方程有形如  $ Y(t) = A e^{t} $ 的特解。代入方程得到 A = 1。于是方程  $ \\frac{d^{2}y}{dt^{2}} + y = 2e^{t} $ 的通解为  $ y = C_{1} \\cos t + C_{2} \\sin t + e^{t} $。\n\n当 x<0 时， $ x=-\\mathrm{e}^{t} $，原方程可化为  $ \\frac{\\mathrm{d}^{2}y}{\\mathrm{d}t^{2}}+y=-2\\mathrm{e}^{t} $。类似地，此方程的通解为  $ y=C_{1}\\cos t+C_{2}\\sin t-\\mathrm{e}^{t} $。所以原欧拉方程通解为\n\n $$ y(x)=C_{1}\\cos\\ln\\mid x\\mid+C_{2}\\sin\\ln\\mid x\\mid+x. $$"
+    },
+    {
+        "question_id": "EX_190",
+        "type": "验证与求解特解",
+        "difficulty": "中等",
+        "question": "验证 $ \\Phi(x)=\\begin{bmatrix}e^{2x}&e^{-x}\\\\ 2e^{2x}&-e^{-x}\\end{bmatrix} $为方程组 $ Y'=\\begin{pmatrix}0&1\\\\ 2&1\\end{pmatrix}Y $的基本解矩阵，并求此方程组满足定解条件 $ Y(0)=(1,5)^{\\mathrm{T}} $的特解 $ Y(x) $.",
+        "answer": "解 记  $ \\boldsymbol{Y}_{1}=(\\mathrm{e}^{2x},2\\mathrm{e}^{2x})^{\\mathrm{T}},\\boldsymbol{Y}_{2}=(\\mathrm{e}^{-x},-\\mathrm{e}^{-x})^{\\mathrm{T}} $ ，则\n\n $$ \\begin{pmatrix}{{{0}}}&{{{1}}} \\\\\\{{{2}}}&{{{1}}}\\end{pmatrix}\\mathbf{Y}_{1}=\\begin{pmatrix}{{{2\\mathrm{e}^{2x}}}} \\\\\\{{{4\\mathrm{e}^{2x}}}}\\end{pmatrix}=\\mathbf{Y}_{1}^{\\prime},\\quad\\begin{pmatrix}{{{0}}}&{{{1}}} \\\\\\{{{2}}}&{{{1}}}\\end{pmatrix}\\mathbf{Y}_{2}=\\begin{pmatrix}{{{-\\mathrm{e}^{-x}}}} \\\\\\{{{\\mathrm{e}^{-x}}}}\\end{pmatrix}=\\mathbf{Y}_{2}^{\\prime}, $$ \n\n即  $ Y_{1}, Y_{2} $ 是原方程组的解，从而  $ \\Phi(x) = (Y_{1}\\ Y_{2}) $ 是基本解矩阵.\n\n设  $ \\boldsymbol{Y}(x)=\\boldsymbol{\\varPhi}(x)\\boldsymbol{C} $，则  $ \\boldsymbol{\\varPhi}(0)(c_{1},c_{2})^{\\mathrm{T}}=(1,5)^{\\mathrm{T}} $。计算得\n\n$$\n\\boldsymbol{\\varPhi}(0) = \\begin{bmatrix}1 & 1 \\\\ 2 & -1\\end{bmatrix},\n$$\n\n解线性方程组\n\n$$\n\\begin{bmatrix}1 & 1 \\\\ 2 & -1\\end{bmatrix} \\begin{bmatrix}c_1 \\\\ c_2\\end{bmatrix} = \\begin{bmatrix}1 \\\\ 5\\end{bmatrix},\n$$\n\n得 $ c_1 = 2,\\ c_2 = -1 $。因此，所求特解为\n\n$$\n\\boldsymbol{Y}(x) = 2\\boldsymbol{Y}_1(x) - \\boldsymbol{Y}_2(x) = 2\\begin{bmatrix}e^{2x} \\\\ 2e^{2x}\\end{bmatrix} - \\begin{bmatrix}e^{-x} \\\\ -e^{-x}\\end{bmatrix} = \\begin{bmatrix}2e^{2x} - e^{-x} \\\\ 4e^{2x} + e^{-x}\\end{bmatrix}.\n$$"
+    },
+    {
+        "question_id": "EX_191",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程组  $ \\mathbf{Y}'=\\begin{pmatrix}0&1\\\\ 2&1\\end{pmatrix}\\mathbf{Y}+\\begin{pmatrix}\\mathbf{e}^{-x}\\\\ -\\mathbf{e}^{-x}\\end{pmatrix} $ 的满足定解条件  $ \\widetilde{\\mathbf{Y}}(0)=(1,2)^{\\mathrm{T}} $ 的特解  $ \\widetilde{\\mathbf{Y}}(x) $.",
+        "answer": "解 在例 7.6.1 中已知，原方程组对应的齐次方程组  $ \\mathbf{Y}' = \\begin{pmatrix} 0 & 1 \\\\ 2 & 1 \\end{pmatrix} \\mathbf{Y} $. 有基本解矩阵  $ \\boldsymbol{\\Phi}(x) = \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} $，它的逆矩阵为  $ \\boldsymbol{\\Phi}^{-1}(x) = \\frac{1}{3} \\begin{pmatrix} \\mathbf{e}^{-2x} & \\mathbf{e}^{-2x} \\\\ 2\\mathbf{e}^{x} & -\\mathbf{e}^{x} \\end{pmatrix} $。由公式 (13) 取得所求特解为\n\n $$ \\begin{align*}\\widetilde{\\mathbf{Y}}(x)&=\\boldsymbol{\\varPhi}\\left(x\\right)\\boldsymbol{\\varPhi}^{-1}(0)\\binom{1}{2}+\\boldsymbol{\\varPhi}\\left(x\\right)\\int_{0}^{x}\\boldsymbol{\\varPhi}^{-1}(t)\\binom{\\mathbf{e}^{-t}}{-\\mathbf{e}^{-t}}\\mathrm{d}t \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\cdot \\frac{1}{3} \\begin{pmatrix} 1 & 1 \\\\ 2 & -1 \\end{pmatrix} \\binom{1}{2} + \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\int_0^x \\frac{1}{3} \\begin{pmatrix} \\mathbf{e}^{-2t} & \\mathbf{e}^{-2t} \\\\ 2\\mathbf{e}^{t} & -\\mathbf{e}^{t} \\end{pmatrix} \\binom{\\mathbf{e}^{-t}}{-\\mathbf{e}^{-t}} \\, \\mathrm{d}t \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\cdot \\frac{1}{3} \\binom{1+2}{2-2} + \\frac{1}{3} \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\int_0^x \\binom{\\mathbf{e}^{-3t} - \\mathbf{e}^{-3t}}{2\\mathbf{e}^{0} + \\mathbf{e}^{0}} \\, \\mathrm{d}t \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\cdot \\frac{1}{3} \\binom{3}{0} + \\frac{1}{3} \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\int_0^x \\binom{0}{3} \\, \\mathrm{d}t \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} \\\\ 2\\mathbf{e}^{2x} \\end{pmatrix} + \\frac{1}{3} \\begin{pmatrix} \\mathbf{e}^{2x} & \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} & -\\mathbf{e}^{-x} \\end{pmatrix} \\binom{0}{3x} \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} \\\\ 2\\mathbf{e}^{2x} \\end{pmatrix} + \\begin{pmatrix} x \\mathbf{e}^{-x} \\\\ -x \\mathbf{e}^{-x} \\end{pmatrix} \\\\ &= \\begin{pmatrix} \\mathbf{e}^{2x} + x \\mathbf{e}^{-x} \\\\ 2\\mathbf{e}^{2x} - x \\mathbf{e}^{-x} \\end{pmatrix}. \\end{align*} $$"
+    },
+    {
+        "question_id": "EX_192",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程组  $ Y' = A Y $，其中  $ A = \\begin{pmatrix} 1 & -2 \\\\ 1 & 4 \\end{pmatrix} $.",
+        "answer": "解  $ \\det(\\lambda I - A) = (\\lambda - 1)(\\lambda - 4) + 2 = (\\lambda - 2)(\\lambda - 3). $\n\n所以 A 的特征根为  $ \\lambda_{1}=2,\\lambda_{2}=3 $。分别求解特征方程  $ (2\\boldsymbol{I}-\\boldsymbol{A})\\boldsymbol{U}=0 $ 与  $ (3\\boldsymbol{I}-\\boldsymbol{A})\\boldsymbol{U}=0 $\n\n可解得 A 的属于  $ \\lambda_{1}=2 $ 的特征向量  $ \\boldsymbol{U}_{1}=(2,-1)^{\\mathrm{T}} $ 与属于  $ \\lambda_{2}=3 $ 的特征向量  $ \\boldsymbol{U}_{2}=(-1,1)^{\\mathrm{T}} $ 。从而原方程组有基本解矩阵  $ \\boldsymbol{\\Phi}(x)=(\\mathrm{e}^{2x}\\boldsymbol{U}_{1},\\mathrm{e}^{3x}\\boldsymbol{U}_{2})=\\begin{pmatrix}2\\mathrm{e}^{2x}&-\\mathrm{e}^{3x}\\\\-\\mathrm{e}^{2x}&\\mathrm{e}^{3x}\\end{pmatrix} $，它的通解为\n\n $$ \\boldsymbol{Y}(x)=\\boldsymbol{\\varPhi}\\left(x\\right)\\binom{c_{1}}{c_{2}}=c_{1}\\mathrm{e}^{2x}\\binom{2}{-1}+c_{2}\\mathrm{e}^{3x}\\binom{-1}{1}. $$"
+    },
+    {
+        "question_id": "EX_193",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求方程组 $ \\boldsymbol{Y}^{\\prime}=\\boldsymbol{A}\\boldsymbol{Y} $ 的满足定解条件 $ \\boldsymbol{Y}(0)=(-1,3,1)^{\\mathrm{T}} $ 的特解。其中\n\n$$\n\\begin{aligned}\n\\boldsymbol{A}&=\\begin{pmatrix}1&2&2\\\\2&1&2\\\\2&2&1\\end{pmatrix}.\n\\end{aligned}\n$$",
+        "answer": "解：$ \\det(\\lambda\\boldsymbol{I}-\\boldsymbol{A})=(\\lambda-5)(\\lambda+1)^{2} $\n\n所以 $ \\boldsymbol{A} $ 的特征根为 $ \\lambda_{1}=5,\\lambda_{2}=\\lambda_{3}=-1 $。分别求解特征方程 $ (5\\boldsymbol{I}-\\boldsymbol{A})\\boldsymbol{U}=\\boldsymbol{0} $ 与 $ (-1\\boldsymbol{I}-\\boldsymbol{A})\\boldsymbol{U}=\\boldsymbol{0} $ 可解得 $ \\boldsymbol{A} $ 的属于 $ \\lambda_{1}=5 $ 的特征向量 $ \\boldsymbol{U}_{1}=(1,1,1)^{\\mathrm{T}} $ 与属于 $ \\lambda_{2}=\\lambda_{3}=-1 $ 的线性无关的特征向量 $ \\boldsymbol{U}_{2}=(1,0,-1)^{\\mathrm{T}} $ 与 $ \\boldsymbol{U}_{3}=(0,1,-1)^{\\mathrm{T}} $。从而原方程组有基本解矩阵 \n$$ \\boldsymbol{\\Phi}(x)=(\\mathrm{e}^{5x}\\boldsymbol{U}_{1},\\ \\mathrm{e}^{-x}\\boldsymbol{U}_{2},\\ \\mathrm{e}^{-x}\\boldsymbol{U}_{3}) $$，它的通解为 \n$$ \\boldsymbol{Y}(x)=\\boldsymbol{\\Phi}(x)(c_{1},c_{2},c_{3})^{\\mathrm{T}} $$。\n\n代入定解条件：\n$$\n\\left(\\boldsymbol{U}_{1}\\quad\\boldsymbol{U}_{2}\\quad\\boldsymbol{U}_{3}\\right)\\left(c_{1},c_{2},c_{3}\\right)^{\\mathrm{T}}=\\boldsymbol{\\varPhi}\\left(0\\right)\\left(c_{1},c_{2},c_{3}\\right)^{\\mathrm{T}}=\\boldsymbol{Y}\\left(0\\right)=\\left(-1,3,1\\right)^{\\mathrm{T}}\n$$\n\n可解得 $ c_{1}=1,\\ c_{2}=-2,\\ c_{3}=2 $。于是所求特解为\n$$\n\\widetilde{\\boldsymbol{Y}}(x)=\\mathrm{e}^{5x}\\boldsymbol{U}_{1}-2\\mathrm{e}^{-x}\\boldsymbol{U}_{2}+2\\mathrm{e}^{-x}\\boldsymbol{U}_{3}=\\begin{pmatrix}\\mathrm{e}^{5x}-2\\mathrm{e}^{-x}\\\\ \\mathrm{e}^{5x}+2\\mathrm{e}^{-x}\\\\ \\mathrm{e}^{5x}\\end{pmatrix}.\n$$"
+    },
+    {
+        "question_id": "EX_194",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求解方程组 \\( \\left\\{\\begin{aligned}y^{\\prime}&=y+2z,\\\\ z^{\\prime}&=3y+2z.\\end{aligned}\\right. \\)",
+        "answer": "解 将第二个方程两边关于 x 求导得  \\( z'' = 3y' + 2z' \\)，再将  \\( y' = y + 2z \\) 与  \\( 3y = z' - 2z \\) 分别代入得\n\n $$ z^{\\prime \\prime}=3(y+2z)+2z^{\\prime}=z^{\\prime}-2z+6z+2z^{\\prime}=3z^{\\prime}+4z, $$ \n\n即\n\n $$ z^{\\prime \\prime}-3z^{\\prime}-4z=0. $$ \n\n这是一个二阶常系数齐次线性方程，解之得\n\n $$ z=c_{1}\\mathrm{e}^{4x}+c_{2}\\mathrm{e}^{-x}, $$ \n\n再由第二个方程得\n\n $$ y=\\frac{1}{3}(z^{\\prime}-2z)=\\frac{2}{3}c_{1}\\mathrm{e}^{4x}-c_{2}\\mathrm{e}^{-x}. $$ \n\n所以原方程组的通解为\n\n $$ \\begin{cases}y=\\frac{2}{3}c_{1}\\mathrm{e}^{4x}-c_{2}\\mathrm{e}^{-x},\\\\z=c_{1}\\mathrm{e}^{4x}+c_{2}\\mathrm{e}^{-x}.\\end{cases} $$"
+    },
+    {
+        "question_id": "EX_195",
+        "type": "数值计算",
+        "difficulty": "中等",
+        "question": "求方程组 \\( \\left\\{\\begin{aligned}x^{\\prime}&=y-z,\\\\ y^{\\prime}&=z+1,\\\\ z^{\\prime}&=y+2t\\end{aligned}\\right. \\)，满足定解条件 \\( \\left\\{\\begin{aligned}x(0)&=1,\\\\ y(0)&=0,\\\\ z(0)&=-1\\end{aligned}\\right. \\)，的特解.",
+        "answer": "解 由后两个方程得  \\( z'' = y' + 2 = z + 3 \\)，即  \\( z'' - z = 3 \\)，解之得  \\( z = c_{1} e^{t} + c_{2} e^{-t} - 3 \\)，于是又有  \\( y = z' - 2t = c_{1} e^{t} - c_{2} e^{-t} - 2t \\)。代入定解条件  \\( y(0) = 0 \\)， \\( z(0) = -1 \\)，可得  \\( c_{1} = c_{2} = 1 \\)。进而得  \\( x' = y - z = -2e^{-t} - 2t + 3 \\)，从而  \\( x = 2e^{-t} - t^{2} + 3t + c_{3} \\)。代入  \\( x(0) = 1 \\) 得  \\( c_{3} = -1 \\)。于是所求特解为\n\n $$ \\begin{cases}x=2\\mathrm{e}^{-t}-t^{2}+3t-1,\\\\y=\\mathrm{e}^{t}-\\mathrm{e}^{-t}-2t,\\\\z=\\mathrm{e}^{t}+\\mathrm{e}^{-t}-3.\\end{cases} $$"
+    }
+]

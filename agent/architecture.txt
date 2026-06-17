@@ -1,0 +1,15 @@
+workspace/
+├── src/
+│   ├── agent.py
+│   ├── config.py
+│   ├── rag.py
+│   ├── tool_executor.py
+│   └── submission.json
+├── inputs/
+│   └── images/          # 题目图片放这里
+├── rag/                 # 知识库（calculus1 等学科文件夹）
+└── test_cases/          # 你的四个 JSON 测试文件
+    ├── case1.json
+    ├── case2.json
+    ├── case3.json
+    └── case4.json须知

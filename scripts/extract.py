@@ -1,188 +1,284 @@
-import os
+# extract.py
+# 实现 zhipuAI 调用接口，并提供处理 data/raw/ 高等微积分教程1.pdf 的入口。
+
+from __future__ import annotations
+
+import argparse
 import json
+import os
+import re
 import sys
+from pathlib import Path
+from typing import Any
 
-ZhipuAI = None
-SDK_IMPORT_ERROR = None
+try:
+    import requests
+except ImportError:  # pragma: no cover
+    requests = None
 
-if sys.version_info >= (3, 14):
-    SDK_IMPORT_ERROR = (
-        "当前 Python 版本为 "
-        f"{sys.version.split()[0]}，zhipuai 及其依赖在 Python 3.14 预发布版本下会崩溃。"
-        "请改用 Python 3.11 或 3.12。"
-    )
-else:
-    try:
-        from zhipuai import ZhipuAI
-    except Exception as exc:
-        SDK_IMPORT_ERROR = f"导入 zhipuai 失败: {exc}"
+try:
+    from PyPDF2 import PdfReader
+except ImportError:  # pragma: no cover
+    PdfReader = None
 
-# ================= 配置区 =================
-# 1. 填入你的 API KEY
-YOUR_ZHIPU_API_KEY = "01bb711437004113965c1497ff8fc8a3.0O2mGLifBFq3pJZb"
-ZHIPU_API_KEY = YOUR_ZHIPU_API_KEY
-client = ZhipuAI(api_key=ZHIPU_API_KEY) if ZhipuAI is not None and ZHIPU_API_KEY != "YOUR_ZHIPU_API_KEY" else None
+DEFAULT_API_BASE = "https://api.zhipu.ai/v1/chat/completions"
+DEFAULT_MODEL = "chatglm_pro"
 
-# 2. 直接在这里指定你要处理的 md 文件路径
-TARGET_FILE = r"./data/processed/quantum/combined_result.md"  
 
-# 3. 输出目录和文本分块参数
-OUTPUT_DIR = r"./data/processed/quantum"  
-CHUNK_SIZE = 2500  
-OVERLAP = 500      
+class ZhipuAIClient:
+    def __init__(self, api_key: str, model: str = DEFAULT_MODEL, api_base: str = DEFAULT_API_BASE) -> None:
+        if not api_key:
+            raise ValueError("zhipuAI API key is required")
+        self.api_key = api_key.strip()
+        self.model = model
+        self.api_base = api_base.rstrip("/")
 
-# 4. 从你的截图中挑选的顶尖模型
-MODEL_NAME = "glm-4-plus"
-# ==========================================
-
-def read_markdown_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
-        return f.read()
-
-def chunk_text(text, chunk_size, overlap):
-    chunks = []
-    start = 0
-    text_length = len(text)
-    while start < text_length:
-        end = start + chunk_size
-        chunks.append(text[start:end])
-        start += chunk_size - overlap
-    return chunks
-
-def extract_examples_from_chunk(text_chunk):
-    system_prompt = """
-    你是一个专业的理科教材数据清洗与结构化专家。
-    用户会输入一段OCR识别的理科教材Markdown文本。请执行以下任务：
-
-    1. 提取【带有完整解答】的例题。直接忽略只有题目没有解答的练习题或课后习题。
-    2. 【反截断原则】：必须保证题目和解答提取完整。如果发现某个例题在文本结尾处被拦腰截断（话没说完），请尽可能通过语义补全，或者直接舍弃残缺部分。
-    3. 【去噪清洗】：请自动过滤掉OCR识别带来的无关页码（如单独出现的四位数字 2764、3218 等）、行号或扫描乱码。
-    4. 【格式保留】：严格保留原有的 LaTeX 数学公式和图片路径。对于图片标签，原样保留即可。
-
-    请严格按照以下 JSON 数组格式输出：
-    [
-        {
-            "question_id": "临时ID",
-            "type": "推断题目类型（如：数值计算、证明题、概念辨析等）",
-            "difficulty": "推断难度（如：基础、中等、困难）",
-            "question": "完整的题目内容（包含原格式公式和图片，剔除杂质）",
-            "answer": "完整的解答过程（包含原格式公式和图片，剔除杂质）"
+    def create_completion(
+        self,
+        content: str,
+        temperature: float = 0.0,
+        max_tokens: int = 2048,
+        top_p: float = 1.0,
+    ) -> str:
+        payload = {
+            "model": self.model,
+            "messages": [{"role": "user", "content": content}],
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "top_p": top_p,
         }
-    ]
-    如果没有符合条件的完整例题，请输出空数组：[]
-    """
+        headers = {
+            "Authorization": f"Bearer {self.api_key}",
+            "Content-Type": "application/json",
+        }
+        response = self._post_json(self.api_base, payload, headers)
+        return self._extract_response_text(response)
 
-    messages = [
-        {'role': 'system', 'content': system_prompt},
-        {'role': 'user', 'content': f"请处理以下文本：\n\n{text_chunk}"}
-    ]
+    def _post_json(self, url: str, payload: dict[str, Any], headers: dict[str, str]) -> dict[str, Any]:
+        if requests is not None:
+            resp = requests.post(url, headers=headers, json=payload, timeout=120)
+            resp.raise_for_status()
+            return resp.json()
+
+        from urllib import request, error
+
+        body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+        req = request.Request(url, data=body, headers=headers, method="POST")
+        try:
+            with request.urlopen(req, timeout=120) as resp:
+                raw = resp.read().decode("utf-8")
+                return json.loads(raw)
+        except error.HTTPError as exc:
+            error_body = exc.read().decode("utf-8", errors="ignore")
+            raise RuntimeError(f"HTTP error {exc.code}: {error_body}") from exc
+
+    def _extract_response_text(self, response: dict[str, Any]) -> str:
+        if not isinstance(response, dict):
+            raise ValueError("zhipuAI response is not a JSON object")
+
+        if "choices" in response and isinstance(response["choices"], list) and response["choices"]:
+            first = response["choices"][0]
+            if isinstance(first, dict):
+                if "message" in first and isinstance(first["message"], dict):
+                    return str(first["message"].get("content", "")).strip()
+                if "text" in first:
+                    return str(first.get("text", "")).strip()
+
+        if "data" in response and isinstance(response["data"], list) and response["data"]:
+            first = response["data"][0]
+            if isinstance(first, dict) and "text" in first:
+                return str(first["text"]).strip()
+
+        if "text" in response:
+            return str(response["text"]).strip()
+
+        raise ValueError("Unable to extract text from zhipuAI response")
+
+
+def extract_text_from_pdf(path: Path) -> str:
+    if PdfReader is None:
+        raise ImportError("读取 PDF 需要安装 PyPDF2。请运行: pip install PyPDF2")
+    if not path.exists():
+        raise FileNotFoundError(f"PDF 文件不存在: {path}")
+
+    reader = PdfReader(path)
+    pages: list[str] = []
+    for page in reader.pages:
+        pages.append(page.extract_text() or "")
+    return "\n\n".join(pages).strip()
+
+
+def extract_text(path: Path) -> str:
+    suffix = path.suffix.lower()
+    if suffix == ".pdf":
+        return extract_text_from_pdf(path)
+    raise ValueError("当前接口仅支持处理 .pdf 文件")
+
+
+def is_end_marker_line(line: str) -> bool:
+    stripped = line.strip()
+    if not stripped:
+        return False
+
+    if re.fullmatch(r"[\s\|\-\u2500-\u257F]+", stripped) and len(stripped) >= 3:
+        return True
+
+    if re.search(r"[│┃┤├┌┐└┘].*[─━]|[─━].*[│┃┤├┌┐└┘]", stripped):
+        return True
+
+    return False
+
+
+def split_question_blocks(content: str) -> list[dict[str, Any]]:
+    question_pattern = re.compile(r"例\s*(\d+(?:\.\d+)*)")
+    blocks: list[dict[str, Any]] = []
+
+    current_block: dict[str, Any] | None = None
+    for line in content.splitlines():
+        match = question_pattern.search(line)
+        if match:
+            if current_block is not None:
+                blocks.append(current_block)
+            current_block = {
+                "question_id": match.group(1),
+                "lines": [line],
+            }
+            continue
+
+        if current_block is not None:
+            current_block["lines"].append(line)
+
+    if current_block is not None:
+        blocks.append(current_block)
+
+    return blocks
+
+
+def split_question_answer(block: dict[str, Any]) -> dict[str, str]:
+    content = "\n".join(block["lines"]).strip()
+    answer_start = None
+    answer_keyword = None
+    for match in re.finditer(r"(?m)^[ \t]*(证明|解)(?:[：:\s]|$)", content):
+        answer_start = match.start()
+        answer_keyword = match.group(1)
+        break
+
+    if answer_start is None:
+        return {
+            "question": content,
+            "answer": "",
+            "question_id": block["question_id"],
+            "type": "数值计算",
+        }
+
+    question_text = content[:answer_start].strip()
+    answer_text = content[answer_start:].strip()
+
+    answer_lines = answer_text.splitlines()
+    end_index = None
+    for idx, line in enumerate(answer_lines):
+        if is_end_marker_line(line):
+            end_index = idx
+            break
+    if end_index is not None:
+        answer_lines = answer_lines[:end_index]
+    answer_text = "\n".join(answer_lines).strip()
+
+    answer_prefix = answer_text.lstrip()
+    if answer_prefix.startswith("证明"):
+        q_type = "推导题"
+    elif answer_prefix.startswith("解"):
+        q_type = "数值计算"
+    else:
+        q_type = "数值计算"
+
+    return {
+        "question": question_text,
+        "answer": answer_text,
+        "question_id": block["question_id"],
+        "type": q_type,
+    }
+
+
+def infer_difficulty(client: ZhipuAIClient, question_text: str) -> str:
+    prompt = (
+        "请判断以下高等微积分题目的难度，返回一个简短的中文标签：简单、中等、较难、困难。"
+        " 只返回标签，不要添加解释。"
+        f"\n题目：\n{question_text}"
+    )
+    response = client.create_completion(prompt, temperature=0.0, max_tokens=30)
+    first_line = response.splitlines()[0].strip()
+    return first_line or "中等"
+
+
+def extract_questions_from_text(content: str, client: ZhipuAIClient) -> list[dict[str, str]]:
+    blocks = split_question_blocks(content)
+    questions: list[dict[str, str]] = []
+    for block in blocks:
+        item = split_question_answer(block)
+        item["difficulty"] = infer_difficulty(client, item["question"]) if item["question"] else "中等"
+        questions.append(item)
+    return questions
+
+
+def process_high_calculus_pdf(
+    input_path: Path,
+    api_key: str,
+    model: str = DEFAULT_MODEL,
+    temperature: float = 0.0,
+) -> str:
+    if not input_path.exists():
+        raise FileNotFoundError(f"输入文件不存在: {input_path}")
+
+    suffix = input_path.suffix.lower()
+    if suffix != ".pdf":
+        raise ValueError("当前接口仅支持处理 .pdf 文件")
+
+    file_content = extract_text(input_path)
+    client = ZhipuAIClient(api_key=api_key, model=model)
+    questions = extract_questions_from_text(file_content, client)
+    return json.dumps(questions, ensure_ascii=False, indent=2)
+
+
+def save_json_output(content: str, output_path: Path) -> Path:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(content, encoding="utf-8")
+    return output_path
+
+
+def parse_args() -> argparse.Namespace:
+    default_input = Path(__file__).resolve().parents[1] / "data" / "raw" / "高等微积分教程1.pdf"
+    default_output = Path(__file__).resolve().parents[1] / "data" / "processed" / "calculus1.json"
+    parser = argparse.ArgumentParser(description="调用 zhipuAI 处理 data/raw/高等微积分教程1.pdf 并将结果输出到 processed 目录。")
+    parser.add_argument("--api-key", help="zhipuAI API Key，可通过 ZHIPU_API_KEY 环境变量补充")
+    parser.add_argument("--model", default=DEFAULT_MODEL, help="zhipuAI 模型名称")
+    parser.add_argument("--input", type=Path, default=default_input, help="待处理的 .pdf 文件路径")
+    parser.add_argument("--output", type=Path, default=default_output, help="输出汇总 JSON 文件路径")
+    parser.add_argument("--temperature", type=float, default=0.0, help="生成温度")
+    return parser.parse_args()
+
+
+def main() -> int:
+    args = parse_args()
+    api_key = args.api_key or os.getenv("ZHIPU_API_KEY")
+    if not api_key:
+        print("ERROR: 需要提供 zhipuAI API Key", file=sys.stderr)
+        return 1
 
     try:
-        if client is None:
-            print("\n\033[0m缺少 ZHIPU_API_KEY，无法调用智谱接口。")
-            return []
-
-        # 开启流式输出，防假死
-        responses = client.chat.completions.create(
-            model=MODEL_NAME,
-            messages=messages,
-            response_format={"type": "json_object"},
-            stream=True,
+        output = process_high_calculus_pdf(
+            input_path=args.input,
+            api_key=api_key,
+            model=args.model,
+            temperature=args.temperature,
         )
-        
-        full_content = ""
-        print("    [模型开始生成]:\n\033[90m", end="", flush=True) 
-        
-        for response in responses:
-            choices = getattr(response, 'choices', None) or []
-            if not choices:
-                continue
+        output_path = save_json_output(output, args.output)
+        print(f"已生成题目汇总文件: {output_path}")
+        return 0
+    except Exception as exc:
+        print(f"处理失败: {exc}", file=sys.stderr)
+        return 2
 
-            delta = getattr(choices[0], 'delta', None)
-            chunk_content = getattr(delta, 'content', '') if delta else ''
-            if not chunk_content:
-                continue
-
-            print(chunk_content, end="", flush=True)
-            full_content += chunk_content
-                
-        print("\033[0m\n    [当前块生成完毕，正在校验数据...]")
-        
-        # 校验并解析 JSON
-        content = full_content.strip()
-        if content.startswith("```json"):
-            content = content[7:-3].strip()
-        elif content.startswith("```"):
-            content = content[3:-3].strip()
-            
-        return json.loads(content)
-            
-    except Exception as e:
-        print(f"\n\033[0m解析或调用异常: {e}")
-        return []
-
-def process_single_file(file_path):
-    print(f"==== 开始处理文件: {file_path} ====")
-    text = read_markdown_file(file_path)
-    chunks = chunk_text(text, CHUNK_SIZE, OVERLAP)
-    
-    all_examples = []
-    for i, chunk in enumerate(chunks):
-        print(f"\n--- 正在处理第 {i+1}/{len(chunks)} 块文本 (长度: {len(chunk)}) ---")
-        examples = extract_examples_from_chunk(chunk)
-        if examples:
-            # 强化拦截：丢掉答案为空或答案长度小于10个字符的残缺数据
-            valid_examples = [ex for ex in examples if ex.get('answer') and len(str(ex.get('answer')).strip()) > 10]
-            all_examples.extend(valid_examples)
-            
-    # 去重与重新编号
-    unique_examples = []
-    seen_questions = set()
-    id_counter = 1
-    
-    for ex in all_examples:
-        # 提取题目前30个字符作为指纹去重（过滤掉空格）
-        q_snippet = ex.get('question', '').replace(" ", "")[:30] 
-        
-        # 必须是有效的非空题目
-        if q_snippet not in seen_questions and len(q_snippet) > 5:
-            seen_questions.add(q_snippet)
-            
-            # 统一格式化 ID (例如 EX_001, EX_002)
-            ex["question_id"] = f"EX_{id_counter:03d}"
-            id_counter += 1
-            
-            unique_examples.append(ex)
-            
-    return unique_examples
-
-def main():
-    if SDK_IMPORT_ERROR:
-        print(f"❌ 错误：{SDK_IMPORT_ERROR}")
-        return
-
-    if client is None:
-        print("❌ 错误：请先设置环境变量 ZHIPU_API_KEY。")
-        return
-
-    if not os.path.exists(TARGET_FILE):
-        print(f"❌ 错误：找不到文件 '{TARGET_FILE}'。请检查路径。")
-        return
-
-    if not os.path.exists(OUTPUT_DIR):
-        os.makedirs(OUTPUT_DIR)
-        
-    extracted_data = process_single_file(TARGET_FILE)
-    
-    base_name = os.path.basename(TARGET_FILE)
-    output_filename = base_name.replace('.md', '_examples.json')
-    output_path = os.path.join(OUTPUT_DIR, output_filename)
-    
-    # 格式化保存 JSON
-    with open(output_path, 'w', encoding='utf-8') as f:
-        json.dump(extracted_data, f, ensure_ascii=False, indent=4)
-        
-    print(f"\n✅ 完成！共提取 {len(extracted_data)} 道高质量例题，已保存至:\n{os.path.abspath(output_path)}")
 
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())
